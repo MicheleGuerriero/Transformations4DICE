@@ -1,0 +1,154 @@
+-- @nsURI TOSCA=http://tosca4cloudify/1.0
+-- @nsURI DDSM=http://ddsm/1.0
+
+module DDSM2TOSCA;
+create tosca : TOSCA from ddsm : DDSM;
+
+rule DDSM2TOSCA{	
+	from 
+		s: DDSM!DDSM
+	to 
+		t: TOSCA!Service_Template(
+			tosca_definitions_version <- 'cloudify_dsl_1_1',
+			serviceTemplate_hasImport <- thisModule.getDICEImport(s),
+			
+			service_hasNodeTemplate <- s.cloudelement 
+			-> select(element | element.oclIsKindOf(DDSM!VM))
+			-> collect(element | thisModule.getNodeTemplatesFromVM(element)).
+			union(s.cloudelement 
+			-> select(element | element.oclIsKindOf(DDSM!InternalComponent))
+			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element))),
+			
+			interface_hasInput <- s.cloudelement
+			-> collect(element | element.resource -> collect(resource | thisModule.getInputFromResource(resource)))
+		)
+}
+
+lazy rule getDICEImport{
+	from
+		s: DDSM!DDSM
+	to 
+		t: TOSCA!Import(
+			file <- 'insert here statically the list of DICE tosca imports'
+		)
+}
+
+lazy rule getNodeTemplatesFromVM{
+	from 
+		s : DDSM!VM
+	to
+		t : TOSCA!Node_template(
+			node_template_name <- s.name,
+            type <- s.oclType().toString(), 
+			
+			nodeTemplate_hasProperty <- s.property 
+			-> collect(property | thisModule.getProperty(property)),
+			
+			nodeTemplate_hasInterface <- s.resource 
+			-> select(resource | resource.oclIsTypeOf(DDSM!ChefRecipe)) 
+			-> collect(resource | thisModule.getInterfaceFromChefResource(resource))
+		)
+}
+
+lazy rule getNodeTemplatesFromInternalComponent{
+	from 
+		s : DDSM!InternalComponent
+	to
+		t : TOSCA!Node_template(
+			node_template_name <- s.name,	
+			type <- s.oclType().toString(), 
+			
+			NodeTemplate_hasRelationship <- s.requiredexecutionplatform -> collect( platform | 
+				thisModule.getContainedInRelationshipFromExecutionBinding(DDSM!ExecutionBinding.allInstances() ->  any(binding | 
+			binding.requiredexecutionplatform.executionPlatformId = platform.executionPlatformId
+			))).union(
+				s.requiredport -> collect( port | 
+				thisModule.getConnectedToRelationshipFromRelationship(DDSM!Relationship.allInstances() ->  any(relationship | 
+				relationship.requiredport.portId = port.portId
+			)))),
+			
+			nodeTemplate_hasProperty <- s.property 
+			-> collect(property | thisModule.getProperty(property)),
+			
+			nodeTemplate_hasInterface <- s.resource 
+			-> select(resource | resource.oclIsTypeOf(DDSM!ChefRecipe)) 
+			-> collect(resource | thisModule.getInterfaceFromChefResource(resource))
+			
+		)
+}
+
+
+lazy rule getInputFromResource{
+	from
+		s: DDSM!Resource
+	to
+		t: TOSCA!Input(
+			parameter_name <- s.name,
+			value <- s.value
+		)
+}
+
+lazy rule getInterfaceFromChefResource{
+	from
+		s: DDSM!ChefRecipe
+	to
+		t: TOSCA!Interface(
+			interface_name <- s.name,	
+			hasOperation <- thisModule.getOperationFromChefResource(s)
+		)
+}
+
+lazy rule getOperationFromChefResource{
+	from 
+		s: DDSM!ChefRecipe
+	to
+		t: TOSCA!Operation(
+			operation_name <- s.name.concat('_Operation'),
+			script <- s.recipeUrl
+		)
+}	
+
+lazy rule getContainedInRelationshipFromExecutionBinding{
+	from
+		s : DDSM!ExecutionBinding
+	to
+		t: TOSCA!Contained_in(
+			validTarget <- s.providedexecutionplatform.owner.name,
+			type <- 'cloudify.relationships.contained_in',
+			relation_haSourceInterface <- s.resource 
+			-> select(resource | resource.oclIsTypeOf(DDSM!ChefRecipe)) 
+			-> collect(resource | thisModule.getInterfaceFromChefResource(resource))
+		
+		)
+}
+
+lazy rule getConnectedToRelationshipFromRelationship{
+	from
+		s: DDSM!Relationship
+	to
+		t: TOSCA!Connected_to(
+			validTarget <- s.providedport.component.name,
+			type <- 'cloudify.relationships.connected_to'
+		)
+		
+}
+	
+lazy rule getProperty{
+	from 
+		s : DDSM!Property
+	to
+		t : TOSCA!Property(
+			property_name <- s.name,
+			property_hasParameters <- thisModule.getParameter(s)
+		)
+}
+
+lazy rule getParameter{
+	from 
+		s : DDSM!Property
+	to
+		t: TOSCA!Parameter (
+			parameter_name <- s.name.concat('_Parameter'),
+			value <- s.value
+		)
+}
