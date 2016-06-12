@@ -84,7 +84,7 @@
 		<constant value="resource"/>
 		<constant value="5"/>
 		<constant value="J.getInputFromResource(J):J"/>
-		<constant value="interface_hasInput"/>
+		<constant value="serviceTemplate_hasInput"/>
 		<constant value="12:33-12:51"/>
 		<constant value="12:4-12:51"/>
 		<constant value="13:33-13:43"/>

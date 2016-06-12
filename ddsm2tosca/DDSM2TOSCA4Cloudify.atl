@@ -1,4 +1,4 @@
--- @nsURI TOSCA=http://tosca4cloudify/1.0
+-- @nsURI TOSCA=http://tosca/1.0
 -- @nsURI DDSM=http://ddsm/1.0
 
 module DDSM2TOSCA;
@@ -19,7 +19,7 @@ rule DDSM2TOSCA{
 			-> select(element | element.oclIsKindOf(DDSM!InternalComponent))
 			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element))),
 			
-			interface_hasInput <- s.cloudelement
+			serviceTemplate_hasInput <- s.cloudelement
 			-> collect(element | element.resource -> collect(resource | thisModule.getInputFromResource(resource)))
 		)
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ddsm:DDSM xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ddsm="http://ddsm/1.0"
+    xsi:schemaLocation="http://ddsm/1.0 /io.github.dice-project.ddsm/model/ddsm.ecore">
+  <cloudelement
+      xsi:type="ddsm:MediumHost"
+      name="testhost"
+      provider="myprov-1"/>
+  <provider
+      name="myprov"
+      providerId="myprov-1"/>
+</ddsm:DDSM>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<tosca:Service_Template xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:tosca="http://tosca/1.0" tosca_definitions_version="cloudify_dsl_1_1">
+  <serviceTemplate_hasImport file="insert here statically the list of DICE tosca imports"/>
+  <service_hasNodeTemplate node_template_name="testhost" type="DDSM!MediumHost"/>
+</tosca:Service_Template>
