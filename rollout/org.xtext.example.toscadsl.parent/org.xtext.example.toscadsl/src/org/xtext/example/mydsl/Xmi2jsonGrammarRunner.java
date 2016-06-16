@@ -7,15 +7,13 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Map;
 
-//import mymodelingproject.MymodelingprojectPackage;
-
-//import _12._12Package;
 import tosca.*;
 
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.emf.ecore.resource.ResourceSet;
+import org.xtext.example.mydsl.ToscaDslStandaloneSetup;
 import org.yaml.snakeyaml.Yaml;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -24,16 +22,16 @@ import com.google.inject.Injector;
 
 public class Xmi2jsonGrammarRunner {
     
-    public final static String IN_METAMODEL = "./../../../../DICE-Models/io.github.dice-project.ddsm/model/ddsm.ecore";
-    public final static String IN_METAMODEL_NAME = "ddsm";
-    public final static String OUT_METAMODEL = "./../../../../DICE-Models/io.github.dice-project.tosca/model/tosca.ecore";
-    public final static String OUT_METAMODEL_NAME = "tosca";
+    public final static String IN_METAMODEL = "./metamodels/ddsm.ecore";
+    public final static String IN_METAMODEL_NAME = "DDSM";
+    public final static String OUT_METAMODEL = "./metamodels/tosca.ecore";
+    public final static String OUT_METAMODEL_NAME = "TOSCA";
 
-    public final static String IN_MODEL = "./ddsm_sample.xmi";
-    public final static String OUT_MODEL = "./tosca_sample.xmi";
+    public final static String IN_MODEL = "./models/ddsm_sample.xmi";
+    public final static String OUT_MODEL = "./models/tosca_sample.xmi";
 
-    public final static String TRANSFORMATION_DIR = "/Users/michele/workspace/Transformtion4DICE/ddsm2tosca";
-    public final static String TRANSFORMATION_MODULE = "DDSM2TOSCA4Cloudify";
+    public final static String TRANSFORMATION_DIR = "./transformations/";
+    public final static String TRANSFORMATION_MODULE = "ddsm2tosca";
 
     public static void main(String[] args) throws IOException {
         // you have to specify the input filename and output filename in program
@@ -49,7 +47,7 @@ public class Xmi2jsonGrammarRunner {
     @SuppressWarnings("unchecked")
     public static void runme(String toscaJsonModelPath, String toscaYamlModelPath) {
 
-        ATLLauncher l = new ATLLauncher();
+        ATLTransformationLauncher l = new ATLTransformationLauncher();
         l.registerInputMetamodel(IN_METAMODEL);
         l.registerOutputMetamodel(OUT_METAMODEL);
         l.launch(IN_MODEL, IN_METAMODEL_NAME, OUT_MODEL, OUT_METAMODEL_NAME, TRANSFORMATION_DIR, TRANSFORMATION_MODULE);

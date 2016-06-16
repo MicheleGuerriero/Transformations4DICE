@@ -1,7 +1,8 @@
--- @nsURI TOSCA=http://tosca/1.0
+-- @nsURI TOSCA=http://tosca4cloudify/1.0
 -- @nsURI DDSM=http://ddsm/1.0
 
-module DDSM2TOSCA;
+
+module ddsm2tosca;
 create tosca : TOSCA from ddsm : DDSM;
 
 rule DDSM2TOSCA{	
@@ -10,15 +11,15 @@ rule DDSM2TOSCA{
 	to 
 		t: TOSCA!Service_Template(
 			tosca_definitions_version <- 'cloudify_dsl_1_1',
-			serviceTemplate_hasImport <- thisModule.getDICEImport(s),
 			
+			serviceTemplate_hasImport <- s.cloudelement -> collect(e | thisModule.getDICEImport(e)),
 			service_hasNodeTemplate <- s.cloudelement 
 			-> select(element | element.oclIsKindOf(DDSM!VM))
 			-> collect(element | thisModule.getNodeTemplatesFromVM(element)).
 			union(s.cloudelement 
 			-> select(element | element.oclIsKindOf(DDSM!InternalComponent))
 			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element))),
-			
+						
 			serviceTemplate_hasInput <- s.cloudelement
 			-> collect(element | element.resource -> collect(resource | thisModule.getInputFromResource(resource)))
 		)
@@ -26,7 +27,7 @@ rule DDSM2TOSCA{
 
 lazy rule getDICEImport{
 	from
-		s: DDSM!DDSM
+		s: DDSM!CloudElement
 	to 
 		t: TOSCA!Import(
 			file <- 'insert here statically the list of DICE tosca imports'
@@ -39,7 +40,7 @@ lazy rule getNodeTemplatesFromVM{
 	to
 		t : TOSCA!Node_template(
 			node_template_name <- s.name,
-            type <- s.oclType().toString(), 
+            type <- s.getVMGenericSize, 
 			
 			nodeTemplate_hasProperty <- s.property 
 			-> collect(property | thisModule.getProperty(property)),
@@ -49,6 +50,13 @@ lazy rule getNodeTemplatesFromVM{
 			-> collect(resource | thisModule.getInterfaceFromChefResource(resource))
 		)
 }
+
+helper context DDSM!VM def: getVMGenericSize: String =
+	if not self.genericSize.oclIsUndefined() then
+		self.genericSize.toString()
+	else
+		'dice.hosts.GenericHost'
+	endif;
 
 lazy rule getNodeTemplatesFromInternalComponent{
 	from 
