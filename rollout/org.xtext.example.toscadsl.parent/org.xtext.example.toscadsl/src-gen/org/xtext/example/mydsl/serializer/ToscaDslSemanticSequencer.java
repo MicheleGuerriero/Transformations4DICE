@@ -16,23 +16,18 @@ import org.eclipse.xtext.serializer.sequencer.AbstractDelegatingSemanticSequence
 import org.eclipse.xtext.serializer.sequencer.ITransientValueService.ValueTransient;
 import org.xtext.example.mydsl.services.ToscaDslGrammarAccess;
 import tosca.Attribute;
-import tosca.Connected_to;
-import tosca.Contained_in;
+import tosca.Capability;
+import tosca.Group;
 import tosca.Import;
-import tosca.Input;
 import tosca.Interface;
-import tosca.Node_template;
+import tosca.NodeTemplate;
 import tosca.Operation;
-import tosca.Output;
-import tosca.Parameters;
+import tosca.Policy;
 import tosca.Property;
 import tosca.Relationship;
 import tosca.Requirement;
-import tosca.Service_Template;
-import tosca.Source_interface;
-import tosca.Target_interface;
+import tosca.TopologyTemplate;
 import tosca.ToscaPackage;
-import tosca.instance;
 
 @SuppressWarnings("all")
 public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequencer {
@@ -51,56 +46,41 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 			case ToscaPackage.ATTRIBUTE:
 				sequence_Attribute(context, (Attribute) semanticObject); 
 				return; 
-			case ToscaPackage.CONNECTED_TO:
-				sequence_Connected_to(context, (Connected_to) semanticObject); 
+			case ToscaPackage.CAPABILITY:
+				sequence_Capability(context, (Capability) semanticObject); 
 				return; 
-			case ToscaPackage.CONTAINED_IN:
-				sequence_Contained_in(context, (Contained_in) semanticObject); 
+			case ToscaPackage.GROUP:
+				sequence_Group(context, (Group) semanticObject); 
 				return; 
 			case ToscaPackage.IMPORT:
 				sequence_Import(context, (Import) semanticObject); 
 				return; 
-			case ToscaPackage.INPUT:
-				sequence_Input(context, (Input) semanticObject); 
-				return; 
 			case ToscaPackage.INTERFACE:
-				sequence_Interface_Impl(context, (Interface) semanticObject); 
+				sequence_Interface(context, (Interface) semanticObject); 
 				return; 
 			case ToscaPackage.NODE_TEMPLATE:
-				sequence_Node_template(context, (Node_template) semanticObject); 
+				sequence_NodeTemplate(context, (NodeTemplate) semanticObject); 
 				return; 
 			case ToscaPackage.OPERATION:
 				sequence_Operation(context, (Operation) semanticObject); 
 				return; 
-			case ToscaPackage.OUTPUT:
-				sequence_Output(context, (Output) semanticObject); 
-				return; 
 			case ToscaPackage.PARAMETER:
-				sequence_Parameter_Impl(context, (tosca.Parameter) semanticObject); 
+				sequence_Parameter(context, (tosca.Parameter) semanticObject); 
 				return; 
-			case ToscaPackage.PARAMETERS:
-				sequence_Parameters(context, (Parameters) semanticObject); 
+			case ToscaPackage.POLICY:
+				sequence_Policy(context, (Policy) semanticObject); 
 				return; 
 			case ToscaPackage.PROPERTY:
 				sequence_Property(context, (Property) semanticObject); 
 				return; 
 			case ToscaPackage.RELATIONSHIP:
-				sequence_Relationship_Impl(context, (Relationship) semanticObject); 
+				sequence_Relationship(context, (Relationship) semanticObject); 
 				return; 
 			case ToscaPackage.REQUIREMENT:
 				sequence_Requirement(context, (Requirement) semanticObject); 
 				return; 
-			case ToscaPackage.SERVICE_TEMPLATE:
-				sequence_Service_Template(context, (Service_Template) semanticObject); 
-				return; 
-			case ToscaPackage.SOURCE_INTERFACE:
-				sequence_Source_interface(context, (Source_interface) semanticObject); 
-				return; 
-			case ToscaPackage.TARGET_INTERFACE:
-				sequence_Target_interface(context, (Target_interface) semanticObject); 
-				return; 
-			case ToscaPackage.INSTANCE:
-				sequence_instance(context, (instance) semanticObject); 
+			case ToscaPackage.TOPOLOGY_TEMPLATE:
+				sequence_TopologyTemplate(context, (TopologyTemplate) semanticObject); 
 				return; 
 			}
 		if (errorAcceptor != null)
@@ -109,59 +89,55 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Parameter returns Attribute
 	 *     Attribute returns Attribute
 	 *
 	 * Constraint:
-	 *     (
-	 *         parameter_name=STRING 
-	 *         type=STRING? 
-	 *         description=STRING? 
-	 *         value=STRING? 
-	 *         required=STRING? 
-	 *         default=STRING? 
-	 *         status=STRING?
-	 *     )
+	 *     attribute_name=STRING
 	 */
 	protected void sequence_Attribute(ISerializationContext context, Attribute semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.ATTRIBUTE__ATTRIBUTE_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.ATTRIBUTE__ATTRIBUTE_NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getAttributeAccess().getAttribute_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getAttribute_name());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Capability returns Capability
+	 *
+	 * Constraint:
+	 *     (
+	 *         capability_name=STRING 
+	 *         type=STRING 
+	 *         description=STRING? 
+	 *         (properties+=Property properties+=Property*)? 
+	 *         (attributes+=Attribute attributes+=Attribute*)?
+	 *     )
+	 */
+	protected void sequence_Capability(ISerializationContext context, Capability semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Relationship returns Connected_to
-	 *     Connected_to returns Connected_to
+	 *     Group returns Group
 	 *
 	 * Constraint:
 	 *     (
-	 *         type=STRING? 
-	 *         validSource=STRING? 
-	 *         validTarget=STRING? 
-	 *         (relation_haSourceInterface+=Source_interface relation_haSourceInterface+=Source_interface*)? 
-	 *         (relation_hasTargetInterface+=Target_interface relation_hasTargetInterface+=Target_interface*)?
+	 *         group_name=STRING 
+	 *         type=STRING 
+	 *         description=STRING? 
+	 *         (targets+=EString targets+=STRING*)? 
+	 *         properties=Property? 
+	 *         (interfaces+=Interface interfaces+=Interface*)?
 	 *     )
 	 */
-	protected void sequence_Connected_to(ISerializationContext context, Connected_to semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Relationship returns Contained_in
-	 *     Contained_in returns Contained_in
-	 *
-	 * Constraint:
-	 *     (
-	 *         type=STRING? 
-	 *         validSource=STRING? 
-	 *         validTarget=STRING? 
-	 *         (relation_haSourceInterface+=Source_interface relation_haSourceInterface+=Source_interface*)? 
-	 *         (relation_hasTargetInterface+=Target_interface relation_hasTargetInterface+=Target_interface*)?
-	 *     )
-	 */
-	protected void sequence_Contained_in(ISerializationContext context, Contained_in semanticObject) {
+	protected void sequence_Group(ISerializationContext context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -180,48 +156,34 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Input returns Input
-	 *     Parameter returns Input
-	 *
-	 * Constraint:
-	 *     (parameter_name=STRING description=STRING? type=STRING? default=STRING?)
-	 */
-	protected void sequence_Input(ISerializationContext context, Input semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Interface returns Interface
-	 *     Interface_Impl returns Interface
 	 *
 	 * Constraint:
-	 *     (interface_name=STRING (hasOperation+=Operation hasOperation+=Operation*)?)
+	 *     (interface_name=STRING type=STRING (operations+=Operation operations+=Operation*)? (inputs+=Property inputs+=Property*)?)
 	 */
-	protected void sequence_Interface_Impl(ISerializationContext context, Interface semanticObject) {
+	protected void sequence_Interface(ISerializationContext context, Interface semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Node_template returns Node_template
+	 *     NodeTemplate returns NodeTemplate
 	 *
 	 * Constraint:
 	 *     (
 	 *         node_template_name=STRING 
-	 *         type=STRING? 
+	 *         type=STRING 
 	 *         description=STRING? 
-	 *         (nodeTemplate_hasInterface+=Interface nodeTemplate_hasInterface+=Interface*)? 
-	 *         (nodeTemplate_hasProperty+=Property nodeTemplate_hasProperty+=Property*)? 
-	 *         (nodeTemplate_hasAttribute+=Attribute nodeTemplate_hasAttribute+=Attribute*)? 
-	 *         (nodeTemplate_hasRequirement+=Requirement nodeTemplate_hasRequirement+=Requirement*)? 
-	 *         (NodeTemplate_hasRelationship+=Relationship NodeTemplate_hasRelationship+=Relationship*)? 
-	 *         nodeTemplate_hasInstances=instance?
+	 *         (relationships+=Relationship relationships+=Relationship*)? 
+	 *         (interfaces+=Interface interfaces+=Interface*)? 
+	 *         (properties+=Property properties+=Property*)? 
+	 *         (attributes+=Attribute attributes+=Attribute*)? 
+	 *         (requirements+=Requirement requirements+=Requirement*)? 
+	 *         (capabilities+=Capability capabilities+=Capability*)?
 	 *     )
 	 */
-	protected void sequence_Node_template(ISerializationContext context, Node_template semanticObject) {
+	protected void sequence_NodeTemplate(ISerializationContext context, NodeTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -231,7 +193,13 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Operation returns Operation
 	 *
 	 * Constraint:
-	 *     (operation_name=STRING? script=STRING?)
+	 *     (
+	 *         operation_name=STRING 
+	 *         primary=STRING 
+	 *         description=STRING? 
+	 *         (dependentArtifacts+=EString dependentArtifacts+=EString*)? 
+	 *         (inputs+=Property inputs+=Property*)?
+	 *     )
 	 */
 	protected void sequence_Operation(ISerializationContext context, Operation semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -240,39 +208,37 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Output returns Output
-	 *     Parameter returns Output
-	 *
-	 * Constraint:
-	 *     (parameter_name=STRING description=STRING? value=STRING?)
-	 */
-	protected void sequence_Output(ISerializationContext context, Output semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Parameter_Impl returns Parameter
 	 *     Parameter returns Parameter
 	 *
 	 * Constraint:
-	 *     (parameter_name=STRING value=STRING?)
+	 *     parameter_name=STRING
 	 */
-	protected void sequence_Parameter_Impl(ISerializationContext context, tosca.Parameter semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_Parameter(ISerializationContext context, tosca.Parameter semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.PARAMETER__PARAMETER_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.PARAMETER__PARAMETER_NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getParameterAccess().getParameter_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getParameter_name());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
-	 *     Parameters returns Parameters
+	 *     Policy returns Policy
 	 *
 	 * Constraint:
-	 *     (Paremeters_hasParameter+=Parameter Paremeters_hasParameter+=Parameter*)?
+	 *     policy_name=STRING
 	 */
-	protected void sequence_Parameters(ISerializationContext context, Parameters semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_Policy(ISerializationContext context, Policy semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.POLICY__POLICY_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.POLICY__POLICY_NAME));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPolicyAccess().getPolicy_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getPolicy_name());
+		feeder.finish();
 	}
 	
 	
@@ -281,28 +247,39 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Property returns Property
 	 *
 	 * Constraint:
-	 *     (property_name=STRING (property_hasParameters+=Parameters property_hasParameters+=Parameters*)?)
+	 *     (property_name=STRING value=STRING)
 	 */
 	protected void sequence_Property(ISerializationContext context, Property semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.PROPERTY__PROPERTY_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.PROPERTY__PROPERTY_NAME));
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.PROPERTY__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.PROPERTY__VALUE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getProperty_name());
+		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_5_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Contexts:
 	 *     Relationship returns Relationship
-	 *     Relationship_Impl returns Relationship
 	 *
 	 * Constraint:
 	 *     (
-	 *         type=STRING? 
-	 *         validSource=STRING? 
-	 *         validTarget=STRING? 
-	 *         (relation_haSourceInterface+=Source_interface relation_haSourceInterface+=Source_interface*)? 
-	 *         (relation_hasTargetInterface+=Target_interface relation_hasTargetInterface+=Target_interface*)?
+	 *         relationship_name=STRING 
+	 *         type=STRING 
+	 *         target=STRING? 
+	 *         (interfaces+=Interface interfaces+=Interface*)? 
+	 *         (properties+=Property properties+=Property*)? 
+	 *         (attributes+=Attribute attributes+=Attribute*)? 
+	 *         (sourceInterfaces+=Interface sourceInterfaces+=Interface*)? 
+	 *         (targetInterfaces+=Interface targetInterfaces+=Interface*)?
 	 *     )
 	 */
-	protected void sequence_Relationship_Impl(ISerializationContext context, Relationship semanticObject) {
+	protected void sequence_Relationship(ISerializationContext context, Relationship semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -312,7 +289,7 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Requirement returns Requirement
 	 *
 	 * Constraint:
-	 *     (requirement_name=STRING? node=STRING? capability_Type_name=STRING? (occurances+=STRING occurances+=STRING*)?)
+	 *     (requirement_name=STRING capabiity=STRING node=STRING?)
 	 */
 	protected void sequence_Requirement(ISerializationContext context, Requirement semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -321,64 +298,23 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	
 	/**
 	 * Contexts:
-	 *     Service_Template returns Service_Template
+	 *     TopologyTemplate returns TopologyTemplate
 	 *
 	 * Constraint:
 	 *     (
-	 *         tosca_definitions_version=STRING? 
-	 *         (serviceTemplate_hasImport+=Import serviceTemplate_hasImport+=Import*)? 
-	 *         (serviceTemplate_hasInput+=Input serviceTemplate_hasInput+=Input*)? 
-	 *         service_hasNodeTemplate+=Node_template 
-	 *         service_hasNodeTemplate+=Node_template* 
-	 *         (serviceTemplate_hasOutput+=Output serviceTemplate_hasOutput+=Output*)?
+	 *         tosca_definitions_version=STRING 
+	 *         description=STRING? 
+	 *         (imports+=Import imports+=Import*)? 
+	 *         (outputs+=Parameter outputs+=Parameter*)? 
+	 *         (inputs+=Parameter inputs+=Parameter*)? 
+	 *         (nodeTemplates+=NodeTemplate nodeTemplates+=NodeTemplate*)? 
+	 *         (realtionships+=Relationship realtionships+=Relationship*)? 
+	 *         (groups+=Group groups+=Group*)? 
+	 *         (policies+=Policy policies+=Policy*)?
 	 *     )
 	 */
-	protected void sequence_Service_Template(ISerializationContext context, Service_Template semanticObject) {
+	protected void sequence_TopologyTemplate(ISerializationContext context, TopologyTemplate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Interface returns Source_interface
-	 *     Source_interface returns Source_interface
-	 *
-	 * Constraint:
-	 *     (interface_name=STRING (hasOperation+=Operation hasOperation+=Operation*)?)
-	 */
-	protected void sequence_Source_interface(ISerializationContext context, Source_interface semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     Interface returns Target_interface
-	 *     Target_interface returns Target_interface
-	 *
-	 * Constraint:
-	 *     (interface_name=STRING (hasOperation+=Operation hasOperation+=Operation*)?)
-	 */
-	protected void sequence_Target_interface(ISerializationContext context, Target_interface semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
-	 *     instance returns instance
-	 *
-	 * Constraint:
-	 *     deploy=EInt
-	 */
-	protected void sequence_instance(ISerializationContext context, instance semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.INSTANCE__DEPLOY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.INSTANCE__DEPLOY));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getInstanceAccess().getDeployEIntParserRuleCall_1_0(), semanticObject.getDeploy());
-		feeder.finish();
 	}
 	
 	

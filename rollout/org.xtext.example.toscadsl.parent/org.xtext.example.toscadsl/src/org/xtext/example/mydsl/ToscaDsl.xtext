@@ -4,238 +4,122 @@ grammar org.xtext.example.mydsl.ToscaDsl with org.eclipse.xtext.common.Terminals
 import "http://tosca/1.0" 
 import "http://www.eclipse.org/emf/2002/Ecore" as ecore
 
-Service_Template returns Service_Template:
-// change type of Estring to STRING so xtext will generate "Double quotations" automatically	
+TopologyTemplate returns TopologyTemplate:
 	'{'
-		('"tosca_definitions_version" :' tosca_definitions_version=STRING)?		
-		('\n, "imports" :' '[' serviceTemplate_hasImport+=Import ( "," serviceTemplate_hasImport+=Import)* ']' )?		
-		('\n, "inputs" :' '{' serviceTemplate_hasInput+=Input ( "," serviceTemplate_hasInput+=Input)* '}' )?
-		 '\n, "node_templates" :' '{' service_hasNodeTemplate+=Node_template ( "," service_hasNodeTemplate+=Node_template)* '}' 
-		('\n, "outputs" :' '{' serviceTemplate_hasOutput+=Output ( "," serviceTemplate_hasOutput+=Output)* '}' )?
+		'"tosca_definitions_version" :' tosca_definitions_version=STRING 
+		(',\n"description" :' description=STRING )? 
+		(',\n"imports" :' '[' imports+=Import ( "," imports+=Import)* ']' )? 
+		(',\n"outputs" :' '{' outputs+=Parameter ( "," outputs+=Parameter)* '}' )? 
+		(',\n"inputs" :' '{' inputs+=Parameter ( "," inputs+=Parameter)* '}' )? 
+		(',\n"nodeTemplates" :' '{' nodeTemplates+=NodeTemplate ( "," nodeTemplates+=NodeTemplate)* '}' )? 
+		(',\n"realtionships" :' '{' realtionships+=Relationship ( "," realtionships+=Relationship)* '}' )? 
+		(',\n"groups" :' '{' groups+=Group ( "," groups+=Group)* '}')? 
+		(',\n"policies" :' '{' policies+=Policy ( "," policies+=Policy)* '}')? 
 	'}';
-
-
-
-
-
-Interface returns Interface:
-	Interface_Impl | Source_interface | Target_interface;
-
-
-
-
-Relationship returns Relationship:
-	Relationship_Impl | Contained_in | Connected_to;
-
-
-
-
-
 
 EString returns ecore::EString:
 	STRING | ID;
 
 Import returns Import:
 	{Import}	
-		//(import_name=EString)?
 		(file=STRING)?
-		//('repository' repository=EString)?
-		//('namespace_uri' namespace_uri=EString)?
-		//('namespace_prefix' namespace_prefix=EString)?
-	;
-
-Output returns Output:
-	{Output}
-	
-	parameter_name=STRING ':'
-	'{'
-		('"description" :' description=STRING)?
-		//('"type" :' type=EString)?
-		
-		('\n, "value" :' value=STRING)?
-		//('required' required=EString)?
-		//('default' default=EString)?
-		//('status' status=EString)?
-	'}';
-
-Input returns Input:
-	{Input}
-    parameter_name=STRING     '  :'
-	'{'
-	    ('"description" :' description=STRING)?
-		('\n, "type" :' type=STRING)?		
-		//('required' required=EString)?
-		//(value=STRING)?
-		('\n, "default"  :' default=STRING)?
-		//('status' status=EString)?
-		
-	'}'
-	;
-/*
-Input returns Input:
-	{Input}
-	
-	parameter_name=EString
-	'{'
-		('type' type=EString)?
-		('description' description=EString)?
-		('value' value=EString)?
-		('required' required=EString)?
-		('default' default=EString)?
-		('status' status=EString)?
-	'}';
-*/
-Node_template returns Node_template:
-	{Node_template}
-	node_template_name=STRING ':'
-	'{'
-		('"type" :' type=STRING)?
-		(', \n "description" :' description=STRING)?
-		(', \n "interfaces" :' '{' nodeTemplate_hasInterface+=Interface ( "," nodeTemplate_hasInterface+=Interface)* '}' )?
-		(', \n "properties" :' '{' nodeTemplate_hasProperty+=Property ( "," nodeTemplate_hasProperty+=Property)* '}' )?
-		(', \n "attributes" :' '{' nodeTemplate_hasAttribute+=Attribute ( "," nodeTemplate_hasAttribute+=Attribute)* '}' )?
-		(', \n "requirements" :' '{' nodeTemplate_hasRequirement+=Requirement ( "," nodeTemplate_hasRequirement+=Requirement)* '}' )?
-		(', \n "relationships" :' '[' NodeTemplate_hasRelationship+=Relationship ( "," NodeTemplate_hasRelationship+=Relationship)* ']' )?
-	    (', \n "instances" :' '{' nodeTemplate_hasInstances=instance '}')?
-	'}';
-
-
-
-Interface_Impl returns Interface:
-   {Interface}
-   interface_name=STRING ':'
-	'{'		
-		(hasOperation+=Operation ( "," hasOperation+=Operation)*)?
-		//('interface_hasInput' '{' interface_hasInput+=Input ( "," interface_hasInput+=Input)* '}' )?
-	'}';
-	
-
-	
-	
-
-
-Property returns Property:
-	{Property}	
-	property_name=STRING ':'
-	'['
-		(property_hasParameters+=Parameters ( "," property_hasParameters+=Parameters)*  )?
-	']';
-Parameters returns Parameters:
-	{Parameters}
-	'{'	
-		( Paremeters_hasParameter+=Parameter ( "," Paremeters_hasParameter+=Parameter)*)?
-	'}'
-	;
-
-Parameter_Impl returns Parameter:
-	{Parameter}
-	
-	parameter_name=STRING ':'
+;
 	//'{'
-	//	('type' type=EString)?
-		//('description' description=EString)?
-		(value=STRING)?
-		//('required' required=EString)?
-		//('default' default=EString)?
-		//('status' status=EString)?
-	//'}'
-	;
+		//'"file" :' file=EString 
+		//(',\n"import_name" :' import_name=STRING )?
+		//(',\n"repository" :' repository=STRING )?
+		//(',\n"namespace_uri" :' namespace_uri=STRING )?
+		//(',\n"namespace_prefix" :' namespace_prefix=STRING )?
+	//'}';
 
 Parameter returns Parameter:
-	Parameter_Impl | Attribute | Input | Output;	
+	{Parameter}
+	parameter_name=STRING;
 
+NodeTemplate returns NodeTemplate:
+	{NodeTemplate }
+	node_template_name=STRING ":"
+	'{'
+		'"type" :' type=STRING 
+		(',\n"description" :' description=STRING )?
+		(',\n"relationships" :' '{' relationships+=Relationship ( "," relationships+=Relationship)* '}' )?
+		(',\n"interfaces" :' '{' interfaces+=Interface ( "," interfaces+=Interface)* '}' )?
+		(',\n"properties" :' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		(',\n"attributes" :' '{' attributes+=Attribute ( "," attributes+=Attribute)* '}' )?
+		(',\n"requirements" :' '{' requirements+=Requirement ( "," requirements+=Requirement)* '}' )?
+		(',\n"capabilities" :' '{' capabilities+=Capability ( "," capabilities+=Capability)* '}' )?
+	'}';
+
+Relationship returns Relationship:
+	{Relationship}
+	relationship_name=STRING ":"
+	'{'
+		'"type" :' type=STRING
+		(',\n"target" :' target=STRING )?
+		(',\n"interfaces" :' '{' interfaces+=Interface ( "," interfaces+=Interface)* '}' )?
+		(',\n"properties" :' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		(',\n"attributes" :' '{' attributes+=Attribute ( "," attributes+=Attribute)* '}' )?
+		(',\n"sourceInterfaces" :' '{' sourceInterfaces+=Interface ( "," sourceInterfaces+=Interface)* '}' )?
+		(',\n"targetInterfaces" :' '{' targetInterfaces+=Interface ( "," targetInterfaces+=Interface)* '}' )?
+	'}';
+
+Group returns Group:
+	{Group}
+	group_name=STRING ":"
+	'{'
+		'"type" :' type=STRING 
+		(',\n"description" :' description=STRING )?
+		(',\n"targets" :' '{' targets+=EString ( "," targets+=STRING)* '}' )?
+		(',\n"properties" :' properties=Property )?
+		(',\n"interfaces" :' '{' interfaces+=Interface ( "," interfaces+=Interface)* '}' )?
+	'}';
+
+Policy returns Policy:
+	{Policy}
+	policy_name=STRING ":";
+
+Interface returns Interface:
+	{Interface}
+	interface_name=STRING ":"
+	'{'
+		'"type" :' type=STRING 
+		(',\n"operations" :' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
+		(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+	'}';
+
+Property returns Property:
+	{Property}
+	property_name=STRING ":"
+	'{'
+		'"value" :' value=STRING
+	'}';
 
 Attribute returns Attribute:
 	{Attribute}
-	'Attribute'
-	parameter_name=STRING
-	'{'
-		('type' type=STRING)?
-		('description' description=STRING)?
-		('value' value=STRING)?
-		('required' required=STRING)?
-		('default' default=STRING)?
-		('status' status=STRING)?
-	'}';
+	attribute_name=STRING ":";
 
 Requirement returns Requirement:
-	{Requirement}
-	'Requirement'
+	requirement_name=STRING ":"
 	'{'
-		('requirement_name' requirement_name=STRING)?
-		('node' node=STRING)?
-		('capability_Type_name' capability_Type_name=STRING)?
-		('occurances' '{' occurances+=STRING ( "," occurances+=STRING)* '}' )?
+		'"capabiity" :' capabiity=STRING
+		(',\n"node" :' node=STRING )?
 	'}';
 
-Relationship_Impl returns Relationship:
-	{Relationship}
+Capability returns Capability:
+	capability_name=STRING ":"
 	'{'
-		('"type" :' type=STRING)?
-		(', \n "source" :' validSource=STRING)?
-		(', \n "target" :' validTarget=STRING)?
-		(', \n "source_interfaces" :' '{' relation_haSourceInterface+=Source_interface ( "," relation_haSourceInterface+=Source_interface)* '}' )?
-		(', \n "target_interfaces" :' '{' relation_hasTargetInterface+=Target_interface ( "," relation_hasTargetInterface+=Target_interface)* '}' )?
+		'"type" :' type=STRING 
+		(',\n"description" :' description=STRING )?
+		(',\n"properties" :' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		(',\n"attributes" :' '{' attributes+=Attribute ( "," attributes+=Attribute)* '}' )?
 	'}';
-	
-instance returns instance:
-	
-		'"deploy" :' deploy=EInt
-	;
 
 Operation returns Operation:
-	{Operation}	
-		(operation_name=STRING)? ':'
-		//('description' description=EString)?
-		(script=STRING)?
-		//('executor' executor=EString)?
-		//('operation_hasInput' '{' operation_hasInput+=Input ( "," operation_hasInput+=Input)* '}' )?
-	;
-
-Source_interface returns Source_interface:
-	{Source_interface}
-	interface_name=STRING ' :'
+	{Operation}
+	operation_name=STRING ":"
 	'{'
-		
-		( hasOperation+=Operation ( "," hasOperation+=Operation)* )?
-		//('interface_hasInput' '{' interface_hasInput+=Input ( "," interface_hasInput+=Input)* '}' )?
+		'"primary" :' primary=STRING
+		(',\n"description" :' description=STRING )?
+		(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ( "," dependentArtifacts+=EString)* '}' )?
+		(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
 	'}';
-
-Target_interface returns Target_interface:
-	{Target_interface}	
-	interface_name=STRING '  :'//**keep the spaces before ":" to avoid ambiguity!!**
-	'{'
-		('hasOperation' '{' hasOperation+=Operation ( "," hasOperation+=Operation)* '}' )?
-		//('interface_hasInput' '{' interface_hasInput+=Input ( "," interface_hasInput+=Input)* '}' )?
-	'}';
-
-
-
-
-
-Contained_in returns Contained_in:
-	{Contained_in}
-	'Contained_in'
-	'{'
-		('type' type=STRING)?
-		('validSource' validSource=STRING)?
-		('validTarget' validTarget=STRING)?
-		('relation_haSourceInterface' '{' relation_haSourceInterface+=Source_interface ( "," relation_haSourceInterface+=Source_interface)* '}' )?
-		('relation_hasTargetInterface' '{' relation_hasTargetInterface+=Target_interface ( "," relation_hasTargetInterface+=Target_interface)* '}' )?
-	'}';
-
-Connected_to returns Connected_to:
-	{Connected_to}
-	'Connected_to'
-	'{'
-		('type' type=STRING)?
-		('validSource' validSource=STRING)?
-		('validTarget' validTarget=STRING)?
-		('relation_haSourceInterface' '{' relation_haSourceInterface+=Source_interface ( "," relation_haSourceInterface+=Source_interface)* '}' )?
-		('relation_hasTargetInterface' '{' relation_hasTargetInterface+=Target_interface ( "," relation_hasTargetInterface+=Target_interface)* '}' )?
-	'}';
-	
-EInt returns ecore::EInt:
-	'-'? INT;
-
-

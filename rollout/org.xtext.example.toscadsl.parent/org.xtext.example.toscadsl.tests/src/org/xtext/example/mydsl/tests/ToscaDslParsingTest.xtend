@@ -10,14 +10,14 @@ import org.eclipse.xtext.junit4.util.ParseHelper
 import org.junit.Assert
 import org.junit.Test
 import org.junit.runner.RunWith
-import tosca.Service_Template
+import tosca.TopologyTemplate
 
 @RunWith(XtextRunner)
 @InjectWith(ToscaDslInjectorProvider)
 class ToscaDslParsingTest{
 
 	@Inject
-	ParseHelper<Service_Template> parseHelper
+	ParseHelper<TopologyTemplate> parseHelper
 
 	@Test 
 	def void loadModel() {

@@ -27,8 +27,8 @@ public class Xmi2jsonGrammarRunner {
     public final static String OUT_METAMODEL = "./metamodels/tosca.ecore";
     public final static String OUT_METAMODEL_NAME = "TOSCA";
 
-    public final static String IN_MODEL = "./models/ddsm_sample.xmi";
-    public final static String OUT_MODEL = "./models/tosca_sample.xmi";
+    public final static String IN_MODEL = "./models/sample_ddsm.xmi";
+    public final static String OUT_MODEL = "./models/sample_tosca.xmi";
 
     public final static String TRANSFORMATION_DIR = "./transformations/";
     public final static String TRANSFORMATION_MODULE = "ddsm2tosca";
@@ -41,7 +41,7 @@ public class Xmi2jsonGrammarRunner {
         // transformation from XX-DDSM to TOSCA-DDSM.xmi
         // Second Argument is the name of the output file that generates the
         // YAML as output
-        runme("tosca_sample", "tosca_sample");
+        runme("models/sample_tosca", "models/sample_tosca");
     }
 
     @SuppressWarnings("unchecked")
@@ -68,7 +68,7 @@ public class Xmi2jsonGrammarRunner {
         Resource textualModel_resource = (Resource) xtext_resourceSet
                 .createResource(URI.createURI(toscaJsonModelPath + ".tosca"));
         // add the contents of the source model into destination model
-
+        System.out.println(xmi_resource.getContents().get(0).toString());
         textualModel_resource.getContents().add(xmi_resource.getContents().get(0));
 
         // save the destination file

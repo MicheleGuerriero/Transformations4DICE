@@ -1,0 +1,30 @@
+tosca_definitions_version: cloudify_dsl_1_1
+imports: [insert here statically the list of DICE tosca imports, insert here statically the list of DICE tosca imports,
+  insert here statically the list of DICE tosca imports, insert here statically the list of DICE tosca imports,
+  insert here statically the list of DICE tosca imports]
+nodeTemplates:
+  v1:
+    type: '#Small'
+    interfaces:
+      r1.1:
+        type: r1.1_Type
+        operations:
+          s1.1.1: {primary: jnbwdfciw}
+    properties:
+      p1.1: {value: sdkjbcs}
+      p1.2: {value: dfn vs mc}
+  v2:
+    type: '#Small'
+    interfaces:
+      r2.1:
+        type: r2.1_Type
+        operations:
+          s2.1.1: {primary: sfibcsbke}
+          s2.1.2: {primary: 'wmedf ks '}
+      r2.2:
+        type: r2.2_Type
+        operations:
+          s2.2.1: {primary: wsdkjfbs}
+    properties:
+      p2.1: {value: dkjfnv}
+

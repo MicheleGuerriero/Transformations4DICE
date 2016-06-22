@@ -27,7 +27,7 @@ public class ToscaDslParser extends AbstractAntlrParser {
 
 	@Override 
 	protected String getDefaultRuleName() {
-		return "Service_Template";
+		return "TopologyTemplate";
 	}
 
 	public ToscaDslGrammarAccess getGrammarAccess() {

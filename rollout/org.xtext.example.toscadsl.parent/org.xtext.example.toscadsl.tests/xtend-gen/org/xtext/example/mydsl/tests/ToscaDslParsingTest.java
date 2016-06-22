@@ -13,14 +13,14 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.xtext.example.mydsl.tests.ToscaDslInjectorProvider;
-import tosca.Service_Template;
+import tosca.TopologyTemplate;
 
 @RunWith(XtextRunner.class)
 @InjectWith(ToscaDslInjectorProvider.class)
 @SuppressWarnings("all")
 public class ToscaDslParsingTest {
   @Inject
-  private ParseHelper<Service_Template> parseHelper;
+  private ParseHelper<TopologyTemplate> parseHelper;
   
   @Test
   public void loadModel() {
@@ -28,7 +28,7 @@ public class ToscaDslParsingTest {
       StringConcatenation _builder = new StringConcatenation();
       _builder.append("Hello Xtext!");
       _builder.newLine();
-      final Service_Template result = this.parseHelper.parse(_builder);
+      final TopologyTemplate result = this.parseHelper.parse(_builder);
       Assert.assertNotNull(result);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
