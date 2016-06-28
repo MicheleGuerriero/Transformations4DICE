@@ -1,60 +1,48 @@
 {
 	"tosca_definitions_version" : "cloudify_dsl_1_1" ,
-"imports" : [ "insert here statically the list of DICE tosca imports",
-	"insert here statically the list of DICE tosca imports",
-	"insert here statically the list of DICE tosca imports",
-	"insert here statically the list of DICE tosca imports",
-	"insert here statically the list of DICE tosca imports" ] ,
+"imports" : [ "http://www.getcloudify.org/spec/cloudify/3.3.1/types.yaml",
+	"https://raw.githubusercontent.com/dice-project/DICE-FCO-Plugin-Cloudify//plugin.yaml",
+	"http://www.getcloudify.org/spec/chef-plugin/1.3.1/plugin.yaml",
+	"http://dice-project.github.io/DICE-Deployment-Cloudify/spec///plugin.yaml",
+	"types/dice.yaml" ] ,
 "nodeTemplates" : {
-		"v1" : {
-			"type" : "#Small" ,
-"interfaces" : {
-				"r1.1" : {
-					"type" : "r1.1_Type" ,
-"operations" : {
-						"s1.1.1" : {
-							"primary" : "jnbwdfciw"
-						}
-					}
-				}
-			}
-			,
+		"vm1" : {
+			"type" : "dice.hosts.Small" ,
 "properties" : {
-				"p1.1" : {
-					"value" : "sdkjbcs"
-				},
-				"p1.2" : {
-					"value" : "dfn vs mc"
+				"instances" : {
+					"value" : "1"
 				}
 			}
 		},
-		"v2" : {
-			"type" : "#Small" ,
-"interfaces" : {
-				"r2.1" : {
-					"type" : "r2.1_Type" ,
-"operations" : {
-						"s2.1.1" : {
-							"primary" : "sfibcsbke"
-						},
-						"s2.1.2" : {
-							"primary" : "wmedf ks "
-						}
-					}
-				},
-				"r2.2" : {
-					"type" : "r2.2_Type" ,
-"operations" : {
-						"s2.2.1" : {
-							"primary" : "wsdkjfbs"
-						}
-					}
+		"vm2" : {
+			"type" : "dice.hosts.Small" ,
+"properties" : {
+				"instances" : {
+					"value" : "1"
 				}
 			}
-			,
-"properties" : {
-				"p2.1" : {
-					"value" : "dkjfnv"
+		},
+		"comp1" : {
+			"type" :
+			"org.eclipse.emf.ecore.impl.EClassImpl@61862a7f (name: InternalComponent) (instanceClassName: null) (abstract: false, interface: false)" ,
+"relationships" : {
+				"comp1ToVm1" : {
+					"type" : "cloudify.relationships.contained_in" ,
+"target" : "vm1"
+				},
+				"comp1ToComp2" : {
+					"type" : "cloudify.relationships.connected_to" ,
+"target" : "comp2"
+				}
+			}
+		},
+		"comp2" : {
+			"type" :
+			"org.eclipse.emf.ecore.impl.EClassImpl@61862a7f (name: InternalComponent) (instanceClassName: null) (abstract: false, interface: false)" ,
+"relationships" : {
+				"comp2ToVm2" : {
+					"type" : "cloudify.relationships.contained_in" ,
+"target" : "vm2"
 				}
 			}
 		}

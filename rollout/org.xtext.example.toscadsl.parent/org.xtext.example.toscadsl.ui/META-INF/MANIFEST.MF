@@ -7,7 +7,6 @@ Bundle-SymbolicName: org.xtext.example.toscadsl.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.toscadsl,
  org.xtext.example.toscadsl.ide,
- io.github.dice-project.tosca,
  org.eclipse.xtext.ui,
  org.eclipse.xtext.ui.shared,
  org.eclipse.xtext.ui.codetemplates.ui,

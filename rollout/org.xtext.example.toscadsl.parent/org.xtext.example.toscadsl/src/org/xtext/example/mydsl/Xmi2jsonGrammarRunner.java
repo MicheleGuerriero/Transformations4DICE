@@ -68,7 +68,6 @@ public class Xmi2jsonGrammarRunner {
         Resource textualModel_resource = (Resource) xtext_resourceSet
                 .createResource(URI.createURI(toscaJsonModelPath + ".tosca"));
         // add the contents of the source model into destination model
-        System.out.println(xmi_resource.getContents().get(0).toString());
         textualModel_resource.getContents().add(xmi_resource.getContents().get(0));
 
         // save the destination file

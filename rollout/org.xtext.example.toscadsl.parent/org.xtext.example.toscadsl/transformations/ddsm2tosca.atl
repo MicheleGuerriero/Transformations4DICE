@@ -2,7 +2,6 @@
 -- @nsURI DDSM=http://ddsm/1.0
 -- @atlcompiler emftvm
 
-
 module ddsm2tosca;
 create tosca : TOSCA from ddsm : DDSM;
 
@@ -19,8 +18,11 @@ rule DDSM2TOSCA{
 			description <- s.description,
 					
 			nodeTemplates <- s.cloudelement 
-			-> select(element | element.oclIsKindOf(DDSM!VM))
-			-> collect(element | thisModule.getNodeTemplatesFromVM(element))
+			-> select(element | element.oclIsTypeOf(DDSM!VM))
+			-> collect(element | thisModule.getNodeTemplatesFromVM(element)).
+			union(s.cloudelement 
+			-> select(element | element.oclIsTypeOf(DDSM!InternalComponent))
+			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element)))
 			
 		)
 	do {
@@ -35,6 +37,73 @@ rule DDSM2TOSCA{
 	}
 }
 
+lazy rule getNodeTemplatesFromInternalComponent{
+	from 
+		s : DDSM!InternalComponent
+	to
+		t : TOSCA!NodeTemplate(
+			node_template_name <- s.elementId,	
+			type <- s.oclType().toString(), 
+			
+			relationships <- s.requiredexecutionplatform -> collect( platform | 
+				thisModule.getContainedInRelationshipFromExecutionBinding(DDSM!ExecutionBinding.allInstances() ->  any(binding | 
+			binding.requiredexecutionplatform.elementId = platform.elementId
+			))).union(
+				s.requiredport -> collect( port | 
+				thisModule.getConnectedToRelationshipFromRelationship(DDSM!Relationship.allInstances() ->  any(relationship | 
+				relationship.requiredport.elementId = port.elementId
+			)))),
+			
+			properties <- s.property 
+			-> collect(property | thisModule.getProperty(property)),
+			
+			interfaces <- 
+			s.resource 
+			-> select(resource | resource.oclIsTypeOf(DDSM!Resource))
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)).union(
+			s.resource 
+			-> select(lifecycle | lifecycle.oclIsTypeOf(DDSM!LifeCycle))
+			-> collect(lifecycle | thisModule.getInterfaceFromLifecycleResource(lifecycle))
+			)	
+		)
+		
+}
+
+lazy rule getContainedInRelationshipFromExecutionBinding{
+	from
+		s:  DDSM!ExecutionBinding
+	to
+		t: TOSCA!Relationship(
+			relationship_name <- s.elementId,
+			target <- s.providedexecutionplatform.owner.elementId,
+			type <- 'cloudify.relationships.contained_in',
+			sourceInterfaces <- s.requiredexecutionplatform.resource 
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)),
+			targetInterfaces <- s.providedexecutionplatform.resource 
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)),
+			properties <- s.property 
+			-> collect(property | thisModule.getProperty(property))
+		)
+}
+
+lazy rule getConnectedToRelationshipFromRelationship{
+	from
+		s:  DDSM!Relationship
+	to
+		t: TOSCA!Relationship(
+			relationship_name <- s.elementId,
+			target <- s.providedport.owner.elementId,
+			type <- 'cloudify.relationships.connected_to',
+			sourceInterfaces <- s.requiredport.resource 
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)),
+			targetInterfaces <- s.providedport.resource 
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)),
+			properties <- s.property 
+			-> collect(property | thisModule.getProperty(property))
+		)
+		
+}
+
 helper context DDSM!Provider def: isFlexiant(): Boolean =
 	if self.type = #Flexiant then
 		true
@@ -45,49 +114,76 @@ helper context DDSM!Provider def: isFlexiant(): Boolean =
 
 rule getFlexiantImport(){
 	using {
-	
-		
+		FCO_CLIENT_PLUGIN_VERSION: String = '';
+		PLATFORM: String = '';
+		FCO_CLIENT_VERSION: String = '';
 	}
 	to 
 		i1: TOSCA!Import(
-			file <- 'insert here statically the list of DICE tosca imports'
+			file <- 'http://www.getcloudify.org/spec/cloudify/3.3.1/types.yaml'
 		),
 		i2: TOSCA!Import(
-			file <- 'insert here statically the list of DICE tosca imports'
+			file <- 'https://raw.githubusercontent.com/dice-project/DICE-FCO-Plugin-Cloudify/' + FCO_CLIENT_PLUGIN_VERSION + '/plugin.yaml'
 		),
 		i3: TOSCA!Import(
-			file <- 'insert here statically the list of DICE tosca imports'
+			file <- 'http://www.getcloudify.org/spec/chef-plugin/1.3.1/plugin.yaml'
 		),
 		i4: TOSCA!Import(
-			file <- 'insert here statically the list of DICE tosca imports'
+			file <- 'http://dice-project.github.io/DICE-Deployment-Cloudify/spec/' + PLATFORM + '/' + FCO_CLIENT_VERSION + '/plugin.yaml'
 		),
 		i5: TOSCA!Import(
-			file <- 'insert here statically the list of DICE tosca imports'
+			file <- 'types/dice.yaml'
 		)
 	do {
 		Sequence{i1,i2,i3,i4,i5};	
 	}
 }
 
+rule getOpenstackImport(){
+	using {
+		OPENSTACK_VERSION: String = '';
+	}
+	to 
+		i1: TOSCA!Import(
+			file <- 'openstack-example-import-1' + OPENSTACK_VERSION
+		),
+		i2: TOSCA!Import(
+			file <- 'openstack-example-import-2' + OPENSTACK_VERSION
+		)
+	do {
+		Sequence{i1,i2};	
+	}
+}
+
 lazy rule getNodeTemplatesFromVM{
 	from 
 		s : DDSM!VM
+	using {
+		instances_property_name: String = 'instances';	
+		instances_property: Sequence(TOSCA!Property) = thisModule.getPropertyFromAttribute(instances_property_name, s.instances);
+	}
 	to
 		t : TOSCA!NodeTemplate(
 			node_template_name <- s.elementId,
             type <- s.getVMGenericSize, 
 			
 			properties <- s.property 
-			-> collect(property | thisModule.getProperty(property)),
+			-> collect(property | thisModule.getProperty(property)) -> union(instances_property),	
 			
-			interfaces <- s.resource 
-			-> collect(resource | thisModule.getInterfaceFromResource(resource))
+			interfaces <- 
+			s.resource 
+			-> select(resource | resource.oclIsTypeOf(DDSM!Resource))
+			-> collect(resource | thisModule.getInterfaceFromResource(resource)).union(
+			s.resource 
+			-> select(lifecycle | lifecycle.oclIsTypeOf(DDSM!LifeCycle))
+			-> collect(lifecycle | thisModule.getInterfaceFromLifecycleResource(lifecycle))
+			)
 		)
 }
 
 helper context DDSM!VM def: getVMGenericSize: String =
 	if not self.genericSize.oclIsUndefined() then
-		self.genericSize.toString()
+		'dice.hosts.' + self.genericSize.toString().replaceAll('#', '')
 	else
 		'dice.hosts.GenericHost'
 	endif;
@@ -98,9 +194,31 @@ lazy rule getInterfaceFromResource{
 	to
 		t: TOSCA!Interface(
 			interface_name <- s.resourceId,	
-			type <- s.resourceId + '_Type',
+			type <- s.oclType(),
 			operations <- s.scripts -> collect(script | thisModule.getOperationFromScript(script))
 		)
+}
+
+lazy rule getInterfaceFromLifecycleResource{
+	from
+		s: DDSM!LifeCycle
+	using {
+		download: TOSCA!Operation = thisModule.getOperationFromScript(s.downloadCommand);
+		preconfigure: TOSCA!Operation = thisModule.getOperationFromScript(s.preconfigureCommand);
+		install: TOSCA!Operation = thisModule.getOperationFromScript(s.installCommand);
+		start: TOSCA!Operation = thisModule.getOperationFromScript(s.startCommand);
+		stop: TOSCA!Operation = thisModule.getOperationFromScript(s.stopCommand);
+		ccreate: TOSCA!Operation = thisModule.getOperationFromScript(s.createCommand);
+
+	}
+	to
+		t: TOSCA!Interface(
+			interface_name <- s.resourceId,	
+			type <- s.oclType()
+		)
+	do{
+		t.operations <- Sequence{download, preconfigure, install, start, stop, ccreate};
+	}
 }
 
 lazy rule getOperationFromScript{
@@ -123,3 +241,13 @@ lazy rule getProperty{
 		)
 }
 
+rule getPropertyFromAttribute(name: String, value: Integer){
+	to
+		t : TOSCA!Property(
+			property_name <- name,
+			value <- value.toString()
+		)
+	do {
+		Sequence{t};
+	}
+}

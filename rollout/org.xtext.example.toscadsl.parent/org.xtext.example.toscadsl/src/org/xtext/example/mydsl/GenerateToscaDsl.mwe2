@@ -31,7 +31,7 @@ Workflow {
 		language = StandardLanguage {
 			name = "org.xtext.example.mydsl.ToscaDsl"
 			fileExtensions = "tosca"
-			referencedResource = "platform:/resource/io.github.dice-project.tosca/model/tosca.genmodel"
+			referencedResource = "platform:/resource/org.xtext.example.toscadsl/metamodels/tosca.genmodel"
 			
 			fragment = ecore2xtext.Ecore2XtextValueConverterServiceFragment2 auto-inject {}
 
