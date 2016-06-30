@@ -1,23 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ddsm:DDSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddsm="http://ddsm/1.0" xsi:schemaLocation="http://ddsm/1.0 ddsm.ecore">
-  <cloudelement xsi:type="ddsm:Provider" elementId="flexiant">
-    <property propertyId="maxVm" value="10"/>
-  </cloudelement>
-  <cloudelement xsi:type="ddsm:VM" elementId="vm1" provider="flexiant">
-    <providedexecutionplatform elementId="vm1Hosting" owner="vm1"/>
-  </cloudelement>
-  <cloudelement xsi:type="ddsm:VM" elementId="vm2" provider="flexiant">
-    <providedexecutionplatform elementId="vm2Hosting" owner="vm2"/>
-  </cloudelement>
-  <cloudelement xsi:type="ddsm:InternalComponent" elementId="comp1">
-    <requiredport elementId="comp1ReqComp2"/>
-    <requiredexecutionplatform elementId="comp1ReqHost"/>
-  </cloudelement>
-  <cloudelement xsi:type="ddsm:InternalComponent" elementId="comp2">
-    <providedport elementId="comp2ProvAccess" owner="comp2"/>
-    <requiredexecutionplatform elementId="comp2ReqHost"/>
-  </cloudelement>
-  <cloudelement xsi:type="ddsm:Relationship" elementId="comp1ToComp2" providedport="comp2ProvAccess" requiredport="comp1ReqComp2"/>
-  <cloudelement xsi:type="ddsm:ExecutionBinding" elementId="comp1ToVm1" requiredexecutionplatform="comp1ReqHost" providedexecutionplatform="vm1Hosting"/>
-  <cloudelement xsi:type="ddsm:ExecutionBinding" elementId="comp2ToVm2" requiredexecutionplatform="comp2ReqHost" providedexecutionplatform="vm2Hosting"/>
+<ddsm:DDSM xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddsm="http://ddsm/1.0" xsi:schemaLocation="http://ddsm/1.0 /org.xtext.example.toscadsl/metamodels/ddsm.ecore">
+  <cloudelement xsi:type="ddsm:StormSupervisor" elementId="storm"/>
+  <cloudelement xsi:type="ddsm:StormNimbus" elementId="nimbus"/>
+  <cloudelement xsi:type="ddsm:Zookeeper" elementId="zookeeper"/>
 </ddsm:DDSM>

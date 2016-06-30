@@ -9,7 +9,11 @@ rule DDSM2TOSCA{
 	from 
 		s: DDSM!DDSM
 	using{
-		flexiantImports: Sequence(TOSCA!Import) = thisModule.getFlexiantImport();	
+		flexiantImports: Sequence(TOSCA!Import) = thisModule.getFlexiantImport();
+		additionalNodes: Sequence(TOSCA!NodeTemplate) = s.cloudelement
+			-> select(element | element.oclIsTypeOf(DDSM!InternalComponent))
+			-> select(comp | comp.publicPorts.size() > 0)
+			-> collect(frontend | thisModule.getFloatingIpNodeFromFrontend(frontend.elementId, frontend.openedPort)).flatten();
 	}
 	to 
 		t: TOSCA!TopologyTemplate(
@@ -18,12 +22,12 @@ rule DDSM2TOSCA{
 			description <- s.description,
 					
 			nodeTemplates <- s.cloudelement 
-			-> select(element | element.oclIsTypeOf(DDSM!VM))
+			-> select(element | element.oclIsKindOf(DDSM!VM))
 			-> collect(element | thisModule.getNodeTemplatesFromVM(element)).
 			union(s.cloudelement 
-			-> select(element | element.oclIsTypeOf(DDSM!InternalComponent))
-			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element)))
-			
+			-> select(element | element.oclIsKindOf(DDSM!InternalComponent))
+			-> collect(element | thisModule.getNodeTemplatesFromInternalComponent(element))).
+			union(additionalNodes)
 		)
 	do {
 		for (p in DDSM!Provider.allInstances() ){
@@ -31,10 +35,30 @@ rule DDSM2TOSCA{
 			if (p.isFlexiant()) {
 				t.imports <- flexiantImports;
 			}
-		}
-		
-		
+		}	
+				
 	}
+}
+
+rule getFloatingIpNodeFromFrontend (elementId: String, publicPorts: Sequence(Integer)) {
+	using {
+		securityProperties: Sequence(TOSCA!Property) = publicPorts ->
+		collect(port | thisModule.getPropertyFromAttribute('port', port)).flatten();
+	}
+	to
+		t: TOSCA!NodeTemplate(
+			node_template_name <- elementId + '_floating_ip',
+			type <- 'cloudify.openstack.nodes.FloatingIP' -- this should probably be provider dependent
+		),
+		u: TOSCA!NodeTemplate(
+			node_template_name <- elementId + '_security_group',
+			type <- 'cloudify.openstack.nodes.SecurityGroup', -- this should probably be provider dependent
+			properties <- securityProperties
+		)
+	do {
+		Sequence{t,u};
+	}
+		
 }
 
 lazy rule getNodeTemplatesFromInternalComponent{
@@ -43,7 +67,7 @@ lazy rule getNodeTemplatesFromInternalComponent{
 	to
 		t : TOSCA!NodeTemplate(
 			node_template_name <- s.elementId,	
-			type <- s.oclType().toString(), 
+			type <- 'dice.' + s.oclType().refGetValue('name').toString(), 
 			
 			relationships <- s.requiredexecutionplatform -> collect( platform | 
 				thisModule.getContainedInRelationshipFromExecutionBinding(DDSM!ExecutionBinding.allInstances() ->  any(binding | 
