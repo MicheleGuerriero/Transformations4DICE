@@ -71,6 +71,7 @@ lazy rule getNodeTemplatesFromInternalComponent{
 			
 			relationships <- s.requiredexecutionplatform -> collect( platform | 
 				thisModule.getContainedInRelationshipFromExecutionBinding(DDSM!ExecutionBinding.allInstances() ->  any(binding | 
+					
 			binding.requiredexecutionplatform.elementId = platform.elementId
 			))).union(
 				s.requiredport -> collect( port | 
@@ -86,8 +87,8 @@ lazy rule getNodeTemplatesFromInternalComponent{
 			-> select(resource | resource.oclIsTypeOf(DDSM!Resource))
 			-> collect(resource | thisModule.getInterfaceFromResource(resource)).union(
 			s.resource 
-			-> select(lifecycle | lifecycle.oclIsTypeOf(DDSM!LifeCycle))
-			-> collect(lifecycle | thisModule.getInterfaceFromLifecycleResource(lifecycle))
+			-> select(resource | resource.oclIsTypeOf(DDSM!ChefResource))
+			-> collect(chef_resource | thisModule.getInterfaceFromChefResource(chef_resource))
 			)	
 		)
 		
@@ -199,8 +200,8 @@ lazy rule getNodeTemplatesFromVM{
 			-> select(resource | resource.oclIsTypeOf(DDSM!Resource))
 			-> collect(resource | thisModule.getInterfaceFromResource(resource)).union(
 			s.resource 
-			-> select(lifecycle | lifecycle.oclIsTypeOf(DDSM!LifeCycle))
-			-> collect(lifecycle | thisModule.getInterfaceFromLifecycleResource(lifecycle))
+			-> select(resource | resource.oclIsTypeOf(DDSM!ChefResource))
+			-> collect(chef_resource | thisModule.getInterfaceFromChefResource(chef_resource))
 			)
 		)
 }
@@ -215,43 +216,41 @@ helper context DDSM!VM def: getVMGenericSize: String =
 lazy rule getInterfaceFromResource{
 	from
 		s: DDSM!Resource
-	to
-		t: TOSCA!Interface(
-			interface_name <- s.resourceId,	
-			type <- s.oclType(),
-			operations <- s.scripts -> collect(script | thisModule.getOperationFromScript(script))
-		)
-}
-
-lazy rule getInterfaceFromLifecycleResource{
-	from
-		s: DDSM!LifeCycle
 	using {
-		download: TOSCA!Operation = thisModule.getOperationFromScript(s.downloadCommand);
-		preconfigure: TOSCA!Operation = thisModule.getOperationFromScript(s.preconfigureCommand);
-		install: TOSCA!Operation = thisModule.getOperationFromScript(s.installCommand);
-		start: TOSCA!Operation = thisModule.getOperationFromScript(s.startCommand);
-		stop: TOSCA!Operation = thisModule.getOperationFromScript(s.stopCommand);
-		ccreate: TOSCA!Operation = thisModule.getOperationFromScript(s.createCommand);
+		download: TOSCA!Operation = thisModule.getOperationFromScript('download', s.downloadCommand);
+		preconfigure: TOSCA!Operation = thisModule.getOperationFromScript('preconfigure', s.preconfigureCommand);
+		install: TOSCA!Operation = thisModule.getOperationFromScript('install', s.installCommand);
+		start: TOSCA!Operation = thisModule.getOperationFromScript('start', s.startCommand);
+		stop: TOSCA!Operation = thisModule.getOperationFromScript('stop', s.stopCommand);
+		ccreate: TOSCA!Operation = thisModule.getOperationFromScript('create', s.createCommand);
 
 	}
 	to
 		t: TOSCA!Interface(
 			interface_name <- s.resourceId,	
-			type <- s.oclType()
+			type <- 'cloudify.interfaces.lifecycle'
 		)
 	do{
 		t.operations <- Sequence{download, preconfigure, install, start, stop, ccreate};
 	}
 }
 
-lazy rule getOperationFromScript{
-	from 
-		s: DDSM!Script
+lazy rule getInterfaceFromChefResource {
+	from
+		s: DDSM!ChefResource
+	to
+		t: TOSCA!Interface(
+			interface_name <- s.resourceId,	
+			type <- 'dice.interfaces.chef_resource',
+			operations <- thisModule.getOperationFromScript('chef_cookbook' , s.cookbookId)
+		)
+}
+
+rule getOperationFromScript(operationId: String, command: String){
 	to
 		t: TOSCA!Operation(
-			operation_name <- s.scriptId,
-			primary <- s.scriptUri
+			operation_name <- operationId,
+			primary <- command
 		)
 }	
 	

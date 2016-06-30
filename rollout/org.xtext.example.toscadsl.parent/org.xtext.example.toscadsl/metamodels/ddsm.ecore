@@ -36,8 +36,12 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="resourceId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="scripts" lowerBound="1"
-        eType="#//Script" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="downloadCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="createCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="configureCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="installCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="startCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stopCommand" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Component" abstract="true" eSuperTypes="#//CloudElement">
     <eAnnotations source="http://es.unizar.disco/dice/profiles/generator">
@@ -170,23 +174,6 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="resources" upperBound="-1"
         eType="#//Resource" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="LifeCycle" eSuperTypes="#//Resource">
-    <eAnnotations source="http://es.unizar.disco/dice/profiles/generator">
-      <details key="description" value="test generation"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="downloadCommand" eType="#//Script"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="installCommand" eType="#//Script"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="startCommand" eType="#//Script"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stopCommand" eType="#//Script"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="preconfigureCommand" eType="#//Script"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="createCommand" eType="#//Script"
-        containment="true"/>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="StormSupervisor" eSuperTypes="#//InternalComponent">
     <eAnnotations source="http://es.unizar.disco/dice/profiles/generator">
       <details key="description" value="Specilization of an InternalComponent introduced in the context of DICE which captures &#xA;the deployment and configuration details of the Storm supervisor slave process."/>
@@ -270,10 +257,8 @@
     <eLiterals name="Flexiant"/>
     <eLiterals name="Openstack" value="1"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Script">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scriptId" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString" iD="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="scriptUri" lowerBound="1"
+  <eClassifiers xsi:type="ecore:EClass" name="ChefResource" eSuperTypes="#//Resource">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cookbookId" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
 </ecore:EPackage>
