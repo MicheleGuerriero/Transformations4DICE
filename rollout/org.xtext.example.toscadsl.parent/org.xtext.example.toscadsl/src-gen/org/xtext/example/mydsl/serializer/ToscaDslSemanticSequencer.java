@@ -159,7 +159,7 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Interface returns Interface
 	 *
 	 * Constraint:
-	 *     (interface_name=STRING type=STRING (operations+=Operation operations+=Operation*)? (inputs+=Property inputs+=Property*)?)
+	 *     (type=STRING (operations+=Operation operations+=Operation*)?)
 	 */
 	protected void sequence_Interface(ISerializationContext context, Interface semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -193,16 +193,19 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *     Operation returns Operation
 	 *
 	 * Constraint:
-	 *     (
-	 *         operation_name=STRING 
-	 *         primary=STRING 
-	 *         description=STRING? 
-	 *         (dependentArtifacts+=EString dependentArtifacts+=EString*)? 
-	 *         (inputs+=Property inputs+=Property*)?
-	 *     )
+	 *     (operation_name=STRING primary=STRING)
 	 */
 	protected void sequence_Operation(ISerializationContext context, Operation semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.OPERATION__OPERATION_NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.OPERATION__OPERATION_NAME));
+			if (transientValues.isValueTransient(semanticObject, ToscaPackage.Literals.OPERATION__PRIMARY) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.OPERATION__PRIMARY));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getOperationAccess().getOperation_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getOperation_name());
+		feeder.accept(grammarAccess.getOperationAccess().getPrimarySTRINGTerminalRuleCall_3_0(), semanticObject.getPrimary());
+		feeder.finish();
 	}
 	
 	
@@ -257,8 +260,8 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, ToscaPackage.Literals.PROPERTY__VALUE));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_1_0(), semanticObject.getProperty_name());
-		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_5_0(), semanticObject.getValue());
+		feeder.accept(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_2_0(), semanticObject.getProperty_name());
+		feeder.accept(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_4_0(), semanticObject.getValue());
 		feeder.finish();
 	}
 	
@@ -269,14 +272,13 @@ public class ToscaDslSemanticSequencer extends AbstractDelegatingSemanticSequenc
 	 *
 	 * Constraint:
 	 *     (
-	 *         relationship_name=STRING 
 	 *         type=STRING 
 	 *         target=STRING? 
 	 *         (interfaces+=Interface interfaces+=Interface*)? 
 	 *         (properties+=Property properties+=Property*)? 
 	 *         (attributes+=Attribute attributes+=Attribute*)? 
-	 *         (sourceInterfaces+=Interface sourceInterfaces+=Interface*)? 
-	 *         (targetInterfaces+=Interface targetInterfaces+=Interface*)?
+	 *         (source_interfaces+=Interface source_interfaces+=Interface*)? 
+	 *         (target_interfaces+=Interface target_interfaces+=Interface*)?
 	 *     )
 	 */
 	protected void sequence_Relationship(ISerializationContext context, Relationship semanticObject) {

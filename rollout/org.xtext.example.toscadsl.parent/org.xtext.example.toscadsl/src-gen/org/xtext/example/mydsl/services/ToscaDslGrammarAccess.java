@@ -451,14 +451,14 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDescriptionSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cDescriptionAssignment_6_1.eContents().get(0);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
 		private final Keyword cRelationshipsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
 		private final Assignment cRelationshipsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
 		private final RuleCall cRelationshipsRelationshipParserRuleCall_7_2_0 = (RuleCall)cRelationshipsAssignment_7_2.eContents().get(0);
 		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
 		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
 		private final Assignment cRelationshipsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
 		private final RuleCall cRelationshipsRelationshipParserRuleCall_7_3_1_0 = (RuleCall)cRelationshipsAssignment_7_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
+		private final Keyword cRightSquareBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
 		private final Keyword cInterfacesKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
@@ -471,14 +471,14 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
 		private final Keyword cPropertiesKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
 		private final Assignment cPropertiesAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
 		private final RuleCall cPropertiesPropertyParserRuleCall_9_2_0 = (RuleCall)cPropertiesAssignment_9_2.eContents().get(0);
 		private final Group cGroup_9_3 = (Group)cGroup_9.eContents().get(3);
 		private final Keyword cCommaKeyword_9_3_0 = (Keyword)cGroup_9_3.eContents().get(0);
 		private final Assignment cPropertiesAssignment_9_3_1 = (Assignment)cGroup_9_3.eContents().get(1);
 		private final RuleCall cPropertiesPropertyParserRuleCall_9_3_1_0 = (RuleCall)cPropertiesAssignment_9_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
+		private final Keyword cRightSquareBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
 		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
 		private final Keyword cAttributesKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
@@ -514,9 +514,9 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//NodeTemplate:
 		//	{NodeTemplate} node_template_name=STRING ":"
 		//	'{'
-		//	'"type" :' type=STRING (',\n"description" :' description=STRING)? (',\n"relationships" :' '{'
-		//	relationships+=Relationship ("," relationships+=Relationship)* '}')? (',\n"interfaces" :' '{' interfaces+=Interface
-		//	("," interfaces+=Interface)* '}')? (',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
+		//	'"type" :' type=STRING (',\n"description" :' description=STRING)? (',\n"relationships" :' '['
+		//	relationships+=Relationship ("," relationships+=Relationship)* ']')? (',\n"interfaces" :' '{' interfaces+=Interface
+		//	("," interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
 		//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"requirements" :' '{'
 		//	requirements+=Requirement ("," requirements+=Requirement)* '}')? (',\n"capabilities" :' '{' capabilities+=Capability
 		//	("," capabilities+=Capability)* '}')?
@@ -524,9 +524,9 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		@Override public ParserRule getRule() { return rule; }
 		
 		//{NodeTemplate} node_template_name=STRING ":" '{' '"type" :' type=STRING (',\n"description" :' description=STRING)?
-		//(',\n"relationships" :' '{' relationships+=Relationship ("," relationships+=Relationship)* '}')? (',\n"interfaces" :'
-		//'{' interfaces+=Interface ("," interfaces+=Interface)* '}')? (',\n"properties" :' '{' properties+=Property (","
-		//properties+=Property)* '}')? (',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')?
+		//(',\n"relationships" :' '[' relationships+=Relationship ("," relationships+=Relationship)* ']')? (',\n"interfaces" :'
+		//'{' interfaces+=Interface ("," interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property (","
+		//properties+=Property)* ']')? (',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')?
 		//(',\n"requirements" :' '{' requirements+=Requirement ("," requirements+=Requirement)* '}')? (',\n"capabilities" :' '{'
 		//capabilities+=Capability ("," capabilities+=Capability)* '}')? '}'
 		public Group getGroup() { return cGroup; }
@@ -567,14 +567,14 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//STRING
 		public RuleCall getDescriptionSTRINGTerminalRuleCall_6_1_0() { return cDescriptionSTRINGTerminalRuleCall_6_1_0; }
 		
-		//(',\n"relationships" :' '{' relationships+=Relationship ("," relationships+=Relationship)* '}')?
+		//(',\n"relationships" :' '[' relationships+=Relationship ("," relationships+=Relationship)* ']')?
 		public Group getGroup_7() { return cGroup_7; }
 		
 		//',\n"relationships" :'
 		public Keyword getRelationshipsKeyword_7_0() { return cRelationshipsKeyword_7_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_7_1() { return cLeftSquareBracketKeyword_7_1; }
 		
 		//relationships+=Relationship
 		public Assignment getRelationshipsAssignment_7_2() { return cRelationshipsAssignment_7_2; }
@@ -594,8 +594,8 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Relationship
 		public RuleCall getRelationshipsRelationshipParserRuleCall_7_3_1_0() { return cRelationshipsRelationshipParserRuleCall_7_3_1_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_7_4() { return cRightSquareBracketKeyword_7_4; }
 		
 		//(',\n"interfaces" :' '{' interfaces+=Interface ("," interfaces+=Interface)* '}')?
 		public Group getGroup_8() { return cGroup_8; }
@@ -627,14 +627,14 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
 		
-		//(',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
+		//(',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
 		public Group getGroup_9() { return cGroup_9; }
 		
 		//',\n"properties" :'
 		public Keyword getPropertiesKeyword_9_0() { return cPropertiesKeyword_9_0; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
+		//'['
+		public Keyword getLeftSquareBracketKeyword_9_1() { return cLeftSquareBracketKeyword_9_1; }
 		
 		//properties+=Property
 		public Assignment getPropertiesAssignment_9_2() { return cPropertiesAssignment_9_2; }
@@ -654,8 +654,8 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Property
 		public RuleCall getPropertiesPropertyParserRuleCall_9_3_1_0() { return cPropertiesPropertyParserRuleCall_9_3_1_0; }
 		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
+		//']'
+		public Keyword getRightSquareBracketKeyword_9_4() { return cRightSquareBracketKeyword_9_4; }
 		
 		//(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')?
 		public Group getGroup_10() { return cGroup_10; }
@@ -754,276 +754,269 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ToscaDsl.Relationship");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cRelationshipAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cRelationship_nameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cRelationship_nameSTRINGTerminalRuleCall_1_0 = (RuleCall)cRelationship_nameAssignment_1.eContents().get(0);
-		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTypeSTRINGTerminalRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cTypeKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cTypeAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_3_0 = (RuleCall)cTypeAssignment_3.eContents().get(0);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cTargetKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Assignment cTargetAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cTargetSTRINGTerminalRuleCall_4_1_0 = (RuleCall)cTargetAssignment_4_1.eContents().get(0);
+		private final Group cGroup_5 = (Group)cGroup.eContents().get(5);
+		private final Keyword cInterfacesKeyword_5_0 = (Keyword)cGroup_5.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_5_1 = (Keyword)cGroup_5.eContents().get(1);
+		private final Assignment cInterfacesAssignment_5_2 = (Assignment)cGroup_5.eContents().get(2);
+		private final RuleCall cInterfacesInterfaceParserRuleCall_5_2_0 = (RuleCall)cInterfacesAssignment_5_2.eContents().get(0);
+		private final Group cGroup_5_3 = (Group)cGroup_5.eContents().get(3);
+		private final Keyword cCommaKeyword_5_3_0 = (Keyword)cGroup_5_3.eContents().get(0);
+		private final Assignment cInterfacesAssignment_5_3_1 = (Assignment)cGroup_5_3.eContents().get(1);
+		private final RuleCall cInterfacesInterfaceParserRuleCall_5_3_1_0 = (RuleCall)cInterfacesAssignment_5_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5_4 = (Keyword)cGroup_5.eContents().get(4);
 		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cTargetKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cTargetAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cTargetSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cTargetAssignment_6_1.eContents().get(0);
+		private final Keyword cPropertiesKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
+		private final Keyword cLeftSquareBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
+		private final Assignment cPropertiesAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
+		private final RuleCall cPropertiesPropertyParserRuleCall_6_2_0 = (RuleCall)cPropertiesAssignment_6_2.eContents().get(0);
+		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
+		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
+		private final Assignment cPropertiesAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
+		private final RuleCall cPropertiesPropertyParserRuleCall_6_3_1_0 = (RuleCall)cPropertiesAssignment_6_3_1.eContents().get(0);
+		private final Keyword cRightSquareBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
 		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cInterfacesKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
+		private final Keyword cAttributesKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cInterfacesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cInterfacesInterfaceParserRuleCall_7_2_0 = (RuleCall)cInterfacesAssignment_7_2.eContents().get(0);
+		private final Assignment cAttributesAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
+		private final RuleCall cAttributesAttributeParserRuleCall_7_2_0 = (RuleCall)cAttributesAssignment_7_2.eContents().get(0);
 		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
 		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cInterfacesAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final RuleCall cInterfacesInterfaceParserRuleCall_7_3_1_0 = (RuleCall)cInterfacesAssignment_7_3_1.eContents().get(0);
+		private final Assignment cAttributesAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
+		private final RuleCall cAttributesAttributeParserRuleCall_7_3_1_0 = (RuleCall)cAttributesAssignment_7_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
 		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cPropertiesKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
+		private final Keyword cSource_interfacesKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
-		private final Assignment cPropertiesAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
-		private final RuleCall cPropertiesPropertyParserRuleCall_8_2_0 = (RuleCall)cPropertiesAssignment_8_2.eContents().get(0);
+		private final Assignment cSource_interfacesAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
+		private final RuleCall cSource_interfacesInterfaceParserRuleCall_8_2_0 = (RuleCall)cSource_interfacesAssignment_8_2.eContents().get(0);
 		private final Group cGroup_8_3 = (Group)cGroup_8.eContents().get(3);
 		private final Keyword cCommaKeyword_8_3_0 = (Keyword)cGroup_8_3.eContents().get(0);
-		private final Assignment cPropertiesAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
-		private final RuleCall cPropertiesPropertyParserRuleCall_8_3_1_0 = (RuleCall)cPropertiesAssignment_8_3_1.eContents().get(0);
+		private final Assignment cSource_interfacesAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
+		private final RuleCall cSource_interfacesInterfaceParserRuleCall_8_3_1_0 = (RuleCall)cSource_interfacesAssignment_8_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
 		private final Group cGroup_9 = (Group)cGroup.eContents().get(9);
-		private final Keyword cAttributesKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
+		private final Keyword cTarget_iterfacesKeyword_9_0 = (Keyword)cGroup_9.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_9_1 = (Keyword)cGroup_9.eContents().get(1);
-		private final Assignment cAttributesAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
-		private final RuleCall cAttributesAttributeParserRuleCall_9_2_0 = (RuleCall)cAttributesAssignment_9_2.eContents().get(0);
+		private final Assignment cTarget_interfacesAssignment_9_2 = (Assignment)cGroup_9.eContents().get(2);
+		private final RuleCall cTarget_interfacesInterfaceParserRuleCall_9_2_0 = (RuleCall)cTarget_interfacesAssignment_9_2.eContents().get(0);
 		private final Group cGroup_9_3 = (Group)cGroup_9.eContents().get(3);
 		private final Keyword cCommaKeyword_9_3_0 = (Keyword)cGroup_9_3.eContents().get(0);
-		private final Assignment cAttributesAssignment_9_3_1 = (Assignment)cGroup_9_3.eContents().get(1);
-		private final RuleCall cAttributesAttributeParserRuleCall_9_3_1_0 = (RuleCall)cAttributesAssignment_9_3_1.eContents().get(0);
+		private final Assignment cTarget_interfacesAssignment_9_3_1 = (Assignment)cGroup_9_3.eContents().get(1);
+		private final RuleCall cTarget_interfacesInterfaceParserRuleCall_9_3_1_0 = (RuleCall)cTarget_interfacesAssignment_9_3_1.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_9_4 = (Keyword)cGroup_9.eContents().get(4);
-		private final Group cGroup_10 = (Group)cGroup.eContents().get(10);
-		private final Keyword cSourceInterfacesKeyword_10_0 = (Keyword)cGroup_10.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_10_1 = (Keyword)cGroup_10.eContents().get(1);
-		private final Assignment cSourceInterfacesAssignment_10_2 = (Assignment)cGroup_10.eContents().get(2);
-		private final RuleCall cSourceInterfacesInterfaceParserRuleCall_10_2_0 = (RuleCall)cSourceInterfacesAssignment_10_2.eContents().get(0);
-		private final Group cGroup_10_3 = (Group)cGroup_10.eContents().get(3);
-		private final Keyword cCommaKeyword_10_3_0 = (Keyword)cGroup_10_3.eContents().get(0);
-		private final Assignment cSourceInterfacesAssignment_10_3_1 = (Assignment)cGroup_10_3.eContents().get(1);
-		private final RuleCall cSourceInterfacesInterfaceParserRuleCall_10_3_1_0 = (RuleCall)cSourceInterfacesAssignment_10_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10_4 = (Keyword)cGroup_10.eContents().get(4);
-		private final Group cGroup_11 = (Group)cGroup.eContents().get(11);
-		private final Keyword cTargetInterfacesKeyword_11_0 = (Keyword)cGroup_11.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_11_1 = (Keyword)cGroup_11.eContents().get(1);
-		private final Assignment cTargetInterfacesAssignment_11_2 = (Assignment)cGroup_11.eContents().get(2);
-		private final RuleCall cTargetInterfacesInterfaceParserRuleCall_11_2_0 = (RuleCall)cTargetInterfacesAssignment_11_2.eContents().get(0);
-		private final Group cGroup_11_3 = (Group)cGroup_11.eContents().get(3);
-		private final Keyword cCommaKeyword_11_3_0 = (Keyword)cGroup_11_3.eContents().get(0);
-		private final Assignment cTargetInterfacesAssignment_11_3_1 = (Assignment)cGroup_11_3.eContents().get(1);
-		private final RuleCall cTargetInterfacesInterfaceParserRuleCall_11_3_1_0 = (RuleCall)cTargetInterfacesAssignment_11_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_11_4 = (Keyword)cGroup_11.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_12 = (Keyword)cGroup.eContents().get(12);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//Relationship:
-		//	{Relationship} relationship_name=STRING ":"
+		//	{Relationship}
+		//	//relationship_name=STRING ":"
 		//	'{'
+		//	//'"relationship_name" :' relationship_name=STRING
 		//	'"type" :' type=STRING (',\n"target" :' target=STRING)? (',\n"interfaces" :' '{' interfaces+=Interface (","
-		//	interfaces+=Interface)* '}')? (',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
-		//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"sourceInterfaces" :' '{'
-		//	sourceInterfaces+=Interface ("," sourceInterfaces+=Interface)* '}')? (',\n"targetInterfaces" :' '{'
-		//	targetInterfaces+=Interface ("," targetInterfaces+=Interface)* '}')?
+		//	interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
+		//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"source_interfaces" :' '{'
+		//	source_interfaces+=Interface ("," source_interfaces+=Interface)* '}')? (',\n"target_iterfaces" :' '{'
+		//	target_interfaces+=Interface ("," target_interfaces+=Interface)* '}')?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Relationship} relationship_name=STRING ":" '{' '"type" :' type=STRING (',\n"target" :' target=STRING)?
-		//(',\n"interfaces" :' '{' interfaces+=Interface ("," interfaces+=Interface)* '}')? (',\n"properties" :' '{'
-		//properties+=Property ("," properties+=Property)* '}')? (',\n"attributes" :' '{' attributes+=Attribute (","
-		//attributes+=Attribute)* '}')? (',\n"sourceInterfaces" :' '{' sourceInterfaces+=Interface (","
-		//sourceInterfaces+=Interface)* '}')? (',\n"targetInterfaces" :' '{' targetInterfaces+=Interface (","
-		//targetInterfaces+=Interface)* '}')? '}'
+		//{Relationship} //relationship_name=STRING ":"
+		//'{' //'"relationship_name" :' relationship_name=STRING
+		//'"type" :' type=STRING (',\n"target" :' target=STRING)? (',\n"interfaces" :' '{' interfaces+=Interface (","
+		//interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
+		//(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"source_interfaces" :' '{'
+		//source_interfaces+=Interface ("," source_interfaces+=Interface)* '}')? (',\n"target_iterfaces" :' '{'
+		//target_interfaces+=Interface ("," target_interfaces+=Interface)* '}')? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Relationship}
 		public Action getRelationshipAction_0() { return cRelationshipAction_0; }
 		
-		//relationship_name=STRING
-		public Assignment getRelationship_nameAssignment_1() { return cRelationship_nameAssignment_1; }
-		
-		//STRING
-		public RuleCall getRelationship_nameSTRINGTerminalRuleCall_1_0() { return cRelationship_nameSTRINGTerminalRuleCall_1_0; }
-		
-		//":"
-		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
-		
+		////relationship_name=STRING ":"
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
 		
+		////'"relationship_name" :' relationship_name=STRING
 		//'"type" :'
-		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
+		public Keyword getTypeKeyword_2() { return cTypeKeyword_2; }
 		
 		//type=STRING
-		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
+		public Assignment getTypeAssignment_3() { return cTypeAssignment_3; }
 		
 		//STRING
-		public RuleCall getTypeSTRINGTerminalRuleCall_5_0() { return cTypeSTRINGTerminalRuleCall_5_0; }
+		public RuleCall getTypeSTRINGTerminalRuleCall_3_0() { return cTypeSTRINGTerminalRuleCall_3_0; }
 		
 		//(',\n"target" :' target=STRING)?
-		public Group getGroup_6() { return cGroup_6; }
+		public Group getGroup_4() { return cGroup_4; }
 		
 		//',\n"target" :'
-		public Keyword getTargetKeyword_6_0() { return cTargetKeyword_6_0; }
+		public Keyword getTargetKeyword_4_0() { return cTargetKeyword_4_0; }
 		
 		//target=STRING
-		public Assignment getTargetAssignment_6_1() { return cTargetAssignment_6_1; }
+		public Assignment getTargetAssignment_4_1() { return cTargetAssignment_4_1; }
 		
 		//STRING
-		public RuleCall getTargetSTRINGTerminalRuleCall_6_1_0() { return cTargetSTRINGTerminalRuleCall_6_1_0; }
+		public RuleCall getTargetSTRINGTerminalRuleCall_4_1_0() { return cTargetSTRINGTerminalRuleCall_4_1_0; }
 		
 		//(',\n"interfaces" :' '{' interfaces+=Interface ("," interfaces+=Interface)* '}')?
-		public Group getGroup_7() { return cGroup_7; }
+		public Group getGroup_5() { return cGroup_5; }
 		
 		//',\n"interfaces" :'
-		public Keyword getInterfacesKeyword_7_0() { return cInterfacesKeyword_7_0; }
+		public Keyword getInterfacesKeyword_5_0() { return cInterfacesKeyword_5_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_5_1() { return cLeftCurlyBracketKeyword_5_1; }
+		
+		//interfaces+=Interface
+		public Assignment getInterfacesAssignment_5_2() { return cInterfacesAssignment_5_2; }
+		
+		//Interface
+		public RuleCall getInterfacesInterfaceParserRuleCall_5_2_0() { return cInterfacesInterfaceParserRuleCall_5_2_0; }
+		
+		//("," interfaces+=Interface)*
+		public Group getGroup_5_3() { return cGroup_5_3; }
+		
+		//","
+		public Keyword getCommaKeyword_5_3_0() { return cCommaKeyword_5_3_0; }
+		
+		//interfaces+=Interface
+		public Assignment getInterfacesAssignment_5_3_1() { return cInterfacesAssignment_5_3_1; }
+		
+		//Interface
+		public RuleCall getInterfacesInterfaceParserRuleCall_5_3_1_0() { return cInterfacesInterfaceParserRuleCall_5_3_1_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5_4() { return cRightCurlyBracketKeyword_5_4; }
+		
+		//(',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
+		public Group getGroup_6() { return cGroup_6; }
+		
+		//',\n"properties" :'
+		public Keyword getPropertiesKeyword_6_0() { return cPropertiesKeyword_6_0; }
+		
+		//'['
+		public Keyword getLeftSquareBracketKeyword_6_1() { return cLeftSquareBracketKeyword_6_1; }
+		
+		//properties+=Property
+		public Assignment getPropertiesAssignment_6_2() { return cPropertiesAssignment_6_2; }
+		
+		//Property
+		public RuleCall getPropertiesPropertyParserRuleCall_6_2_0() { return cPropertiesPropertyParserRuleCall_6_2_0; }
+		
+		//("," properties+=Property)*
+		public Group getGroup_6_3() { return cGroup_6_3; }
+		
+		//","
+		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+		
+		//properties+=Property
+		public Assignment getPropertiesAssignment_6_3_1() { return cPropertiesAssignment_6_3_1; }
+		
+		//Property
+		public RuleCall getPropertiesPropertyParserRuleCall_6_3_1_0() { return cPropertiesPropertyParserRuleCall_6_3_1_0; }
+		
+		//']'
+		public Keyword getRightSquareBracketKeyword_6_4() { return cRightSquareBracketKeyword_6_4; }
+		
+		//(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')?
+		public Group getGroup_7() { return cGroup_7; }
+		
+		//',\n"attributes" :'
+		public Keyword getAttributesKeyword_7_0() { return cAttributesKeyword_7_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
 		
-		//interfaces+=Interface
-		public Assignment getInterfacesAssignment_7_2() { return cInterfacesAssignment_7_2; }
+		//attributes+=Attribute
+		public Assignment getAttributesAssignment_7_2() { return cAttributesAssignment_7_2; }
 		
-		//Interface
-		public RuleCall getInterfacesInterfaceParserRuleCall_7_2_0() { return cInterfacesInterfaceParserRuleCall_7_2_0; }
+		//Attribute
+		public RuleCall getAttributesAttributeParserRuleCall_7_2_0() { return cAttributesAttributeParserRuleCall_7_2_0; }
 		
-		//("," interfaces+=Interface)*
+		//("," attributes+=Attribute)*
 		public Group getGroup_7_3() { return cGroup_7_3; }
 		
 		//","
 		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
 		
-		//interfaces+=Interface
-		public Assignment getInterfacesAssignment_7_3_1() { return cInterfacesAssignment_7_3_1; }
+		//attributes+=Attribute
+		public Assignment getAttributesAssignment_7_3_1() { return cAttributesAssignment_7_3_1; }
 		
-		//Interface
-		public RuleCall getInterfacesInterfaceParserRuleCall_7_3_1_0() { return cInterfacesInterfaceParserRuleCall_7_3_1_0; }
+		//Attribute
+		public RuleCall getAttributesAttributeParserRuleCall_7_3_1_0() { return cAttributesAttributeParserRuleCall_7_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
 		
-		//(',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
+		//(',\n"source_interfaces" :' '{' source_interfaces+=Interface ("," source_interfaces+=Interface)* '}')?
 		public Group getGroup_8() { return cGroup_8; }
 		
-		//',\n"properties" :'
-		public Keyword getPropertiesKeyword_8_0() { return cPropertiesKeyword_8_0; }
+		//',\n"source_interfaces" :'
+		public Keyword getSource_interfacesKeyword_8_0() { return cSource_interfacesKeyword_8_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_8_1() { return cLeftCurlyBracketKeyword_8_1; }
 		
-		//properties+=Property
-		public Assignment getPropertiesAssignment_8_2() { return cPropertiesAssignment_8_2; }
+		//source_interfaces+=Interface
+		public Assignment getSource_interfacesAssignment_8_2() { return cSource_interfacesAssignment_8_2; }
 		
-		//Property
-		public RuleCall getPropertiesPropertyParserRuleCall_8_2_0() { return cPropertiesPropertyParserRuleCall_8_2_0; }
+		//Interface
+		public RuleCall getSource_interfacesInterfaceParserRuleCall_8_2_0() { return cSource_interfacesInterfaceParserRuleCall_8_2_0; }
 		
-		//("," properties+=Property)*
+		//("," source_interfaces+=Interface)*
 		public Group getGroup_8_3() { return cGroup_8_3; }
 		
 		//","
 		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
 		
-		//properties+=Property
-		public Assignment getPropertiesAssignment_8_3_1() { return cPropertiesAssignment_8_3_1; }
+		//source_interfaces+=Interface
+		public Assignment getSource_interfacesAssignment_8_3_1() { return cSource_interfacesAssignment_8_3_1; }
 		
-		//Property
-		public RuleCall getPropertiesPropertyParserRuleCall_8_3_1_0() { return cPropertiesPropertyParserRuleCall_8_3_1_0; }
+		//Interface
+		public RuleCall getSource_interfacesInterfaceParserRuleCall_8_3_1_0() { return cSource_interfacesInterfaceParserRuleCall_8_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
 		
-		//(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')?
+		//(',\n"target_iterfaces" :' '{' target_interfaces+=Interface ("," target_interfaces+=Interface)* '}')?
 		public Group getGroup_9() { return cGroup_9; }
 		
-		//',\n"attributes" :'
-		public Keyword getAttributesKeyword_9_0() { return cAttributesKeyword_9_0; }
+		//',\n"target_iterfaces" :'
+		public Keyword getTarget_iterfacesKeyword_9_0() { return cTarget_iterfacesKeyword_9_0; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_9_1() { return cLeftCurlyBracketKeyword_9_1; }
 		
-		//attributes+=Attribute
-		public Assignment getAttributesAssignment_9_2() { return cAttributesAssignment_9_2; }
+		//target_interfaces+=Interface
+		public Assignment getTarget_interfacesAssignment_9_2() { return cTarget_interfacesAssignment_9_2; }
 		
-		//Attribute
-		public RuleCall getAttributesAttributeParserRuleCall_9_2_0() { return cAttributesAttributeParserRuleCall_9_2_0; }
+		//Interface
+		public RuleCall getTarget_interfacesInterfaceParserRuleCall_9_2_0() { return cTarget_interfacesInterfaceParserRuleCall_9_2_0; }
 		
-		//("," attributes+=Attribute)*
+		//("," target_interfaces+=Interface)*
 		public Group getGroup_9_3() { return cGroup_9_3; }
 		
 		//","
 		public Keyword getCommaKeyword_9_3_0() { return cCommaKeyword_9_3_0; }
 		
-		//attributes+=Attribute
-		public Assignment getAttributesAssignment_9_3_1() { return cAttributesAssignment_9_3_1; }
+		//target_interfaces+=Interface
+		public Assignment getTarget_interfacesAssignment_9_3_1() { return cTarget_interfacesAssignment_9_3_1; }
 		
-		//Attribute
-		public RuleCall getAttributesAttributeParserRuleCall_9_3_1_0() { return cAttributesAttributeParserRuleCall_9_3_1_0; }
+		//Interface
+		public RuleCall getTarget_interfacesInterfaceParserRuleCall_9_3_1_0() { return cTarget_interfacesInterfaceParserRuleCall_9_3_1_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_9_4() { return cRightCurlyBracketKeyword_9_4; }
 		
-		//(',\n"sourceInterfaces" :' '{' sourceInterfaces+=Interface ("," sourceInterfaces+=Interface)* '}')?
-		public Group getGroup_10() { return cGroup_10; }
-		
-		//',\n"sourceInterfaces" :'
-		public Keyword getSourceInterfacesKeyword_10_0() { return cSourceInterfacesKeyword_10_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_10_1() { return cLeftCurlyBracketKeyword_10_1; }
-		
-		//sourceInterfaces+=Interface
-		public Assignment getSourceInterfacesAssignment_10_2() { return cSourceInterfacesAssignment_10_2; }
-		
-		//Interface
-		public RuleCall getSourceInterfacesInterfaceParserRuleCall_10_2_0() { return cSourceInterfacesInterfaceParserRuleCall_10_2_0; }
-		
-		//("," sourceInterfaces+=Interface)*
-		public Group getGroup_10_3() { return cGroup_10_3; }
-		
-		//","
-		public Keyword getCommaKeyword_10_3_0() { return cCommaKeyword_10_3_0; }
-		
-		//sourceInterfaces+=Interface
-		public Assignment getSourceInterfacesAssignment_10_3_1() { return cSourceInterfacesAssignment_10_3_1; }
-		
-		//Interface
-		public RuleCall getSourceInterfacesInterfaceParserRuleCall_10_3_1_0() { return cSourceInterfacesInterfaceParserRuleCall_10_3_1_0; }
-		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10_4() { return cRightCurlyBracketKeyword_10_4; }
-		
-		//(',\n"targetInterfaces" :' '{' targetInterfaces+=Interface ("," targetInterfaces+=Interface)* '}')?
-		public Group getGroup_11() { return cGroup_11; }
-		
-		//',\n"targetInterfaces" :'
-		public Keyword getTargetInterfacesKeyword_11_0() { return cTargetInterfacesKeyword_11_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_11_1() { return cLeftCurlyBracketKeyword_11_1; }
-		
-		//targetInterfaces+=Interface
-		public Assignment getTargetInterfacesAssignment_11_2() { return cTargetInterfacesAssignment_11_2; }
-		
-		//Interface
-		public RuleCall getTargetInterfacesInterfaceParserRuleCall_11_2_0() { return cTargetInterfacesInterfaceParserRuleCall_11_2_0; }
-		
-		//("," targetInterfaces+=Interface)*
-		public Group getGroup_11_3() { return cGroup_11_3; }
-		
-		//","
-		public Keyword getCommaKeyword_11_3_0() { return cCommaKeyword_11_3_0; }
-		
-		//targetInterfaces+=Interface
-		public Assignment getTargetInterfacesAssignment_11_3_1() { return cTargetInterfacesAssignment_11_3_1; }
-		
-		//Interface
-		public RuleCall getTargetInterfacesInterfaceParserRuleCall_11_3_1_0() { return cTargetInterfacesInterfaceParserRuleCall_11_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_11_4() { return cRightCurlyBracketKeyword_11_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_12() { return cRightCurlyBracketKeyword_12; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class GroupElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ToscaDsl.Group");
@@ -1222,55 +1215,42 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ToscaDsl.Interface");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cInterfaceAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cInterface_nameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cInterface_nameSTRINGTerminalRuleCall_1_0 = (RuleCall)cInterface_nameAssignment_1.eContents().get(0);
+		private final Assignment cTypeAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_1_0 = (RuleCall)cTypeAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cTypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cTypeSTRINGTerminalRuleCall_5_0 = (RuleCall)cTypeAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cOperationsKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_6_1 = (Keyword)cGroup_6.eContents().get(1);
-		private final Assignment cOperationsAssignment_6_2 = (Assignment)cGroup_6.eContents().get(2);
-		private final RuleCall cOperationsOperationParserRuleCall_6_2_0 = (RuleCall)cOperationsAssignment_6_2.eContents().get(0);
-		private final Group cGroup_6_3 = (Group)cGroup_6.eContents().get(3);
-		private final Keyword cCommaKeyword_6_3_0 = (Keyword)cGroup_6_3.eContents().get(0);
-		private final Assignment cOperationsAssignment_6_3_1 = (Assignment)cGroup_6_3.eContents().get(1);
-		private final RuleCall cOperationsOperationParserRuleCall_6_3_1_0 = (RuleCall)cOperationsAssignment_6_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6_4 = (Keyword)cGroup_6.eContents().get(4);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cInputsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cInputsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cInputsPropertyParserRuleCall_7_2_0 = (RuleCall)cInputsAssignment_7_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
-		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cInputsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final RuleCall cInputsPropertyParserRuleCall_7_3_1_0 = (RuleCall)cInputsAssignment_7_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
+		private final Keyword cOperationsKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4_1 = (Keyword)cGroup_4.eContents().get(1);
+		private final Assignment cOperationsAssignment_4_2 = (Assignment)cGroup_4.eContents().get(2);
+		private final RuleCall cOperationsOperationParserRuleCall_4_2_0 = (RuleCall)cOperationsAssignment_4_2.eContents().get(0);
+		private final Group cGroup_4_3 = (Group)cGroup_4.eContents().get(3);
+		private final Keyword cCommaKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Assignment cOperationsAssignment_4_3_1 = (Assignment)cGroup_4_3.eContents().get(1);
+		private final RuleCall cOperationsOperationParserRuleCall_4_3_1_0 = (RuleCall)cOperationsAssignment_4_3_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4_4 = (Keyword)cGroup_4.eContents().get(4);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Interface:
-		//	{Interface} interface_name=STRING ":"
-		//	'{'
-		//	'"type" :' type=STRING (',\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
-		//	(',\n"inputs" :' '{' inputs+=Property ("," inputs+=Property)* '}')?
+		//	{Interface} type=STRING ":"
+		//	'{' ('\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
+		//	//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Interface} interface_name=STRING ":" '{' '"type" :' type=STRING (',\n"operations" :' '{' operations+=Operation (","
-		//operations+=Operation)* '}')? (',\n"inputs" :' '{' inputs+=Property ("," inputs+=Property)* '}')? '}'
+		//{Interface} type=STRING ":" '{' ('\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')? //(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+		//'}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Interface}
 		public Action getInterfaceAction_0() { return cInterfaceAction_0; }
 		
-		//interface_name=STRING
-		public Assignment getInterface_nameAssignment_1() { return cInterface_nameAssignment_1; }
+		////interface_name=STRING ":"
+		//type=STRING
+		public Assignment getTypeAssignment_1() { return cTypeAssignment_1; }
 		
 		//STRING
-		public RuleCall getInterface_nameSTRINGTerminalRuleCall_1_0() { return cInterface_nameSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getTypeSTRINGTerminalRuleCall_1_0() { return cTypeSTRINGTerminalRuleCall_1_0; }
 		
 		//":"
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
@@ -1278,127 +1258,86 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//'"type" :'
-		public Keyword getTypeKeyword_4() { return cTypeKeyword_4; }
+		//('\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
+		public Group getGroup_4() { return cGroup_4; }
 		
-		//type=STRING
-		public Assignment getTypeAssignment_5() { return cTypeAssignment_5; }
-		
-		//STRING
-		public RuleCall getTypeSTRINGTerminalRuleCall_5_0() { return cTypeSTRINGTerminalRuleCall_5_0; }
-		
-		//(',\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//',\n"operations" :'
-		public Keyword getOperationsKeyword_6_0() { return cOperationsKeyword_6_0; }
+		//'\n"operations" :'
+		public Keyword getOperationsKeyword_4_0() { return cOperationsKeyword_4_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_6_1() { return cLeftCurlyBracketKeyword_6_1; }
+		public Keyword getLeftCurlyBracketKeyword_4_1() { return cLeftCurlyBracketKeyword_4_1; }
 		
 		//operations+=Operation
-		public Assignment getOperationsAssignment_6_2() { return cOperationsAssignment_6_2; }
+		public Assignment getOperationsAssignment_4_2() { return cOperationsAssignment_4_2; }
 		
 		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_6_2_0() { return cOperationsOperationParserRuleCall_6_2_0; }
+		public RuleCall getOperationsOperationParserRuleCall_4_2_0() { return cOperationsOperationParserRuleCall_4_2_0; }
 		
 		//("," operations+=Operation)*
-		public Group getGroup_6_3() { return cGroup_6_3; }
+		public Group getGroup_4_3() { return cGroup_4_3; }
 		
 		//","
-		public Keyword getCommaKeyword_6_3_0() { return cCommaKeyword_6_3_0; }
+		public Keyword getCommaKeyword_4_3_0() { return cCommaKeyword_4_3_0; }
 		
 		//operations+=Operation
-		public Assignment getOperationsAssignment_6_3_1() { return cOperationsAssignment_6_3_1; }
+		public Assignment getOperationsAssignment_4_3_1() { return cOperationsAssignment_4_3_1; }
 		
 		//Operation
-		public RuleCall getOperationsOperationParserRuleCall_6_3_1_0() { return cOperationsOperationParserRuleCall_6_3_1_0; }
+		public RuleCall getOperationsOperationParserRuleCall_4_3_1_0() { return cOperationsOperationParserRuleCall_4_3_1_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6_4() { return cRightCurlyBracketKeyword_6_4; }
+		public Keyword getRightCurlyBracketKeyword_4_4() { return cRightCurlyBracketKeyword_4_4; }
 		
-		//(',\n"inputs" :' '{' inputs+=Property ("," inputs+=Property)* '}')?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//',\n"inputs" :'
-		public Keyword getInputsKeyword_7_0() { return cInputsKeyword_7_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
-		
-		//inputs+=Property
-		public Assignment getInputsAssignment_7_2() { return cInputsAssignment_7_2; }
-		
-		//Property
-		public RuleCall getInputsPropertyParserRuleCall_7_2_0() { return cInputsPropertyParserRuleCall_7_2_0; }
-		
-		//("," inputs+=Property)*
-		public Group getGroup_7_3() { return cGroup_7_3; }
-		
-		//","
-		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
-		
-		//inputs+=Property
-		public Assignment getInputsAssignment_7_3_1() { return cInputsAssignment_7_3_1; }
-		
-		//Property
-		public RuleCall getInputsPropertyParserRuleCall_7_3_1_0() { return cInputsPropertyParserRuleCall_7_3_1_0; }
-		
+		////(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class PropertyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ToscaDsl.Property");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Action cPropertyAction_0 = (Action)cGroup.eContents().get(0);
-		private final Assignment cProperty_nameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cProperty_nameSTRINGTerminalRuleCall_1_0 = (RuleCall)cProperty_nameAssignment_1.eContents().get(0);
-		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cValueKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cValueAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cValueSTRINGTerminalRuleCall_5_0 = (RuleCall)cValueAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		private final Keyword cLeftCurlyBracketKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cProperty_nameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cProperty_nameSTRINGTerminalRuleCall_2_0 = (RuleCall)cProperty_nameAssignment_2.eContents().get(0);
+		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cValueAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cValueSTRINGTerminalRuleCall_4_0 = (RuleCall)cValueAssignment_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Property:
-		//	{Property} property_name=STRING ":"
+		//	{Property}
 		//	'{'
-		//	'"value" :' value=STRING
+		//	property_name=STRING ":"
+		//	value=STRING
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Property} property_name=STRING ":" '{' '"value" :' value=STRING '}'
+		//{Property} '{' property_name=STRING ":" value=STRING '}'
 		public Group getGroup() { return cGroup; }
 		
 		//{Property}
 		public Action getPropertyAction_0() { return cPropertyAction_0; }
 		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_1() { return cLeftCurlyBracketKeyword_1; }
+		
 		//property_name=STRING
-		public Assignment getProperty_nameAssignment_1() { return cProperty_nameAssignment_1; }
+		public Assignment getProperty_nameAssignment_2() { return cProperty_nameAssignment_2; }
 		
 		//STRING
-		public RuleCall getProperty_nameSTRINGTerminalRuleCall_1_0() { return cProperty_nameSTRINGTerminalRuleCall_1_0; }
+		public RuleCall getProperty_nameSTRINGTerminalRuleCall_2_0() { return cProperty_nameSTRINGTerminalRuleCall_2_0; }
 		
 		//":"
-		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//'"value" :'
-		public Keyword getValueKeyword_4() { return cValueKeyword_4; }
+		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 		
 		//value=STRING
-		public Assignment getValueAssignment_5() { return cValueAssignment_5; }
+		public Assignment getValueAssignment_4() { return cValueAssignment_4; }
 		
 		//STRING
-		public RuleCall getValueSTRINGTerminalRuleCall_5_0() { return cValueSTRINGTerminalRuleCall_5_0; }
+		public RuleCall getValueSTRINGTerminalRuleCall_4_0() { return cValueSTRINGTerminalRuleCall_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
 	public class AttributeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "org.xtext.example.mydsl.ToscaDsl.Attribute");
@@ -1641,48 +1580,22 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cOperation_nameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cOperation_nameSTRINGTerminalRuleCall_1_0 = (RuleCall)cOperation_nameAssignment_1.eContents().get(0);
 		private final Keyword cColonKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cPrimaryKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cPrimaryAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cPrimarySTRINGTerminalRuleCall_5_0 = (RuleCall)cPrimaryAssignment_5.eContents().get(0);
-		private final Group cGroup_6 = (Group)cGroup.eContents().get(6);
-		private final Keyword cDescriptionKeyword_6_0 = (Keyword)cGroup_6.eContents().get(0);
-		private final Assignment cDescriptionAssignment_6_1 = (Assignment)cGroup_6.eContents().get(1);
-		private final RuleCall cDescriptionSTRINGTerminalRuleCall_6_1_0 = (RuleCall)cDescriptionAssignment_6_1.eContents().get(0);
-		private final Group cGroup_7 = (Group)cGroup.eContents().get(7);
-		private final Keyword cDependentArtifactsKeyword_7_0 = (Keyword)cGroup_7.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_7_1 = (Keyword)cGroup_7.eContents().get(1);
-		private final Assignment cDependentArtifactsAssignment_7_2 = (Assignment)cGroup_7.eContents().get(2);
-		private final RuleCall cDependentArtifactsEStringParserRuleCall_7_2_0 = (RuleCall)cDependentArtifactsAssignment_7_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cGroup_7.eContents().get(3);
-		private final Keyword cCommaKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Assignment cDependentArtifactsAssignment_7_3_1 = (Assignment)cGroup_7_3.eContents().get(1);
-		private final RuleCall cDependentArtifactsEStringParserRuleCall_7_3_1_0 = (RuleCall)cDependentArtifactsAssignment_7_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_7_4 = (Keyword)cGroup_7.eContents().get(4);
-		private final Group cGroup_8 = (Group)cGroup.eContents().get(8);
-		private final Keyword cInputsKeyword_8_0 = (Keyword)cGroup_8.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_8_1 = (Keyword)cGroup_8.eContents().get(1);
-		private final Assignment cInputsAssignment_8_2 = (Assignment)cGroup_8.eContents().get(2);
-		private final RuleCall cInputsPropertyParserRuleCall_8_2_0 = (RuleCall)cInputsAssignment_8_2.eContents().get(0);
-		private final Group cGroup_8_3 = (Group)cGroup_8.eContents().get(3);
-		private final Keyword cCommaKeyword_8_3_0 = (Keyword)cGroup_8_3.eContents().get(0);
-		private final Assignment cInputsAssignment_8_3_1 = (Assignment)cGroup_8_3.eContents().get(1);
-		private final RuleCall cInputsPropertyParserRuleCall_8_3_1_0 = (RuleCall)cInputsAssignment_8_3_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8_4 = (Keyword)cGroup_8.eContents().get(4);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Assignment cPrimaryAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cPrimarySTRINGTerminalRuleCall_3_0 = (RuleCall)cPrimaryAssignment_3.eContents().get(0);
 		
 		//Operation:
 		//	{Operation} operation_name=STRING ":"
-		//	'{'
-		//	'"primary" :' primary=STRING (',\n"description" :' description=STRING)? (',\n"dependentArtifacts" :' '{'
-		//	dependentArtifacts+=EString ("," dependentArtifacts+=EString)* '}')? (',\n"inputs" :' '{' inputs+=Property (","
-		//	inputs+=Property)* '}')?
-		//	'}';
+		//	primary=STRING
+		//	//'{'
+		//	//'"primary" :' primary=STRING
+		//	//(',\n"description" :' description=STRING )?
+		//	//(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ( "," dependentArtifacts+=EString)* '}' )?
+		//	//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+		//	//'}'
+		//;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//{Operation} operation_name=STRING ":" '{' '"primary" :' primary=STRING (',\n"description" :' description=STRING)?
-		//(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ("," dependentArtifacts+=EString)* '}')? (',\n"inputs" :'
-		//'{' inputs+=Property ("," inputs+=Property)* '}')? '}'
+		//{Operation} operation_name=STRING ":" primary=STRING
 		public Group getGroup() { return cGroup; }
 		
 		//{Operation}
@@ -1697,92 +1610,11 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 		//":"
 		public Keyword getColonKeyword_2() { return cColonKeyword_2; }
 		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
-		
-		//'"primary" :'
-		public Keyword getPrimaryKeyword_4() { return cPrimaryKeyword_4; }
-		
 		//primary=STRING
-		public Assignment getPrimaryAssignment_5() { return cPrimaryAssignment_5; }
+		public Assignment getPrimaryAssignment_3() { return cPrimaryAssignment_3; }
 		
 		//STRING
-		public RuleCall getPrimarySTRINGTerminalRuleCall_5_0() { return cPrimarySTRINGTerminalRuleCall_5_0; }
-		
-		//(',\n"description" :' description=STRING)?
-		public Group getGroup_6() { return cGroup_6; }
-		
-		//',\n"description" :'
-		public Keyword getDescriptionKeyword_6_0() { return cDescriptionKeyword_6_0; }
-		
-		//description=STRING
-		public Assignment getDescriptionAssignment_6_1() { return cDescriptionAssignment_6_1; }
-		
-		//STRING
-		public RuleCall getDescriptionSTRINGTerminalRuleCall_6_1_0() { return cDescriptionSTRINGTerminalRuleCall_6_1_0; }
-		
-		//(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ("," dependentArtifacts+=EString)* '}')?
-		public Group getGroup_7() { return cGroup_7; }
-		
-		//',\n"dependentArtifacts" :'
-		public Keyword getDependentArtifactsKeyword_7_0() { return cDependentArtifactsKeyword_7_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_7_1() { return cLeftCurlyBracketKeyword_7_1; }
-		
-		//dependentArtifacts+=EString
-		public Assignment getDependentArtifactsAssignment_7_2() { return cDependentArtifactsAssignment_7_2; }
-		
-		//EString
-		public RuleCall getDependentArtifactsEStringParserRuleCall_7_2_0() { return cDependentArtifactsEStringParserRuleCall_7_2_0; }
-		
-		//("," dependentArtifacts+=EString)*
-		public Group getGroup_7_3() { return cGroup_7_3; }
-		
-		//","
-		public Keyword getCommaKeyword_7_3_0() { return cCommaKeyword_7_3_0; }
-		
-		//dependentArtifacts+=EString
-		public Assignment getDependentArtifactsAssignment_7_3_1() { return cDependentArtifactsAssignment_7_3_1; }
-		
-		//EString
-		public RuleCall getDependentArtifactsEStringParserRuleCall_7_3_1_0() { return cDependentArtifactsEStringParserRuleCall_7_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_7_4() { return cRightCurlyBracketKeyword_7_4; }
-		
-		//(',\n"inputs" :' '{' inputs+=Property ("," inputs+=Property)* '}')?
-		public Group getGroup_8() { return cGroup_8; }
-		
-		//',\n"inputs" :'
-		public Keyword getInputsKeyword_8_0() { return cInputsKeyword_8_0; }
-		
-		//'{'
-		public Keyword getLeftCurlyBracketKeyword_8_1() { return cLeftCurlyBracketKeyword_8_1; }
-		
-		//inputs+=Property
-		public Assignment getInputsAssignment_8_2() { return cInputsAssignment_8_2; }
-		
-		//Property
-		public RuleCall getInputsPropertyParserRuleCall_8_2_0() { return cInputsPropertyParserRuleCall_8_2_0; }
-		
-		//("," inputs+=Property)*
-		public Group getGroup_8_3() { return cGroup_8_3; }
-		
-		//","
-		public Keyword getCommaKeyword_8_3_0() { return cCommaKeyword_8_3_0; }
-		
-		//inputs+=Property
-		public Assignment getInputsAssignment_8_3_1() { return cInputsAssignment_8_3_1; }
-		
-		//Property
-		public RuleCall getInputsPropertyParserRuleCall_8_3_1_0() { return cInputsPropertyParserRuleCall_8_3_1_0; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_8_4() { return cRightCurlyBracketKeyword_8_4; }
-		
-		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public RuleCall getPrimarySTRINGTerminalRuleCall_3_0() { return cPrimarySTRINGTerminalRuleCall_3_0; }
 	}
 	
 	
@@ -1910,9 +1742,9 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 	//NodeTemplate:
 	//	{NodeTemplate} node_template_name=STRING ":"
 	//	'{'
-	//	'"type" :' type=STRING (',\n"description" :' description=STRING)? (',\n"relationships" :' '{'
-	//	relationships+=Relationship ("," relationships+=Relationship)* '}')? (',\n"interfaces" :' '{' interfaces+=Interface
-	//	("," interfaces+=Interface)* '}')? (',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
+	//	'"type" :' type=STRING (',\n"description" :' description=STRING)? (',\n"relationships" :' '['
+	//	relationships+=Relationship ("," relationships+=Relationship)* ']')? (',\n"interfaces" :' '{' interfaces+=Interface
+	//	("," interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
 	//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"requirements" :' '{'
 	//	requirements+=Requirement ("," requirements+=Requirement)* '}')? (',\n"capabilities" :' '{' capabilities+=Capability
 	//	("," capabilities+=Capability)* '}')?
@@ -1926,13 +1758,15 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Relationship:
-	//	{Relationship} relationship_name=STRING ":"
+	//	{Relationship}
+	//	//relationship_name=STRING ":"
 	//	'{'
+	//	//'"relationship_name" :' relationship_name=STRING
 	//	'"type" :' type=STRING (',\n"target" :' target=STRING)? (',\n"interfaces" :' '{' interfaces+=Interface (","
-	//	interfaces+=Interface)* '}')? (',\n"properties" :' '{' properties+=Property ("," properties+=Property)* '}')?
-	//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"sourceInterfaces" :' '{'
-	//	sourceInterfaces+=Interface ("," sourceInterfaces+=Interface)* '}')? (',\n"targetInterfaces" :' '{'
-	//	targetInterfaces+=Interface ("," targetInterfaces+=Interface)* '}')?
+	//	interfaces+=Interface)* '}')? (',\n"properties" :' '[' properties+=Property ("," properties+=Property)* ']')?
+	//	(',\n"attributes" :' '{' attributes+=Attribute ("," attributes+=Attribute)* '}')? (',\n"source_interfaces" :' '{'
+	//	source_interfaces+=Interface ("," source_interfaces+=Interface)* '}')? (',\n"target_iterfaces" :' '{'
+	//	target_interfaces+=Interface ("," target_interfaces+=Interface)* '}')?
 	//	'}';
 	public RelationshipElements getRelationshipAccess() {
 		return pRelationship;
@@ -1968,10 +1802,9 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Interface:
-	//	{Interface} interface_name=STRING ":"
-	//	'{'
-	//	'"type" :' type=STRING (',\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
-	//	(',\n"inputs" :' '{' inputs+=Property ("," inputs+=Property)* '}')?
+	//	{Interface} type=STRING ":"
+	//	'{' ('\n"operations" :' '{' operations+=Operation ("," operations+=Operation)* '}')?
+	//	//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
 	//	'}';
 	public InterfaceElements getInterfaceAccess() {
 		return pInterface;
@@ -1982,9 +1815,10 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Property:
-	//	{Property} property_name=STRING ":"
+	//	{Property}
 	//	'{'
-	//	'"value" :' value=STRING
+	//	property_name=STRING ":"
+	//	value=STRING
 	//	'}';
 	public PropertyElements getPropertyAccess() {
 		return pProperty;
@@ -2033,11 +1867,14 @@ public class ToscaDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Operation:
 	//	{Operation} operation_name=STRING ":"
-	//	'{'
-	//	'"primary" :' primary=STRING (',\n"description" :' description=STRING)? (',\n"dependentArtifacts" :' '{'
-	//	dependentArtifacts+=EString ("," dependentArtifacts+=EString)* '}')? (',\n"inputs" :' '{' inputs+=Property (","
-	//	inputs+=Property)* '}')?
-	//	'}';
+	//	primary=STRING
+	//	//'{'
+	//	//'"primary" :' primary=STRING
+	//	//(',\n"description" :' description=STRING )?
+	//	//(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ( "," dependentArtifacts+=EString)* '}' )?
+	//	//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+	//	//'}'
+	//;
 	public OperationElements getOperationAccess() {
 		return pOperation;
 	}

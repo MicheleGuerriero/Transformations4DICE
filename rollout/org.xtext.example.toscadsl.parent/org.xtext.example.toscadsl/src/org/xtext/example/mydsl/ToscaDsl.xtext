@@ -42,9 +42,9 @@ NodeTemplate returns NodeTemplate:
 	'{'
 		'"type" :' type=STRING 
 		(',\n"description" :' description=STRING )?
-		(',\n"relationships" :' '{' relationships+=Relationship ( "," relationships+=Relationship)* '}' )?
+		(',\n"relationships" :' '['relationships+=Relationship ( ","  relationships+=Relationship )* ']' )?
 		(',\n"interfaces" :' '{' interfaces+=Interface ( "," interfaces+=Interface)* '}' )?
-		(',\n"properties" :' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		(',\n"properties" :' '[' properties+=Property ( "," properties+=Property)* ']' )?
 		(',\n"attributes" :' '{' attributes+=Attribute ( "," attributes+=Attribute)* '}' )?
 		(',\n"requirements" :' '{' requirements+=Requirement ( "," requirements+=Requirement)* '}' )?
 		(',\n"capabilities" :' '{' capabilities+=Capability ( "," capabilities+=Capability)* '}' )?
@@ -52,15 +52,16 @@ NodeTemplate returns NodeTemplate:
 
 Relationship returns Relationship:
 	{Relationship}
-	relationship_name=STRING ":"
+	//relationship_name=STRING ":"
 	'{'
+		//'"relationship_name" :' relationship_name=STRING
 		'"type" :' type=STRING
 		(',\n"target" :' target=STRING )?
 		(',\n"interfaces" :' '{' interfaces+=Interface ( "," interfaces+=Interface)* '}' )?
-		(',\n"properties" :' '{' properties+=Property ( "," properties+=Property)* '}' )?
+		(',\n"properties" :' '[' properties+=Property ( "," properties+=Property)* ']' )?
 		(',\n"attributes" :' '{' attributes+=Attribute ( "," attributes+=Attribute)* '}' )?
-		(',\n"sourceInterfaces" :' '{' sourceInterfaces+=Interface ( "," sourceInterfaces+=Interface)* '}' )?
-		(',\n"targetInterfaces" :' '{' targetInterfaces+=Interface ( "," targetInterfaces+=Interface)* '}' )?
+		(',\n"source_interfaces" :' '{' source_interfaces+=Interface ( "," source_interfaces+=Interface)* '}' )?
+		(',\n"target_iterfaces" :' '{' target_interfaces+=Interface ( "," target_interfaces+=Interface)* '}' )?
 	'}';
 
 Group returns Group:
@@ -80,19 +81,22 @@ Policy returns Policy:
 
 Interface returns Interface:
 	{Interface}
-	interface_name=STRING ":"
+	//interface_name=STRING ":"
+	type=STRING ":"
 	'{'
-		'"type" :' type=STRING 
-		(',\n"operations" :' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
-		(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+		//'"type" :' type=STRING 
+		//(',\n"operations" :' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
+		('\n"operations" :' '{' operations+=Operation ( "," operations+=Operation)* '}' )?
+		//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
 	'}';
 
 Property returns Property:
 	{Property}
-	property_name=STRING ":"
 	'{'
-		'"value" :' value=STRING
-	'}';
+	property_name=STRING ":"
+	value=STRING
+	'}'
+	;
 
 Attribute returns Attribute:
 	{Attribute}
@@ -116,10 +120,12 @@ Capability returns Capability:
 
 Operation returns Operation:
 	{Operation}
-	operation_name=STRING ":"
-	'{'
-		'"primary" :' primary=STRING
-		(',\n"description" :' description=STRING )?
-		(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ( "," dependentArtifacts+=EString)* '}' )?
-		(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
-	'}';
+		operation_name=STRING ":"
+		primary=STRING
+	//'{'
+		//'"primary" :' primary=STRING
+		//(',\n"description" :' description=STRING )?
+		//(',\n"dependentArtifacts" :' '{' dependentArtifacts+=EString ( "," dependentArtifacts+=EString)* '}' )?
+		//(',\n"inputs" :' '{' inputs+=Property ( "," inputs+=Property)* '}' )?
+	//'}'
+	;

@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalToscaDslParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'\"tosca_definitions_version\" :'", "'}'", "',\\n\"description\" :'", "',\\n\"imports\" :'", "'['", "']'", "','", "',\\n\"outputs\" :'", "',\\n\"inputs\" :'", "',\\n\"nodeTemplates\" :'", "',\\n\"realtionships\" :'", "',\\n\"groups\" :'", "',\\n\"policies\" :'", "':'", "'\"type\" :'", "',\\n\"relationships\" :'", "',\\n\"interfaces\" :'", "',\\n\"properties\" :'", "',\\n\"attributes\" :'", "',\\n\"requirements\" :'", "',\\n\"capabilities\" :'", "',\\n\"target\" :'", "',\\n\"sourceInterfaces\" :'", "',\\n\"targetInterfaces\" :'", "',\\n\"targets\" :'", "',\\n\"operations\" :'", "'\"value\" :'", "'\"capabiity\" :'", "',\\n\"node\" :'", "'\"primary\" :'", "',\\n\"dependentArtifacts\" :'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_STRING", "RULE_ID", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'{'", "'\"tosca_definitions_version\" :'", "'}'", "',\\n\"description\" :'", "',\\n\"imports\" :'", "'['", "']'", "','", "',\\n\"outputs\" :'", "',\\n\"inputs\" :'", "',\\n\"nodeTemplates\" :'", "',\\n\"realtionships\" :'", "',\\n\"groups\" :'", "',\\n\"policies\" :'", "':'", "'\"type\" :'", "',\\n\"relationships\" :'", "',\\n\"interfaces\" :'", "',\\n\"properties\" :'", "',\\n\"attributes\" :'", "',\\n\"requirements\" :'", "',\\n\"capabilities\" :'", "',\\n\"target\" :'", "',\\n\"source_interfaces\" :'", "',\\n\"target_iterfaces\" :'", "',\\n\"targets\" :'", "'\\n\"operations\" :'", "'\"capabiity\" :'", "',\\n\"node\" :'"
     };
     public static final int RULE_STRING=4;
     public static final int RULE_SL_COMMENT=8;
@@ -59,10 +59,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     public static final int T__23=23;
     public static final int T__24=24;
     public static final int T__25=25;
-    public static final int T__40=40;
-    public static final int T__41=41;
     public static final int T__20=20;
-    public static final int T__42=42;
     public static final int T__21=21;
 
     // delegates
@@ -4814,7 +4811,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:1588:1: ( rule__TopologyTemplate__Group_8__1__Impl rule__TopologyTemplate__Group_8__2 )
             // InternalToscaDsl.g:1589:2: rule__TopologyTemplate__Group_8__1__Impl rule__TopologyTemplate__Group_8__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__TopologyTemplate__Group_8__1__Impl();
 
             state._fsp--;
@@ -5147,7 +5144,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:1696:1: ( rule__TopologyTemplate__Group_8_3__0__Impl rule__TopologyTemplate__Group_8_3__1 )
             // InternalToscaDsl.g:1697:2: rule__TopologyTemplate__Group_8_3__0__Impl rule__TopologyTemplate__Group_8_3__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__TopologyTemplate__Group_8_3__0__Impl();
 
             state._fsp--;
@@ -8116,7 +8113,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:2668:1: ( rule__NodeTemplate__Group_7__0__Impl rule__NodeTemplate__Group_7__1 )
             // InternalToscaDsl.g:2669:2: rule__NodeTemplate__Group_7__0__Impl rule__NodeTemplate__Group_7__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_6);
             rule__NodeTemplate__Group_7__0__Impl();
 
             state._fsp--;
@@ -8191,7 +8188,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:2695:1: ( rule__NodeTemplate__Group_7__1__Impl rule__NodeTemplate__Group_7__2 )
             // InternalToscaDsl.g:2696:2: rule__NodeTemplate__Group_7__1__Impl rule__NodeTemplate__Group_7__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__NodeTemplate__Group_7__1__Impl();
 
             state._fsp--;
@@ -8220,21 +8217,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__Group_7__1__Impl"
-    // InternalToscaDsl.g:2703:1: rule__NodeTemplate__Group_7__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:2703:1: rule__NodeTemplate__Group_7__1__Impl : ( '[' ) ;
     public final void rule__NodeTemplate__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:2707:1: ( ( '{' ) )
-            // InternalToscaDsl.g:2708:1: ( '{' )
+            // InternalToscaDsl.g:2707:1: ( ( '[' ) )
+            // InternalToscaDsl.g:2708:1: ( '[' )
             {
-            // InternalToscaDsl.g:2708:1: ( '{' )
-            // InternalToscaDsl.g:2709:2: '{'
+            // InternalToscaDsl.g:2708:1: ( '[' )
+            // InternalToscaDsl.g:2709:2: '['
             {
-             before(grammarAccess.getNodeTemplateAccess().getLeftCurlyBracketKeyword_7_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getNodeTemplateAccess().getLeftCurlyBracketKeyword_7_1()); 
+             before(grammarAccess.getNodeTemplateAccess().getLeftSquareBracketKeyword_7_1()); 
+            match(input,16,FOLLOW_2); 
+             after(grammarAccess.getNodeTemplateAccess().getLeftSquareBracketKeyword_7_1()); 
 
             }
 
@@ -8266,7 +8263,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:2722:1: ( rule__NodeTemplate__Group_7__2__Impl rule__NodeTemplate__Group_7__3 )
             // InternalToscaDsl.g:2723:2: rule__NodeTemplate__Group_7__2__Impl rule__NodeTemplate__Group_7__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__NodeTemplate__Group_7__2__Impl();
 
             state._fsp--;
@@ -8351,7 +8348,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:2749:1: ( rule__NodeTemplate__Group_7__3__Impl rule__NodeTemplate__Group_7__4 )
             // InternalToscaDsl.g:2750:2: rule__NodeTemplate__Group_7__3__Impl rule__NodeTemplate__Group_7__4
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__NodeTemplate__Group_7__3__Impl();
 
             state._fsp--;
@@ -8478,21 +8475,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__Group_7__4__Impl"
-    // InternalToscaDsl.g:2783:1: rule__NodeTemplate__Group_7__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:2783:1: rule__NodeTemplate__Group_7__4__Impl : ( ']' ) ;
     public final void rule__NodeTemplate__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:2787:1: ( ( '}' ) )
-            // InternalToscaDsl.g:2788:1: ( '}' )
+            // InternalToscaDsl.g:2787:1: ( ( ']' ) )
+            // InternalToscaDsl.g:2788:1: ( ']' )
             {
-            // InternalToscaDsl.g:2788:1: ( '}' )
-            // InternalToscaDsl.g:2789:2: '}'
+            // InternalToscaDsl.g:2788:1: ( ']' )
+            // InternalToscaDsl.g:2789:2: ']'
             {
-             before(grammarAccess.getNodeTemplateAccess().getRightCurlyBracketKeyword_7_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getNodeTemplateAccess().getRightCurlyBracketKeyword_7_4()); 
+             before(grammarAccess.getNodeTemplateAccess().getRightSquareBracketKeyword_7_4()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getNodeTemplateAccess().getRightSquareBracketKeyword_7_4()); 
 
             }
 
@@ -8524,7 +8521,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:2803:1: ( rule__NodeTemplate__Group_7_3__0__Impl rule__NodeTemplate__Group_7_3__1 )
             // InternalToscaDsl.g:2804:2: rule__NodeTemplate__Group_7_3__0__Impl rule__NodeTemplate__Group_7_3__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__NodeTemplate__Group_7_3__0__Impl();
 
             state._fsp--;
@@ -9242,7 +9239,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3046:1: ( rule__NodeTemplate__Group_9__0__Impl rule__NodeTemplate__Group_9__1 )
             // InternalToscaDsl.g:3047:2: rule__NodeTemplate__Group_9__0__Impl rule__NodeTemplate__Group_9__1
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_6);
             rule__NodeTemplate__Group_9__0__Impl();
 
             state._fsp--;
@@ -9317,7 +9314,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3073:1: ( rule__NodeTemplate__Group_9__1__Impl rule__NodeTemplate__Group_9__2 )
             // InternalToscaDsl.g:3074:2: rule__NodeTemplate__Group_9__1__Impl rule__NodeTemplate__Group_9__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__NodeTemplate__Group_9__1__Impl();
 
             state._fsp--;
@@ -9346,21 +9343,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__Group_9__1__Impl"
-    // InternalToscaDsl.g:3081:1: rule__NodeTemplate__Group_9__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:3081:1: rule__NodeTemplate__Group_9__1__Impl : ( '[' ) ;
     public final void rule__NodeTemplate__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3085:1: ( ( '{' ) )
-            // InternalToscaDsl.g:3086:1: ( '{' )
+            // InternalToscaDsl.g:3085:1: ( ( '[' ) )
+            // InternalToscaDsl.g:3086:1: ( '[' )
             {
-            // InternalToscaDsl.g:3086:1: ( '{' )
-            // InternalToscaDsl.g:3087:2: '{'
+            // InternalToscaDsl.g:3086:1: ( '[' )
+            // InternalToscaDsl.g:3087:2: '['
             {
-             before(grammarAccess.getNodeTemplateAccess().getLeftCurlyBracketKeyword_9_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getNodeTemplateAccess().getLeftCurlyBracketKeyword_9_1()); 
+             before(grammarAccess.getNodeTemplateAccess().getLeftSquareBracketKeyword_9_1()); 
+            match(input,16,FOLLOW_2); 
+             after(grammarAccess.getNodeTemplateAccess().getLeftSquareBracketKeyword_9_1()); 
 
             }
 
@@ -9392,7 +9389,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3100:1: ( rule__NodeTemplate__Group_9__2__Impl rule__NodeTemplate__Group_9__3 )
             // InternalToscaDsl.g:3101:2: rule__NodeTemplate__Group_9__2__Impl rule__NodeTemplate__Group_9__3
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__NodeTemplate__Group_9__2__Impl();
 
             state._fsp--;
@@ -9477,7 +9474,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3127:1: ( rule__NodeTemplate__Group_9__3__Impl rule__NodeTemplate__Group_9__4 )
             // InternalToscaDsl.g:3128:2: rule__NodeTemplate__Group_9__3__Impl rule__NodeTemplate__Group_9__4
             {
-            pushFollow(FOLLOW_10);
+            pushFollow(FOLLOW_7);
             rule__NodeTemplate__Group_9__3__Impl();
 
             state._fsp--;
@@ -9604,21 +9601,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__Group_9__4__Impl"
-    // InternalToscaDsl.g:3161:1: rule__NodeTemplate__Group_9__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:3161:1: rule__NodeTemplate__Group_9__4__Impl : ( ']' ) ;
     public final void rule__NodeTemplate__Group_9__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3165:1: ( ( '}' ) )
-            // InternalToscaDsl.g:3166:1: ( '}' )
+            // InternalToscaDsl.g:3165:1: ( ( ']' ) )
+            // InternalToscaDsl.g:3166:1: ( ']' )
             {
-            // InternalToscaDsl.g:3166:1: ( '}' )
-            // InternalToscaDsl.g:3167:2: '}'
+            // InternalToscaDsl.g:3166:1: ( ']' )
+            // InternalToscaDsl.g:3167:2: ']'
             {
-             before(grammarAccess.getNodeTemplateAccess().getRightCurlyBracketKeyword_9_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getNodeTemplateAccess().getRightCurlyBracketKeyword_9_4()); 
+             before(grammarAccess.getNodeTemplateAccess().getRightSquareBracketKeyword_9_4()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getNodeTemplateAccess().getRightSquareBracketKeyword_9_4()); 
 
             }
 
@@ -9650,7 +9647,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3181:1: ( rule__NodeTemplate__Group_9_3__0__Impl rule__NodeTemplate__Group_9_3__1 )
             // InternalToscaDsl.g:3182:2: rule__NodeTemplate__Group_9_3__0__Impl rule__NodeTemplate__Group_9_3__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__NodeTemplate__Group_9_3__0__Impl();
 
             state._fsp--;
@@ -11494,7 +11491,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3802:1: ( rule__Relationship__Group__0__Impl rule__Relationship__Group__1 )
             // InternalToscaDsl.g:3803:2: rule__Relationship__Group__0__Impl rule__Relationship__Group__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__Relationship__Group__0__Impl();
 
             state._fsp--;
@@ -11569,7 +11566,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3829:1: ( rule__Relationship__Group__1__Impl rule__Relationship__Group__2 )
             // InternalToscaDsl.g:3830:2: rule__Relationship__Group__1__Impl rule__Relationship__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_12);
             rule__Relationship__Group__1__Impl();
 
             state._fsp--;
@@ -11598,31 +11595,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__1__Impl"
-    // InternalToscaDsl.g:3837:1: rule__Relationship__Group__1__Impl : ( ( rule__Relationship__Relationship_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:3837:1: rule__Relationship__Group__1__Impl : ( '{' ) ;
     public final void rule__Relationship__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3841:1: ( ( ( rule__Relationship__Relationship_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:3842:1: ( ( rule__Relationship__Relationship_nameAssignment_1 ) )
+            // InternalToscaDsl.g:3841:1: ( ( '{' ) )
+            // InternalToscaDsl.g:3842:1: ( '{' )
             {
-            // InternalToscaDsl.g:3842:1: ( ( rule__Relationship__Relationship_nameAssignment_1 ) )
-            // InternalToscaDsl.g:3843:2: ( rule__Relationship__Relationship_nameAssignment_1 )
+            // InternalToscaDsl.g:3842:1: ( '{' )
+            // InternalToscaDsl.g:3843:2: '{'
             {
-             before(grammarAccess.getRelationshipAccess().getRelationship_nameAssignment_1()); 
-            // InternalToscaDsl.g:3844:2: ( rule__Relationship__Relationship_nameAssignment_1 )
-            // InternalToscaDsl.g:3844:3: rule__Relationship__Relationship_nameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Relationship_nameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getRelationship_nameAssignment_1()); 
+             before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_1()); 
+            match(input,11,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
 
@@ -11654,7 +11641,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3856:1: ( rule__Relationship__Group__2__Impl rule__Relationship__Group__3 )
             // InternalToscaDsl.g:3857:2: rule__Relationship__Group__2__Impl rule__Relationship__Group__3
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_4);
             rule__Relationship__Group__2__Impl();
 
             state._fsp--;
@@ -11683,21 +11670,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__2__Impl"
-    // InternalToscaDsl.g:3864:1: rule__Relationship__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:3864:1: rule__Relationship__Group__2__Impl : ( '\"type\" :' ) ;
     public final void rule__Relationship__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3868:1: ( ( ':' ) )
-            // InternalToscaDsl.g:3869:1: ( ':' )
+            // InternalToscaDsl.g:3868:1: ( ( '\"type\" :' ) )
+            // InternalToscaDsl.g:3869:1: ( '\"type\" :' )
             {
-            // InternalToscaDsl.g:3869:1: ( ':' )
-            // InternalToscaDsl.g:3870:2: ':'
+            // InternalToscaDsl.g:3869:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:3870:2: '\"type\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getColonKeyword_2()); 
-            match(input,25,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getColonKeyword_2()); 
+             before(grammarAccess.getRelationshipAccess().getTypeKeyword_2()); 
+            match(input,26,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getTypeKeyword_2()); 
 
             }
 
@@ -11729,7 +11716,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3883:1: ( rule__Relationship__Group__3__Impl rule__Relationship__Group__4 )
             // InternalToscaDsl.g:3884:2: rule__Relationship__Group__3__Impl rule__Relationship__Group__4
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_14);
             rule__Relationship__Group__3__Impl();
 
             state._fsp--;
@@ -11758,21 +11745,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__3__Impl"
-    // InternalToscaDsl.g:3891:1: rule__Relationship__Group__3__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:3891:1: rule__Relationship__Group__3__Impl : ( ( rule__Relationship__TypeAssignment_3 ) ) ;
     public final void rule__Relationship__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3895:1: ( ( '{' ) )
-            // InternalToscaDsl.g:3896:1: ( '{' )
+            // InternalToscaDsl.g:3895:1: ( ( ( rule__Relationship__TypeAssignment_3 ) ) )
+            // InternalToscaDsl.g:3896:1: ( ( rule__Relationship__TypeAssignment_3 ) )
             {
-            // InternalToscaDsl.g:3896:1: ( '{' )
-            // InternalToscaDsl.g:3897:2: '{'
+            // InternalToscaDsl.g:3896:1: ( ( rule__Relationship__TypeAssignment_3 ) )
+            // InternalToscaDsl.g:3897:2: ( rule__Relationship__TypeAssignment_3 )
             {
-             before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_3()); 
+             before(grammarAccess.getRelationshipAccess().getTypeAssignment_3()); 
+            // InternalToscaDsl.g:3898:2: ( rule__Relationship__TypeAssignment_3 )
+            // InternalToscaDsl.g:3898:3: rule__Relationship__TypeAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__TypeAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getTypeAssignment_3()); 
 
             }
 
@@ -11804,7 +11801,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:3910:1: ( rule__Relationship__Group__4__Impl rule__Relationship__Group__5 )
             // InternalToscaDsl.g:3911:2: rule__Relationship__Group__4__Impl rule__Relationship__Group__5
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_14);
             rule__Relationship__Group__4__Impl();
 
             state._fsp--;
@@ -11833,21 +11830,42 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__4__Impl"
-    // InternalToscaDsl.g:3918:1: rule__Relationship__Group__4__Impl : ( '\"type\" :' ) ;
+    // InternalToscaDsl.g:3918:1: rule__Relationship__Group__4__Impl : ( ( rule__Relationship__Group_4__0 )? ) ;
     public final void rule__Relationship__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3922:1: ( ( '\"type\" :' ) )
-            // InternalToscaDsl.g:3923:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:3922:1: ( ( ( rule__Relationship__Group_4__0 )? ) )
+            // InternalToscaDsl.g:3923:1: ( ( rule__Relationship__Group_4__0 )? )
             {
-            // InternalToscaDsl.g:3923:1: ( '\"type\" :' )
-            // InternalToscaDsl.g:3924:2: '\"type\" :'
+            // InternalToscaDsl.g:3923:1: ( ( rule__Relationship__Group_4__0 )? )
+            // InternalToscaDsl.g:3924:2: ( rule__Relationship__Group_4__0 )?
             {
-             before(grammarAccess.getRelationshipAccess().getTypeKeyword_4()); 
-            match(input,26,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getTypeKeyword_4()); 
+             before(grammarAccess.getRelationshipAccess().getGroup_4()); 
+            // InternalToscaDsl.g:3925:2: ( rule__Relationship__Group_4__0 )?
+            int alt31=2;
+            int LA31_0 = input.LA(1);
+
+            if ( (LA31_0==33) ) {
+                alt31=1;
+            }
+            switch (alt31) {
+                case 1 :
+                    // InternalToscaDsl.g:3925:3: rule__Relationship__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Relationship__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getGroup_4()); 
 
             }
 
@@ -11908,31 +11926,42 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__5__Impl"
-    // InternalToscaDsl.g:3945:1: rule__Relationship__Group__5__Impl : ( ( rule__Relationship__TypeAssignment_5 ) ) ;
+    // InternalToscaDsl.g:3945:1: rule__Relationship__Group__5__Impl : ( ( rule__Relationship__Group_5__0 )? ) ;
     public final void rule__Relationship__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:3949:1: ( ( ( rule__Relationship__TypeAssignment_5 ) ) )
-            // InternalToscaDsl.g:3950:1: ( ( rule__Relationship__TypeAssignment_5 ) )
+            // InternalToscaDsl.g:3949:1: ( ( ( rule__Relationship__Group_5__0 )? ) )
+            // InternalToscaDsl.g:3950:1: ( ( rule__Relationship__Group_5__0 )? )
             {
-            // InternalToscaDsl.g:3950:1: ( ( rule__Relationship__TypeAssignment_5 ) )
-            // InternalToscaDsl.g:3951:2: ( rule__Relationship__TypeAssignment_5 )
+            // InternalToscaDsl.g:3950:1: ( ( rule__Relationship__Group_5__0 )? )
+            // InternalToscaDsl.g:3951:2: ( rule__Relationship__Group_5__0 )?
             {
-             before(grammarAccess.getRelationshipAccess().getTypeAssignment_5()); 
-            // InternalToscaDsl.g:3952:2: ( rule__Relationship__TypeAssignment_5 )
-            // InternalToscaDsl.g:3952:3: rule__Relationship__TypeAssignment_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__TypeAssignment_5();
+             before(grammarAccess.getRelationshipAccess().getGroup_5()); 
+            // InternalToscaDsl.g:3952:2: ( rule__Relationship__Group_5__0 )?
+            int alt32=2;
+            int LA32_0 = input.LA(1);
 
-            state._fsp--;
+            if ( (LA32_0==28) ) {
+                alt32=1;
+            }
+            switch (alt32) {
+                case 1 :
+                    // InternalToscaDsl.g:3952:3: rule__Relationship__Group_5__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Relationship__Group_5__0();
 
+                    state._fsp--;
+
+
+                    }
+                    break;
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getTypeAssignment_5()); 
+             after(grammarAccess.getRelationshipAccess().getGroup_5()); 
 
             }
 
@@ -12007,13 +12036,13 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getRelationshipAccess().getGroup_6()); 
             // InternalToscaDsl.g:3979:2: ( rule__Relationship__Group_6__0 )?
-            int alt31=2;
-            int LA31_0 = input.LA(1);
+            int alt33=2;
+            int LA33_0 = input.LA(1);
 
-            if ( (LA31_0==33) ) {
-                alt31=1;
+            if ( (LA33_0==29) ) {
+                alt33=1;
             }
-            switch (alt31) {
+            switch (alt33) {
                 case 1 :
                     // InternalToscaDsl.g:3979:3: rule__Relationship__Group_6__0
                     {
@@ -12103,13 +12132,13 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getRelationshipAccess().getGroup_7()); 
             // InternalToscaDsl.g:4006:2: ( rule__Relationship__Group_7__0 )?
-            int alt32=2;
-            int LA32_0 = input.LA(1);
+            int alt34=2;
+            int LA34_0 = input.LA(1);
 
-            if ( (LA32_0==28) ) {
-                alt32=1;
+            if ( (LA34_0==30) ) {
+                alt34=1;
             }
-            switch (alt32) {
+            switch (alt34) {
                 case 1 :
                     // InternalToscaDsl.g:4006:3: rule__Relationship__Group_7__0
                     {
@@ -12199,13 +12228,13 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getRelationshipAccess().getGroup_8()); 
             // InternalToscaDsl.g:4033:2: ( rule__Relationship__Group_8__0 )?
-            int alt33=2;
-            int LA33_0 = input.LA(1);
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA33_0==29) ) {
-                alt33=1;
+            if ( (LA35_0==34) ) {
+                alt35=1;
             }
-            switch (alt33) {
+            switch (alt35) {
                 case 1 :
                     // InternalToscaDsl.g:4033:3: rule__Relationship__Group_8__0
                     {
@@ -12295,13 +12324,13 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             {
              before(grammarAccess.getRelationshipAccess().getGroup_9()); 
             // InternalToscaDsl.g:4060:2: ( rule__Relationship__Group_9__0 )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA34_0==30) ) {
-                alt34=1;
+            if ( (LA36_0==35) ) {
+                alt36=1;
             }
-            switch (alt34) {
+            switch (alt36) {
                 case 1 :
                     // InternalToscaDsl.g:4060:3: rule__Relationship__Group_9__0
                     {
@@ -12339,22 +12368,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__10"
-    // InternalToscaDsl.g:4068:1: rule__Relationship__Group__10 : rule__Relationship__Group__10__Impl rule__Relationship__Group__11 ;
+    // InternalToscaDsl.g:4068:1: rule__Relationship__Group__10 : rule__Relationship__Group__10__Impl ;
     public final void rule__Relationship__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4072:1: ( rule__Relationship__Group__10__Impl rule__Relationship__Group__11 )
-            // InternalToscaDsl.g:4073:2: rule__Relationship__Group__10__Impl rule__Relationship__Group__11
+            // InternalToscaDsl.g:4072:1: ( rule__Relationship__Group__10__Impl )
+            // InternalToscaDsl.g:4073:2: rule__Relationship__Group__10__Impl
             {
-            pushFollow(FOLLOW_14);
-            rule__Relationship__Group__10__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Relationship__Group__11();
+            rule__Relationship__Group__10__Impl();
 
             state._fsp--;
 
@@ -12377,42 +12401,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group__10__Impl"
-    // InternalToscaDsl.g:4080:1: rule__Relationship__Group__10__Impl : ( ( rule__Relationship__Group_10__0 )? ) ;
+    // InternalToscaDsl.g:4079:1: rule__Relationship__Group__10__Impl : ( '}' ) ;
     public final void rule__Relationship__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4084:1: ( ( ( rule__Relationship__Group_10__0 )? ) )
-            // InternalToscaDsl.g:4085:1: ( ( rule__Relationship__Group_10__0 )? )
+            // InternalToscaDsl.g:4083:1: ( ( '}' ) )
+            // InternalToscaDsl.g:4084:1: ( '}' )
             {
-            // InternalToscaDsl.g:4085:1: ( ( rule__Relationship__Group_10__0 )? )
-            // InternalToscaDsl.g:4086:2: ( rule__Relationship__Group_10__0 )?
+            // InternalToscaDsl.g:4084:1: ( '}' )
+            // InternalToscaDsl.g:4085:2: '}'
             {
-             before(grammarAccess.getRelationshipAccess().getGroup_10()); 
-            // InternalToscaDsl.g:4087:2: ( rule__Relationship__Group_10__0 )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
-
-            if ( (LA35_0==34) ) {
-                alt35=1;
-            }
-            switch (alt35) {
-                case 1 :
-                    // InternalToscaDsl.g:4087:3: rule__Relationship__Group_10__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Relationship__Group_10__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getGroup_10()); 
+             before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_10()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_10()); 
 
             }
 
@@ -12434,23 +12437,23 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Relationship__Group__10__Impl"
 
 
-    // $ANTLR start "rule__Relationship__Group__11"
-    // InternalToscaDsl.g:4095:1: rule__Relationship__Group__11 : rule__Relationship__Group__11__Impl rule__Relationship__Group__12 ;
-    public final void rule__Relationship__Group__11() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Group_4__0"
+    // InternalToscaDsl.g:4095:1: rule__Relationship__Group_4__0 : rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1 ;
+    public final void rule__Relationship__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4099:1: ( rule__Relationship__Group__11__Impl rule__Relationship__Group__12 )
-            // InternalToscaDsl.g:4100:2: rule__Relationship__Group__11__Impl rule__Relationship__Group__12
+            // InternalToscaDsl.g:4099:1: ( rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1 )
+            // InternalToscaDsl.g:4100:2: rule__Relationship__Group_4__0__Impl rule__Relationship__Group_4__1
             {
-            pushFollow(FOLLOW_14);
-            rule__Relationship__Group__11__Impl();
+            pushFollow(FOLLOW_4);
+            rule__Relationship__Group_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Relationship__Group__12();
+            rule__Relationship__Group_4__1();
 
             state._fsp--;
 
@@ -12469,46 +12472,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__Group__11"
+    // $ANTLR end "rule__Relationship__Group_4__0"
 
 
-    // $ANTLR start "rule__Relationship__Group__11__Impl"
-    // InternalToscaDsl.g:4107:1: rule__Relationship__Group__11__Impl : ( ( rule__Relationship__Group_11__0 )? ) ;
-    public final void rule__Relationship__Group__11__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Group_4__0__Impl"
+    // InternalToscaDsl.g:4107:1: rule__Relationship__Group_4__0__Impl : ( ',\\n\"target\" :' ) ;
+    public final void rule__Relationship__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4111:1: ( ( ( rule__Relationship__Group_11__0 )? ) )
-            // InternalToscaDsl.g:4112:1: ( ( rule__Relationship__Group_11__0 )? )
+            // InternalToscaDsl.g:4111:1: ( ( ',\\n\"target\" :' ) )
+            // InternalToscaDsl.g:4112:1: ( ',\\n\"target\" :' )
             {
-            // InternalToscaDsl.g:4112:1: ( ( rule__Relationship__Group_11__0 )? )
-            // InternalToscaDsl.g:4113:2: ( rule__Relationship__Group_11__0 )?
+            // InternalToscaDsl.g:4112:1: ( ',\\n\"target\" :' )
+            // InternalToscaDsl.g:4113:2: ',\\n\"target\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getGroup_11()); 
-            // InternalToscaDsl.g:4114:2: ( rule__Relationship__Group_11__0 )?
-            int alt36=2;
-            int LA36_0 = input.LA(1);
-
-            if ( (LA36_0==35) ) {
-                alt36=1;
-            }
-            switch (alt36) {
-                case 1 :
-                    // InternalToscaDsl.g:4114:3: rule__Relationship__Group_11__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Relationship__Group_11__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getGroup_11()); 
+             before(grammarAccess.getRelationshipAccess().getTargetKeyword_4_0()); 
+            match(input,33,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getTargetKeyword_4_0()); 
 
             }
 
@@ -12527,21 +12509,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__Group__11__Impl"
+    // $ANTLR end "rule__Relationship__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__Relationship__Group__12"
-    // InternalToscaDsl.g:4122:1: rule__Relationship__Group__12 : rule__Relationship__Group__12__Impl ;
-    public final void rule__Relationship__Group__12() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Group_4__1"
+    // InternalToscaDsl.g:4122:1: rule__Relationship__Group_4__1 : rule__Relationship__Group_4__1__Impl ;
+    public final void rule__Relationship__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4126:1: ( rule__Relationship__Group__12__Impl )
-            // InternalToscaDsl.g:4127:2: rule__Relationship__Group__12__Impl
+            // InternalToscaDsl.g:4126:1: ( rule__Relationship__Group_4__1__Impl )
+            // InternalToscaDsl.g:4127:2: rule__Relationship__Group_4__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__Group__12__Impl();
+            rule__Relationship__Group_4__1__Impl();
 
             state._fsp--;
 
@@ -12560,25 +12542,443 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__Group__12"
+    // $ANTLR end "rule__Relationship__Group_4__1"
 
 
-    // $ANTLR start "rule__Relationship__Group__12__Impl"
-    // InternalToscaDsl.g:4133:1: rule__Relationship__Group__12__Impl : ( '}' ) ;
-    public final void rule__Relationship__Group__12__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Group_4__1__Impl"
+    // InternalToscaDsl.g:4133:1: rule__Relationship__Group_4__1__Impl : ( ( rule__Relationship__TargetAssignment_4_1 ) ) ;
+    public final void rule__Relationship__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4137:1: ( ( '}' ) )
-            // InternalToscaDsl.g:4138:1: ( '}' )
+            // InternalToscaDsl.g:4137:1: ( ( ( rule__Relationship__TargetAssignment_4_1 ) ) )
+            // InternalToscaDsl.g:4138:1: ( ( rule__Relationship__TargetAssignment_4_1 ) )
             {
-            // InternalToscaDsl.g:4138:1: ( '}' )
-            // InternalToscaDsl.g:4139:2: '}'
+            // InternalToscaDsl.g:4138:1: ( ( rule__Relationship__TargetAssignment_4_1 ) )
+            // InternalToscaDsl.g:4139:2: ( rule__Relationship__TargetAssignment_4_1 )
             {
-             before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_12()); 
+             before(grammarAccess.getRelationshipAccess().getTargetAssignment_4_1()); 
+            // InternalToscaDsl.g:4140:2: ( rule__Relationship__TargetAssignment_4_1 )
+            // InternalToscaDsl.g:4140:3: rule__Relationship__TargetAssignment_4_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__TargetAssignment_4_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getTargetAssignment_4_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_4__1__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__0"
+    // InternalToscaDsl.g:4149:1: rule__Relationship__Group_5__0 : rule__Relationship__Group_5__0__Impl rule__Relationship__Group_5__1 ;
+    public final void rule__Relationship__Group_5__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4153:1: ( rule__Relationship__Group_5__0__Impl rule__Relationship__Group_5__1 )
+            // InternalToscaDsl.g:4154:2: rule__Relationship__Group_5__0__Impl rule__Relationship__Group_5__1
+            {
+            pushFollow(FOLLOW_9);
+            rule__Relationship__Group_5__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__0"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__0__Impl"
+    // InternalToscaDsl.g:4161:1: rule__Relationship__Group_5__0__Impl : ( ',\\n\"interfaces\" :' ) ;
+    public final void rule__Relationship__Group_5__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4165:1: ( ( ',\\n\"interfaces\" :' ) )
+            // InternalToscaDsl.g:4166:1: ( ',\\n\"interfaces\" :' )
+            {
+            // InternalToscaDsl.g:4166:1: ( ',\\n\"interfaces\" :' )
+            // InternalToscaDsl.g:4167:2: ',\\n\"interfaces\" :'
+            {
+             before(grammarAccess.getRelationshipAccess().getInterfacesKeyword_5_0()); 
+            match(input,28,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getInterfacesKeyword_5_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__0__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__1"
+    // InternalToscaDsl.g:4176:1: rule__Relationship__Group_5__1 : rule__Relationship__Group_5__1__Impl rule__Relationship__Group_5__2 ;
+    public final void rule__Relationship__Group_5__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4180:1: ( rule__Relationship__Group_5__1__Impl rule__Relationship__Group_5__2 )
+            // InternalToscaDsl.g:4181:2: rule__Relationship__Group_5__1__Impl rule__Relationship__Group_5__2
+            {
+            pushFollow(FOLLOW_4);
+            rule__Relationship__Group_5__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__1"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__1__Impl"
+    // InternalToscaDsl.g:4188:1: rule__Relationship__Group_5__1__Impl : ( '{' ) ;
+    public final void rule__Relationship__Group_5__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4192:1: ( ( '{' ) )
+            // InternalToscaDsl.g:4193:1: ( '{' )
+            {
+            // InternalToscaDsl.g:4193:1: ( '{' )
+            // InternalToscaDsl.g:4194:2: '{'
+            {
+             before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_5_1()); 
+            match(input,11,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_5_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__1__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__2"
+    // InternalToscaDsl.g:4203:1: rule__Relationship__Group_5__2 : rule__Relationship__Group_5__2__Impl rule__Relationship__Group_5__3 ;
+    public final void rule__Relationship__Group_5__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4207:1: ( rule__Relationship__Group_5__2__Impl rule__Relationship__Group_5__3 )
+            // InternalToscaDsl.g:4208:2: rule__Relationship__Group_5__2__Impl rule__Relationship__Group_5__3
+            {
+            pushFollow(FOLLOW_10);
+            rule__Relationship__Group_5__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__2"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__2__Impl"
+    // InternalToscaDsl.g:4215:1: rule__Relationship__Group_5__2__Impl : ( ( rule__Relationship__InterfacesAssignment_5_2 ) ) ;
+    public final void rule__Relationship__Group_5__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4219:1: ( ( ( rule__Relationship__InterfacesAssignment_5_2 ) ) )
+            // InternalToscaDsl.g:4220:1: ( ( rule__Relationship__InterfacesAssignment_5_2 ) )
+            {
+            // InternalToscaDsl.g:4220:1: ( ( rule__Relationship__InterfacesAssignment_5_2 ) )
+            // InternalToscaDsl.g:4221:2: ( rule__Relationship__InterfacesAssignment_5_2 )
+            {
+             before(grammarAccess.getRelationshipAccess().getInterfacesAssignment_5_2()); 
+            // InternalToscaDsl.g:4222:2: ( rule__Relationship__InterfacesAssignment_5_2 )
+            // InternalToscaDsl.g:4222:3: rule__Relationship__InterfacesAssignment_5_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__InterfacesAssignment_5_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getInterfacesAssignment_5_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__2__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__3"
+    // InternalToscaDsl.g:4230:1: rule__Relationship__Group_5__3 : rule__Relationship__Group_5__3__Impl rule__Relationship__Group_5__4 ;
+    public final void rule__Relationship__Group_5__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4234:1: ( rule__Relationship__Group_5__3__Impl rule__Relationship__Group_5__4 )
+            // InternalToscaDsl.g:4235:2: rule__Relationship__Group_5__3__Impl rule__Relationship__Group_5__4
+            {
+            pushFollow(FOLLOW_10);
+            rule__Relationship__Group_5__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__3"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__3__Impl"
+    // InternalToscaDsl.g:4242:1: rule__Relationship__Group_5__3__Impl : ( ( rule__Relationship__Group_5_3__0 )* ) ;
+    public final void rule__Relationship__Group_5__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4246:1: ( ( ( rule__Relationship__Group_5_3__0 )* ) )
+            // InternalToscaDsl.g:4247:1: ( ( rule__Relationship__Group_5_3__0 )* )
+            {
+            // InternalToscaDsl.g:4247:1: ( ( rule__Relationship__Group_5_3__0 )* )
+            // InternalToscaDsl.g:4248:2: ( rule__Relationship__Group_5_3__0 )*
+            {
+             before(grammarAccess.getRelationshipAccess().getGroup_5_3()); 
+            // InternalToscaDsl.g:4249:2: ( rule__Relationship__Group_5_3__0 )*
+            loop37:
+            do {
+                int alt37=2;
+                int LA37_0 = input.LA(1);
+
+                if ( (LA37_0==18) ) {
+                    alt37=1;
+                }
+
+
+                switch (alt37) {
+            	case 1 :
+            	    // InternalToscaDsl.g:4249:3: rule__Relationship__Group_5_3__0
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Relationship__Group_5_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop37;
+                }
+            } while (true);
+
+             after(grammarAccess.getRelationshipAccess().getGroup_5_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__3__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__4"
+    // InternalToscaDsl.g:4257:1: rule__Relationship__Group_5__4 : rule__Relationship__Group_5__4__Impl ;
+    public final void rule__Relationship__Group_5__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4261:1: ( rule__Relationship__Group_5__4__Impl )
+            // InternalToscaDsl.g:4262:2: rule__Relationship__Group_5__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5__4"
+
+
+    // $ANTLR start "rule__Relationship__Group_5__4__Impl"
+    // InternalToscaDsl.g:4268:1: rule__Relationship__Group_5__4__Impl : ( '}' ) ;
+    public final void rule__Relationship__Group_5__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4272:1: ( ( '}' ) )
+            // InternalToscaDsl.g:4273:1: ( '}' )
+            {
+            // InternalToscaDsl.g:4273:1: ( '}' )
+            // InternalToscaDsl.g:4274:2: '}'
+            {
+             before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_5_4()); 
             match(input,13,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_12()); 
+             after(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_5_4()); 
 
             }
 
@@ -12597,20 +12997,175 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__Group__12__Impl"
+    // $ANTLR end "rule__Relationship__Group_5__4__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5_3__0"
+    // InternalToscaDsl.g:4284:1: rule__Relationship__Group_5_3__0 : rule__Relationship__Group_5_3__0__Impl rule__Relationship__Group_5_3__1 ;
+    public final void rule__Relationship__Group_5_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4288:1: ( rule__Relationship__Group_5_3__0__Impl rule__Relationship__Group_5_3__1 )
+            // InternalToscaDsl.g:4289:2: rule__Relationship__Group_5_3__0__Impl rule__Relationship__Group_5_3__1
+            {
+            pushFollow(FOLLOW_4);
+            rule__Relationship__Group_5_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5_3__0"
+
+
+    // $ANTLR start "rule__Relationship__Group_5_3__0__Impl"
+    // InternalToscaDsl.g:4296:1: rule__Relationship__Group_5_3__0__Impl : ( ',' ) ;
+    public final void rule__Relationship__Group_5_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4300:1: ( ( ',' ) )
+            // InternalToscaDsl.g:4301:1: ( ',' )
+            {
+            // InternalToscaDsl.g:4301:1: ( ',' )
+            // InternalToscaDsl.g:4302:2: ','
+            {
+             before(grammarAccess.getRelationshipAccess().getCommaKeyword_5_3_0()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getCommaKeyword_5_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5_3__0__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_5_3__1"
+    // InternalToscaDsl.g:4311:1: rule__Relationship__Group_5_3__1 : rule__Relationship__Group_5_3__1__Impl ;
+    public final void rule__Relationship__Group_5_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4315:1: ( rule__Relationship__Group_5_3__1__Impl )
+            // InternalToscaDsl.g:4316:2: rule__Relationship__Group_5_3__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_5_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5_3__1"
+
+
+    // $ANTLR start "rule__Relationship__Group_5_3__1__Impl"
+    // InternalToscaDsl.g:4322:1: rule__Relationship__Group_5_3__1__Impl : ( ( rule__Relationship__InterfacesAssignment_5_3_1 ) ) ;
+    public final void rule__Relationship__Group_5_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4326:1: ( ( ( rule__Relationship__InterfacesAssignment_5_3_1 ) ) )
+            // InternalToscaDsl.g:4327:1: ( ( rule__Relationship__InterfacesAssignment_5_3_1 ) )
+            {
+            // InternalToscaDsl.g:4327:1: ( ( rule__Relationship__InterfacesAssignment_5_3_1 ) )
+            // InternalToscaDsl.g:4328:2: ( rule__Relationship__InterfacesAssignment_5_3_1 )
+            {
+             before(grammarAccess.getRelationshipAccess().getInterfacesAssignment_5_3_1()); 
+            // InternalToscaDsl.g:4329:2: ( rule__Relationship__InterfacesAssignment_5_3_1 )
+            // InternalToscaDsl.g:4329:3: rule__Relationship__InterfacesAssignment_5_3_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__InterfacesAssignment_5_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getInterfacesAssignment_5_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_5_3__1__Impl"
 
 
     // $ANTLR start "rule__Relationship__Group_6__0"
-    // InternalToscaDsl.g:4149:1: rule__Relationship__Group_6__0 : rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 ;
+    // InternalToscaDsl.g:4338:1: rule__Relationship__Group_6__0 : rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 ;
     public final void rule__Relationship__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4153:1: ( rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 )
-            // InternalToscaDsl.g:4154:2: rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1
+            // InternalToscaDsl.g:4342:1: ( rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1 )
+            // InternalToscaDsl.g:4343:2: rule__Relationship__Group_6__0__Impl rule__Relationship__Group_6__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_6);
             rule__Relationship__Group_6__0__Impl();
 
             state._fsp--;
@@ -12639,21 +13194,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_6__0__Impl"
-    // InternalToscaDsl.g:4161:1: rule__Relationship__Group_6__0__Impl : ( ',\\n\"target\" :' ) ;
+    // InternalToscaDsl.g:4350:1: rule__Relationship__Group_6__0__Impl : ( ',\\n\"properties\" :' ) ;
     public final void rule__Relationship__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4165:1: ( ( ',\\n\"target\" :' ) )
-            // InternalToscaDsl.g:4166:1: ( ',\\n\"target\" :' )
+            // InternalToscaDsl.g:4354:1: ( ( ',\\n\"properties\" :' ) )
+            // InternalToscaDsl.g:4355:1: ( ',\\n\"properties\" :' )
             {
-            // InternalToscaDsl.g:4166:1: ( ',\\n\"target\" :' )
-            // InternalToscaDsl.g:4167:2: ',\\n\"target\" :'
+            // InternalToscaDsl.g:4355:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:4356:2: ',\\n\"properties\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getTargetKeyword_6_0()); 
-            match(input,33,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getTargetKeyword_6_0()); 
+             before(grammarAccess.getRelationshipAccess().getPropertiesKeyword_6_0()); 
+            match(input,29,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getPropertiesKeyword_6_0()); 
 
             }
 
@@ -12676,17 +13231,22 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_6__1"
-    // InternalToscaDsl.g:4176:1: rule__Relationship__Group_6__1 : rule__Relationship__Group_6__1__Impl ;
+    // InternalToscaDsl.g:4365:1: rule__Relationship__Group_6__1 : rule__Relationship__Group_6__1__Impl rule__Relationship__Group_6__2 ;
     public final void rule__Relationship__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4180:1: ( rule__Relationship__Group_6__1__Impl )
-            // InternalToscaDsl.g:4181:2: rule__Relationship__Group_6__1__Impl
+            // InternalToscaDsl.g:4369:1: ( rule__Relationship__Group_6__1__Impl rule__Relationship__Group_6__2 )
+            // InternalToscaDsl.g:4370:2: rule__Relationship__Group_6__1__Impl rule__Relationship__Group_6__2
             {
-            pushFollow(FOLLOW_2);
+            pushFollow(FOLLOW_9);
             rule__Relationship__Group_6__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6__2();
 
             state._fsp--;
 
@@ -12709,31 +13269,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_6__1__Impl"
-    // InternalToscaDsl.g:4187:1: rule__Relationship__Group_6__1__Impl : ( ( rule__Relationship__TargetAssignment_6_1 ) ) ;
+    // InternalToscaDsl.g:4377:1: rule__Relationship__Group_6__1__Impl : ( '[' ) ;
     public final void rule__Relationship__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4191:1: ( ( ( rule__Relationship__TargetAssignment_6_1 ) ) )
-            // InternalToscaDsl.g:4192:1: ( ( rule__Relationship__TargetAssignment_6_1 ) )
+            // InternalToscaDsl.g:4381:1: ( ( '[' ) )
+            // InternalToscaDsl.g:4382:1: ( '[' )
             {
-            // InternalToscaDsl.g:4192:1: ( ( rule__Relationship__TargetAssignment_6_1 ) )
-            // InternalToscaDsl.g:4193:2: ( rule__Relationship__TargetAssignment_6_1 )
+            // InternalToscaDsl.g:4382:1: ( '[' )
+            // InternalToscaDsl.g:4383:2: '['
             {
-             before(grammarAccess.getRelationshipAccess().getTargetAssignment_6_1()); 
-            // InternalToscaDsl.g:4194:2: ( rule__Relationship__TargetAssignment_6_1 )
-            // InternalToscaDsl.g:4194:3: rule__Relationship__TargetAssignment_6_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__TargetAssignment_6_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getTargetAssignment_6_1()); 
+             before(grammarAccess.getRelationshipAccess().getLeftSquareBracketKeyword_6_1()); 
+            match(input,16,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getLeftSquareBracketKeyword_6_1()); 
 
             }
 
@@ -12755,15 +13305,428 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Relationship__Group_6__1__Impl"
 
 
+    // $ANTLR start "rule__Relationship__Group_6__2"
+    // InternalToscaDsl.g:4392:1: rule__Relationship__Group_6__2 : rule__Relationship__Group_6__2__Impl rule__Relationship__Group_6__3 ;
+    public final void rule__Relationship__Group_6__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4396:1: ( rule__Relationship__Group_6__2__Impl rule__Relationship__Group_6__3 )
+            // InternalToscaDsl.g:4397:2: rule__Relationship__Group_6__2__Impl rule__Relationship__Group_6__3
+            {
+            pushFollow(FOLLOW_7);
+            rule__Relationship__Group_6__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__2"
+
+
+    // $ANTLR start "rule__Relationship__Group_6__2__Impl"
+    // InternalToscaDsl.g:4404:1: rule__Relationship__Group_6__2__Impl : ( ( rule__Relationship__PropertiesAssignment_6_2 ) ) ;
+    public final void rule__Relationship__Group_6__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4408:1: ( ( ( rule__Relationship__PropertiesAssignment_6_2 ) ) )
+            // InternalToscaDsl.g:4409:1: ( ( rule__Relationship__PropertiesAssignment_6_2 ) )
+            {
+            // InternalToscaDsl.g:4409:1: ( ( rule__Relationship__PropertiesAssignment_6_2 ) )
+            // InternalToscaDsl.g:4410:2: ( rule__Relationship__PropertiesAssignment_6_2 )
+            {
+             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_2()); 
+            // InternalToscaDsl.g:4411:2: ( rule__Relationship__PropertiesAssignment_6_2 )
+            // InternalToscaDsl.g:4411:3: rule__Relationship__PropertiesAssignment_6_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__PropertiesAssignment_6_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__2__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_6__3"
+    // InternalToscaDsl.g:4419:1: rule__Relationship__Group_6__3 : rule__Relationship__Group_6__3__Impl rule__Relationship__Group_6__4 ;
+    public final void rule__Relationship__Group_6__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4423:1: ( rule__Relationship__Group_6__3__Impl rule__Relationship__Group_6__4 )
+            // InternalToscaDsl.g:4424:2: rule__Relationship__Group_6__3__Impl rule__Relationship__Group_6__4
+            {
+            pushFollow(FOLLOW_7);
+            rule__Relationship__Group_6__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6__4();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__3"
+
+
+    // $ANTLR start "rule__Relationship__Group_6__3__Impl"
+    // InternalToscaDsl.g:4431:1: rule__Relationship__Group_6__3__Impl : ( ( rule__Relationship__Group_6_3__0 )* ) ;
+    public final void rule__Relationship__Group_6__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4435:1: ( ( ( rule__Relationship__Group_6_3__0 )* ) )
+            // InternalToscaDsl.g:4436:1: ( ( rule__Relationship__Group_6_3__0 )* )
+            {
+            // InternalToscaDsl.g:4436:1: ( ( rule__Relationship__Group_6_3__0 )* )
+            // InternalToscaDsl.g:4437:2: ( rule__Relationship__Group_6_3__0 )*
+            {
+             before(grammarAccess.getRelationshipAccess().getGroup_6_3()); 
+            // InternalToscaDsl.g:4438:2: ( rule__Relationship__Group_6_3__0 )*
+            loop38:
+            do {
+                int alt38=2;
+                int LA38_0 = input.LA(1);
+
+                if ( (LA38_0==18) ) {
+                    alt38=1;
+                }
+
+
+                switch (alt38) {
+            	case 1 :
+            	    // InternalToscaDsl.g:4438:3: rule__Relationship__Group_6_3__0
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Relationship__Group_6_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop38;
+                }
+            } while (true);
+
+             after(grammarAccess.getRelationshipAccess().getGroup_6_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__3__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_6__4"
+    // InternalToscaDsl.g:4446:1: rule__Relationship__Group_6__4 : rule__Relationship__Group_6__4__Impl ;
+    public final void rule__Relationship__Group_6__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4450:1: ( rule__Relationship__Group_6__4__Impl )
+            // InternalToscaDsl.g:4451:2: rule__Relationship__Group_6__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__4"
+
+
+    // $ANTLR start "rule__Relationship__Group_6__4__Impl"
+    // InternalToscaDsl.g:4457:1: rule__Relationship__Group_6__4__Impl : ( ']' ) ;
+    public final void rule__Relationship__Group_6__4__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4461:1: ( ( ']' ) )
+            // InternalToscaDsl.g:4462:1: ( ']' )
+            {
+            // InternalToscaDsl.g:4462:1: ( ']' )
+            // InternalToscaDsl.g:4463:2: ']'
+            {
+             before(grammarAccess.getRelationshipAccess().getRightSquareBracketKeyword_6_4()); 
+            match(input,17,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getRightSquareBracketKeyword_6_4()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6__4__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_6_3__0"
+    // InternalToscaDsl.g:4473:1: rule__Relationship__Group_6_3__0 : rule__Relationship__Group_6_3__0__Impl rule__Relationship__Group_6_3__1 ;
+    public final void rule__Relationship__Group_6_3__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4477:1: ( rule__Relationship__Group_6_3__0__Impl rule__Relationship__Group_6_3__1 )
+            // InternalToscaDsl.g:4478:2: rule__Relationship__Group_6_3__0__Impl rule__Relationship__Group_6_3__1
+            {
+            pushFollow(FOLLOW_9);
+            rule__Relationship__Group_6_3__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6_3__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6_3__0"
+
+
+    // $ANTLR start "rule__Relationship__Group_6_3__0__Impl"
+    // InternalToscaDsl.g:4485:1: rule__Relationship__Group_6_3__0__Impl : ( ',' ) ;
+    public final void rule__Relationship__Group_6_3__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4489:1: ( ( ',' ) )
+            // InternalToscaDsl.g:4490:1: ( ',' )
+            {
+            // InternalToscaDsl.g:4490:1: ( ',' )
+            // InternalToscaDsl.g:4491:2: ','
+            {
+             before(grammarAccess.getRelationshipAccess().getCommaKeyword_6_3_0()); 
+            match(input,18,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getCommaKeyword_6_3_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6_3__0__Impl"
+
+
+    // $ANTLR start "rule__Relationship__Group_6_3__1"
+    // InternalToscaDsl.g:4500:1: rule__Relationship__Group_6_3__1 : rule__Relationship__Group_6_3__1__Impl ;
+    public final void rule__Relationship__Group_6_3__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4504:1: ( rule__Relationship__Group_6_3__1__Impl )
+            // InternalToscaDsl.g:4505:2: rule__Relationship__Group_6_3__1__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__Group_6_3__1__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6_3__1"
+
+
+    // $ANTLR start "rule__Relationship__Group_6_3__1__Impl"
+    // InternalToscaDsl.g:4511:1: rule__Relationship__Group_6_3__1__Impl : ( ( rule__Relationship__PropertiesAssignment_6_3_1 ) ) ;
+    public final void rule__Relationship__Group_6_3__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:4515:1: ( ( ( rule__Relationship__PropertiesAssignment_6_3_1 ) ) )
+            // InternalToscaDsl.g:4516:1: ( ( rule__Relationship__PropertiesAssignment_6_3_1 ) )
+            {
+            // InternalToscaDsl.g:4516:1: ( ( rule__Relationship__PropertiesAssignment_6_3_1 ) )
+            // InternalToscaDsl.g:4517:2: ( rule__Relationship__PropertiesAssignment_6_3_1 )
+            {
+             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_3_1()); 
+            // InternalToscaDsl.g:4518:2: ( rule__Relationship__PropertiesAssignment_6_3_1 )
+            // InternalToscaDsl.g:4518:3: rule__Relationship__PropertiesAssignment_6_3_1
+            {
+            pushFollow(FOLLOW_2);
+            rule__Relationship__PropertiesAssignment_6_3_1();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_6_3_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Relationship__Group_6_3__1__Impl"
+
+
     // $ANTLR start "rule__Relationship__Group_7__0"
-    // InternalToscaDsl.g:4203:1: rule__Relationship__Group_7__0 : rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1 ;
+    // InternalToscaDsl.g:4527:1: rule__Relationship__Group_7__0 : rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1 ;
     public final void rule__Relationship__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4207:1: ( rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1 )
-            // InternalToscaDsl.g:4208:2: rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1
+            // InternalToscaDsl.g:4531:1: ( rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1 )
+            // InternalToscaDsl.g:4532:2: rule__Relationship__Group_7__0__Impl rule__Relationship__Group_7__1
             {
             pushFollow(FOLLOW_9);
             rule__Relationship__Group_7__0__Impl();
@@ -12794,21 +13757,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__0__Impl"
-    // InternalToscaDsl.g:4215:1: rule__Relationship__Group_7__0__Impl : ( ',\\n\"interfaces\" :' ) ;
+    // InternalToscaDsl.g:4539:1: rule__Relationship__Group_7__0__Impl : ( ',\\n\"attributes\" :' ) ;
     public final void rule__Relationship__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4219:1: ( ( ',\\n\"interfaces\" :' ) )
-            // InternalToscaDsl.g:4220:1: ( ',\\n\"interfaces\" :' )
+            // InternalToscaDsl.g:4543:1: ( ( ',\\n\"attributes\" :' ) )
+            // InternalToscaDsl.g:4544:1: ( ',\\n\"attributes\" :' )
             {
-            // InternalToscaDsl.g:4220:1: ( ',\\n\"interfaces\" :' )
-            // InternalToscaDsl.g:4221:2: ',\\n\"interfaces\" :'
+            // InternalToscaDsl.g:4544:1: ( ',\\n\"attributes\" :' )
+            // InternalToscaDsl.g:4545:2: ',\\n\"attributes\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getInterfacesKeyword_7_0()); 
-            match(input,28,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getInterfacesKeyword_7_0()); 
+             before(grammarAccess.getRelationshipAccess().getAttributesKeyword_7_0()); 
+            match(input,30,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getAttributesKeyword_7_0()); 
 
             }
 
@@ -12831,14 +13794,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__1"
-    // InternalToscaDsl.g:4230:1: rule__Relationship__Group_7__1 : rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2 ;
+    // InternalToscaDsl.g:4554:1: rule__Relationship__Group_7__1 : rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2 ;
     public final void rule__Relationship__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4234:1: ( rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2 )
-            // InternalToscaDsl.g:4235:2: rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2
+            // InternalToscaDsl.g:4558:1: ( rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2 )
+            // InternalToscaDsl.g:4559:2: rule__Relationship__Group_7__1__Impl rule__Relationship__Group_7__2
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_7__1__Impl();
@@ -12869,17 +13832,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__1__Impl"
-    // InternalToscaDsl.g:4242:1: rule__Relationship__Group_7__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:4566:1: rule__Relationship__Group_7__1__Impl : ( '{' ) ;
     public final void rule__Relationship__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4246:1: ( ( '{' ) )
-            // InternalToscaDsl.g:4247:1: ( '{' )
+            // InternalToscaDsl.g:4570:1: ( ( '{' ) )
+            // InternalToscaDsl.g:4571:1: ( '{' )
             {
-            // InternalToscaDsl.g:4247:1: ( '{' )
-            // InternalToscaDsl.g:4248:2: '{'
+            // InternalToscaDsl.g:4571:1: ( '{' )
+            // InternalToscaDsl.g:4572:2: '{'
             {
              before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_7_1()); 
             match(input,11,FOLLOW_2); 
@@ -12906,14 +13869,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__2"
-    // InternalToscaDsl.g:4257:1: rule__Relationship__Group_7__2 : rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3 ;
+    // InternalToscaDsl.g:4581:1: rule__Relationship__Group_7__2 : rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3 ;
     public final void rule__Relationship__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4261:1: ( rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3 )
-            // InternalToscaDsl.g:4262:2: rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3
+            // InternalToscaDsl.g:4585:1: ( rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3 )
+            // InternalToscaDsl.g:4586:2: rule__Relationship__Group_7__2__Impl rule__Relationship__Group_7__3
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_7__2__Impl();
@@ -12944,31 +13907,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__2__Impl"
-    // InternalToscaDsl.g:4269:1: rule__Relationship__Group_7__2__Impl : ( ( rule__Relationship__InterfacesAssignment_7_2 ) ) ;
+    // InternalToscaDsl.g:4593:1: rule__Relationship__Group_7__2__Impl : ( ( rule__Relationship__AttributesAssignment_7_2 ) ) ;
     public final void rule__Relationship__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4273:1: ( ( ( rule__Relationship__InterfacesAssignment_7_2 ) ) )
-            // InternalToscaDsl.g:4274:1: ( ( rule__Relationship__InterfacesAssignment_7_2 ) )
+            // InternalToscaDsl.g:4597:1: ( ( ( rule__Relationship__AttributesAssignment_7_2 ) ) )
+            // InternalToscaDsl.g:4598:1: ( ( rule__Relationship__AttributesAssignment_7_2 ) )
             {
-            // InternalToscaDsl.g:4274:1: ( ( rule__Relationship__InterfacesAssignment_7_2 ) )
-            // InternalToscaDsl.g:4275:2: ( rule__Relationship__InterfacesAssignment_7_2 )
+            // InternalToscaDsl.g:4598:1: ( ( rule__Relationship__AttributesAssignment_7_2 ) )
+            // InternalToscaDsl.g:4599:2: ( rule__Relationship__AttributesAssignment_7_2 )
             {
-             before(grammarAccess.getRelationshipAccess().getInterfacesAssignment_7_2()); 
-            // InternalToscaDsl.g:4276:2: ( rule__Relationship__InterfacesAssignment_7_2 )
-            // InternalToscaDsl.g:4276:3: rule__Relationship__InterfacesAssignment_7_2
+             before(grammarAccess.getRelationshipAccess().getAttributesAssignment_7_2()); 
+            // InternalToscaDsl.g:4600:2: ( rule__Relationship__AttributesAssignment_7_2 )
+            // InternalToscaDsl.g:4600:3: rule__Relationship__AttributesAssignment_7_2
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__InterfacesAssignment_7_2();
+            rule__Relationship__AttributesAssignment_7_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getInterfacesAssignment_7_2()); 
+             after(grammarAccess.getRelationshipAccess().getAttributesAssignment_7_2()); 
 
             }
 
@@ -12991,14 +13954,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__3"
-    // InternalToscaDsl.g:4284:1: rule__Relationship__Group_7__3 : rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4 ;
+    // InternalToscaDsl.g:4608:1: rule__Relationship__Group_7__3 : rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4 ;
     public final void rule__Relationship__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4288:1: ( rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4 )
-            // InternalToscaDsl.g:4289:2: rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4
+            // InternalToscaDsl.g:4612:1: ( rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4 )
+            // InternalToscaDsl.g:4613:2: rule__Relationship__Group_7__3__Impl rule__Relationship__Group_7__4
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_7__3__Impl();
@@ -13029,33 +13992,33 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__3__Impl"
-    // InternalToscaDsl.g:4296:1: rule__Relationship__Group_7__3__Impl : ( ( rule__Relationship__Group_7_3__0 )* ) ;
+    // InternalToscaDsl.g:4620:1: rule__Relationship__Group_7__3__Impl : ( ( rule__Relationship__Group_7_3__0 )* ) ;
     public final void rule__Relationship__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4300:1: ( ( ( rule__Relationship__Group_7_3__0 )* ) )
-            // InternalToscaDsl.g:4301:1: ( ( rule__Relationship__Group_7_3__0 )* )
+            // InternalToscaDsl.g:4624:1: ( ( ( rule__Relationship__Group_7_3__0 )* ) )
+            // InternalToscaDsl.g:4625:1: ( ( rule__Relationship__Group_7_3__0 )* )
             {
-            // InternalToscaDsl.g:4301:1: ( ( rule__Relationship__Group_7_3__0 )* )
-            // InternalToscaDsl.g:4302:2: ( rule__Relationship__Group_7_3__0 )*
+            // InternalToscaDsl.g:4625:1: ( ( rule__Relationship__Group_7_3__0 )* )
+            // InternalToscaDsl.g:4626:2: ( rule__Relationship__Group_7_3__0 )*
             {
              before(grammarAccess.getRelationshipAccess().getGroup_7_3()); 
-            // InternalToscaDsl.g:4303:2: ( rule__Relationship__Group_7_3__0 )*
-            loop37:
+            // InternalToscaDsl.g:4627:2: ( rule__Relationship__Group_7_3__0 )*
+            loop39:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt39=2;
+                int LA39_0 = input.LA(1);
 
-                if ( (LA37_0==18) ) {
-                    alt37=1;
+                if ( (LA39_0==18) ) {
+                    alt39=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt39) {
             	case 1 :
-            	    // InternalToscaDsl.g:4303:3: rule__Relationship__Group_7_3__0
+            	    // InternalToscaDsl.g:4627:3: rule__Relationship__Group_7_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Relationship__Group_7_3__0();
@@ -13067,7 +14030,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop39;
                 }
             } while (true);
 
@@ -13094,14 +14057,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__4"
-    // InternalToscaDsl.g:4311:1: rule__Relationship__Group_7__4 : rule__Relationship__Group_7__4__Impl ;
+    // InternalToscaDsl.g:4635:1: rule__Relationship__Group_7__4 : rule__Relationship__Group_7__4__Impl ;
     public final void rule__Relationship__Group_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4315:1: ( rule__Relationship__Group_7__4__Impl )
-            // InternalToscaDsl.g:4316:2: rule__Relationship__Group_7__4__Impl
+            // InternalToscaDsl.g:4639:1: ( rule__Relationship__Group_7__4__Impl )
+            // InternalToscaDsl.g:4640:2: rule__Relationship__Group_7__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_7__4__Impl();
@@ -13127,17 +14090,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7__4__Impl"
-    // InternalToscaDsl.g:4322:1: rule__Relationship__Group_7__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:4646:1: rule__Relationship__Group_7__4__Impl : ( '}' ) ;
     public final void rule__Relationship__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4326:1: ( ( '}' ) )
-            // InternalToscaDsl.g:4327:1: ( '}' )
+            // InternalToscaDsl.g:4650:1: ( ( '}' ) )
+            // InternalToscaDsl.g:4651:1: ( '}' )
             {
-            // InternalToscaDsl.g:4327:1: ( '}' )
-            // InternalToscaDsl.g:4328:2: '}'
+            // InternalToscaDsl.g:4651:1: ( '}' )
+            // InternalToscaDsl.g:4652:2: '}'
             {
              before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_7_4()); 
             match(input,13,FOLLOW_2); 
@@ -13164,14 +14127,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7_3__0"
-    // InternalToscaDsl.g:4338:1: rule__Relationship__Group_7_3__0 : rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1 ;
+    // InternalToscaDsl.g:4662:1: rule__Relationship__Group_7_3__0 : rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1 ;
     public final void rule__Relationship__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4342:1: ( rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1 )
-            // InternalToscaDsl.g:4343:2: rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1
+            // InternalToscaDsl.g:4666:1: ( rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1 )
+            // InternalToscaDsl.g:4667:2: rule__Relationship__Group_7_3__0__Impl rule__Relationship__Group_7_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_7_3__0__Impl();
@@ -13202,17 +14165,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7_3__0__Impl"
-    // InternalToscaDsl.g:4350:1: rule__Relationship__Group_7_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:4674:1: rule__Relationship__Group_7_3__0__Impl : ( ',' ) ;
     public final void rule__Relationship__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4354:1: ( ( ',' ) )
-            // InternalToscaDsl.g:4355:1: ( ',' )
+            // InternalToscaDsl.g:4678:1: ( ( ',' ) )
+            // InternalToscaDsl.g:4679:1: ( ',' )
             {
-            // InternalToscaDsl.g:4355:1: ( ',' )
-            // InternalToscaDsl.g:4356:2: ','
+            // InternalToscaDsl.g:4679:1: ( ',' )
+            // InternalToscaDsl.g:4680:2: ','
             {
              before(grammarAccess.getRelationshipAccess().getCommaKeyword_7_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -13239,14 +14202,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7_3__1"
-    // InternalToscaDsl.g:4365:1: rule__Relationship__Group_7_3__1 : rule__Relationship__Group_7_3__1__Impl ;
+    // InternalToscaDsl.g:4689:1: rule__Relationship__Group_7_3__1 : rule__Relationship__Group_7_3__1__Impl ;
     public final void rule__Relationship__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4369:1: ( rule__Relationship__Group_7_3__1__Impl )
-            // InternalToscaDsl.g:4370:2: rule__Relationship__Group_7_3__1__Impl
+            // InternalToscaDsl.g:4693:1: ( rule__Relationship__Group_7_3__1__Impl )
+            // InternalToscaDsl.g:4694:2: rule__Relationship__Group_7_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_7_3__1__Impl();
@@ -13272,31 +14235,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_7_3__1__Impl"
-    // InternalToscaDsl.g:4376:1: rule__Relationship__Group_7_3__1__Impl : ( ( rule__Relationship__InterfacesAssignment_7_3_1 ) ) ;
+    // InternalToscaDsl.g:4700:1: rule__Relationship__Group_7_3__1__Impl : ( ( rule__Relationship__AttributesAssignment_7_3_1 ) ) ;
     public final void rule__Relationship__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4380:1: ( ( ( rule__Relationship__InterfacesAssignment_7_3_1 ) ) )
-            // InternalToscaDsl.g:4381:1: ( ( rule__Relationship__InterfacesAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:4704:1: ( ( ( rule__Relationship__AttributesAssignment_7_3_1 ) ) )
+            // InternalToscaDsl.g:4705:1: ( ( rule__Relationship__AttributesAssignment_7_3_1 ) )
             {
-            // InternalToscaDsl.g:4381:1: ( ( rule__Relationship__InterfacesAssignment_7_3_1 ) )
-            // InternalToscaDsl.g:4382:2: ( rule__Relationship__InterfacesAssignment_7_3_1 )
+            // InternalToscaDsl.g:4705:1: ( ( rule__Relationship__AttributesAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:4706:2: ( rule__Relationship__AttributesAssignment_7_3_1 )
             {
-             before(grammarAccess.getRelationshipAccess().getInterfacesAssignment_7_3_1()); 
-            // InternalToscaDsl.g:4383:2: ( rule__Relationship__InterfacesAssignment_7_3_1 )
-            // InternalToscaDsl.g:4383:3: rule__Relationship__InterfacesAssignment_7_3_1
+             before(grammarAccess.getRelationshipAccess().getAttributesAssignment_7_3_1()); 
+            // InternalToscaDsl.g:4707:2: ( rule__Relationship__AttributesAssignment_7_3_1 )
+            // InternalToscaDsl.g:4707:3: rule__Relationship__AttributesAssignment_7_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__InterfacesAssignment_7_3_1();
+            rule__Relationship__AttributesAssignment_7_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getInterfacesAssignment_7_3_1()); 
+             after(grammarAccess.getRelationshipAccess().getAttributesAssignment_7_3_1()); 
 
             }
 
@@ -13319,14 +14282,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__0"
-    // InternalToscaDsl.g:4392:1: rule__Relationship__Group_8__0 : rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1 ;
+    // InternalToscaDsl.g:4716:1: rule__Relationship__Group_8__0 : rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1 ;
     public final void rule__Relationship__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4396:1: ( rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1 )
-            // InternalToscaDsl.g:4397:2: rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1
+            // InternalToscaDsl.g:4720:1: ( rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1 )
+            // InternalToscaDsl.g:4721:2: rule__Relationship__Group_8__0__Impl rule__Relationship__Group_8__1
             {
             pushFollow(FOLLOW_9);
             rule__Relationship__Group_8__0__Impl();
@@ -13357,21 +14320,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__0__Impl"
-    // InternalToscaDsl.g:4404:1: rule__Relationship__Group_8__0__Impl : ( ',\\n\"properties\" :' ) ;
+    // InternalToscaDsl.g:4728:1: rule__Relationship__Group_8__0__Impl : ( ',\\n\"source_interfaces\" :' ) ;
     public final void rule__Relationship__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4408:1: ( ( ',\\n\"properties\" :' ) )
-            // InternalToscaDsl.g:4409:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:4732:1: ( ( ',\\n\"source_interfaces\" :' ) )
+            // InternalToscaDsl.g:4733:1: ( ',\\n\"source_interfaces\" :' )
             {
-            // InternalToscaDsl.g:4409:1: ( ',\\n\"properties\" :' )
-            // InternalToscaDsl.g:4410:2: ',\\n\"properties\" :'
+            // InternalToscaDsl.g:4733:1: ( ',\\n\"source_interfaces\" :' )
+            // InternalToscaDsl.g:4734:2: ',\\n\"source_interfaces\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesKeyword_8_0()); 
-            match(input,29,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getPropertiesKeyword_8_0()); 
+             before(grammarAccess.getRelationshipAccess().getSource_interfacesKeyword_8_0()); 
+            match(input,34,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getSource_interfacesKeyword_8_0()); 
 
             }
 
@@ -13394,14 +14357,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__1"
-    // InternalToscaDsl.g:4419:1: rule__Relationship__Group_8__1 : rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2 ;
+    // InternalToscaDsl.g:4743:1: rule__Relationship__Group_8__1 : rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2 ;
     public final void rule__Relationship__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4423:1: ( rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2 )
-            // InternalToscaDsl.g:4424:2: rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2
+            // InternalToscaDsl.g:4747:1: ( rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2 )
+            // InternalToscaDsl.g:4748:2: rule__Relationship__Group_8__1__Impl rule__Relationship__Group_8__2
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_8__1__Impl();
@@ -13432,17 +14395,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__1__Impl"
-    // InternalToscaDsl.g:4431:1: rule__Relationship__Group_8__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:4755:1: rule__Relationship__Group_8__1__Impl : ( '{' ) ;
     public final void rule__Relationship__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4435:1: ( ( '{' ) )
-            // InternalToscaDsl.g:4436:1: ( '{' )
+            // InternalToscaDsl.g:4759:1: ( ( '{' ) )
+            // InternalToscaDsl.g:4760:1: ( '{' )
             {
-            // InternalToscaDsl.g:4436:1: ( '{' )
-            // InternalToscaDsl.g:4437:2: '{'
+            // InternalToscaDsl.g:4760:1: ( '{' )
+            // InternalToscaDsl.g:4761:2: '{'
             {
              before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_8_1()); 
             match(input,11,FOLLOW_2); 
@@ -13469,14 +14432,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__2"
-    // InternalToscaDsl.g:4446:1: rule__Relationship__Group_8__2 : rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3 ;
+    // InternalToscaDsl.g:4770:1: rule__Relationship__Group_8__2 : rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3 ;
     public final void rule__Relationship__Group_8__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4450:1: ( rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3 )
-            // InternalToscaDsl.g:4451:2: rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3
+            // InternalToscaDsl.g:4774:1: ( rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3 )
+            // InternalToscaDsl.g:4775:2: rule__Relationship__Group_8__2__Impl rule__Relationship__Group_8__3
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_8__2__Impl();
@@ -13507,31 +14470,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__2__Impl"
-    // InternalToscaDsl.g:4458:1: rule__Relationship__Group_8__2__Impl : ( ( rule__Relationship__PropertiesAssignment_8_2 ) ) ;
+    // InternalToscaDsl.g:4782:1: rule__Relationship__Group_8__2__Impl : ( ( rule__Relationship__Source_interfacesAssignment_8_2 ) ) ;
     public final void rule__Relationship__Group_8__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4462:1: ( ( ( rule__Relationship__PropertiesAssignment_8_2 ) ) )
-            // InternalToscaDsl.g:4463:1: ( ( rule__Relationship__PropertiesAssignment_8_2 ) )
+            // InternalToscaDsl.g:4786:1: ( ( ( rule__Relationship__Source_interfacesAssignment_8_2 ) ) )
+            // InternalToscaDsl.g:4787:1: ( ( rule__Relationship__Source_interfacesAssignment_8_2 ) )
             {
-            // InternalToscaDsl.g:4463:1: ( ( rule__Relationship__PropertiesAssignment_8_2 ) )
-            // InternalToscaDsl.g:4464:2: ( rule__Relationship__PropertiesAssignment_8_2 )
+            // InternalToscaDsl.g:4787:1: ( ( rule__Relationship__Source_interfacesAssignment_8_2 ) )
+            // InternalToscaDsl.g:4788:2: ( rule__Relationship__Source_interfacesAssignment_8_2 )
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_8_2()); 
-            // InternalToscaDsl.g:4465:2: ( rule__Relationship__PropertiesAssignment_8_2 )
-            // InternalToscaDsl.g:4465:3: rule__Relationship__PropertiesAssignment_8_2
+             before(grammarAccess.getRelationshipAccess().getSource_interfacesAssignment_8_2()); 
+            // InternalToscaDsl.g:4789:2: ( rule__Relationship__Source_interfacesAssignment_8_2 )
+            // InternalToscaDsl.g:4789:3: rule__Relationship__Source_interfacesAssignment_8_2
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__PropertiesAssignment_8_2();
+            rule__Relationship__Source_interfacesAssignment_8_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_8_2()); 
+             after(grammarAccess.getRelationshipAccess().getSource_interfacesAssignment_8_2()); 
 
             }
 
@@ -13554,14 +14517,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__3"
-    // InternalToscaDsl.g:4473:1: rule__Relationship__Group_8__3 : rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4 ;
+    // InternalToscaDsl.g:4797:1: rule__Relationship__Group_8__3 : rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4 ;
     public final void rule__Relationship__Group_8__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4477:1: ( rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4 )
-            // InternalToscaDsl.g:4478:2: rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4
+            // InternalToscaDsl.g:4801:1: ( rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4 )
+            // InternalToscaDsl.g:4802:2: rule__Relationship__Group_8__3__Impl rule__Relationship__Group_8__4
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_8__3__Impl();
@@ -13592,33 +14555,33 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__3__Impl"
-    // InternalToscaDsl.g:4485:1: rule__Relationship__Group_8__3__Impl : ( ( rule__Relationship__Group_8_3__0 )* ) ;
+    // InternalToscaDsl.g:4809:1: rule__Relationship__Group_8__3__Impl : ( ( rule__Relationship__Group_8_3__0 )* ) ;
     public final void rule__Relationship__Group_8__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4489:1: ( ( ( rule__Relationship__Group_8_3__0 )* ) )
-            // InternalToscaDsl.g:4490:1: ( ( rule__Relationship__Group_8_3__0 )* )
+            // InternalToscaDsl.g:4813:1: ( ( ( rule__Relationship__Group_8_3__0 )* ) )
+            // InternalToscaDsl.g:4814:1: ( ( rule__Relationship__Group_8_3__0 )* )
             {
-            // InternalToscaDsl.g:4490:1: ( ( rule__Relationship__Group_8_3__0 )* )
-            // InternalToscaDsl.g:4491:2: ( rule__Relationship__Group_8_3__0 )*
+            // InternalToscaDsl.g:4814:1: ( ( rule__Relationship__Group_8_3__0 )* )
+            // InternalToscaDsl.g:4815:2: ( rule__Relationship__Group_8_3__0 )*
             {
              before(grammarAccess.getRelationshipAccess().getGroup_8_3()); 
-            // InternalToscaDsl.g:4492:2: ( rule__Relationship__Group_8_3__0 )*
-            loop38:
+            // InternalToscaDsl.g:4816:2: ( rule__Relationship__Group_8_3__0 )*
+            loop40:
             do {
-                int alt38=2;
-                int LA38_0 = input.LA(1);
+                int alt40=2;
+                int LA40_0 = input.LA(1);
 
-                if ( (LA38_0==18) ) {
-                    alt38=1;
+                if ( (LA40_0==18) ) {
+                    alt40=1;
                 }
 
 
-                switch (alt38) {
+                switch (alt40) {
             	case 1 :
-            	    // InternalToscaDsl.g:4492:3: rule__Relationship__Group_8_3__0
+            	    // InternalToscaDsl.g:4816:3: rule__Relationship__Group_8_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Relationship__Group_8_3__0();
@@ -13630,7 +14593,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop40;
                 }
             } while (true);
 
@@ -13657,14 +14620,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__4"
-    // InternalToscaDsl.g:4500:1: rule__Relationship__Group_8__4 : rule__Relationship__Group_8__4__Impl ;
+    // InternalToscaDsl.g:4824:1: rule__Relationship__Group_8__4 : rule__Relationship__Group_8__4__Impl ;
     public final void rule__Relationship__Group_8__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4504:1: ( rule__Relationship__Group_8__4__Impl )
-            // InternalToscaDsl.g:4505:2: rule__Relationship__Group_8__4__Impl
+            // InternalToscaDsl.g:4828:1: ( rule__Relationship__Group_8__4__Impl )
+            // InternalToscaDsl.g:4829:2: rule__Relationship__Group_8__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_8__4__Impl();
@@ -13690,17 +14653,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8__4__Impl"
-    // InternalToscaDsl.g:4511:1: rule__Relationship__Group_8__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:4835:1: rule__Relationship__Group_8__4__Impl : ( '}' ) ;
     public final void rule__Relationship__Group_8__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4515:1: ( ( '}' ) )
-            // InternalToscaDsl.g:4516:1: ( '}' )
+            // InternalToscaDsl.g:4839:1: ( ( '}' ) )
+            // InternalToscaDsl.g:4840:1: ( '}' )
             {
-            // InternalToscaDsl.g:4516:1: ( '}' )
-            // InternalToscaDsl.g:4517:2: '}'
+            // InternalToscaDsl.g:4840:1: ( '}' )
+            // InternalToscaDsl.g:4841:2: '}'
             {
              before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_8_4()); 
             match(input,13,FOLLOW_2); 
@@ -13727,14 +14690,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8_3__0"
-    // InternalToscaDsl.g:4527:1: rule__Relationship__Group_8_3__0 : rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1 ;
+    // InternalToscaDsl.g:4851:1: rule__Relationship__Group_8_3__0 : rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1 ;
     public final void rule__Relationship__Group_8_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4531:1: ( rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1 )
-            // InternalToscaDsl.g:4532:2: rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1
+            // InternalToscaDsl.g:4855:1: ( rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1 )
+            // InternalToscaDsl.g:4856:2: rule__Relationship__Group_8_3__0__Impl rule__Relationship__Group_8_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_8_3__0__Impl();
@@ -13765,17 +14728,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8_3__0__Impl"
-    // InternalToscaDsl.g:4539:1: rule__Relationship__Group_8_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:4863:1: rule__Relationship__Group_8_3__0__Impl : ( ',' ) ;
     public final void rule__Relationship__Group_8_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4543:1: ( ( ',' ) )
-            // InternalToscaDsl.g:4544:1: ( ',' )
+            // InternalToscaDsl.g:4867:1: ( ( ',' ) )
+            // InternalToscaDsl.g:4868:1: ( ',' )
             {
-            // InternalToscaDsl.g:4544:1: ( ',' )
-            // InternalToscaDsl.g:4545:2: ','
+            // InternalToscaDsl.g:4868:1: ( ',' )
+            // InternalToscaDsl.g:4869:2: ','
             {
              before(grammarAccess.getRelationshipAccess().getCommaKeyword_8_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -13802,14 +14765,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8_3__1"
-    // InternalToscaDsl.g:4554:1: rule__Relationship__Group_8_3__1 : rule__Relationship__Group_8_3__1__Impl ;
+    // InternalToscaDsl.g:4878:1: rule__Relationship__Group_8_3__1 : rule__Relationship__Group_8_3__1__Impl ;
     public final void rule__Relationship__Group_8_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4558:1: ( rule__Relationship__Group_8_3__1__Impl )
-            // InternalToscaDsl.g:4559:2: rule__Relationship__Group_8_3__1__Impl
+            // InternalToscaDsl.g:4882:1: ( rule__Relationship__Group_8_3__1__Impl )
+            // InternalToscaDsl.g:4883:2: rule__Relationship__Group_8_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_8_3__1__Impl();
@@ -13835,31 +14798,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_8_3__1__Impl"
-    // InternalToscaDsl.g:4565:1: rule__Relationship__Group_8_3__1__Impl : ( ( rule__Relationship__PropertiesAssignment_8_3_1 ) ) ;
+    // InternalToscaDsl.g:4889:1: rule__Relationship__Group_8_3__1__Impl : ( ( rule__Relationship__Source_interfacesAssignment_8_3_1 ) ) ;
     public final void rule__Relationship__Group_8_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4569:1: ( ( ( rule__Relationship__PropertiesAssignment_8_3_1 ) ) )
-            // InternalToscaDsl.g:4570:1: ( ( rule__Relationship__PropertiesAssignment_8_3_1 ) )
+            // InternalToscaDsl.g:4893:1: ( ( ( rule__Relationship__Source_interfacesAssignment_8_3_1 ) ) )
+            // InternalToscaDsl.g:4894:1: ( ( rule__Relationship__Source_interfacesAssignment_8_3_1 ) )
             {
-            // InternalToscaDsl.g:4570:1: ( ( rule__Relationship__PropertiesAssignment_8_3_1 ) )
-            // InternalToscaDsl.g:4571:2: ( rule__Relationship__PropertiesAssignment_8_3_1 )
+            // InternalToscaDsl.g:4894:1: ( ( rule__Relationship__Source_interfacesAssignment_8_3_1 ) )
+            // InternalToscaDsl.g:4895:2: ( rule__Relationship__Source_interfacesAssignment_8_3_1 )
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesAssignment_8_3_1()); 
-            // InternalToscaDsl.g:4572:2: ( rule__Relationship__PropertiesAssignment_8_3_1 )
-            // InternalToscaDsl.g:4572:3: rule__Relationship__PropertiesAssignment_8_3_1
+             before(grammarAccess.getRelationshipAccess().getSource_interfacesAssignment_8_3_1()); 
+            // InternalToscaDsl.g:4896:2: ( rule__Relationship__Source_interfacesAssignment_8_3_1 )
+            // InternalToscaDsl.g:4896:3: rule__Relationship__Source_interfacesAssignment_8_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__PropertiesAssignment_8_3_1();
+            rule__Relationship__Source_interfacesAssignment_8_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesAssignment_8_3_1()); 
+             after(grammarAccess.getRelationshipAccess().getSource_interfacesAssignment_8_3_1()); 
 
             }
 
@@ -13882,14 +14845,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__0"
-    // InternalToscaDsl.g:4581:1: rule__Relationship__Group_9__0 : rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1 ;
+    // InternalToscaDsl.g:4905:1: rule__Relationship__Group_9__0 : rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1 ;
     public final void rule__Relationship__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4585:1: ( rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1 )
-            // InternalToscaDsl.g:4586:2: rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1
+            // InternalToscaDsl.g:4909:1: ( rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1 )
+            // InternalToscaDsl.g:4910:2: rule__Relationship__Group_9__0__Impl rule__Relationship__Group_9__1
             {
             pushFollow(FOLLOW_9);
             rule__Relationship__Group_9__0__Impl();
@@ -13920,21 +14883,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__0__Impl"
-    // InternalToscaDsl.g:4593:1: rule__Relationship__Group_9__0__Impl : ( ',\\n\"attributes\" :' ) ;
+    // InternalToscaDsl.g:4917:1: rule__Relationship__Group_9__0__Impl : ( ',\\n\"target_iterfaces\" :' ) ;
     public final void rule__Relationship__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4597:1: ( ( ',\\n\"attributes\" :' ) )
-            // InternalToscaDsl.g:4598:1: ( ',\\n\"attributes\" :' )
+            // InternalToscaDsl.g:4921:1: ( ( ',\\n\"target_iterfaces\" :' ) )
+            // InternalToscaDsl.g:4922:1: ( ',\\n\"target_iterfaces\" :' )
             {
-            // InternalToscaDsl.g:4598:1: ( ',\\n\"attributes\" :' )
-            // InternalToscaDsl.g:4599:2: ',\\n\"attributes\" :'
+            // InternalToscaDsl.g:4922:1: ( ',\\n\"target_iterfaces\" :' )
+            // InternalToscaDsl.g:4923:2: ',\\n\"target_iterfaces\" :'
             {
-             before(grammarAccess.getRelationshipAccess().getAttributesKeyword_9_0()); 
-            match(input,30,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getAttributesKeyword_9_0()); 
+             before(grammarAccess.getRelationshipAccess().getTarget_iterfacesKeyword_9_0()); 
+            match(input,35,FOLLOW_2); 
+             after(grammarAccess.getRelationshipAccess().getTarget_iterfacesKeyword_9_0()); 
 
             }
 
@@ -13957,14 +14920,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__1"
-    // InternalToscaDsl.g:4608:1: rule__Relationship__Group_9__1 : rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2 ;
+    // InternalToscaDsl.g:4932:1: rule__Relationship__Group_9__1 : rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2 ;
     public final void rule__Relationship__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4612:1: ( rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2 )
-            // InternalToscaDsl.g:4613:2: rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2
+            // InternalToscaDsl.g:4936:1: ( rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2 )
+            // InternalToscaDsl.g:4937:2: rule__Relationship__Group_9__1__Impl rule__Relationship__Group_9__2
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_9__1__Impl();
@@ -13995,17 +14958,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__1__Impl"
-    // InternalToscaDsl.g:4620:1: rule__Relationship__Group_9__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:4944:1: rule__Relationship__Group_9__1__Impl : ( '{' ) ;
     public final void rule__Relationship__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4624:1: ( ( '{' ) )
-            // InternalToscaDsl.g:4625:1: ( '{' )
+            // InternalToscaDsl.g:4948:1: ( ( '{' ) )
+            // InternalToscaDsl.g:4949:1: ( '{' )
             {
-            // InternalToscaDsl.g:4625:1: ( '{' )
-            // InternalToscaDsl.g:4626:2: '{'
+            // InternalToscaDsl.g:4949:1: ( '{' )
+            // InternalToscaDsl.g:4950:2: '{'
             {
              before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_9_1()); 
             match(input,11,FOLLOW_2); 
@@ -14032,14 +14995,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__2"
-    // InternalToscaDsl.g:4635:1: rule__Relationship__Group_9__2 : rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3 ;
+    // InternalToscaDsl.g:4959:1: rule__Relationship__Group_9__2 : rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3 ;
     public final void rule__Relationship__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4639:1: ( rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3 )
-            // InternalToscaDsl.g:4640:2: rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3
+            // InternalToscaDsl.g:4963:1: ( rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3 )
+            // InternalToscaDsl.g:4964:2: rule__Relationship__Group_9__2__Impl rule__Relationship__Group_9__3
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_9__2__Impl();
@@ -14070,31 +15033,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__2__Impl"
-    // InternalToscaDsl.g:4647:1: rule__Relationship__Group_9__2__Impl : ( ( rule__Relationship__AttributesAssignment_9_2 ) ) ;
+    // InternalToscaDsl.g:4971:1: rule__Relationship__Group_9__2__Impl : ( ( rule__Relationship__Target_interfacesAssignment_9_2 ) ) ;
     public final void rule__Relationship__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4651:1: ( ( ( rule__Relationship__AttributesAssignment_9_2 ) ) )
-            // InternalToscaDsl.g:4652:1: ( ( rule__Relationship__AttributesAssignment_9_2 ) )
+            // InternalToscaDsl.g:4975:1: ( ( ( rule__Relationship__Target_interfacesAssignment_9_2 ) ) )
+            // InternalToscaDsl.g:4976:1: ( ( rule__Relationship__Target_interfacesAssignment_9_2 ) )
             {
-            // InternalToscaDsl.g:4652:1: ( ( rule__Relationship__AttributesAssignment_9_2 ) )
-            // InternalToscaDsl.g:4653:2: ( rule__Relationship__AttributesAssignment_9_2 )
+            // InternalToscaDsl.g:4976:1: ( ( rule__Relationship__Target_interfacesAssignment_9_2 ) )
+            // InternalToscaDsl.g:4977:2: ( rule__Relationship__Target_interfacesAssignment_9_2 )
             {
-             before(grammarAccess.getRelationshipAccess().getAttributesAssignment_9_2()); 
-            // InternalToscaDsl.g:4654:2: ( rule__Relationship__AttributesAssignment_9_2 )
-            // InternalToscaDsl.g:4654:3: rule__Relationship__AttributesAssignment_9_2
+             before(grammarAccess.getRelationshipAccess().getTarget_interfacesAssignment_9_2()); 
+            // InternalToscaDsl.g:4978:2: ( rule__Relationship__Target_interfacesAssignment_9_2 )
+            // InternalToscaDsl.g:4978:3: rule__Relationship__Target_interfacesAssignment_9_2
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__AttributesAssignment_9_2();
+            rule__Relationship__Target_interfacesAssignment_9_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getAttributesAssignment_9_2()); 
+             after(grammarAccess.getRelationshipAccess().getTarget_interfacesAssignment_9_2()); 
 
             }
 
@@ -14117,14 +15080,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__3"
-    // InternalToscaDsl.g:4662:1: rule__Relationship__Group_9__3 : rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4 ;
+    // InternalToscaDsl.g:4986:1: rule__Relationship__Group_9__3 : rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4 ;
     public final void rule__Relationship__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4666:1: ( rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4 )
-            // InternalToscaDsl.g:4667:2: rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4
+            // InternalToscaDsl.g:4990:1: ( rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4 )
+            // InternalToscaDsl.g:4991:2: rule__Relationship__Group_9__3__Impl rule__Relationship__Group_9__4
             {
             pushFollow(FOLLOW_10);
             rule__Relationship__Group_9__3__Impl();
@@ -14155,33 +15118,33 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__3__Impl"
-    // InternalToscaDsl.g:4674:1: rule__Relationship__Group_9__3__Impl : ( ( rule__Relationship__Group_9_3__0 )* ) ;
+    // InternalToscaDsl.g:4998:1: rule__Relationship__Group_9__3__Impl : ( ( rule__Relationship__Group_9_3__0 )* ) ;
     public final void rule__Relationship__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4678:1: ( ( ( rule__Relationship__Group_9_3__0 )* ) )
-            // InternalToscaDsl.g:4679:1: ( ( rule__Relationship__Group_9_3__0 )* )
+            // InternalToscaDsl.g:5002:1: ( ( ( rule__Relationship__Group_9_3__0 )* ) )
+            // InternalToscaDsl.g:5003:1: ( ( rule__Relationship__Group_9_3__0 )* )
             {
-            // InternalToscaDsl.g:4679:1: ( ( rule__Relationship__Group_9_3__0 )* )
-            // InternalToscaDsl.g:4680:2: ( rule__Relationship__Group_9_3__0 )*
+            // InternalToscaDsl.g:5003:1: ( ( rule__Relationship__Group_9_3__0 )* )
+            // InternalToscaDsl.g:5004:2: ( rule__Relationship__Group_9_3__0 )*
             {
              before(grammarAccess.getRelationshipAccess().getGroup_9_3()); 
-            // InternalToscaDsl.g:4681:2: ( rule__Relationship__Group_9_3__0 )*
-            loop39:
+            // InternalToscaDsl.g:5005:2: ( rule__Relationship__Group_9_3__0 )*
+            loop41:
             do {
-                int alt39=2;
-                int LA39_0 = input.LA(1);
+                int alt41=2;
+                int LA41_0 = input.LA(1);
 
-                if ( (LA39_0==18) ) {
-                    alt39=1;
+                if ( (LA41_0==18) ) {
+                    alt41=1;
                 }
 
 
-                switch (alt39) {
+                switch (alt41) {
             	case 1 :
-            	    // InternalToscaDsl.g:4681:3: rule__Relationship__Group_9_3__0
+            	    // InternalToscaDsl.g:5005:3: rule__Relationship__Group_9_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Relationship__Group_9_3__0();
@@ -14193,7 +15156,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop39;
+            	    break loop41;
                 }
             } while (true);
 
@@ -14220,14 +15183,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__4"
-    // InternalToscaDsl.g:4689:1: rule__Relationship__Group_9__4 : rule__Relationship__Group_9__4__Impl ;
+    // InternalToscaDsl.g:5013:1: rule__Relationship__Group_9__4 : rule__Relationship__Group_9__4__Impl ;
     public final void rule__Relationship__Group_9__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4693:1: ( rule__Relationship__Group_9__4__Impl )
-            // InternalToscaDsl.g:4694:2: rule__Relationship__Group_9__4__Impl
+            // InternalToscaDsl.g:5017:1: ( rule__Relationship__Group_9__4__Impl )
+            // InternalToscaDsl.g:5018:2: rule__Relationship__Group_9__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_9__4__Impl();
@@ -14253,17 +15216,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9__4__Impl"
-    // InternalToscaDsl.g:4700:1: rule__Relationship__Group_9__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:5024:1: rule__Relationship__Group_9__4__Impl : ( '}' ) ;
     public final void rule__Relationship__Group_9__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4704:1: ( ( '}' ) )
-            // InternalToscaDsl.g:4705:1: ( '}' )
+            // InternalToscaDsl.g:5028:1: ( ( '}' ) )
+            // InternalToscaDsl.g:5029:1: ( '}' )
             {
-            // InternalToscaDsl.g:4705:1: ( '}' )
-            // InternalToscaDsl.g:4706:2: '}'
+            // InternalToscaDsl.g:5029:1: ( '}' )
+            // InternalToscaDsl.g:5030:2: '}'
             {
              before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_9_4()); 
             match(input,13,FOLLOW_2); 
@@ -14290,14 +15253,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9_3__0"
-    // InternalToscaDsl.g:4716:1: rule__Relationship__Group_9_3__0 : rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1 ;
+    // InternalToscaDsl.g:5040:1: rule__Relationship__Group_9_3__0 : rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1 ;
     public final void rule__Relationship__Group_9_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4720:1: ( rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1 )
-            // InternalToscaDsl.g:4721:2: rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1
+            // InternalToscaDsl.g:5044:1: ( rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1 )
+            // InternalToscaDsl.g:5045:2: rule__Relationship__Group_9_3__0__Impl rule__Relationship__Group_9_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Relationship__Group_9_3__0__Impl();
@@ -14328,17 +15291,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9_3__0__Impl"
-    // InternalToscaDsl.g:4728:1: rule__Relationship__Group_9_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:5052:1: rule__Relationship__Group_9_3__0__Impl : ( ',' ) ;
     public final void rule__Relationship__Group_9_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4732:1: ( ( ',' ) )
-            // InternalToscaDsl.g:4733:1: ( ',' )
+            // InternalToscaDsl.g:5056:1: ( ( ',' ) )
+            // InternalToscaDsl.g:5057:1: ( ',' )
             {
-            // InternalToscaDsl.g:4733:1: ( ',' )
-            // InternalToscaDsl.g:4734:2: ','
+            // InternalToscaDsl.g:5057:1: ( ',' )
+            // InternalToscaDsl.g:5058:2: ','
             {
              before(grammarAccess.getRelationshipAccess().getCommaKeyword_9_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -14365,14 +15328,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9_3__1"
-    // InternalToscaDsl.g:4743:1: rule__Relationship__Group_9_3__1 : rule__Relationship__Group_9_3__1__Impl ;
+    // InternalToscaDsl.g:5067:1: rule__Relationship__Group_9_3__1 : rule__Relationship__Group_9_3__1__Impl ;
     public final void rule__Relationship__Group_9_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4747:1: ( rule__Relationship__Group_9_3__1__Impl )
-            // InternalToscaDsl.g:4748:2: rule__Relationship__Group_9_3__1__Impl
+            // InternalToscaDsl.g:5071:1: ( rule__Relationship__Group_9_3__1__Impl )
+            // InternalToscaDsl.g:5072:2: rule__Relationship__Group_9_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Relationship__Group_9_3__1__Impl();
@@ -14398,31 +15361,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Relationship__Group_9_3__1__Impl"
-    // InternalToscaDsl.g:4754:1: rule__Relationship__Group_9_3__1__Impl : ( ( rule__Relationship__AttributesAssignment_9_3_1 ) ) ;
+    // InternalToscaDsl.g:5078:1: rule__Relationship__Group_9_3__1__Impl : ( ( rule__Relationship__Target_interfacesAssignment_9_3_1 ) ) ;
     public final void rule__Relationship__Group_9_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:4758:1: ( ( ( rule__Relationship__AttributesAssignment_9_3_1 ) ) )
-            // InternalToscaDsl.g:4759:1: ( ( rule__Relationship__AttributesAssignment_9_3_1 ) )
+            // InternalToscaDsl.g:5082:1: ( ( ( rule__Relationship__Target_interfacesAssignment_9_3_1 ) ) )
+            // InternalToscaDsl.g:5083:1: ( ( rule__Relationship__Target_interfacesAssignment_9_3_1 ) )
             {
-            // InternalToscaDsl.g:4759:1: ( ( rule__Relationship__AttributesAssignment_9_3_1 ) )
-            // InternalToscaDsl.g:4760:2: ( rule__Relationship__AttributesAssignment_9_3_1 )
+            // InternalToscaDsl.g:5083:1: ( ( rule__Relationship__Target_interfacesAssignment_9_3_1 ) )
+            // InternalToscaDsl.g:5084:2: ( rule__Relationship__Target_interfacesAssignment_9_3_1 )
             {
-             before(grammarAccess.getRelationshipAccess().getAttributesAssignment_9_3_1()); 
-            // InternalToscaDsl.g:4761:2: ( rule__Relationship__AttributesAssignment_9_3_1 )
-            // InternalToscaDsl.g:4761:3: rule__Relationship__AttributesAssignment_9_3_1
+             before(grammarAccess.getRelationshipAccess().getTarget_interfacesAssignment_9_3_1()); 
+            // InternalToscaDsl.g:5085:2: ( rule__Relationship__Target_interfacesAssignment_9_3_1 )
+            // InternalToscaDsl.g:5085:3: rule__Relationship__Target_interfacesAssignment_9_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Relationship__AttributesAssignment_9_3_1();
+            rule__Relationship__Target_interfacesAssignment_9_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getRelationshipAccess().getAttributesAssignment_9_3_1()); 
+             after(grammarAccess.getRelationshipAccess().getTarget_interfacesAssignment_9_3_1()); 
 
             }
 
@@ -14444,1141 +15407,15 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Relationship__Group_9_3__1__Impl"
 
 
-    // $ANTLR start "rule__Relationship__Group_10__0"
-    // InternalToscaDsl.g:4770:1: rule__Relationship__Group_10__0 : rule__Relationship__Group_10__0__Impl rule__Relationship__Group_10__1 ;
-    public final void rule__Relationship__Group_10__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4774:1: ( rule__Relationship__Group_10__0__Impl rule__Relationship__Group_10__1 )
-            // InternalToscaDsl.g:4775:2: rule__Relationship__Group_10__0__Impl rule__Relationship__Group_10__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Relationship__Group_10__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__0"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__0__Impl"
-    // InternalToscaDsl.g:4782:1: rule__Relationship__Group_10__0__Impl : ( ',\\n\"sourceInterfaces\" :' ) ;
-    public final void rule__Relationship__Group_10__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4786:1: ( ( ',\\n\"sourceInterfaces\" :' ) )
-            // InternalToscaDsl.g:4787:1: ( ',\\n\"sourceInterfaces\" :' )
-            {
-            // InternalToscaDsl.g:4787:1: ( ',\\n\"sourceInterfaces\" :' )
-            // InternalToscaDsl.g:4788:2: ',\\n\"sourceInterfaces\" :'
-            {
-             before(grammarAccess.getRelationshipAccess().getSourceInterfacesKeyword_10_0()); 
-            match(input,34,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getSourceInterfacesKeyword_10_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__0__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__1"
-    // InternalToscaDsl.g:4797:1: rule__Relationship__Group_10__1 : rule__Relationship__Group_10__1__Impl rule__Relationship__Group_10__2 ;
-    public final void rule__Relationship__Group_10__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4801:1: ( rule__Relationship__Group_10__1__Impl rule__Relationship__Group_10__2 )
-            // InternalToscaDsl.g:4802:2: rule__Relationship__Group_10__1__Impl rule__Relationship__Group_10__2
-            {
-            pushFollow(FOLLOW_4);
-            rule__Relationship__Group_10__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__1"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__1__Impl"
-    // InternalToscaDsl.g:4809:1: rule__Relationship__Group_10__1__Impl : ( '{' ) ;
-    public final void rule__Relationship__Group_10__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4813:1: ( ( '{' ) )
-            // InternalToscaDsl.g:4814:1: ( '{' )
-            {
-            // InternalToscaDsl.g:4814:1: ( '{' )
-            // InternalToscaDsl.g:4815:2: '{'
-            {
-             before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_10_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_10_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__1__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__2"
-    // InternalToscaDsl.g:4824:1: rule__Relationship__Group_10__2 : rule__Relationship__Group_10__2__Impl rule__Relationship__Group_10__3 ;
-    public final void rule__Relationship__Group_10__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4828:1: ( rule__Relationship__Group_10__2__Impl rule__Relationship__Group_10__3 )
-            // InternalToscaDsl.g:4829:2: rule__Relationship__Group_10__2__Impl rule__Relationship__Group_10__3
-            {
-            pushFollow(FOLLOW_10);
-            rule__Relationship__Group_10__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__2"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__2__Impl"
-    // InternalToscaDsl.g:4836:1: rule__Relationship__Group_10__2__Impl : ( ( rule__Relationship__SourceInterfacesAssignment_10_2 ) ) ;
-    public final void rule__Relationship__Group_10__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4840:1: ( ( ( rule__Relationship__SourceInterfacesAssignment_10_2 ) ) )
-            // InternalToscaDsl.g:4841:1: ( ( rule__Relationship__SourceInterfacesAssignment_10_2 ) )
-            {
-            // InternalToscaDsl.g:4841:1: ( ( rule__Relationship__SourceInterfacesAssignment_10_2 ) )
-            // InternalToscaDsl.g:4842:2: ( rule__Relationship__SourceInterfacesAssignment_10_2 )
-            {
-             before(grammarAccess.getRelationshipAccess().getSourceInterfacesAssignment_10_2()); 
-            // InternalToscaDsl.g:4843:2: ( rule__Relationship__SourceInterfacesAssignment_10_2 )
-            // InternalToscaDsl.g:4843:3: rule__Relationship__SourceInterfacesAssignment_10_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__SourceInterfacesAssignment_10_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getSourceInterfacesAssignment_10_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__2__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__3"
-    // InternalToscaDsl.g:4851:1: rule__Relationship__Group_10__3 : rule__Relationship__Group_10__3__Impl rule__Relationship__Group_10__4 ;
-    public final void rule__Relationship__Group_10__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4855:1: ( rule__Relationship__Group_10__3__Impl rule__Relationship__Group_10__4 )
-            // InternalToscaDsl.g:4856:2: rule__Relationship__Group_10__3__Impl rule__Relationship__Group_10__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Relationship__Group_10__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__3"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__3__Impl"
-    // InternalToscaDsl.g:4863:1: rule__Relationship__Group_10__3__Impl : ( ( rule__Relationship__Group_10_3__0 )* ) ;
-    public final void rule__Relationship__Group_10__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4867:1: ( ( ( rule__Relationship__Group_10_3__0 )* ) )
-            // InternalToscaDsl.g:4868:1: ( ( rule__Relationship__Group_10_3__0 )* )
-            {
-            // InternalToscaDsl.g:4868:1: ( ( rule__Relationship__Group_10_3__0 )* )
-            // InternalToscaDsl.g:4869:2: ( rule__Relationship__Group_10_3__0 )*
-            {
-             before(grammarAccess.getRelationshipAccess().getGroup_10_3()); 
-            // InternalToscaDsl.g:4870:2: ( rule__Relationship__Group_10_3__0 )*
-            loop40:
-            do {
-                int alt40=2;
-                int LA40_0 = input.LA(1);
-
-                if ( (LA40_0==18) ) {
-                    alt40=1;
-                }
-
-
-                switch (alt40) {
-            	case 1 :
-            	    // InternalToscaDsl.g:4870:3: rule__Relationship__Group_10_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Relationship__Group_10_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop40;
-                }
-            } while (true);
-
-             after(grammarAccess.getRelationshipAccess().getGroup_10_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__3__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__4"
-    // InternalToscaDsl.g:4878:1: rule__Relationship__Group_10__4 : rule__Relationship__Group_10__4__Impl ;
-    public final void rule__Relationship__Group_10__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4882:1: ( rule__Relationship__Group_10__4__Impl )
-            // InternalToscaDsl.g:4883:2: rule__Relationship__Group_10__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__4"
-
-
-    // $ANTLR start "rule__Relationship__Group_10__4__Impl"
-    // InternalToscaDsl.g:4889:1: rule__Relationship__Group_10__4__Impl : ( '}' ) ;
-    public final void rule__Relationship__Group_10__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4893:1: ( ( '}' ) )
-            // InternalToscaDsl.g:4894:1: ( '}' )
-            {
-            // InternalToscaDsl.g:4894:1: ( '}' )
-            // InternalToscaDsl.g:4895:2: '}'
-            {
-             before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_10_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_10_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10__4__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10_3__0"
-    // InternalToscaDsl.g:4905:1: rule__Relationship__Group_10_3__0 : rule__Relationship__Group_10_3__0__Impl rule__Relationship__Group_10_3__1 ;
-    public final void rule__Relationship__Group_10_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4909:1: ( rule__Relationship__Group_10_3__0__Impl rule__Relationship__Group_10_3__1 )
-            // InternalToscaDsl.g:4910:2: rule__Relationship__Group_10_3__0__Impl rule__Relationship__Group_10_3__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Relationship__Group_10_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10_3__0"
-
-
-    // $ANTLR start "rule__Relationship__Group_10_3__0__Impl"
-    // InternalToscaDsl.g:4917:1: rule__Relationship__Group_10_3__0__Impl : ( ',' ) ;
-    public final void rule__Relationship__Group_10_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4921:1: ( ( ',' ) )
-            // InternalToscaDsl.g:4922:1: ( ',' )
-            {
-            // InternalToscaDsl.g:4922:1: ( ',' )
-            // InternalToscaDsl.g:4923:2: ','
-            {
-             before(grammarAccess.getRelationshipAccess().getCommaKeyword_10_3_0()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getCommaKeyword_10_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10_3__0__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_10_3__1"
-    // InternalToscaDsl.g:4932:1: rule__Relationship__Group_10_3__1 : rule__Relationship__Group_10_3__1__Impl ;
-    public final void rule__Relationship__Group_10_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4936:1: ( rule__Relationship__Group_10_3__1__Impl )
-            // InternalToscaDsl.g:4937:2: rule__Relationship__Group_10_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_10_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10_3__1"
-
-
-    // $ANTLR start "rule__Relationship__Group_10_3__1__Impl"
-    // InternalToscaDsl.g:4943:1: rule__Relationship__Group_10_3__1__Impl : ( ( rule__Relationship__SourceInterfacesAssignment_10_3_1 ) ) ;
-    public final void rule__Relationship__Group_10_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4947:1: ( ( ( rule__Relationship__SourceInterfacesAssignment_10_3_1 ) ) )
-            // InternalToscaDsl.g:4948:1: ( ( rule__Relationship__SourceInterfacesAssignment_10_3_1 ) )
-            {
-            // InternalToscaDsl.g:4948:1: ( ( rule__Relationship__SourceInterfacesAssignment_10_3_1 ) )
-            // InternalToscaDsl.g:4949:2: ( rule__Relationship__SourceInterfacesAssignment_10_3_1 )
-            {
-             before(grammarAccess.getRelationshipAccess().getSourceInterfacesAssignment_10_3_1()); 
-            // InternalToscaDsl.g:4950:2: ( rule__Relationship__SourceInterfacesAssignment_10_3_1 )
-            // InternalToscaDsl.g:4950:3: rule__Relationship__SourceInterfacesAssignment_10_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__SourceInterfacesAssignment_10_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getSourceInterfacesAssignment_10_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_10_3__1__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__0"
-    // InternalToscaDsl.g:4959:1: rule__Relationship__Group_11__0 : rule__Relationship__Group_11__0__Impl rule__Relationship__Group_11__1 ;
-    public final void rule__Relationship__Group_11__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4963:1: ( rule__Relationship__Group_11__0__Impl rule__Relationship__Group_11__1 )
-            // InternalToscaDsl.g:4964:2: rule__Relationship__Group_11__0__Impl rule__Relationship__Group_11__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Relationship__Group_11__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__0"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__0__Impl"
-    // InternalToscaDsl.g:4971:1: rule__Relationship__Group_11__0__Impl : ( ',\\n\"targetInterfaces\" :' ) ;
-    public final void rule__Relationship__Group_11__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4975:1: ( ( ',\\n\"targetInterfaces\" :' ) )
-            // InternalToscaDsl.g:4976:1: ( ',\\n\"targetInterfaces\" :' )
-            {
-            // InternalToscaDsl.g:4976:1: ( ',\\n\"targetInterfaces\" :' )
-            // InternalToscaDsl.g:4977:2: ',\\n\"targetInterfaces\" :'
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetInterfacesKeyword_11_0()); 
-            match(input,35,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getTargetInterfacesKeyword_11_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__0__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__1"
-    // InternalToscaDsl.g:4986:1: rule__Relationship__Group_11__1 : rule__Relationship__Group_11__1__Impl rule__Relationship__Group_11__2 ;
-    public final void rule__Relationship__Group_11__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:4990:1: ( rule__Relationship__Group_11__1__Impl rule__Relationship__Group_11__2 )
-            // InternalToscaDsl.g:4991:2: rule__Relationship__Group_11__1__Impl rule__Relationship__Group_11__2
-            {
-            pushFollow(FOLLOW_4);
-            rule__Relationship__Group_11__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__1"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__1__Impl"
-    // InternalToscaDsl.g:4998:1: rule__Relationship__Group_11__1__Impl : ( '{' ) ;
-    public final void rule__Relationship__Group_11__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5002:1: ( ( '{' ) )
-            // InternalToscaDsl.g:5003:1: ( '{' )
-            {
-            // InternalToscaDsl.g:5003:1: ( '{' )
-            // InternalToscaDsl.g:5004:2: '{'
-            {
-             before(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_11_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getLeftCurlyBracketKeyword_11_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__1__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__2"
-    // InternalToscaDsl.g:5013:1: rule__Relationship__Group_11__2 : rule__Relationship__Group_11__2__Impl rule__Relationship__Group_11__3 ;
-    public final void rule__Relationship__Group_11__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5017:1: ( rule__Relationship__Group_11__2__Impl rule__Relationship__Group_11__3 )
-            // InternalToscaDsl.g:5018:2: rule__Relationship__Group_11__2__Impl rule__Relationship__Group_11__3
-            {
-            pushFollow(FOLLOW_10);
-            rule__Relationship__Group_11__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__2"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__2__Impl"
-    // InternalToscaDsl.g:5025:1: rule__Relationship__Group_11__2__Impl : ( ( rule__Relationship__TargetInterfacesAssignment_11_2 ) ) ;
-    public final void rule__Relationship__Group_11__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5029:1: ( ( ( rule__Relationship__TargetInterfacesAssignment_11_2 ) ) )
-            // InternalToscaDsl.g:5030:1: ( ( rule__Relationship__TargetInterfacesAssignment_11_2 ) )
-            {
-            // InternalToscaDsl.g:5030:1: ( ( rule__Relationship__TargetInterfacesAssignment_11_2 ) )
-            // InternalToscaDsl.g:5031:2: ( rule__Relationship__TargetInterfacesAssignment_11_2 )
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetInterfacesAssignment_11_2()); 
-            // InternalToscaDsl.g:5032:2: ( rule__Relationship__TargetInterfacesAssignment_11_2 )
-            // InternalToscaDsl.g:5032:3: rule__Relationship__TargetInterfacesAssignment_11_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__TargetInterfacesAssignment_11_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getTargetInterfacesAssignment_11_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__2__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__3"
-    // InternalToscaDsl.g:5040:1: rule__Relationship__Group_11__3 : rule__Relationship__Group_11__3__Impl rule__Relationship__Group_11__4 ;
-    public final void rule__Relationship__Group_11__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5044:1: ( rule__Relationship__Group_11__3__Impl rule__Relationship__Group_11__4 )
-            // InternalToscaDsl.g:5045:2: rule__Relationship__Group_11__3__Impl rule__Relationship__Group_11__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Relationship__Group_11__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__3"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__3__Impl"
-    // InternalToscaDsl.g:5052:1: rule__Relationship__Group_11__3__Impl : ( ( rule__Relationship__Group_11_3__0 )* ) ;
-    public final void rule__Relationship__Group_11__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5056:1: ( ( ( rule__Relationship__Group_11_3__0 )* ) )
-            // InternalToscaDsl.g:5057:1: ( ( rule__Relationship__Group_11_3__0 )* )
-            {
-            // InternalToscaDsl.g:5057:1: ( ( rule__Relationship__Group_11_3__0 )* )
-            // InternalToscaDsl.g:5058:2: ( rule__Relationship__Group_11_3__0 )*
-            {
-             before(grammarAccess.getRelationshipAccess().getGroup_11_3()); 
-            // InternalToscaDsl.g:5059:2: ( rule__Relationship__Group_11_3__0 )*
-            loop41:
-            do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
-
-                if ( (LA41_0==18) ) {
-                    alt41=1;
-                }
-
-
-                switch (alt41) {
-            	case 1 :
-            	    // InternalToscaDsl.g:5059:3: rule__Relationship__Group_11_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Relationship__Group_11_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop41;
-                }
-            } while (true);
-
-             after(grammarAccess.getRelationshipAccess().getGroup_11_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__3__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__4"
-    // InternalToscaDsl.g:5067:1: rule__Relationship__Group_11__4 : rule__Relationship__Group_11__4__Impl ;
-    public final void rule__Relationship__Group_11__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5071:1: ( rule__Relationship__Group_11__4__Impl )
-            // InternalToscaDsl.g:5072:2: rule__Relationship__Group_11__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__4"
-
-
-    // $ANTLR start "rule__Relationship__Group_11__4__Impl"
-    // InternalToscaDsl.g:5078:1: rule__Relationship__Group_11__4__Impl : ( '}' ) ;
-    public final void rule__Relationship__Group_11__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5082:1: ( ( '}' ) )
-            // InternalToscaDsl.g:5083:1: ( '}' )
-            {
-            // InternalToscaDsl.g:5083:1: ( '}' )
-            // InternalToscaDsl.g:5084:2: '}'
-            {
-             before(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_11_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getRightCurlyBracketKeyword_11_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11__4__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11_3__0"
-    // InternalToscaDsl.g:5094:1: rule__Relationship__Group_11_3__0 : rule__Relationship__Group_11_3__0__Impl rule__Relationship__Group_11_3__1 ;
-    public final void rule__Relationship__Group_11_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5098:1: ( rule__Relationship__Group_11_3__0__Impl rule__Relationship__Group_11_3__1 )
-            // InternalToscaDsl.g:5099:2: rule__Relationship__Group_11_3__0__Impl rule__Relationship__Group_11_3__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Relationship__Group_11_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11_3__0"
-
-
-    // $ANTLR start "rule__Relationship__Group_11_3__0__Impl"
-    // InternalToscaDsl.g:5106:1: rule__Relationship__Group_11_3__0__Impl : ( ',' ) ;
-    public final void rule__Relationship__Group_11_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5110:1: ( ( ',' ) )
-            // InternalToscaDsl.g:5111:1: ( ',' )
-            {
-            // InternalToscaDsl.g:5111:1: ( ',' )
-            // InternalToscaDsl.g:5112:2: ','
-            {
-             before(grammarAccess.getRelationshipAccess().getCommaKeyword_11_3_0()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getCommaKeyword_11_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11_3__0__Impl"
-
-
-    // $ANTLR start "rule__Relationship__Group_11_3__1"
-    // InternalToscaDsl.g:5121:1: rule__Relationship__Group_11_3__1 : rule__Relationship__Group_11_3__1__Impl ;
-    public final void rule__Relationship__Group_11_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5125:1: ( rule__Relationship__Group_11_3__1__Impl )
-            // InternalToscaDsl.g:5126:2: rule__Relationship__Group_11_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__Group_11_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11_3__1"
-
-
-    // $ANTLR start "rule__Relationship__Group_11_3__1__Impl"
-    // InternalToscaDsl.g:5132:1: rule__Relationship__Group_11_3__1__Impl : ( ( rule__Relationship__TargetInterfacesAssignment_11_3_1 ) ) ;
-    public final void rule__Relationship__Group_11_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:5136:1: ( ( ( rule__Relationship__TargetInterfacesAssignment_11_3_1 ) ) )
-            // InternalToscaDsl.g:5137:1: ( ( rule__Relationship__TargetInterfacesAssignment_11_3_1 ) )
-            {
-            // InternalToscaDsl.g:5137:1: ( ( rule__Relationship__TargetInterfacesAssignment_11_3_1 ) )
-            // InternalToscaDsl.g:5138:2: ( rule__Relationship__TargetInterfacesAssignment_11_3_1 )
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetInterfacesAssignment_11_3_1()); 
-            // InternalToscaDsl.g:5139:2: ( rule__Relationship__TargetInterfacesAssignment_11_3_1 )
-            // InternalToscaDsl.g:5139:3: rule__Relationship__TargetInterfacesAssignment_11_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Relationship__TargetInterfacesAssignment_11_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getRelationshipAccess().getTargetInterfacesAssignment_11_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__Group_11_3__1__Impl"
-
-
     // $ANTLR start "rule__Group__Group__0"
-    // InternalToscaDsl.g:5148:1: rule__Group__Group__0 : rule__Group__Group__0__Impl rule__Group__Group__1 ;
+    // InternalToscaDsl.g:5094:1: rule__Group__Group__0 : rule__Group__Group__0__Impl rule__Group__Group__1 ;
     public final void rule__Group__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5152:1: ( rule__Group__Group__0__Impl rule__Group__Group__1 )
-            // InternalToscaDsl.g:5153:2: rule__Group__Group__0__Impl rule__Group__Group__1
+            // InternalToscaDsl.g:5098:1: ( rule__Group__Group__0__Impl rule__Group__Group__1 )
+            // InternalToscaDsl.g:5099:2: rule__Group__Group__0__Impl rule__Group__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group__0__Impl();
@@ -15609,21 +15446,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__0__Impl"
-    // InternalToscaDsl.g:5160:1: rule__Group__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:5106:1: rule__Group__Group__0__Impl : ( () ) ;
     public final void rule__Group__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5164:1: ( ( () ) )
-            // InternalToscaDsl.g:5165:1: ( () )
+            // InternalToscaDsl.g:5110:1: ( ( () ) )
+            // InternalToscaDsl.g:5111:1: ( () )
             {
-            // InternalToscaDsl.g:5165:1: ( () )
-            // InternalToscaDsl.g:5166:2: ()
+            // InternalToscaDsl.g:5111:1: ( () )
+            // InternalToscaDsl.g:5112:2: ()
             {
              before(grammarAccess.getGroupAccess().getGroupAction_0()); 
-            // InternalToscaDsl.g:5167:2: ()
-            // InternalToscaDsl.g:5167:3: 
+            // InternalToscaDsl.g:5113:2: ()
+            // InternalToscaDsl.g:5113:3: 
             {
             }
 
@@ -15646,14 +15483,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__1"
-    // InternalToscaDsl.g:5175:1: rule__Group__Group__1 : rule__Group__Group__1__Impl rule__Group__Group__2 ;
+    // InternalToscaDsl.g:5121:1: rule__Group__Group__1 : rule__Group__Group__1__Impl rule__Group__Group__2 ;
     public final void rule__Group__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5179:1: ( rule__Group__Group__1__Impl rule__Group__Group__2 )
-            // InternalToscaDsl.g:5180:2: rule__Group__Group__1__Impl rule__Group__Group__2
+            // InternalToscaDsl.g:5125:1: ( rule__Group__Group__1__Impl rule__Group__Group__2 )
+            // InternalToscaDsl.g:5126:2: rule__Group__Group__1__Impl rule__Group__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Group__Group__1__Impl();
@@ -15684,21 +15521,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__1__Impl"
-    // InternalToscaDsl.g:5187:1: rule__Group__Group__1__Impl : ( ( rule__Group__Group_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:5133:1: rule__Group__Group__1__Impl : ( ( rule__Group__Group_nameAssignment_1 ) ) ;
     public final void rule__Group__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5191:1: ( ( ( rule__Group__Group_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:5192:1: ( ( rule__Group__Group_nameAssignment_1 ) )
+            // InternalToscaDsl.g:5137:1: ( ( ( rule__Group__Group_nameAssignment_1 ) ) )
+            // InternalToscaDsl.g:5138:1: ( ( rule__Group__Group_nameAssignment_1 ) )
             {
-            // InternalToscaDsl.g:5192:1: ( ( rule__Group__Group_nameAssignment_1 ) )
-            // InternalToscaDsl.g:5193:2: ( rule__Group__Group_nameAssignment_1 )
+            // InternalToscaDsl.g:5138:1: ( ( rule__Group__Group_nameAssignment_1 ) )
+            // InternalToscaDsl.g:5139:2: ( rule__Group__Group_nameAssignment_1 )
             {
              before(grammarAccess.getGroupAccess().getGroup_nameAssignment_1()); 
-            // InternalToscaDsl.g:5194:2: ( rule__Group__Group_nameAssignment_1 )
-            // InternalToscaDsl.g:5194:3: rule__Group__Group_nameAssignment_1
+            // InternalToscaDsl.g:5140:2: ( rule__Group__Group_nameAssignment_1 )
+            // InternalToscaDsl.g:5140:3: rule__Group__Group_nameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_nameAssignment_1();
@@ -15731,14 +15568,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__2"
-    // InternalToscaDsl.g:5202:1: rule__Group__Group__2 : rule__Group__Group__2__Impl rule__Group__Group__3 ;
+    // InternalToscaDsl.g:5148:1: rule__Group__Group__2 : rule__Group__Group__2__Impl rule__Group__Group__3 ;
     public final void rule__Group__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5206:1: ( rule__Group__Group__2__Impl rule__Group__Group__3 )
-            // InternalToscaDsl.g:5207:2: rule__Group__Group__2__Impl rule__Group__Group__3
+            // InternalToscaDsl.g:5152:1: ( rule__Group__Group__2__Impl rule__Group__Group__3 )
+            // InternalToscaDsl.g:5153:2: rule__Group__Group__2__Impl rule__Group__Group__3
             {
             pushFollow(FOLLOW_9);
             rule__Group__Group__2__Impl();
@@ -15769,17 +15606,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__2__Impl"
-    // InternalToscaDsl.g:5214:1: rule__Group__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:5160:1: rule__Group__Group__2__Impl : ( ':' ) ;
     public final void rule__Group__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5218:1: ( ( ':' ) )
-            // InternalToscaDsl.g:5219:1: ( ':' )
+            // InternalToscaDsl.g:5164:1: ( ( ':' ) )
+            // InternalToscaDsl.g:5165:1: ( ':' )
             {
-            // InternalToscaDsl.g:5219:1: ( ':' )
-            // InternalToscaDsl.g:5220:2: ':'
+            // InternalToscaDsl.g:5165:1: ( ':' )
+            // InternalToscaDsl.g:5166:2: ':'
             {
              before(grammarAccess.getGroupAccess().getColonKeyword_2()); 
             match(input,25,FOLLOW_2); 
@@ -15806,14 +15643,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__3"
-    // InternalToscaDsl.g:5229:1: rule__Group__Group__3 : rule__Group__Group__3__Impl rule__Group__Group__4 ;
+    // InternalToscaDsl.g:5175:1: rule__Group__Group__3 : rule__Group__Group__3__Impl rule__Group__Group__4 ;
     public final void rule__Group__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5233:1: ( rule__Group__Group__3__Impl rule__Group__Group__4 )
-            // InternalToscaDsl.g:5234:2: rule__Group__Group__3__Impl rule__Group__Group__4
+            // InternalToscaDsl.g:5179:1: ( rule__Group__Group__3__Impl rule__Group__Group__4 )
+            // InternalToscaDsl.g:5180:2: rule__Group__Group__3__Impl rule__Group__Group__4
             {
             pushFollow(FOLLOW_12);
             rule__Group__Group__3__Impl();
@@ -15844,17 +15681,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__3__Impl"
-    // InternalToscaDsl.g:5241:1: rule__Group__Group__3__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:5187:1: rule__Group__Group__3__Impl : ( '{' ) ;
     public final void rule__Group__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5245:1: ( ( '{' ) )
-            // InternalToscaDsl.g:5246:1: ( '{' )
+            // InternalToscaDsl.g:5191:1: ( ( '{' ) )
+            // InternalToscaDsl.g:5192:1: ( '{' )
             {
-            // InternalToscaDsl.g:5246:1: ( '{' )
-            // InternalToscaDsl.g:5247:2: '{'
+            // InternalToscaDsl.g:5192:1: ( '{' )
+            // InternalToscaDsl.g:5193:2: '{'
             {
              before(grammarAccess.getGroupAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,11,FOLLOW_2); 
@@ -15881,14 +15718,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__4"
-    // InternalToscaDsl.g:5256:1: rule__Group__Group__4 : rule__Group__Group__4__Impl rule__Group__Group__5 ;
+    // InternalToscaDsl.g:5202:1: rule__Group__Group__4 : rule__Group__Group__4__Impl rule__Group__Group__5 ;
     public final void rule__Group__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5260:1: ( rule__Group__Group__4__Impl rule__Group__Group__5 )
-            // InternalToscaDsl.g:5261:2: rule__Group__Group__4__Impl rule__Group__Group__5
+            // InternalToscaDsl.g:5206:1: ( rule__Group__Group__4__Impl rule__Group__Group__5 )
+            // InternalToscaDsl.g:5207:2: rule__Group__Group__4__Impl rule__Group__Group__5
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group__4__Impl();
@@ -15919,17 +15756,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__4__Impl"
-    // InternalToscaDsl.g:5268:1: rule__Group__Group__4__Impl : ( '\"type\" :' ) ;
+    // InternalToscaDsl.g:5214:1: rule__Group__Group__4__Impl : ( '\"type\" :' ) ;
     public final void rule__Group__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5272:1: ( ( '\"type\" :' ) )
-            // InternalToscaDsl.g:5273:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:5218:1: ( ( '\"type\" :' ) )
+            // InternalToscaDsl.g:5219:1: ( '\"type\" :' )
             {
-            // InternalToscaDsl.g:5273:1: ( '\"type\" :' )
-            // InternalToscaDsl.g:5274:2: '\"type\" :'
+            // InternalToscaDsl.g:5219:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:5220:2: '\"type\" :'
             {
              before(grammarAccess.getGroupAccess().getTypeKeyword_4()); 
             match(input,26,FOLLOW_2); 
@@ -15956,14 +15793,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__5"
-    // InternalToscaDsl.g:5283:1: rule__Group__Group__5 : rule__Group__Group__5__Impl rule__Group__Group__6 ;
+    // InternalToscaDsl.g:5229:1: rule__Group__Group__5 : rule__Group__Group__5__Impl rule__Group__Group__6 ;
     public final void rule__Group__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5287:1: ( rule__Group__Group__5__Impl rule__Group__Group__6 )
-            // InternalToscaDsl.g:5288:2: rule__Group__Group__5__Impl rule__Group__Group__6
+            // InternalToscaDsl.g:5233:1: ( rule__Group__Group__5__Impl rule__Group__Group__6 )
+            // InternalToscaDsl.g:5234:2: rule__Group__Group__5__Impl rule__Group__Group__6
             {
             pushFollow(FOLLOW_15);
             rule__Group__Group__5__Impl();
@@ -15994,21 +15831,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__5__Impl"
-    // InternalToscaDsl.g:5295:1: rule__Group__Group__5__Impl : ( ( rule__Group__TypeAssignment_5 ) ) ;
+    // InternalToscaDsl.g:5241:1: rule__Group__Group__5__Impl : ( ( rule__Group__TypeAssignment_5 ) ) ;
     public final void rule__Group__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5299:1: ( ( ( rule__Group__TypeAssignment_5 ) ) )
-            // InternalToscaDsl.g:5300:1: ( ( rule__Group__TypeAssignment_5 ) )
+            // InternalToscaDsl.g:5245:1: ( ( ( rule__Group__TypeAssignment_5 ) ) )
+            // InternalToscaDsl.g:5246:1: ( ( rule__Group__TypeAssignment_5 ) )
             {
-            // InternalToscaDsl.g:5300:1: ( ( rule__Group__TypeAssignment_5 ) )
-            // InternalToscaDsl.g:5301:2: ( rule__Group__TypeAssignment_5 )
+            // InternalToscaDsl.g:5246:1: ( ( rule__Group__TypeAssignment_5 ) )
+            // InternalToscaDsl.g:5247:2: ( rule__Group__TypeAssignment_5 )
             {
              before(grammarAccess.getGroupAccess().getTypeAssignment_5()); 
-            // InternalToscaDsl.g:5302:2: ( rule__Group__TypeAssignment_5 )
-            // InternalToscaDsl.g:5302:3: rule__Group__TypeAssignment_5
+            // InternalToscaDsl.g:5248:2: ( rule__Group__TypeAssignment_5 )
+            // InternalToscaDsl.g:5248:3: rule__Group__TypeAssignment_5
             {
             pushFollow(FOLLOW_2);
             rule__Group__TypeAssignment_5();
@@ -16041,14 +15878,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__6"
-    // InternalToscaDsl.g:5310:1: rule__Group__Group__6 : rule__Group__Group__6__Impl rule__Group__Group__7 ;
+    // InternalToscaDsl.g:5256:1: rule__Group__Group__6 : rule__Group__Group__6__Impl rule__Group__Group__7 ;
     public final void rule__Group__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5314:1: ( rule__Group__Group__6__Impl rule__Group__Group__7 )
-            // InternalToscaDsl.g:5315:2: rule__Group__Group__6__Impl rule__Group__Group__7
+            // InternalToscaDsl.g:5260:1: ( rule__Group__Group__6__Impl rule__Group__Group__7 )
+            // InternalToscaDsl.g:5261:2: rule__Group__Group__6__Impl rule__Group__Group__7
             {
             pushFollow(FOLLOW_15);
             rule__Group__Group__6__Impl();
@@ -16079,20 +15916,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__6__Impl"
-    // InternalToscaDsl.g:5322:1: rule__Group__Group__6__Impl : ( ( rule__Group__Group_6__0 )? ) ;
+    // InternalToscaDsl.g:5268:1: rule__Group__Group__6__Impl : ( ( rule__Group__Group_6__0 )? ) ;
     public final void rule__Group__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5326:1: ( ( ( rule__Group__Group_6__0 )? ) )
-            // InternalToscaDsl.g:5327:1: ( ( rule__Group__Group_6__0 )? )
+            // InternalToscaDsl.g:5272:1: ( ( ( rule__Group__Group_6__0 )? ) )
+            // InternalToscaDsl.g:5273:1: ( ( rule__Group__Group_6__0 )? )
             {
-            // InternalToscaDsl.g:5327:1: ( ( rule__Group__Group_6__0 )? )
-            // InternalToscaDsl.g:5328:2: ( rule__Group__Group_6__0 )?
+            // InternalToscaDsl.g:5273:1: ( ( rule__Group__Group_6__0 )? )
+            // InternalToscaDsl.g:5274:2: ( rule__Group__Group_6__0 )?
             {
              before(grammarAccess.getGroupAccess().getGroup_6()); 
-            // InternalToscaDsl.g:5329:2: ( rule__Group__Group_6__0 )?
+            // InternalToscaDsl.g:5275:2: ( rule__Group__Group_6__0 )?
             int alt42=2;
             int LA42_0 = input.LA(1);
 
@@ -16101,7 +15938,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             }
             switch (alt42) {
                 case 1 :
-                    // InternalToscaDsl.g:5329:3: rule__Group__Group_6__0
+                    // InternalToscaDsl.g:5275:3: rule__Group__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Group__Group_6__0();
@@ -16137,14 +15974,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__7"
-    // InternalToscaDsl.g:5337:1: rule__Group__Group__7 : rule__Group__Group__7__Impl rule__Group__Group__8 ;
+    // InternalToscaDsl.g:5283:1: rule__Group__Group__7 : rule__Group__Group__7__Impl rule__Group__Group__8 ;
     public final void rule__Group__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5341:1: ( rule__Group__Group__7__Impl rule__Group__Group__8 )
-            // InternalToscaDsl.g:5342:2: rule__Group__Group__7__Impl rule__Group__Group__8
+            // InternalToscaDsl.g:5287:1: ( rule__Group__Group__7__Impl rule__Group__Group__8 )
+            // InternalToscaDsl.g:5288:2: rule__Group__Group__7__Impl rule__Group__Group__8
             {
             pushFollow(FOLLOW_15);
             rule__Group__Group__7__Impl();
@@ -16175,20 +16012,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__7__Impl"
-    // InternalToscaDsl.g:5349:1: rule__Group__Group__7__Impl : ( ( rule__Group__Group_7__0 )? ) ;
+    // InternalToscaDsl.g:5295:1: rule__Group__Group__7__Impl : ( ( rule__Group__Group_7__0 )? ) ;
     public final void rule__Group__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5353:1: ( ( ( rule__Group__Group_7__0 )? ) )
-            // InternalToscaDsl.g:5354:1: ( ( rule__Group__Group_7__0 )? )
+            // InternalToscaDsl.g:5299:1: ( ( ( rule__Group__Group_7__0 )? ) )
+            // InternalToscaDsl.g:5300:1: ( ( rule__Group__Group_7__0 )? )
             {
-            // InternalToscaDsl.g:5354:1: ( ( rule__Group__Group_7__0 )? )
-            // InternalToscaDsl.g:5355:2: ( rule__Group__Group_7__0 )?
+            // InternalToscaDsl.g:5300:1: ( ( rule__Group__Group_7__0 )? )
+            // InternalToscaDsl.g:5301:2: ( rule__Group__Group_7__0 )?
             {
              before(grammarAccess.getGroupAccess().getGroup_7()); 
-            // InternalToscaDsl.g:5356:2: ( rule__Group__Group_7__0 )?
+            // InternalToscaDsl.g:5302:2: ( rule__Group__Group_7__0 )?
             int alt43=2;
             int LA43_0 = input.LA(1);
 
@@ -16197,7 +16034,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             }
             switch (alt43) {
                 case 1 :
-                    // InternalToscaDsl.g:5356:3: rule__Group__Group_7__0
+                    // InternalToscaDsl.g:5302:3: rule__Group__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Group__Group_7__0();
@@ -16233,14 +16070,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__8"
-    // InternalToscaDsl.g:5364:1: rule__Group__Group__8 : rule__Group__Group__8__Impl rule__Group__Group__9 ;
+    // InternalToscaDsl.g:5310:1: rule__Group__Group__8 : rule__Group__Group__8__Impl rule__Group__Group__9 ;
     public final void rule__Group__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5368:1: ( rule__Group__Group__8__Impl rule__Group__Group__9 )
-            // InternalToscaDsl.g:5369:2: rule__Group__Group__8__Impl rule__Group__Group__9
+            // InternalToscaDsl.g:5314:1: ( rule__Group__Group__8__Impl rule__Group__Group__9 )
+            // InternalToscaDsl.g:5315:2: rule__Group__Group__8__Impl rule__Group__Group__9
             {
             pushFollow(FOLLOW_15);
             rule__Group__Group__8__Impl();
@@ -16271,20 +16108,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__8__Impl"
-    // InternalToscaDsl.g:5376:1: rule__Group__Group__8__Impl : ( ( rule__Group__Group_8__0 )? ) ;
+    // InternalToscaDsl.g:5322:1: rule__Group__Group__8__Impl : ( ( rule__Group__Group_8__0 )? ) ;
     public final void rule__Group__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5380:1: ( ( ( rule__Group__Group_8__0 )? ) )
-            // InternalToscaDsl.g:5381:1: ( ( rule__Group__Group_8__0 )? )
+            // InternalToscaDsl.g:5326:1: ( ( ( rule__Group__Group_8__0 )? ) )
+            // InternalToscaDsl.g:5327:1: ( ( rule__Group__Group_8__0 )? )
             {
-            // InternalToscaDsl.g:5381:1: ( ( rule__Group__Group_8__0 )? )
-            // InternalToscaDsl.g:5382:2: ( rule__Group__Group_8__0 )?
+            // InternalToscaDsl.g:5327:1: ( ( rule__Group__Group_8__0 )? )
+            // InternalToscaDsl.g:5328:2: ( rule__Group__Group_8__0 )?
             {
              before(grammarAccess.getGroupAccess().getGroup_8()); 
-            // InternalToscaDsl.g:5383:2: ( rule__Group__Group_8__0 )?
+            // InternalToscaDsl.g:5329:2: ( rule__Group__Group_8__0 )?
             int alt44=2;
             int LA44_0 = input.LA(1);
 
@@ -16293,7 +16130,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             }
             switch (alt44) {
                 case 1 :
-                    // InternalToscaDsl.g:5383:3: rule__Group__Group_8__0
+                    // InternalToscaDsl.g:5329:3: rule__Group__Group_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Group__Group_8__0();
@@ -16329,14 +16166,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__9"
-    // InternalToscaDsl.g:5391:1: rule__Group__Group__9 : rule__Group__Group__9__Impl rule__Group__Group__10 ;
+    // InternalToscaDsl.g:5337:1: rule__Group__Group__9 : rule__Group__Group__9__Impl rule__Group__Group__10 ;
     public final void rule__Group__Group__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5395:1: ( rule__Group__Group__9__Impl rule__Group__Group__10 )
-            // InternalToscaDsl.g:5396:2: rule__Group__Group__9__Impl rule__Group__Group__10
+            // InternalToscaDsl.g:5341:1: ( rule__Group__Group__9__Impl rule__Group__Group__10 )
+            // InternalToscaDsl.g:5342:2: rule__Group__Group__9__Impl rule__Group__Group__10
             {
             pushFollow(FOLLOW_15);
             rule__Group__Group__9__Impl();
@@ -16367,20 +16204,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__9__Impl"
-    // InternalToscaDsl.g:5403:1: rule__Group__Group__9__Impl : ( ( rule__Group__Group_9__0 )? ) ;
+    // InternalToscaDsl.g:5349:1: rule__Group__Group__9__Impl : ( ( rule__Group__Group_9__0 )? ) ;
     public final void rule__Group__Group__9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5407:1: ( ( ( rule__Group__Group_9__0 )? ) )
-            // InternalToscaDsl.g:5408:1: ( ( rule__Group__Group_9__0 )? )
+            // InternalToscaDsl.g:5353:1: ( ( ( rule__Group__Group_9__0 )? ) )
+            // InternalToscaDsl.g:5354:1: ( ( rule__Group__Group_9__0 )? )
             {
-            // InternalToscaDsl.g:5408:1: ( ( rule__Group__Group_9__0 )? )
-            // InternalToscaDsl.g:5409:2: ( rule__Group__Group_9__0 )?
+            // InternalToscaDsl.g:5354:1: ( ( rule__Group__Group_9__0 )? )
+            // InternalToscaDsl.g:5355:2: ( rule__Group__Group_9__0 )?
             {
              before(grammarAccess.getGroupAccess().getGroup_9()); 
-            // InternalToscaDsl.g:5410:2: ( rule__Group__Group_9__0 )?
+            // InternalToscaDsl.g:5356:2: ( rule__Group__Group_9__0 )?
             int alt45=2;
             int LA45_0 = input.LA(1);
 
@@ -16389,7 +16226,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             }
             switch (alt45) {
                 case 1 :
-                    // InternalToscaDsl.g:5410:3: rule__Group__Group_9__0
+                    // InternalToscaDsl.g:5356:3: rule__Group__Group_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Group__Group_9__0();
@@ -16425,14 +16262,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__10"
-    // InternalToscaDsl.g:5418:1: rule__Group__Group__10 : rule__Group__Group__10__Impl ;
+    // InternalToscaDsl.g:5364:1: rule__Group__Group__10 : rule__Group__Group__10__Impl ;
     public final void rule__Group__Group__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5422:1: ( rule__Group__Group__10__Impl )
-            // InternalToscaDsl.g:5423:2: rule__Group__Group__10__Impl
+            // InternalToscaDsl.g:5368:1: ( rule__Group__Group__10__Impl )
+            // InternalToscaDsl.g:5369:2: rule__Group__Group__10__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group__10__Impl();
@@ -16458,17 +16295,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group__10__Impl"
-    // InternalToscaDsl.g:5429:1: rule__Group__Group__10__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:5375:1: rule__Group__Group__10__Impl : ( '}' ) ;
     public final void rule__Group__Group__10__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5433:1: ( ( '}' ) )
-            // InternalToscaDsl.g:5434:1: ( '}' )
+            // InternalToscaDsl.g:5379:1: ( ( '}' ) )
+            // InternalToscaDsl.g:5380:1: ( '}' )
             {
-            // InternalToscaDsl.g:5434:1: ( '}' )
-            // InternalToscaDsl.g:5435:2: '}'
+            // InternalToscaDsl.g:5380:1: ( '}' )
+            // InternalToscaDsl.g:5381:2: '}'
             {
              before(grammarAccess.getGroupAccess().getRightCurlyBracketKeyword_10()); 
             match(input,13,FOLLOW_2); 
@@ -16495,14 +16332,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_6__0"
-    // InternalToscaDsl.g:5445:1: rule__Group__Group_6__0 : rule__Group__Group_6__0__Impl rule__Group__Group_6__1 ;
+    // InternalToscaDsl.g:5391:1: rule__Group__Group_6__0 : rule__Group__Group_6__0__Impl rule__Group__Group_6__1 ;
     public final void rule__Group__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5449:1: ( rule__Group__Group_6__0__Impl rule__Group__Group_6__1 )
-            // InternalToscaDsl.g:5450:2: rule__Group__Group_6__0__Impl rule__Group__Group_6__1
+            // InternalToscaDsl.g:5395:1: ( rule__Group__Group_6__0__Impl rule__Group__Group_6__1 )
+            // InternalToscaDsl.g:5396:2: rule__Group__Group_6__0__Impl rule__Group__Group_6__1
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group_6__0__Impl();
@@ -16533,17 +16370,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_6__0__Impl"
-    // InternalToscaDsl.g:5457:1: rule__Group__Group_6__0__Impl : ( ',\\n\"description\" :' ) ;
+    // InternalToscaDsl.g:5403:1: rule__Group__Group_6__0__Impl : ( ',\\n\"description\" :' ) ;
     public final void rule__Group__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5461:1: ( ( ',\\n\"description\" :' ) )
-            // InternalToscaDsl.g:5462:1: ( ',\\n\"description\" :' )
+            // InternalToscaDsl.g:5407:1: ( ( ',\\n\"description\" :' ) )
+            // InternalToscaDsl.g:5408:1: ( ',\\n\"description\" :' )
             {
-            // InternalToscaDsl.g:5462:1: ( ',\\n\"description\" :' )
-            // InternalToscaDsl.g:5463:2: ',\\n\"description\" :'
+            // InternalToscaDsl.g:5408:1: ( ',\\n\"description\" :' )
+            // InternalToscaDsl.g:5409:2: ',\\n\"description\" :'
             {
              before(grammarAccess.getGroupAccess().getDescriptionKeyword_6_0()); 
             match(input,14,FOLLOW_2); 
@@ -16570,14 +16407,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_6__1"
-    // InternalToscaDsl.g:5472:1: rule__Group__Group_6__1 : rule__Group__Group_6__1__Impl ;
+    // InternalToscaDsl.g:5418:1: rule__Group__Group_6__1 : rule__Group__Group_6__1__Impl ;
     public final void rule__Group__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5476:1: ( rule__Group__Group_6__1__Impl )
-            // InternalToscaDsl.g:5477:2: rule__Group__Group_6__1__Impl
+            // InternalToscaDsl.g:5422:1: ( rule__Group__Group_6__1__Impl )
+            // InternalToscaDsl.g:5423:2: rule__Group__Group_6__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_6__1__Impl();
@@ -16603,21 +16440,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_6__1__Impl"
-    // InternalToscaDsl.g:5483:1: rule__Group__Group_6__1__Impl : ( ( rule__Group__DescriptionAssignment_6_1 ) ) ;
+    // InternalToscaDsl.g:5429:1: rule__Group__Group_6__1__Impl : ( ( rule__Group__DescriptionAssignment_6_1 ) ) ;
     public final void rule__Group__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5487:1: ( ( ( rule__Group__DescriptionAssignment_6_1 ) ) )
-            // InternalToscaDsl.g:5488:1: ( ( rule__Group__DescriptionAssignment_6_1 ) )
+            // InternalToscaDsl.g:5433:1: ( ( ( rule__Group__DescriptionAssignment_6_1 ) ) )
+            // InternalToscaDsl.g:5434:1: ( ( rule__Group__DescriptionAssignment_6_1 ) )
             {
-            // InternalToscaDsl.g:5488:1: ( ( rule__Group__DescriptionAssignment_6_1 ) )
-            // InternalToscaDsl.g:5489:2: ( rule__Group__DescriptionAssignment_6_1 )
+            // InternalToscaDsl.g:5434:1: ( ( rule__Group__DescriptionAssignment_6_1 ) )
+            // InternalToscaDsl.g:5435:2: ( rule__Group__DescriptionAssignment_6_1 )
             {
              before(grammarAccess.getGroupAccess().getDescriptionAssignment_6_1()); 
-            // InternalToscaDsl.g:5490:2: ( rule__Group__DescriptionAssignment_6_1 )
-            // InternalToscaDsl.g:5490:3: rule__Group__DescriptionAssignment_6_1
+            // InternalToscaDsl.g:5436:2: ( rule__Group__DescriptionAssignment_6_1 )
+            // InternalToscaDsl.g:5436:3: rule__Group__DescriptionAssignment_6_1
             {
             pushFollow(FOLLOW_2);
             rule__Group__DescriptionAssignment_6_1();
@@ -16650,14 +16487,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__0"
-    // InternalToscaDsl.g:5499:1: rule__Group__Group_7__0 : rule__Group__Group_7__0__Impl rule__Group__Group_7__1 ;
+    // InternalToscaDsl.g:5445:1: rule__Group__Group_7__0 : rule__Group__Group_7__0__Impl rule__Group__Group_7__1 ;
     public final void rule__Group__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5503:1: ( rule__Group__Group_7__0__Impl rule__Group__Group_7__1 )
-            // InternalToscaDsl.g:5504:2: rule__Group__Group_7__0__Impl rule__Group__Group_7__1
+            // InternalToscaDsl.g:5449:1: ( rule__Group__Group_7__0__Impl rule__Group__Group_7__1 )
+            // InternalToscaDsl.g:5450:2: rule__Group__Group_7__0__Impl rule__Group__Group_7__1
             {
             pushFollow(FOLLOW_9);
             rule__Group__Group_7__0__Impl();
@@ -16688,17 +16525,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__0__Impl"
-    // InternalToscaDsl.g:5511:1: rule__Group__Group_7__0__Impl : ( ',\\n\"targets\" :' ) ;
+    // InternalToscaDsl.g:5457:1: rule__Group__Group_7__0__Impl : ( ',\\n\"targets\" :' ) ;
     public final void rule__Group__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5515:1: ( ( ',\\n\"targets\" :' ) )
-            // InternalToscaDsl.g:5516:1: ( ',\\n\"targets\" :' )
+            // InternalToscaDsl.g:5461:1: ( ( ',\\n\"targets\" :' ) )
+            // InternalToscaDsl.g:5462:1: ( ',\\n\"targets\" :' )
             {
-            // InternalToscaDsl.g:5516:1: ( ',\\n\"targets\" :' )
-            // InternalToscaDsl.g:5517:2: ',\\n\"targets\" :'
+            // InternalToscaDsl.g:5462:1: ( ',\\n\"targets\" :' )
+            // InternalToscaDsl.g:5463:2: ',\\n\"targets\" :'
             {
              before(grammarAccess.getGroupAccess().getTargetsKeyword_7_0()); 
             match(input,36,FOLLOW_2); 
@@ -16725,14 +16562,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__1"
-    // InternalToscaDsl.g:5526:1: rule__Group__Group_7__1 : rule__Group__Group_7__1__Impl rule__Group__Group_7__2 ;
+    // InternalToscaDsl.g:5472:1: rule__Group__Group_7__1 : rule__Group__Group_7__1__Impl rule__Group__Group_7__2 ;
     public final void rule__Group__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5530:1: ( rule__Group__Group_7__1__Impl rule__Group__Group_7__2 )
-            // InternalToscaDsl.g:5531:2: rule__Group__Group_7__1__Impl rule__Group__Group_7__2
+            // InternalToscaDsl.g:5476:1: ( rule__Group__Group_7__1__Impl rule__Group__Group_7__2 )
+            // InternalToscaDsl.g:5477:2: rule__Group__Group_7__1__Impl rule__Group__Group_7__2
             {
             pushFollow(FOLLOW_16);
             rule__Group__Group_7__1__Impl();
@@ -16763,17 +16600,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__1__Impl"
-    // InternalToscaDsl.g:5538:1: rule__Group__Group_7__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:5484:1: rule__Group__Group_7__1__Impl : ( '{' ) ;
     public final void rule__Group__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5542:1: ( ( '{' ) )
-            // InternalToscaDsl.g:5543:1: ( '{' )
+            // InternalToscaDsl.g:5488:1: ( ( '{' ) )
+            // InternalToscaDsl.g:5489:1: ( '{' )
             {
-            // InternalToscaDsl.g:5543:1: ( '{' )
-            // InternalToscaDsl.g:5544:2: '{'
+            // InternalToscaDsl.g:5489:1: ( '{' )
+            // InternalToscaDsl.g:5490:2: '{'
             {
              before(grammarAccess.getGroupAccess().getLeftCurlyBracketKeyword_7_1()); 
             match(input,11,FOLLOW_2); 
@@ -16800,14 +16637,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__2"
-    // InternalToscaDsl.g:5553:1: rule__Group__Group_7__2 : rule__Group__Group_7__2__Impl rule__Group__Group_7__3 ;
+    // InternalToscaDsl.g:5499:1: rule__Group__Group_7__2 : rule__Group__Group_7__2__Impl rule__Group__Group_7__3 ;
     public final void rule__Group__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5557:1: ( rule__Group__Group_7__2__Impl rule__Group__Group_7__3 )
-            // InternalToscaDsl.g:5558:2: rule__Group__Group_7__2__Impl rule__Group__Group_7__3
+            // InternalToscaDsl.g:5503:1: ( rule__Group__Group_7__2__Impl rule__Group__Group_7__3 )
+            // InternalToscaDsl.g:5504:2: rule__Group__Group_7__2__Impl rule__Group__Group_7__3
             {
             pushFollow(FOLLOW_10);
             rule__Group__Group_7__2__Impl();
@@ -16838,21 +16675,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__2__Impl"
-    // InternalToscaDsl.g:5565:1: rule__Group__Group_7__2__Impl : ( ( rule__Group__TargetsAssignment_7_2 ) ) ;
+    // InternalToscaDsl.g:5511:1: rule__Group__Group_7__2__Impl : ( ( rule__Group__TargetsAssignment_7_2 ) ) ;
     public final void rule__Group__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5569:1: ( ( ( rule__Group__TargetsAssignment_7_2 ) ) )
-            // InternalToscaDsl.g:5570:1: ( ( rule__Group__TargetsAssignment_7_2 ) )
+            // InternalToscaDsl.g:5515:1: ( ( ( rule__Group__TargetsAssignment_7_2 ) ) )
+            // InternalToscaDsl.g:5516:1: ( ( rule__Group__TargetsAssignment_7_2 ) )
             {
-            // InternalToscaDsl.g:5570:1: ( ( rule__Group__TargetsAssignment_7_2 ) )
-            // InternalToscaDsl.g:5571:2: ( rule__Group__TargetsAssignment_7_2 )
+            // InternalToscaDsl.g:5516:1: ( ( rule__Group__TargetsAssignment_7_2 ) )
+            // InternalToscaDsl.g:5517:2: ( rule__Group__TargetsAssignment_7_2 )
             {
              before(grammarAccess.getGroupAccess().getTargetsAssignment_7_2()); 
-            // InternalToscaDsl.g:5572:2: ( rule__Group__TargetsAssignment_7_2 )
-            // InternalToscaDsl.g:5572:3: rule__Group__TargetsAssignment_7_2
+            // InternalToscaDsl.g:5518:2: ( rule__Group__TargetsAssignment_7_2 )
+            // InternalToscaDsl.g:5518:3: rule__Group__TargetsAssignment_7_2
             {
             pushFollow(FOLLOW_2);
             rule__Group__TargetsAssignment_7_2();
@@ -16885,14 +16722,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__3"
-    // InternalToscaDsl.g:5580:1: rule__Group__Group_7__3 : rule__Group__Group_7__3__Impl rule__Group__Group_7__4 ;
+    // InternalToscaDsl.g:5526:1: rule__Group__Group_7__3 : rule__Group__Group_7__3__Impl rule__Group__Group_7__4 ;
     public final void rule__Group__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5584:1: ( rule__Group__Group_7__3__Impl rule__Group__Group_7__4 )
-            // InternalToscaDsl.g:5585:2: rule__Group__Group_7__3__Impl rule__Group__Group_7__4
+            // InternalToscaDsl.g:5530:1: ( rule__Group__Group_7__3__Impl rule__Group__Group_7__4 )
+            // InternalToscaDsl.g:5531:2: rule__Group__Group_7__3__Impl rule__Group__Group_7__4
             {
             pushFollow(FOLLOW_10);
             rule__Group__Group_7__3__Impl();
@@ -16923,20 +16760,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__3__Impl"
-    // InternalToscaDsl.g:5592:1: rule__Group__Group_7__3__Impl : ( ( rule__Group__Group_7_3__0 )* ) ;
+    // InternalToscaDsl.g:5538:1: rule__Group__Group_7__3__Impl : ( ( rule__Group__Group_7_3__0 )* ) ;
     public final void rule__Group__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5596:1: ( ( ( rule__Group__Group_7_3__0 )* ) )
-            // InternalToscaDsl.g:5597:1: ( ( rule__Group__Group_7_3__0 )* )
+            // InternalToscaDsl.g:5542:1: ( ( ( rule__Group__Group_7_3__0 )* ) )
+            // InternalToscaDsl.g:5543:1: ( ( rule__Group__Group_7_3__0 )* )
             {
-            // InternalToscaDsl.g:5597:1: ( ( rule__Group__Group_7_3__0 )* )
-            // InternalToscaDsl.g:5598:2: ( rule__Group__Group_7_3__0 )*
+            // InternalToscaDsl.g:5543:1: ( ( rule__Group__Group_7_3__0 )* )
+            // InternalToscaDsl.g:5544:2: ( rule__Group__Group_7_3__0 )*
             {
              before(grammarAccess.getGroupAccess().getGroup_7_3()); 
-            // InternalToscaDsl.g:5599:2: ( rule__Group__Group_7_3__0 )*
+            // InternalToscaDsl.g:5545:2: ( rule__Group__Group_7_3__0 )*
             loop46:
             do {
                 int alt46=2;
@@ -16949,7 +16786,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
                 switch (alt46) {
             	case 1 :
-            	    // InternalToscaDsl.g:5599:3: rule__Group__Group_7_3__0
+            	    // InternalToscaDsl.g:5545:3: rule__Group__Group_7_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Group__Group_7_3__0();
@@ -16988,14 +16825,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__4"
-    // InternalToscaDsl.g:5607:1: rule__Group__Group_7__4 : rule__Group__Group_7__4__Impl ;
+    // InternalToscaDsl.g:5553:1: rule__Group__Group_7__4 : rule__Group__Group_7__4__Impl ;
     public final void rule__Group__Group_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5611:1: ( rule__Group__Group_7__4__Impl )
-            // InternalToscaDsl.g:5612:2: rule__Group__Group_7__4__Impl
+            // InternalToscaDsl.g:5557:1: ( rule__Group__Group_7__4__Impl )
+            // InternalToscaDsl.g:5558:2: rule__Group__Group_7__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_7__4__Impl();
@@ -17021,17 +16858,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7__4__Impl"
-    // InternalToscaDsl.g:5618:1: rule__Group__Group_7__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:5564:1: rule__Group__Group_7__4__Impl : ( '}' ) ;
     public final void rule__Group__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5622:1: ( ( '}' ) )
-            // InternalToscaDsl.g:5623:1: ( '}' )
+            // InternalToscaDsl.g:5568:1: ( ( '}' ) )
+            // InternalToscaDsl.g:5569:1: ( '}' )
             {
-            // InternalToscaDsl.g:5623:1: ( '}' )
-            // InternalToscaDsl.g:5624:2: '}'
+            // InternalToscaDsl.g:5569:1: ( '}' )
+            // InternalToscaDsl.g:5570:2: '}'
             {
              before(grammarAccess.getGroupAccess().getRightCurlyBracketKeyword_7_4()); 
             match(input,13,FOLLOW_2); 
@@ -17058,14 +16895,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7_3__0"
-    // InternalToscaDsl.g:5634:1: rule__Group__Group_7_3__0 : rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1 ;
+    // InternalToscaDsl.g:5580:1: rule__Group__Group_7_3__0 : rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1 ;
     public final void rule__Group__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5638:1: ( rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1 )
-            // InternalToscaDsl.g:5639:2: rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1
+            // InternalToscaDsl.g:5584:1: ( rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1 )
+            // InternalToscaDsl.g:5585:2: rule__Group__Group_7_3__0__Impl rule__Group__Group_7_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group_7_3__0__Impl();
@@ -17096,17 +16933,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7_3__0__Impl"
-    // InternalToscaDsl.g:5646:1: rule__Group__Group_7_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:5592:1: rule__Group__Group_7_3__0__Impl : ( ',' ) ;
     public final void rule__Group__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5650:1: ( ( ',' ) )
-            // InternalToscaDsl.g:5651:1: ( ',' )
+            // InternalToscaDsl.g:5596:1: ( ( ',' ) )
+            // InternalToscaDsl.g:5597:1: ( ',' )
             {
-            // InternalToscaDsl.g:5651:1: ( ',' )
-            // InternalToscaDsl.g:5652:2: ','
+            // InternalToscaDsl.g:5597:1: ( ',' )
+            // InternalToscaDsl.g:5598:2: ','
             {
              before(grammarAccess.getGroupAccess().getCommaKeyword_7_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -17133,14 +16970,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7_3__1"
-    // InternalToscaDsl.g:5661:1: rule__Group__Group_7_3__1 : rule__Group__Group_7_3__1__Impl ;
+    // InternalToscaDsl.g:5607:1: rule__Group__Group_7_3__1 : rule__Group__Group_7_3__1__Impl ;
     public final void rule__Group__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5665:1: ( rule__Group__Group_7_3__1__Impl )
-            // InternalToscaDsl.g:5666:2: rule__Group__Group_7_3__1__Impl
+            // InternalToscaDsl.g:5611:1: ( rule__Group__Group_7_3__1__Impl )
+            // InternalToscaDsl.g:5612:2: rule__Group__Group_7_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_7_3__1__Impl();
@@ -17166,21 +17003,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_7_3__1__Impl"
-    // InternalToscaDsl.g:5672:1: rule__Group__Group_7_3__1__Impl : ( ( rule__Group__TargetsAssignment_7_3_1 ) ) ;
+    // InternalToscaDsl.g:5618:1: rule__Group__Group_7_3__1__Impl : ( ( rule__Group__TargetsAssignment_7_3_1 ) ) ;
     public final void rule__Group__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5676:1: ( ( ( rule__Group__TargetsAssignment_7_3_1 ) ) )
-            // InternalToscaDsl.g:5677:1: ( ( rule__Group__TargetsAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:5622:1: ( ( ( rule__Group__TargetsAssignment_7_3_1 ) ) )
+            // InternalToscaDsl.g:5623:1: ( ( rule__Group__TargetsAssignment_7_3_1 ) )
             {
-            // InternalToscaDsl.g:5677:1: ( ( rule__Group__TargetsAssignment_7_3_1 ) )
-            // InternalToscaDsl.g:5678:2: ( rule__Group__TargetsAssignment_7_3_1 )
+            // InternalToscaDsl.g:5623:1: ( ( rule__Group__TargetsAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:5624:2: ( rule__Group__TargetsAssignment_7_3_1 )
             {
              before(grammarAccess.getGroupAccess().getTargetsAssignment_7_3_1()); 
-            // InternalToscaDsl.g:5679:2: ( rule__Group__TargetsAssignment_7_3_1 )
-            // InternalToscaDsl.g:5679:3: rule__Group__TargetsAssignment_7_3_1
+            // InternalToscaDsl.g:5625:2: ( rule__Group__TargetsAssignment_7_3_1 )
+            // InternalToscaDsl.g:5625:3: rule__Group__TargetsAssignment_7_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Group__TargetsAssignment_7_3_1();
@@ -17213,16 +17050,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_8__0"
-    // InternalToscaDsl.g:5688:1: rule__Group__Group_8__0 : rule__Group__Group_8__0__Impl rule__Group__Group_8__1 ;
+    // InternalToscaDsl.g:5634:1: rule__Group__Group_8__0 : rule__Group__Group_8__0__Impl rule__Group__Group_8__1 ;
     public final void rule__Group__Group_8__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5692:1: ( rule__Group__Group_8__0__Impl rule__Group__Group_8__1 )
-            // InternalToscaDsl.g:5693:2: rule__Group__Group_8__0__Impl rule__Group__Group_8__1
+            // InternalToscaDsl.g:5638:1: ( rule__Group__Group_8__0__Impl rule__Group__Group_8__1 )
+            // InternalToscaDsl.g:5639:2: rule__Group__Group_8__0__Impl rule__Group__Group_8__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__Group__Group_8__0__Impl();
 
             state._fsp--;
@@ -17251,17 +17088,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_8__0__Impl"
-    // InternalToscaDsl.g:5700:1: rule__Group__Group_8__0__Impl : ( ',\\n\"properties\" :' ) ;
+    // InternalToscaDsl.g:5646:1: rule__Group__Group_8__0__Impl : ( ',\\n\"properties\" :' ) ;
     public final void rule__Group__Group_8__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5704:1: ( ( ',\\n\"properties\" :' ) )
-            // InternalToscaDsl.g:5705:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:5650:1: ( ( ',\\n\"properties\" :' ) )
+            // InternalToscaDsl.g:5651:1: ( ',\\n\"properties\" :' )
             {
-            // InternalToscaDsl.g:5705:1: ( ',\\n\"properties\" :' )
-            // InternalToscaDsl.g:5706:2: ',\\n\"properties\" :'
+            // InternalToscaDsl.g:5651:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:5652:2: ',\\n\"properties\" :'
             {
              before(grammarAccess.getGroupAccess().getPropertiesKeyword_8_0()); 
             match(input,29,FOLLOW_2); 
@@ -17288,14 +17125,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_8__1"
-    // InternalToscaDsl.g:5715:1: rule__Group__Group_8__1 : rule__Group__Group_8__1__Impl ;
+    // InternalToscaDsl.g:5661:1: rule__Group__Group_8__1 : rule__Group__Group_8__1__Impl ;
     public final void rule__Group__Group_8__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5719:1: ( rule__Group__Group_8__1__Impl )
-            // InternalToscaDsl.g:5720:2: rule__Group__Group_8__1__Impl
+            // InternalToscaDsl.g:5665:1: ( rule__Group__Group_8__1__Impl )
+            // InternalToscaDsl.g:5666:2: rule__Group__Group_8__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_8__1__Impl();
@@ -17321,21 +17158,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_8__1__Impl"
-    // InternalToscaDsl.g:5726:1: rule__Group__Group_8__1__Impl : ( ( rule__Group__PropertiesAssignment_8_1 ) ) ;
+    // InternalToscaDsl.g:5672:1: rule__Group__Group_8__1__Impl : ( ( rule__Group__PropertiesAssignment_8_1 ) ) ;
     public final void rule__Group__Group_8__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5730:1: ( ( ( rule__Group__PropertiesAssignment_8_1 ) ) )
-            // InternalToscaDsl.g:5731:1: ( ( rule__Group__PropertiesAssignment_8_1 ) )
+            // InternalToscaDsl.g:5676:1: ( ( ( rule__Group__PropertiesAssignment_8_1 ) ) )
+            // InternalToscaDsl.g:5677:1: ( ( rule__Group__PropertiesAssignment_8_1 ) )
             {
-            // InternalToscaDsl.g:5731:1: ( ( rule__Group__PropertiesAssignment_8_1 ) )
-            // InternalToscaDsl.g:5732:2: ( rule__Group__PropertiesAssignment_8_1 )
+            // InternalToscaDsl.g:5677:1: ( ( rule__Group__PropertiesAssignment_8_1 ) )
+            // InternalToscaDsl.g:5678:2: ( rule__Group__PropertiesAssignment_8_1 )
             {
              before(grammarAccess.getGroupAccess().getPropertiesAssignment_8_1()); 
-            // InternalToscaDsl.g:5733:2: ( rule__Group__PropertiesAssignment_8_1 )
-            // InternalToscaDsl.g:5733:3: rule__Group__PropertiesAssignment_8_1
+            // InternalToscaDsl.g:5679:2: ( rule__Group__PropertiesAssignment_8_1 )
+            // InternalToscaDsl.g:5679:3: rule__Group__PropertiesAssignment_8_1
             {
             pushFollow(FOLLOW_2);
             rule__Group__PropertiesAssignment_8_1();
@@ -17368,14 +17205,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__0"
-    // InternalToscaDsl.g:5742:1: rule__Group__Group_9__0 : rule__Group__Group_9__0__Impl rule__Group__Group_9__1 ;
+    // InternalToscaDsl.g:5688:1: rule__Group__Group_9__0 : rule__Group__Group_9__0__Impl rule__Group__Group_9__1 ;
     public final void rule__Group__Group_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5746:1: ( rule__Group__Group_9__0__Impl rule__Group__Group_9__1 )
-            // InternalToscaDsl.g:5747:2: rule__Group__Group_9__0__Impl rule__Group__Group_9__1
+            // InternalToscaDsl.g:5692:1: ( rule__Group__Group_9__0__Impl rule__Group__Group_9__1 )
+            // InternalToscaDsl.g:5693:2: rule__Group__Group_9__0__Impl rule__Group__Group_9__1
             {
             pushFollow(FOLLOW_9);
             rule__Group__Group_9__0__Impl();
@@ -17406,17 +17243,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__0__Impl"
-    // InternalToscaDsl.g:5754:1: rule__Group__Group_9__0__Impl : ( ',\\n\"interfaces\" :' ) ;
+    // InternalToscaDsl.g:5700:1: rule__Group__Group_9__0__Impl : ( ',\\n\"interfaces\" :' ) ;
     public final void rule__Group__Group_9__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5758:1: ( ( ',\\n\"interfaces\" :' ) )
-            // InternalToscaDsl.g:5759:1: ( ',\\n\"interfaces\" :' )
+            // InternalToscaDsl.g:5704:1: ( ( ',\\n\"interfaces\" :' ) )
+            // InternalToscaDsl.g:5705:1: ( ',\\n\"interfaces\" :' )
             {
-            // InternalToscaDsl.g:5759:1: ( ',\\n\"interfaces\" :' )
-            // InternalToscaDsl.g:5760:2: ',\\n\"interfaces\" :'
+            // InternalToscaDsl.g:5705:1: ( ',\\n\"interfaces\" :' )
+            // InternalToscaDsl.g:5706:2: ',\\n\"interfaces\" :'
             {
              before(grammarAccess.getGroupAccess().getInterfacesKeyword_9_0()); 
             match(input,28,FOLLOW_2); 
@@ -17443,14 +17280,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__1"
-    // InternalToscaDsl.g:5769:1: rule__Group__Group_9__1 : rule__Group__Group_9__1__Impl rule__Group__Group_9__2 ;
+    // InternalToscaDsl.g:5715:1: rule__Group__Group_9__1 : rule__Group__Group_9__1__Impl rule__Group__Group_9__2 ;
     public final void rule__Group__Group_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5773:1: ( rule__Group__Group_9__1__Impl rule__Group__Group_9__2 )
-            // InternalToscaDsl.g:5774:2: rule__Group__Group_9__1__Impl rule__Group__Group_9__2
+            // InternalToscaDsl.g:5719:1: ( rule__Group__Group_9__1__Impl rule__Group__Group_9__2 )
+            // InternalToscaDsl.g:5720:2: rule__Group__Group_9__1__Impl rule__Group__Group_9__2
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group_9__1__Impl();
@@ -17481,17 +17318,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__1__Impl"
-    // InternalToscaDsl.g:5781:1: rule__Group__Group_9__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:5727:1: rule__Group__Group_9__1__Impl : ( '{' ) ;
     public final void rule__Group__Group_9__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5785:1: ( ( '{' ) )
-            // InternalToscaDsl.g:5786:1: ( '{' )
+            // InternalToscaDsl.g:5731:1: ( ( '{' ) )
+            // InternalToscaDsl.g:5732:1: ( '{' )
             {
-            // InternalToscaDsl.g:5786:1: ( '{' )
-            // InternalToscaDsl.g:5787:2: '{'
+            // InternalToscaDsl.g:5732:1: ( '{' )
+            // InternalToscaDsl.g:5733:2: '{'
             {
              before(grammarAccess.getGroupAccess().getLeftCurlyBracketKeyword_9_1()); 
             match(input,11,FOLLOW_2); 
@@ -17518,14 +17355,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__2"
-    // InternalToscaDsl.g:5796:1: rule__Group__Group_9__2 : rule__Group__Group_9__2__Impl rule__Group__Group_9__3 ;
+    // InternalToscaDsl.g:5742:1: rule__Group__Group_9__2 : rule__Group__Group_9__2__Impl rule__Group__Group_9__3 ;
     public final void rule__Group__Group_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5800:1: ( rule__Group__Group_9__2__Impl rule__Group__Group_9__3 )
-            // InternalToscaDsl.g:5801:2: rule__Group__Group_9__2__Impl rule__Group__Group_9__3
+            // InternalToscaDsl.g:5746:1: ( rule__Group__Group_9__2__Impl rule__Group__Group_9__3 )
+            // InternalToscaDsl.g:5747:2: rule__Group__Group_9__2__Impl rule__Group__Group_9__3
             {
             pushFollow(FOLLOW_10);
             rule__Group__Group_9__2__Impl();
@@ -17556,21 +17393,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__2__Impl"
-    // InternalToscaDsl.g:5808:1: rule__Group__Group_9__2__Impl : ( ( rule__Group__InterfacesAssignment_9_2 ) ) ;
+    // InternalToscaDsl.g:5754:1: rule__Group__Group_9__2__Impl : ( ( rule__Group__InterfacesAssignment_9_2 ) ) ;
     public final void rule__Group__Group_9__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5812:1: ( ( ( rule__Group__InterfacesAssignment_9_2 ) ) )
-            // InternalToscaDsl.g:5813:1: ( ( rule__Group__InterfacesAssignment_9_2 ) )
+            // InternalToscaDsl.g:5758:1: ( ( ( rule__Group__InterfacesAssignment_9_2 ) ) )
+            // InternalToscaDsl.g:5759:1: ( ( rule__Group__InterfacesAssignment_9_2 ) )
             {
-            // InternalToscaDsl.g:5813:1: ( ( rule__Group__InterfacesAssignment_9_2 ) )
-            // InternalToscaDsl.g:5814:2: ( rule__Group__InterfacesAssignment_9_2 )
+            // InternalToscaDsl.g:5759:1: ( ( rule__Group__InterfacesAssignment_9_2 ) )
+            // InternalToscaDsl.g:5760:2: ( rule__Group__InterfacesAssignment_9_2 )
             {
              before(grammarAccess.getGroupAccess().getInterfacesAssignment_9_2()); 
-            // InternalToscaDsl.g:5815:2: ( rule__Group__InterfacesAssignment_9_2 )
-            // InternalToscaDsl.g:5815:3: rule__Group__InterfacesAssignment_9_2
+            // InternalToscaDsl.g:5761:2: ( rule__Group__InterfacesAssignment_9_2 )
+            // InternalToscaDsl.g:5761:3: rule__Group__InterfacesAssignment_9_2
             {
             pushFollow(FOLLOW_2);
             rule__Group__InterfacesAssignment_9_2();
@@ -17603,14 +17440,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__3"
-    // InternalToscaDsl.g:5823:1: rule__Group__Group_9__3 : rule__Group__Group_9__3__Impl rule__Group__Group_9__4 ;
+    // InternalToscaDsl.g:5769:1: rule__Group__Group_9__3 : rule__Group__Group_9__3__Impl rule__Group__Group_9__4 ;
     public final void rule__Group__Group_9__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5827:1: ( rule__Group__Group_9__3__Impl rule__Group__Group_9__4 )
-            // InternalToscaDsl.g:5828:2: rule__Group__Group_9__3__Impl rule__Group__Group_9__4
+            // InternalToscaDsl.g:5773:1: ( rule__Group__Group_9__3__Impl rule__Group__Group_9__4 )
+            // InternalToscaDsl.g:5774:2: rule__Group__Group_9__3__Impl rule__Group__Group_9__4
             {
             pushFollow(FOLLOW_10);
             rule__Group__Group_9__3__Impl();
@@ -17641,20 +17478,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__3__Impl"
-    // InternalToscaDsl.g:5835:1: rule__Group__Group_9__3__Impl : ( ( rule__Group__Group_9_3__0 )* ) ;
+    // InternalToscaDsl.g:5781:1: rule__Group__Group_9__3__Impl : ( ( rule__Group__Group_9_3__0 )* ) ;
     public final void rule__Group__Group_9__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5839:1: ( ( ( rule__Group__Group_9_3__0 )* ) )
-            // InternalToscaDsl.g:5840:1: ( ( rule__Group__Group_9_3__0 )* )
+            // InternalToscaDsl.g:5785:1: ( ( ( rule__Group__Group_9_3__0 )* ) )
+            // InternalToscaDsl.g:5786:1: ( ( rule__Group__Group_9_3__0 )* )
             {
-            // InternalToscaDsl.g:5840:1: ( ( rule__Group__Group_9_3__0 )* )
-            // InternalToscaDsl.g:5841:2: ( rule__Group__Group_9_3__0 )*
+            // InternalToscaDsl.g:5786:1: ( ( rule__Group__Group_9_3__0 )* )
+            // InternalToscaDsl.g:5787:2: ( rule__Group__Group_9_3__0 )*
             {
              before(grammarAccess.getGroupAccess().getGroup_9_3()); 
-            // InternalToscaDsl.g:5842:2: ( rule__Group__Group_9_3__0 )*
+            // InternalToscaDsl.g:5788:2: ( rule__Group__Group_9_3__0 )*
             loop47:
             do {
                 int alt47=2;
@@ -17667,7 +17504,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
                 switch (alt47) {
             	case 1 :
-            	    // InternalToscaDsl.g:5842:3: rule__Group__Group_9_3__0
+            	    // InternalToscaDsl.g:5788:3: rule__Group__Group_9_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Group__Group_9_3__0();
@@ -17706,14 +17543,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__4"
-    // InternalToscaDsl.g:5850:1: rule__Group__Group_9__4 : rule__Group__Group_9__4__Impl ;
+    // InternalToscaDsl.g:5796:1: rule__Group__Group_9__4 : rule__Group__Group_9__4__Impl ;
     public final void rule__Group__Group_9__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5854:1: ( rule__Group__Group_9__4__Impl )
-            // InternalToscaDsl.g:5855:2: rule__Group__Group_9__4__Impl
+            // InternalToscaDsl.g:5800:1: ( rule__Group__Group_9__4__Impl )
+            // InternalToscaDsl.g:5801:2: rule__Group__Group_9__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_9__4__Impl();
@@ -17739,17 +17576,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9__4__Impl"
-    // InternalToscaDsl.g:5861:1: rule__Group__Group_9__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:5807:1: rule__Group__Group_9__4__Impl : ( '}' ) ;
     public final void rule__Group__Group_9__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5865:1: ( ( '}' ) )
-            // InternalToscaDsl.g:5866:1: ( '}' )
+            // InternalToscaDsl.g:5811:1: ( ( '}' ) )
+            // InternalToscaDsl.g:5812:1: ( '}' )
             {
-            // InternalToscaDsl.g:5866:1: ( '}' )
-            // InternalToscaDsl.g:5867:2: '}'
+            // InternalToscaDsl.g:5812:1: ( '}' )
+            // InternalToscaDsl.g:5813:2: '}'
             {
              before(grammarAccess.getGroupAccess().getRightCurlyBracketKeyword_9_4()); 
             match(input,13,FOLLOW_2); 
@@ -17776,14 +17613,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9_3__0"
-    // InternalToscaDsl.g:5877:1: rule__Group__Group_9_3__0 : rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1 ;
+    // InternalToscaDsl.g:5823:1: rule__Group__Group_9_3__0 : rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1 ;
     public final void rule__Group__Group_9_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5881:1: ( rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1 )
-            // InternalToscaDsl.g:5882:2: rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1
+            // InternalToscaDsl.g:5827:1: ( rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1 )
+            // InternalToscaDsl.g:5828:2: rule__Group__Group_9_3__0__Impl rule__Group__Group_9_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Group__Group_9_3__0__Impl();
@@ -17814,17 +17651,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9_3__0__Impl"
-    // InternalToscaDsl.g:5889:1: rule__Group__Group_9_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:5835:1: rule__Group__Group_9_3__0__Impl : ( ',' ) ;
     public final void rule__Group__Group_9_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5893:1: ( ( ',' ) )
-            // InternalToscaDsl.g:5894:1: ( ',' )
+            // InternalToscaDsl.g:5839:1: ( ( ',' ) )
+            // InternalToscaDsl.g:5840:1: ( ',' )
             {
-            // InternalToscaDsl.g:5894:1: ( ',' )
-            // InternalToscaDsl.g:5895:2: ','
+            // InternalToscaDsl.g:5840:1: ( ',' )
+            // InternalToscaDsl.g:5841:2: ','
             {
              before(grammarAccess.getGroupAccess().getCommaKeyword_9_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -17851,14 +17688,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9_3__1"
-    // InternalToscaDsl.g:5904:1: rule__Group__Group_9_3__1 : rule__Group__Group_9_3__1__Impl ;
+    // InternalToscaDsl.g:5850:1: rule__Group__Group_9_3__1 : rule__Group__Group_9_3__1__Impl ;
     public final void rule__Group__Group_9_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5908:1: ( rule__Group__Group_9_3__1__Impl )
-            // InternalToscaDsl.g:5909:2: rule__Group__Group_9_3__1__Impl
+            // InternalToscaDsl.g:5854:1: ( rule__Group__Group_9_3__1__Impl )
+            // InternalToscaDsl.g:5855:2: rule__Group__Group_9_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Group__Group_9_3__1__Impl();
@@ -17884,21 +17721,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__Group_9_3__1__Impl"
-    // InternalToscaDsl.g:5915:1: rule__Group__Group_9_3__1__Impl : ( ( rule__Group__InterfacesAssignment_9_3_1 ) ) ;
+    // InternalToscaDsl.g:5861:1: rule__Group__Group_9_3__1__Impl : ( ( rule__Group__InterfacesAssignment_9_3_1 ) ) ;
     public final void rule__Group__Group_9_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5919:1: ( ( ( rule__Group__InterfacesAssignment_9_3_1 ) ) )
-            // InternalToscaDsl.g:5920:1: ( ( rule__Group__InterfacesAssignment_9_3_1 ) )
+            // InternalToscaDsl.g:5865:1: ( ( ( rule__Group__InterfacesAssignment_9_3_1 ) ) )
+            // InternalToscaDsl.g:5866:1: ( ( rule__Group__InterfacesAssignment_9_3_1 ) )
             {
-            // InternalToscaDsl.g:5920:1: ( ( rule__Group__InterfacesAssignment_9_3_1 ) )
-            // InternalToscaDsl.g:5921:2: ( rule__Group__InterfacesAssignment_9_3_1 )
+            // InternalToscaDsl.g:5866:1: ( ( rule__Group__InterfacesAssignment_9_3_1 ) )
+            // InternalToscaDsl.g:5867:2: ( rule__Group__InterfacesAssignment_9_3_1 )
             {
              before(grammarAccess.getGroupAccess().getInterfacesAssignment_9_3_1()); 
-            // InternalToscaDsl.g:5922:2: ( rule__Group__InterfacesAssignment_9_3_1 )
-            // InternalToscaDsl.g:5922:3: rule__Group__InterfacesAssignment_9_3_1
+            // InternalToscaDsl.g:5868:2: ( rule__Group__InterfacesAssignment_9_3_1 )
+            // InternalToscaDsl.g:5868:3: rule__Group__InterfacesAssignment_9_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Group__InterfacesAssignment_9_3_1();
@@ -17931,14 +17768,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__0"
-    // InternalToscaDsl.g:5931:1: rule__Policy__Group__0 : rule__Policy__Group__0__Impl rule__Policy__Group__1 ;
+    // InternalToscaDsl.g:5877:1: rule__Policy__Group__0 : rule__Policy__Group__0__Impl rule__Policy__Group__1 ;
     public final void rule__Policy__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5935:1: ( rule__Policy__Group__0__Impl rule__Policy__Group__1 )
-            // InternalToscaDsl.g:5936:2: rule__Policy__Group__0__Impl rule__Policy__Group__1
+            // InternalToscaDsl.g:5881:1: ( rule__Policy__Group__0__Impl rule__Policy__Group__1 )
+            // InternalToscaDsl.g:5882:2: rule__Policy__Group__0__Impl rule__Policy__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Policy__Group__0__Impl();
@@ -17969,21 +17806,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__0__Impl"
-    // InternalToscaDsl.g:5943:1: rule__Policy__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:5889:1: rule__Policy__Group__0__Impl : ( () ) ;
     public final void rule__Policy__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5947:1: ( ( () ) )
-            // InternalToscaDsl.g:5948:1: ( () )
+            // InternalToscaDsl.g:5893:1: ( ( () ) )
+            // InternalToscaDsl.g:5894:1: ( () )
             {
-            // InternalToscaDsl.g:5948:1: ( () )
-            // InternalToscaDsl.g:5949:2: ()
+            // InternalToscaDsl.g:5894:1: ( () )
+            // InternalToscaDsl.g:5895:2: ()
             {
              before(grammarAccess.getPolicyAccess().getPolicyAction_0()); 
-            // InternalToscaDsl.g:5950:2: ()
-            // InternalToscaDsl.g:5950:3: 
+            // InternalToscaDsl.g:5896:2: ()
+            // InternalToscaDsl.g:5896:3: 
             {
             }
 
@@ -18006,14 +17843,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__1"
-    // InternalToscaDsl.g:5958:1: rule__Policy__Group__1 : rule__Policy__Group__1__Impl rule__Policy__Group__2 ;
+    // InternalToscaDsl.g:5904:1: rule__Policy__Group__1 : rule__Policy__Group__1__Impl rule__Policy__Group__2 ;
     public final void rule__Policy__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5962:1: ( rule__Policy__Group__1__Impl rule__Policy__Group__2 )
-            // InternalToscaDsl.g:5963:2: rule__Policy__Group__1__Impl rule__Policy__Group__2
+            // InternalToscaDsl.g:5908:1: ( rule__Policy__Group__1__Impl rule__Policy__Group__2 )
+            // InternalToscaDsl.g:5909:2: rule__Policy__Group__1__Impl rule__Policy__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Policy__Group__1__Impl();
@@ -18044,21 +17881,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__1__Impl"
-    // InternalToscaDsl.g:5970:1: rule__Policy__Group__1__Impl : ( ( rule__Policy__Policy_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:5916:1: rule__Policy__Group__1__Impl : ( ( rule__Policy__Policy_nameAssignment_1 ) ) ;
     public final void rule__Policy__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5974:1: ( ( ( rule__Policy__Policy_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:5975:1: ( ( rule__Policy__Policy_nameAssignment_1 ) )
+            // InternalToscaDsl.g:5920:1: ( ( ( rule__Policy__Policy_nameAssignment_1 ) ) )
+            // InternalToscaDsl.g:5921:1: ( ( rule__Policy__Policy_nameAssignment_1 ) )
             {
-            // InternalToscaDsl.g:5975:1: ( ( rule__Policy__Policy_nameAssignment_1 ) )
-            // InternalToscaDsl.g:5976:2: ( rule__Policy__Policy_nameAssignment_1 )
+            // InternalToscaDsl.g:5921:1: ( ( rule__Policy__Policy_nameAssignment_1 ) )
+            // InternalToscaDsl.g:5922:2: ( rule__Policy__Policy_nameAssignment_1 )
             {
              before(grammarAccess.getPolicyAccess().getPolicy_nameAssignment_1()); 
-            // InternalToscaDsl.g:5977:2: ( rule__Policy__Policy_nameAssignment_1 )
-            // InternalToscaDsl.g:5977:3: rule__Policy__Policy_nameAssignment_1
+            // InternalToscaDsl.g:5923:2: ( rule__Policy__Policy_nameAssignment_1 )
+            // InternalToscaDsl.g:5923:3: rule__Policy__Policy_nameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Policy__Policy_nameAssignment_1();
@@ -18091,14 +17928,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__2"
-    // InternalToscaDsl.g:5985:1: rule__Policy__Group__2 : rule__Policy__Group__2__Impl ;
+    // InternalToscaDsl.g:5931:1: rule__Policy__Group__2 : rule__Policy__Group__2__Impl ;
     public final void rule__Policy__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:5989:1: ( rule__Policy__Group__2__Impl )
-            // InternalToscaDsl.g:5990:2: rule__Policy__Group__2__Impl
+            // InternalToscaDsl.g:5935:1: ( rule__Policy__Group__2__Impl )
+            // InternalToscaDsl.g:5936:2: rule__Policy__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Policy__Group__2__Impl();
@@ -18124,17 +17961,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Group__2__Impl"
-    // InternalToscaDsl.g:5996:1: rule__Policy__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:5942:1: rule__Policy__Group__2__Impl : ( ':' ) ;
     public final void rule__Policy__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6000:1: ( ( ':' ) )
-            // InternalToscaDsl.g:6001:1: ( ':' )
+            // InternalToscaDsl.g:5946:1: ( ( ':' ) )
+            // InternalToscaDsl.g:5947:1: ( ':' )
             {
-            // InternalToscaDsl.g:6001:1: ( ':' )
-            // InternalToscaDsl.g:6002:2: ':'
+            // InternalToscaDsl.g:5947:1: ( ':' )
+            // InternalToscaDsl.g:5948:2: ':'
             {
              before(grammarAccess.getPolicyAccess().getColonKeyword_2()); 
             match(input,25,FOLLOW_2); 
@@ -18161,14 +17998,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__0"
-    // InternalToscaDsl.g:6012:1: rule__Interface__Group__0 : rule__Interface__Group__0__Impl rule__Interface__Group__1 ;
+    // InternalToscaDsl.g:5958:1: rule__Interface__Group__0 : rule__Interface__Group__0__Impl rule__Interface__Group__1 ;
     public final void rule__Interface__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6016:1: ( rule__Interface__Group__0__Impl rule__Interface__Group__1 )
-            // InternalToscaDsl.g:6017:2: rule__Interface__Group__0__Impl rule__Interface__Group__1
+            // InternalToscaDsl.g:5962:1: ( rule__Interface__Group__0__Impl rule__Interface__Group__1 )
+            // InternalToscaDsl.g:5963:2: rule__Interface__Group__0__Impl rule__Interface__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Interface__Group__0__Impl();
@@ -18199,21 +18036,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__0__Impl"
-    // InternalToscaDsl.g:6024:1: rule__Interface__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:5970:1: rule__Interface__Group__0__Impl : ( () ) ;
     public final void rule__Interface__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6028:1: ( ( () ) )
-            // InternalToscaDsl.g:6029:1: ( () )
+            // InternalToscaDsl.g:5974:1: ( ( () ) )
+            // InternalToscaDsl.g:5975:1: ( () )
             {
-            // InternalToscaDsl.g:6029:1: ( () )
-            // InternalToscaDsl.g:6030:2: ()
+            // InternalToscaDsl.g:5975:1: ( () )
+            // InternalToscaDsl.g:5976:2: ()
             {
              before(grammarAccess.getInterfaceAccess().getInterfaceAction_0()); 
-            // InternalToscaDsl.g:6031:2: ()
-            // InternalToscaDsl.g:6031:3: 
+            // InternalToscaDsl.g:5977:2: ()
+            // InternalToscaDsl.g:5977:3: 
             {
             }
 
@@ -18236,14 +18073,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__1"
-    // InternalToscaDsl.g:6039:1: rule__Interface__Group__1 : rule__Interface__Group__1__Impl rule__Interface__Group__2 ;
+    // InternalToscaDsl.g:5985:1: rule__Interface__Group__1 : rule__Interface__Group__1__Impl rule__Interface__Group__2 ;
     public final void rule__Interface__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6043:1: ( rule__Interface__Group__1__Impl rule__Interface__Group__2 )
-            // InternalToscaDsl.g:6044:2: rule__Interface__Group__1__Impl rule__Interface__Group__2
+            // InternalToscaDsl.g:5989:1: ( rule__Interface__Group__1__Impl rule__Interface__Group__2 )
+            // InternalToscaDsl.g:5990:2: rule__Interface__Group__1__Impl rule__Interface__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Interface__Group__1__Impl();
@@ -18274,31 +18111,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__1__Impl"
-    // InternalToscaDsl.g:6051:1: rule__Interface__Group__1__Impl : ( ( rule__Interface__Interface_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:5997:1: rule__Interface__Group__1__Impl : ( ( rule__Interface__TypeAssignment_1 ) ) ;
     public final void rule__Interface__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6055:1: ( ( ( rule__Interface__Interface_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:6056:1: ( ( rule__Interface__Interface_nameAssignment_1 ) )
+            // InternalToscaDsl.g:6001:1: ( ( ( rule__Interface__TypeAssignment_1 ) ) )
+            // InternalToscaDsl.g:6002:1: ( ( rule__Interface__TypeAssignment_1 ) )
             {
-            // InternalToscaDsl.g:6056:1: ( ( rule__Interface__Interface_nameAssignment_1 ) )
-            // InternalToscaDsl.g:6057:2: ( rule__Interface__Interface_nameAssignment_1 )
+            // InternalToscaDsl.g:6002:1: ( ( rule__Interface__TypeAssignment_1 ) )
+            // InternalToscaDsl.g:6003:2: ( rule__Interface__TypeAssignment_1 )
             {
-             before(grammarAccess.getInterfaceAccess().getInterface_nameAssignment_1()); 
-            // InternalToscaDsl.g:6058:2: ( rule__Interface__Interface_nameAssignment_1 )
-            // InternalToscaDsl.g:6058:3: rule__Interface__Interface_nameAssignment_1
+             before(grammarAccess.getInterfaceAccess().getTypeAssignment_1()); 
+            // InternalToscaDsl.g:6004:2: ( rule__Interface__TypeAssignment_1 )
+            // InternalToscaDsl.g:6004:3: rule__Interface__TypeAssignment_1
             {
             pushFollow(FOLLOW_2);
-            rule__Interface__Interface_nameAssignment_1();
+            rule__Interface__TypeAssignment_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterfaceAccess().getInterface_nameAssignment_1()); 
+             after(grammarAccess.getInterfaceAccess().getTypeAssignment_1()); 
 
             }
 
@@ -18321,14 +18158,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__2"
-    // InternalToscaDsl.g:6066:1: rule__Interface__Group__2 : rule__Interface__Group__2__Impl rule__Interface__Group__3 ;
+    // InternalToscaDsl.g:6012:1: rule__Interface__Group__2 : rule__Interface__Group__2__Impl rule__Interface__Group__3 ;
     public final void rule__Interface__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6070:1: ( rule__Interface__Group__2__Impl rule__Interface__Group__3 )
-            // InternalToscaDsl.g:6071:2: rule__Interface__Group__2__Impl rule__Interface__Group__3
+            // InternalToscaDsl.g:6016:1: ( rule__Interface__Group__2__Impl rule__Interface__Group__3 )
+            // InternalToscaDsl.g:6017:2: rule__Interface__Group__2__Impl rule__Interface__Group__3
             {
             pushFollow(FOLLOW_9);
             rule__Interface__Group__2__Impl();
@@ -18359,17 +18196,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__2__Impl"
-    // InternalToscaDsl.g:6078:1: rule__Interface__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:6024:1: rule__Interface__Group__2__Impl : ( ':' ) ;
     public final void rule__Interface__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6082:1: ( ( ':' ) )
-            // InternalToscaDsl.g:6083:1: ( ':' )
+            // InternalToscaDsl.g:6028:1: ( ( ':' ) )
+            // InternalToscaDsl.g:6029:1: ( ':' )
             {
-            // InternalToscaDsl.g:6083:1: ( ':' )
-            // InternalToscaDsl.g:6084:2: ':'
+            // InternalToscaDsl.g:6029:1: ( ':' )
+            // InternalToscaDsl.g:6030:2: ':'
             {
              before(grammarAccess.getInterfaceAccess().getColonKeyword_2()); 
             match(input,25,FOLLOW_2); 
@@ -18396,16 +18233,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__3"
-    // InternalToscaDsl.g:6093:1: rule__Interface__Group__3 : rule__Interface__Group__3__Impl rule__Interface__Group__4 ;
+    // InternalToscaDsl.g:6039:1: rule__Interface__Group__3 : rule__Interface__Group__3__Impl rule__Interface__Group__4 ;
     public final void rule__Interface__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6097:1: ( rule__Interface__Group__3__Impl rule__Interface__Group__4 )
-            // InternalToscaDsl.g:6098:2: rule__Interface__Group__3__Impl rule__Interface__Group__4
+            // InternalToscaDsl.g:6043:1: ( rule__Interface__Group__3__Impl rule__Interface__Group__4 )
+            // InternalToscaDsl.g:6044:2: rule__Interface__Group__3__Impl rule__Interface__Group__4
             {
-            pushFollow(FOLLOW_12);
+            pushFollow(FOLLOW_17);
             rule__Interface__Group__3__Impl();
 
             state._fsp--;
@@ -18434,17 +18271,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__3__Impl"
-    // InternalToscaDsl.g:6105:1: rule__Interface__Group__3__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:6051:1: rule__Interface__Group__3__Impl : ( '{' ) ;
     public final void rule__Interface__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6109:1: ( ( '{' ) )
-            // InternalToscaDsl.g:6110:1: ( '{' )
+            // InternalToscaDsl.g:6055:1: ( ( '{' ) )
+            // InternalToscaDsl.g:6056:1: ( '{' )
             {
-            // InternalToscaDsl.g:6110:1: ( '{' )
-            // InternalToscaDsl.g:6111:2: '{'
+            // InternalToscaDsl.g:6056:1: ( '{' )
+            // InternalToscaDsl.g:6057:2: '{'
             {
              before(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,11,FOLLOW_2); 
@@ -18471,16 +18308,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__4"
-    // InternalToscaDsl.g:6120:1: rule__Interface__Group__4 : rule__Interface__Group__4__Impl rule__Interface__Group__5 ;
+    // InternalToscaDsl.g:6066:1: rule__Interface__Group__4 : rule__Interface__Group__4__Impl rule__Interface__Group__5 ;
     public final void rule__Interface__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6124:1: ( rule__Interface__Group__4__Impl rule__Interface__Group__5 )
-            // InternalToscaDsl.g:6125:2: rule__Interface__Group__4__Impl rule__Interface__Group__5
+            // InternalToscaDsl.g:6070:1: ( rule__Interface__Group__4__Impl rule__Interface__Group__5 )
+            // InternalToscaDsl.g:6071:2: rule__Interface__Group__4__Impl rule__Interface__Group__5
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_17);
             rule__Interface__Group__4__Impl();
 
             state._fsp--;
@@ -18509,21 +18346,42 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__4__Impl"
-    // InternalToscaDsl.g:6132:1: rule__Interface__Group__4__Impl : ( '\"type\" :' ) ;
+    // InternalToscaDsl.g:6078:1: rule__Interface__Group__4__Impl : ( ( rule__Interface__Group_4__0 )? ) ;
     public final void rule__Interface__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6136:1: ( ( '\"type\" :' ) )
-            // InternalToscaDsl.g:6137:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:6082:1: ( ( ( rule__Interface__Group_4__0 )? ) )
+            // InternalToscaDsl.g:6083:1: ( ( rule__Interface__Group_4__0 )? )
             {
-            // InternalToscaDsl.g:6137:1: ( '\"type\" :' )
-            // InternalToscaDsl.g:6138:2: '\"type\" :'
+            // InternalToscaDsl.g:6083:1: ( ( rule__Interface__Group_4__0 )? )
+            // InternalToscaDsl.g:6084:2: ( rule__Interface__Group_4__0 )?
             {
-             before(grammarAccess.getInterfaceAccess().getTypeKeyword_4()); 
-            match(input,26,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getTypeKeyword_4()); 
+             before(grammarAccess.getInterfaceAccess().getGroup_4()); 
+            // InternalToscaDsl.g:6085:2: ( rule__Interface__Group_4__0 )?
+            int alt48=2;
+            int LA48_0 = input.LA(1);
+
+            if ( (LA48_0==37) ) {
+                alt48=1;
+            }
+            switch (alt48) {
+                case 1 :
+                    // InternalToscaDsl.g:6085:3: rule__Interface__Group_4__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Interface__Group_4__0();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+             after(grammarAccess.getInterfaceAccess().getGroup_4()); 
 
             }
 
@@ -18546,22 +18404,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__5"
-    // InternalToscaDsl.g:6147:1: rule__Interface__Group__5 : rule__Interface__Group__5__Impl rule__Interface__Group__6 ;
+    // InternalToscaDsl.g:6093:1: rule__Interface__Group__5 : rule__Interface__Group__5__Impl ;
     public final void rule__Interface__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6151:1: ( rule__Interface__Group__5__Impl rule__Interface__Group__6 )
-            // InternalToscaDsl.g:6152:2: rule__Interface__Group__5__Impl rule__Interface__Group__6
+            // InternalToscaDsl.g:6097:1: ( rule__Interface__Group__5__Impl )
+            // InternalToscaDsl.g:6098:2: rule__Interface__Group__5__Impl
             {
-            pushFollow(FOLLOW_17);
-            rule__Interface__Group__5__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Interface__Group__6();
+            rule__Interface__Group__5__Impl();
 
             state._fsp--;
 
@@ -18584,31 +18437,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Interface__Group__5__Impl"
-    // InternalToscaDsl.g:6159:1: rule__Interface__Group__5__Impl : ( ( rule__Interface__TypeAssignment_5 ) ) ;
+    // InternalToscaDsl.g:6104:1: rule__Interface__Group__5__Impl : ( '}' ) ;
     public final void rule__Interface__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6163:1: ( ( ( rule__Interface__TypeAssignment_5 ) ) )
-            // InternalToscaDsl.g:6164:1: ( ( rule__Interface__TypeAssignment_5 ) )
+            // InternalToscaDsl.g:6108:1: ( ( '}' ) )
+            // InternalToscaDsl.g:6109:1: ( '}' )
             {
-            // InternalToscaDsl.g:6164:1: ( ( rule__Interface__TypeAssignment_5 ) )
-            // InternalToscaDsl.g:6165:2: ( rule__Interface__TypeAssignment_5 )
+            // InternalToscaDsl.g:6109:1: ( '}' )
+            // InternalToscaDsl.g:6110:2: '}'
             {
-             before(grammarAccess.getInterfaceAccess().getTypeAssignment_5()); 
-            // InternalToscaDsl.g:6166:2: ( rule__Interface__TypeAssignment_5 )
-            // InternalToscaDsl.g:6166:3: rule__Interface__TypeAssignment_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__TypeAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getTypeAssignment_5()); 
+             before(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_5()); 
 
             }
 
@@ -18630,23 +18473,23 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Interface__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Interface__Group__6"
-    // InternalToscaDsl.g:6174:1: rule__Interface__Group__6 : rule__Interface__Group__6__Impl rule__Interface__Group__7 ;
-    public final void rule__Interface__Group__6() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__0"
+    // InternalToscaDsl.g:6120:1: rule__Interface__Group_4__0 : rule__Interface__Group_4__0__Impl rule__Interface__Group_4__1 ;
+    public final void rule__Interface__Group_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6178:1: ( rule__Interface__Group__6__Impl rule__Interface__Group__7 )
-            // InternalToscaDsl.g:6179:2: rule__Interface__Group__6__Impl rule__Interface__Group__7
+            // InternalToscaDsl.g:6124:1: ( rule__Interface__Group_4__0__Impl rule__Interface__Group_4__1 )
+            // InternalToscaDsl.g:6125:2: rule__Interface__Group_4__0__Impl rule__Interface__Group_4__1
             {
-            pushFollow(FOLLOW_17);
-            rule__Interface__Group__6__Impl();
+            pushFollow(FOLLOW_9);
+            rule__Interface__Group_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Interface__Group__7();
+            rule__Interface__Group_4__1();
 
             state._fsp--;
 
@@ -18665,46 +18508,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__6"
+    // $ANTLR end "rule__Interface__Group_4__0"
 
 
-    // $ANTLR start "rule__Interface__Group__6__Impl"
-    // InternalToscaDsl.g:6186:1: rule__Interface__Group__6__Impl : ( ( rule__Interface__Group_6__0 )? ) ;
-    public final void rule__Interface__Group__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__0__Impl"
+    // InternalToscaDsl.g:6132:1: rule__Interface__Group_4__0__Impl : ( '\\n\"operations\" :' ) ;
+    public final void rule__Interface__Group_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6190:1: ( ( ( rule__Interface__Group_6__0 )? ) )
-            // InternalToscaDsl.g:6191:1: ( ( rule__Interface__Group_6__0 )? )
+            // InternalToscaDsl.g:6136:1: ( ( '\\n\"operations\" :' ) )
+            // InternalToscaDsl.g:6137:1: ( '\\n\"operations\" :' )
             {
-            // InternalToscaDsl.g:6191:1: ( ( rule__Interface__Group_6__0 )? )
-            // InternalToscaDsl.g:6192:2: ( rule__Interface__Group_6__0 )?
+            // InternalToscaDsl.g:6137:1: ( '\\n\"operations\" :' )
+            // InternalToscaDsl.g:6138:2: '\\n\"operations\" :'
             {
-             before(grammarAccess.getInterfaceAccess().getGroup_6()); 
-            // InternalToscaDsl.g:6193:2: ( rule__Interface__Group_6__0 )?
-            int alt48=2;
-            int LA48_0 = input.LA(1);
-
-            if ( (LA48_0==37) ) {
-                alt48=1;
-            }
-            switch (alt48) {
-                case 1 :
-                    // InternalToscaDsl.g:6193:3: rule__Interface__Group_6__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Interface__Group_6__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getGroup_6()); 
+             before(grammarAccess.getInterfaceAccess().getOperationsKeyword_4_0()); 
+            match(input,37,FOLLOW_2); 
+             after(grammarAccess.getInterfaceAccess().getOperationsKeyword_4_0()); 
 
             }
 
@@ -18723,26 +18545,26 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__6__Impl"
+    // $ANTLR end "rule__Interface__Group_4__0__Impl"
 
 
-    // $ANTLR start "rule__Interface__Group__7"
-    // InternalToscaDsl.g:6201:1: rule__Interface__Group__7 : rule__Interface__Group__7__Impl rule__Interface__Group__8 ;
-    public final void rule__Interface__Group__7() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__1"
+    // InternalToscaDsl.g:6147:1: rule__Interface__Group_4__1 : rule__Interface__Group_4__1__Impl rule__Interface__Group_4__2 ;
+    public final void rule__Interface__Group_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6205:1: ( rule__Interface__Group__7__Impl rule__Interface__Group__8 )
-            // InternalToscaDsl.g:6206:2: rule__Interface__Group__7__Impl rule__Interface__Group__8
+            // InternalToscaDsl.g:6151:1: ( rule__Interface__Group_4__1__Impl rule__Interface__Group_4__2 )
+            // InternalToscaDsl.g:6152:2: rule__Interface__Group_4__1__Impl rule__Interface__Group_4__2
             {
-            pushFollow(FOLLOW_17);
-            rule__Interface__Group__7__Impl();
+            pushFollow(FOLLOW_4);
+            rule__Interface__Group_4__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Interface__Group__8();
+            rule__Interface__Group_4__2();
 
             state._fsp--;
 
@@ -18761,46 +18583,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__7"
+    // $ANTLR end "rule__Interface__Group_4__1"
 
 
-    // $ANTLR start "rule__Interface__Group__7__Impl"
-    // InternalToscaDsl.g:6213:1: rule__Interface__Group__7__Impl : ( ( rule__Interface__Group_7__0 )? ) ;
-    public final void rule__Interface__Group__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__1__Impl"
+    // InternalToscaDsl.g:6159:1: rule__Interface__Group_4__1__Impl : ( '{' ) ;
+    public final void rule__Interface__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6217:1: ( ( ( rule__Interface__Group_7__0 )? ) )
-            // InternalToscaDsl.g:6218:1: ( ( rule__Interface__Group_7__0 )? )
+            // InternalToscaDsl.g:6163:1: ( ( '{' ) )
+            // InternalToscaDsl.g:6164:1: ( '{' )
             {
-            // InternalToscaDsl.g:6218:1: ( ( rule__Interface__Group_7__0 )? )
-            // InternalToscaDsl.g:6219:2: ( rule__Interface__Group_7__0 )?
+            // InternalToscaDsl.g:6164:1: ( '{' )
+            // InternalToscaDsl.g:6165:2: '{'
             {
-             before(grammarAccess.getInterfaceAccess().getGroup_7()); 
-            // InternalToscaDsl.g:6220:2: ( rule__Interface__Group_7__0 )?
-            int alt49=2;
-            int LA49_0 = input.LA(1);
-
-            if ( (LA49_0==20) ) {
-                alt49=1;
-            }
-            switch (alt49) {
-                case 1 :
-                    // InternalToscaDsl.g:6220:3: rule__Interface__Group_7__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Interface__Group_7__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getGroup_7()); 
+             before(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_4_1()); 
+            match(input,11,FOLLOW_2); 
+             after(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_4_1()); 
 
             }
 
@@ -18819,21 +18620,111 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__7__Impl"
+    // $ANTLR end "rule__Interface__Group_4__1__Impl"
 
 
-    // $ANTLR start "rule__Interface__Group__8"
-    // InternalToscaDsl.g:6228:1: rule__Interface__Group__8 : rule__Interface__Group__8__Impl ;
-    public final void rule__Interface__Group__8() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__2"
+    // InternalToscaDsl.g:6174:1: rule__Interface__Group_4__2 : rule__Interface__Group_4__2__Impl rule__Interface__Group_4__3 ;
+    public final void rule__Interface__Group_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6232:1: ( rule__Interface__Group__8__Impl )
-            // InternalToscaDsl.g:6233:2: rule__Interface__Group__8__Impl
+            // InternalToscaDsl.g:6178:1: ( rule__Interface__Group_4__2__Impl rule__Interface__Group_4__3 )
+            // InternalToscaDsl.g:6179:2: rule__Interface__Group_4__2__Impl rule__Interface__Group_4__3
+            {
+            pushFollow(FOLLOW_10);
+            rule__Interface__Group_4__2__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Interface__Group_4__3();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Interface__Group_4__2"
+
+
+    // $ANTLR start "rule__Interface__Group_4__2__Impl"
+    // InternalToscaDsl.g:6186:1: rule__Interface__Group_4__2__Impl : ( ( rule__Interface__OperationsAssignment_4_2 ) ) ;
+    public final void rule__Interface__Group_4__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:6190:1: ( ( ( rule__Interface__OperationsAssignment_4_2 ) ) )
+            // InternalToscaDsl.g:6191:1: ( ( rule__Interface__OperationsAssignment_4_2 ) )
+            {
+            // InternalToscaDsl.g:6191:1: ( ( rule__Interface__OperationsAssignment_4_2 ) )
+            // InternalToscaDsl.g:6192:2: ( rule__Interface__OperationsAssignment_4_2 )
+            {
+             before(grammarAccess.getInterfaceAccess().getOperationsAssignment_4_2()); 
+            // InternalToscaDsl.g:6193:2: ( rule__Interface__OperationsAssignment_4_2 )
+            // InternalToscaDsl.g:6193:3: rule__Interface__OperationsAssignment_4_2
             {
             pushFollow(FOLLOW_2);
-            rule__Interface__Group__8__Impl();
+            rule__Interface__OperationsAssignment_4_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getInterfaceAccess().getOperationsAssignment_4_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Interface__Group_4__2__Impl"
+
+
+    // $ANTLR start "rule__Interface__Group_4__3"
+    // InternalToscaDsl.g:6201:1: rule__Interface__Group_4__3 : rule__Interface__Group_4__3__Impl rule__Interface__Group_4__4 ;
+    public final void rule__Interface__Group_4__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:6205:1: ( rule__Interface__Group_4__3__Impl rule__Interface__Group_4__4 )
+            // InternalToscaDsl.g:6206:2: rule__Interface__Group_4__3__Impl rule__Interface__Group_4__4
+            {
+            pushFollow(FOLLOW_10);
+            rule__Interface__Group_4__3__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Interface__Group_4__4();
 
             state._fsp--;
 
@@ -18852,12 +18743,110 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__8"
+    // $ANTLR end "rule__Interface__Group_4__3"
 
 
-    // $ANTLR start "rule__Interface__Group__8__Impl"
-    // InternalToscaDsl.g:6239:1: rule__Interface__Group__8__Impl : ( '}' ) ;
-    public final void rule__Interface__Group__8__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4__3__Impl"
+    // InternalToscaDsl.g:6213:1: rule__Interface__Group_4__3__Impl : ( ( rule__Interface__Group_4_3__0 )* ) ;
+    public final void rule__Interface__Group_4__3__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:6217:1: ( ( ( rule__Interface__Group_4_3__0 )* ) )
+            // InternalToscaDsl.g:6218:1: ( ( rule__Interface__Group_4_3__0 )* )
+            {
+            // InternalToscaDsl.g:6218:1: ( ( rule__Interface__Group_4_3__0 )* )
+            // InternalToscaDsl.g:6219:2: ( rule__Interface__Group_4_3__0 )*
+            {
+             before(grammarAccess.getInterfaceAccess().getGroup_4_3()); 
+            // InternalToscaDsl.g:6220:2: ( rule__Interface__Group_4_3__0 )*
+            loop49:
+            do {
+                int alt49=2;
+                int LA49_0 = input.LA(1);
+
+                if ( (LA49_0==18) ) {
+                    alt49=1;
+                }
+
+
+                switch (alt49) {
+            	case 1 :
+            	    // InternalToscaDsl.g:6220:3: rule__Interface__Group_4_3__0
+            	    {
+            	    pushFollow(FOLLOW_8);
+            	    rule__Interface__Group_4_3__0();
+
+            	    state._fsp--;
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop49;
+                }
+            } while (true);
+
+             after(grammarAccess.getInterfaceAccess().getGroup_4_3()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Interface__Group_4__3__Impl"
+
+
+    // $ANTLR start "rule__Interface__Group_4__4"
+    // InternalToscaDsl.g:6228:1: rule__Interface__Group_4__4 : rule__Interface__Group_4__4__Impl ;
+    public final void rule__Interface__Group_4__4() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalToscaDsl.g:6232:1: ( rule__Interface__Group_4__4__Impl )
+            // InternalToscaDsl.g:6233:2: rule__Interface__Group_4__4__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Interface__Group_4__4__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Interface__Group_4__4"
+
+
+    // $ANTLR start "rule__Interface__Group_4__4__Impl"
+    // InternalToscaDsl.g:6239:1: rule__Interface__Group_4__4__Impl : ( '}' ) ;
+    public final void rule__Interface__Group_4__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -18868,9 +18857,9 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             // InternalToscaDsl.g:6244:1: ( '}' )
             // InternalToscaDsl.g:6245:2: '}'
             {
-             before(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_8()); 
+             before(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_4_4()); 
             match(input,13,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_8()); 
+             after(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_4_4()); 
 
             }
 
@@ -18889,101 +18878,26 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group__8__Impl"
+    // $ANTLR end "rule__Interface__Group_4__4__Impl"
 
 
-    // $ANTLR start "rule__Interface__Group_6__0"
-    // InternalToscaDsl.g:6255:1: rule__Interface__Group_6__0 : rule__Interface__Group_6__0__Impl rule__Interface__Group_6__1 ;
-    public final void rule__Interface__Group_6__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6259:1: ( rule__Interface__Group_6__0__Impl rule__Interface__Group_6__1 )
-            // InternalToscaDsl.g:6260:2: rule__Interface__Group_6__0__Impl rule__Interface__Group_6__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Interface__Group_6__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_6__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__0"
-
-
-    // $ANTLR start "rule__Interface__Group_6__0__Impl"
-    // InternalToscaDsl.g:6267:1: rule__Interface__Group_6__0__Impl : ( ',\\n\"operations\" :' ) ;
-    public final void rule__Interface__Group_6__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4_3__0"
+    // InternalToscaDsl.g:6255:1: rule__Interface__Group_4_3__0 : rule__Interface__Group_4_3__0__Impl rule__Interface__Group_4_3__1 ;
+    public final void rule__Interface__Group_4_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6271:1: ( ( ',\\n\"operations\" :' ) )
-            // InternalToscaDsl.g:6272:1: ( ',\\n\"operations\" :' )
-            {
-            // InternalToscaDsl.g:6272:1: ( ',\\n\"operations\" :' )
-            // InternalToscaDsl.g:6273:2: ',\\n\"operations\" :'
-            {
-             before(grammarAccess.getInterfaceAccess().getOperationsKeyword_6_0()); 
-            match(input,37,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getOperationsKeyword_6_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__0__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_6__1"
-    // InternalToscaDsl.g:6282:1: rule__Interface__Group_6__1 : rule__Interface__Group_6__1__Impl rule__Interface__Group_6__2 ;
-    public final void rule__Interface__Group_6__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6286:1: ( rule__Interface__Group_6__1__Impl rule__Interface__Group_6__2 )
-            // InternalToscaDsl.g:6287:2: rule__Interface__Group_6__1__Impl rule__Interface__Group_6__2
+            // InternalToscaDsl.g:6259:1: ( rule__Interface__Group_4_3__0__Impl rule__Interface__Group_4_3__1 )
+            // InternalToscaDsl.g:6260:2: rule__Interface__Group_4_3__0__Impl rule__Interface__Group_4_3__1
             {
             pushFollow(FOLLOW_4);
-            rule__Interface__Group_6__1__Impl();
+            rule__Interface__Group_4_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Interface__Group_6__2();
+            rule__Interface__Group_4_3__1();
 
             state._fsp--;
 
@@ -19002,358 +18916,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group_6__1"
+    // $ANTLR end "rule__Interface__Group_4_3__0"
 
 
-    // $ANTLR start "rule__Interface__Group_6__1__Impl"
-    // InternalToscaDsl.g:6294:1: rule__Interface__Group_6__1__Impl : ( '{' ) ;
-    public final void rule__Interface__Group_6__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6298:1: ( ( '{' ) )
-            // InternalToscaDsl.g:6299:1: ( '{' )
-            {
-            // InternalToscaDsl.g:6299:1: ( '{' )
-            // InternalToscaDsl.g:6300:2: '{'
-            {
-             before(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_6_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_6_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__1__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_6__2"
-    // InternalToscaDsl.g:6309:1: rule__Interface__Group_6__2 : rule__Interface__Group_6__2__Impl rule__Interface__Group_6__3 ;
-    public final void rule__Interface__Group_6__2() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4_3__0__Impl"
+    // InternalToscaDsl.g:6267:1: rule__Interface__Group_4_3__0__Impl : ( ',' ) ;
+    public final void rule__Interface__Group_4_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6313:1: ( rule__Interface__Group_6__2__Impl rule__Interface__Group_6__3 )
-            // InternalToscaDsl.g:6314:2: rule__Interface__Group_6__2__Impl rule__Interface__Group_6__3
+            // InternalToscaDsl.g:6271:1: ( ( ',' ) )
+            // InternalToscaDsl.g:6272:1: ( ',' )
             {
-            pushFollow(FOLLOW_10);
-            rule__Interface__Group_6__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_6__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__2"
-
-
-    // $ANTLR start "rule__Interface__Group_6__2__Impl"
-    // InternalToscaDsl.g:6321:1: rule__Interface__Group_6__2__Impl : ( ( rule__Interface__OperationsAssignment_6_2 ) ) ;
-    public final void rule__Interface__Group_6__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6325:1: ( ( ( rule__Interface__OperationsAssignment_6_2 ) ) )
-            // InternalToscaDsl.g:6326:1: ( ( rule__Interface__OperationsAssignment_6_2 ) )
+            // InternalToscaDsl.g:6272:1: ( ',' )
+            // InternalToscaDsl.g:6273:2: ','
             {
-            // InternalToscaDsl.g:6326:1: ( ( rule__Interface__OperationsAssignment_6_2 ) )
-            // InternalToscaDsl.g:6327:2: ( rule__Interface__OperationsAssignment_6_2 )
-            {
-             before(grammarAccess.getInterfaceAccess().getOperationsAssignment_6_2()); 
-            // InternalToscaDsl.g:6328:2: ( rule__Interface__OperationsAssignment_6_2 )
-            // InternalToscaDsl.g:6328:3: rule__Interface__OperationsAssignment_6_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__OperationsAssignment_6_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getOperationsAssignment_6_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__2__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_6__3"
-    // InternalToscaDsl.g:6336:1: rule__Interface__Group_6__3 : rule__Interface__Group_6__3__Impl rule__Interface__Group_6__4 ;
-    public final void rule__Interface__Group_6__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6340:1: ( rule__Interface__Group_6__3__Impl rule__Interface__Group_6__4 )
-            // InternalToscaDsl.g:6341:2: rule__Interface__Group_6__3__Impl rule__Interface__Group_6__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Interface__Group_6__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_6__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__3"
-
-
-    // $ANTLR start "rule__Interface__Group_6__3__Impl"
-    // InternalToscaDsl.g:6348:1: rule__Interface__Group_6__3__Impl : ( ( rule__Interface__Group_6_3__0 )* ) ;
-    public final void rule__Interface__Group_6__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6352:1: ( ( ( rule__Interface__Group_6_3__0 )* ) )
-            // InternalToscaDsl.g:6353:1: ( ( rule__Interface__Group_6_3__0 )* )
-            {
-            // InternalToscaDsl.g:6353:1: ( ( rule__Interface__Group_6_3__0 )* )
-            // InternalToscaDsl.g:6354:2: ( rule__Interface__Group_6_3__0 )*
-            {
-             before(grammarAccess.getInterfaceAccess().getGroup_6_3()); 
-            // InternalToscaDsl.g:6355:2: ( rule__Interface__Group_6_3__0 )*
-            loop50:
-            do {
-                int alt50=2;
-                int LA50_0 = input.LA(1);
-
-                if ( (LA50_0==18) ) {
-                    alt50=1;
-                }
-
-
-                switch (alt50) {
-            	case 1 :
-            	    // InternalToscaDsl.g:6355:3: rule__Interface__Group_6_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Interface__Group_6_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop50;
-                }
-            } while (true);
-
-             after(grammarAccess.getInterfaceAccess().getGroup_6_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__3__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_6__4"
-    // InternalToscaDsl.g:6363:1: rule__Interface__Group_6__4 : rule__Interface__Group_6__4__Impl ;
-    public final void rule__Interface__Group_6__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6367:1: ( rule__Interface__Group_6__4__Impl )
-            // InternalToscaDsl.g:6368:2: rule__Interface__Group_6__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_6__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__4"
-
-
-    // $ANTLR start "rule__Interface__Group_6__4__Impl"
-    // InternalToscaDsl.g:6374:1: rule__Interface__Group_6__4__Impl : ( '}' ) ;
-    public final void rule__Interface__Group_6__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6378:1: ( ( '}' ) )
-            // InternalToscaDsl.g:6379:1: ( '}' )
-            {
-            // InternalToscaDsl.g:6379:1: ( '}' )
-            // InternalToscaDsl.g:6380:2: '}'
-            {
-             before(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_6_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_6_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6__4__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_6_3__0"
-    // InternalToscaDsl.g:6390:1: rule__Interface__Group_6_3__0 : rule__Interface__Group_6_3__0__Impl rule__Interface__Group_6_3__1 ;
-    public final void rule__Interface__Group_6_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6394:1: ( rule__Interface__Group_6_3__0__Impl rule__Interface__Group_6_3__1 )
-            // InternalToscaDsl.g:6395:2: rule__Interface__Group_6_3__0__Impl rule__Interface__Group_6_3__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Interface__Group_6_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_6_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_6_3__0"
-
-
-    // $ANTLR start "rule__Interface__Group_6_3__0__Impl"
-    // InternalToscaDsl.g:6402:1: rule__Interface__Group_6_3__0__Impl : ( ',' ) ;
-    public final void rule__Interface__Group_6_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6406:1: ( ( ',' ) )
-            // InternalToscaDsl.g:6407:1: ( ',' )
-            {
-            // InternalToscaDsl.g:6407:1: ( ',' )
-            // InternalToscaDsl.g:6408:2: ','
-            {
-             before(grammarAccess.getInterfaceAccess().getCommaKeyword_6_3_0()); 
+             before(grammarAccess.getInterfaceAccess().getCommaKeyword_4_3_0()); 
             match(input,18,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getCommaKeyword_6_3_0()); 
+             after(grammarAccess.getInterfaceAccess().getCommaKeyword_4_3_0()); 
 
             }
 
@@ -19372,21 +18953,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group_6_3__0__Impl"
+    // $ANTLR end "rule__Interface__Group_4_3__0__Impl"
 
 
-    // $ANTLR start "rule__Interface__Group_6_3__1"
-    // InternalToscaDsl.g:6417:1: rule__Interface__Group_6_3__1 : rule__Interface__Group_6_3__1__Impl ;
-    public final void rule__Interface__Group_6_3__1() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4_3__1"
+    // InternalToscaDsl.g:6282:1: rule__Interface__Group_4_3__1 : rule__Interface__Group_4_3__1__Impl ;
+    public final void rule__Interface__Group_4_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6421:1: ( rule__Interface__Group_6_3__1__Impl )
-            // InternalToscaDsl.g:6422:2: rule__Interface__Group_6_3__1__Impl
+            // InternalToscaDsl.g:6286:1: ( rule__Interface__Group_4_3__1__Impl )
+            // InternalToscaDsl.g:6287:2: rule__Interface__Group_4_3__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Interface__Group_6_3__1__Impl();
+            rule__Interface__Group_4_3__1__Impl();
 
             state._fsp--;
 
@@ -19405,35 +18986,35 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group_6_3__1"
+    // $ANTLR end "rule__Interface__Group_4_3__1"
 
 
-    // $ANTLR start "rule__Interface__Group_6_3__1__Impl"
-    // InternalToscaDsl.g:6428:1: rule__Interface__Group_6_3__1__Impl : ( ( rule__Interface__OperationsAssignment_6_3_1 ) ) ;
-    public final void rule__Interface__Group_6_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Interface__Group_4_3__1__Impl"
+    // InternalToscaDsl.g:6293:1: rule__Interface__Group_4_3__1__Impl : ( ( rule__Interface__OperationsAssignment_4_3_1 ) ) ;
+    public final void rule__Interface__Group_4_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6432:1: ( ( ( rule__Interface__OperationsAssignment_6_3_1 ) ) )
-            // InternalToscaDsl.g:6433:1: ( ( rule__Interface__OperationsAssignment_6_3_1 ) )
+            // InternalToscaDsl.g:6297:1: ( ( ( rule__Interface__OperationsAssignment_4_3_1 ) ) )
+            // InternalToscaDsl.g:6298:1: ( ( rule__Interface__OperationsAssignment_4_3_1 ) )
             {
-            // InternalToscaDsl.g:6433:1: ( ( rule__Interface__OperationsAssignment_6_3_1 ) )
-            // InternalToscaDsl.g:6434:2: ( rule__Interface__OperationsAssignment_6_3_1 )
+            // InternalToscaDsl.g:6298:1: ( ( rule__Interface__OperationsAssignment_4_3_1 ) )
+            // InternalToscaDsl.g:6299:2: ( rule__Interface__OperationsAssignment_4_3_1 )
             {
-             before(grammarAccess.getInterfaceAccess().getOperationsAssignment_6_3_1()); 
-            // InternalToscaDsl.g:6435:2: ( rule__Interface__OperationsAssignment_6_3_1 )
-            // InternalToscaDsl.g:6435:3: rule__Interface__OperationsAssignment_6_3_1
+             before(grammarAccess.getInterfaceAccess().getOperationsAssignment_4_3_1()); 
+            // InternalToscaDsl.g:6300:2: ( rule__Interface__OperationsAssignment_4_3_1 )
+            // InternalToscaDsl.g:6300:3: rule__Interface__OperationsAssignment_4_3_1
             {
             pushFollow(FOLLOW_2);
-            rule__Interface__OperationsAssignment_6_3_1();
+            rule__Interface__OperationsAssignment_4_3_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getInterfaceAccess().getOperationsAssignment_6_3_1()); 
+             after(grammarAccess.getInterfaceAccess().getOperationsAssignment_4_3_1()); 
 
             }
 
@@ -19452,583 +19033,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Group_6_3__1__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7__0"
-    // InternalToscaDsl.g:6444:1: rule__Interface__Group_7__0 : rule__Interface__Group_7__0__Impl rule__Interface__Group_7__1 ;
-    public final void rule__Interface__Group_7__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6448:1: ( rule__Interface__Group_7__0__Impl rule__Interface__Group_7__1 )
-            // InternalToscaDsl.g:6449:2: rule__Interface__Group_7__0__Impl rule__Interface__Group_7__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Interface__Group_7__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__0"
-
-
-    // $ANTLR start "rule__Interface__Group_7__0__Impl"
-    // InternalToscaDsl.g:6456:1: rule__Interface__Group_7__0__Impl : ( ',\\n\"inputs\" :' ) ;
-    public final void rule__Interface__Group_7__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6460:1: ( ( ',\\n\"inputs\" :' ) )
-            // InternalToscaDsl.g:6461:1: ( ',\\n\"inputs\" :' )
-            {
-            // InternalToscaDsl.g:6461:1: ( ',\\n\"inputs\" :' )
-            // InternalToscaDsl.g:6462:2: ',\\n\"inputs\" :'
-            {
-             before(grammarAccess.getInterfaceAccess().getInputsKeyword_7_0()); 
-            match(input,20,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getInputsKeyword_7_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__0__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7__1"
-    // InternalToscaDsl.g:6471:1: rule__Interface__Group_7__1 : rule__Interface__Group_7__1__Impl rule__Interface__Group_7__2 ;
-    public final void rule__Interface__Group_7__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6475:1: ( rule__Interface__Group_7__1__Impl rule__Interface__Group_7__2 )
-            // InternalToscaDsl.g:6476:2: rule__Interface__Group_7__1__Impl rule__Interface__Group_7__2
-            {
-            pushFollow(FOLLOW_4);
-            rule__Interface__Group_7__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__1"
-
-
-    // $ANTLR start "rule__Interface__Group_7__1__Impl"
-    // InternalToscaDsl.g:6483:1: rule__Interface__Group_7__1__Impl : ( '{' ) ;
-    public final void rule__Interface__Group_7__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6487:1: ( ( '{' ) )
-            // InternalToscaDsl.g:6488:1: ( '{' )
-            {
-            // InternalToscaDsl.g:6488:1: ( '{' )
-            // InternalToscaDsl.g:6489:2: '{'
-            {
-             before(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_7_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getLeftCurlyBracketKeyword_7_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__1__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7__2"
-    // InternalToscaDsl.g:6498:1: rule__Interface__Group_7__2 : rule__Interface__Group_7__2__Impl rule__Interface__Group_7__3 ;
-    public final void rule__Interface__Group_7__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6502:1: ( rule__Interface__Group_7__2__Impl rule__Interface__Group_7__3 )
-            // InternalToscaDsl.g:6503:2: rule__Interface__Group_7__2__Impl rule__Interface__Group_7__3
-            {
-            pushFollow(FOLLOW_10);
-            rule__Interface__Group_7__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__2"
-
-
-    // $ANTLR start "rule__Interface__Group_7__2__Impl"
-    // InternalToscaDsl.g:6510:1: rule__Interface__Group_7__2__Impl : ( ( rule__Interface__InputsAssignment_7_2 ) ) ;
-    public final void rule__Interface__Group_7__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6514:1: ( ( ( rule__Interface__InputsAssignment_7_2 ) ) )
-            // InternalToscaDsl.g:6515:1: ( ( rule__Interface__InputsAssignment_7_2 ) )
-            {
-            // InternalToscaDsl.g:6515:1: ( ( rule__Interface__InputsAssignment_7_2 ) )
-            // InternalToscaDsl.g:6516:2: ( rule__Interface__InputsAssignment_7_2 )
-            {
-             before(grammarAccess.getInterfaceAccess().getInputsAssignment_7_2()); 
-            // InternalToscaDsl.g:6517:2: ( rule__Interface__InputsAssignment_7_2 )
-            // InternalToscaDsl.g:6517:3: rule__Interface__InputsAssignment_7_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__InputsAssignment_7_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getInputsAssignment_7_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__2__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7__3"
-    // InternalToscaDsl.g:6525:1: rule__Interface__Group_7__3 : rule__Interface__Group_7__3__Impl rule__Interface__Group_7__4 ;
-    public final void rule__Interface__Group_7__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6529:1: ( rule__Interface__Group_7__3__Impl rule__Interface__Group_7__4 )
-            // InternalToscaDsl.g:6530:2: rule__Interface__Group_7__3__Impl rule__Interface__Group_7__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Interface__Group_7__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__3"
-
-
-    // $ANTLR start "rule__Interface__Group_7__3__Impl"
-    // InternalToscaDsl.g:6537:1: rule__Interface__Group_7__3__Impl : ( ( rule__Interface__Group_7_3__0 )* ) ;
-    public final void rule__Interface__Group_7__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6541:1: ( ( ( rule__Interface__Group_7_3__0 )* ) )
-            // InternalToscaDsl.g:6542:1: ( ( rule__Interface__Group_7_3__0 )* )
-            {
-            // InternalToscaDsl.g:6542:1: ( ( rule__Interface__Group_7_3__0 )* )
-            // InternalToscaDsl.g:6543:2: ( rule__Interface__Group_7_3__0 )*
-            {
-             before(grammarAccess.getInterfaceAccess().getGroup_7_3()); 
-            // InternalToscaDsl.g:6544:2: ( rule__Interface__Group_7_3__0 )*
-            loop51:
-            do {
-                int alt51=2;
-                int LA51_0 = input.LA(1);
-
-                if ( (LA51_0==18) ) {
-                    alt51=1;
-                }
-
-
-                switch (alt51) {
-            	case 1 :
-            	    // InternalToscaDsl.g:6544:3: rule__Interface__Group_7_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Interface__Group_7_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop51;
-                }
-            } while (true);
-
-             after(grammarAccess.getInterfaceAccess().getGroup_7_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__3__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7__4"
-    // InternalToscaDsl.g:6552:1: rule__Interface__Group_7__4 : rule__Interface__Group_7__4__Impl ;
-    public final void rule__Interface__Group_7__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6556:1: ( rule__Interface__Group_7__4__Impl )
-            // InternalToscaDsl.g:6557:2: rule__Interface__Group_7__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__4"
-
-
-    // $ANTLR start "rule__Interface__Group_7__4__Impl"
-    // InternalToscaDsl.g:6563:1: rule__Interface__Group_7__4__Impl : ( '}' ) ;
-    public final void rule__Interface__Group_7__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6567:1: ( ( '}' ) )
-            // InternalToscaDsl.g:6568:1: ( '}' )
-            {
-            // InternalToscaDsl.g:6568:1: ( '}' )
-            // InternalToscaDsl.g:6569:2: '}'
-            {
-             before(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_7_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getRightCurlyBracketKeyword_7_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7__4__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7_3__0"
-    // InternalToscaDsl.g:6579:1: rule__Interface__Group_7_3__0 : rule__Interface__Group_7_3__0__Impl rule__Interface__Group_7_3__1 ;
-    public final void rule__Interface__Group_7_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6583:1: ( rule__Interface__Group_7_3__0__Impl rule__Interface__Group_7_3__1 )
-            // InternalToscaDsl.g:6584:2: rule__Interface__Group_7_3__0__Impl rule__Interface__Group_7_3__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Interface__Group_7_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7_3__0"
-
-
-    // $ANTLR start "rule__Interface__Group_7_3__0__Impl"
-    // InternalToscaDsl.g:6591:1: rule__Interface__Group_7_3__0__Impl : ( ',' ) ;
-    public final void rule__Interface__Group_7_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6595:1: ( ( ',' ) )
-            // InternalToscaDsl.g:6596:1: ( ',' )
-            {
-            // InternalToscaDsl.g:6596:1: ( ',' )
-            // InternalToscaDsl.g:6597:2: ','
-            {
-             before(grammarAccess.getInterfaceAccess().getCommaKeyword_7_3_0()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getCommaKeyword_7_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7_3__0__Impl"
-
-
-    // $ANTLR start "rule__Interface__Group_7_3__1"
-    // InternalToscaDsl.g:6606:1: rule__Interface__Group_7_3__1 : rule__Interface__Group_7_3__1__Impl ;
-    public final void rule__Interface__Group_7_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6610:1: ( rule__Interface__Group_7_3__1__Impl )
-            // InternalToscaDsl.g:6611:2: rule__Interface__Group_7_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__Group_7_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7_3__1"
-
-
-    // $ANTLR start "rule__Interface__Group_7_3__1__Impl"
-    // InternalToscaDsl.g:6617:1: rule__Interface__Group_7_3__1__Impl : ( ( rule__Interface__InputsAssignment_7_3_1 ) ) ;
-    public final void rule__Interface__Group_7_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6621:1: ( ( ( rule__Interface__InputsAssignment_7_3_1 ) ) )
-            // InternalToscaDsl.g:6622:1: ( ( rule__Interface__InputsAssignment_7_3_1 ) )
-            {
-            // InternalToscaDsl.g:6622:1: ( ( rule__Interface__InputsAssignment_7_3_1 ) )
-            // InternalToscaDsl.g:6623:2: ( rule__Interface__InputsAssignment_7_3_1 )
-            {
-             before(grammarAccess.getInterfaceAccess().getInputsAssignment_7_3_1()); 
-            // InternalToscaDsl.g:6624:2: ( rule__Interface__InputsAssignment_7_3_1 )
-            // InternalToscaDsl.g:6624:3: rule__Interface__InputsAssignment_7_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Interface__InputsAssignment_7_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getInterfaceAccess().getInputsAssignment_7_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__Group_7_3__1__Impl"
+    // $ANTLR end "rule__Interface__Group_4_3__1__Impl"
 
 
     // $ANTLR start "rule__Property__Group__0"
-    // InternalToscaDsl.g:6633:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
+    // InternalToscaDsl.g:6309:1: rule__Property__Group__0 : rule__Property__Group__0__Impl rule__Property__Group__1 ;
     public final void rule__Property__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6637:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
-            // InternalToscaDsl.g:6638:2: rule__Property__Group__0__Impl rule__Property__Group__1
+            // InternalToscaDsl.g:6313:1: ( rule__Property__Group__0__Impl rule__Property__Group__1 )
+            // InternalToscaDsl.g:6314:2: rule__Property__Group__0__Impl rule__Property__Group__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__Property__Group__0__Impl();
 
             state._fsp--;
@@ -20057,21 +19075,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__0__Impl"
-    // InternalToscaDsl.g:6645:1: rule__Property__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:6321:1: rule__Property__Group__0__Impl : ( () ) ;
     public final void rule__Property__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6649:1: ( ( () ) )
-            // InternalToscaDsl.g:6650:1: ( () )
+            // InternalToscaDsl.g:6325:1: ( ( () ) )
+            // InternalToscaDsl.g:6326:1: ( () )
             {
-            // InternalToscaDsl.g:6650:1: ( () )
-            // InternalToscaDsl.g:6651:2: ()
+            // InternalToscaDsl.g:6326:1: ( () )
+            // InternalToscaDsl.g:6327:2: ()
             {
              before(grammarAccess.getPropertyAccess().getPropertyAction_0()); 
-            // InternalToscaDsl.g:6652:2: ()
-            // InternalToscaDsl.g:6652:3: 
+            // InternalToscaDsl.g:6328:2: ()
+            // InternalToscaDsl.g:6328:3: 
             {
             }
 
@@ -20094,16 +19112,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__1"
-    // InternalToscaDsl.g:6660:1: rule__Property__Group__1 : rule__Property__Group__1__Impl rule__Property__Group__2 ;
+    // InternalToscaDsl.g:6336:1: rule__Property__Group__1 : rule__Property__Group__1__Impl rule__Property__Group__2 ;
     public final void rule__Property__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6664:1: ( rule__Property__Group__1__Impl rule__Property__Group__2 )
-            // InternalToscaDsl.g:6665:2: rule__Property__Group__1__Impl rule__Property__Group__2
+            // InternalToscaDsl.g:6340:1: ( rule__Property__Group__1__Impl rule__Property__Group__2 )
+            // InternalToscaDsl.g:6341:2: rule__Property__Group__1__Impl rule__Property__Group__2
             {
-            pushFollow(FOLLOW_11);
+            pushFollow(FOLLOW_4);
             rule__Property__Group__1__Impl();
 
             state._fsp--;
@@ -20132,31 +19150,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__1__Impl"
-    // InternalToscaDsl.g:6672:1: rule__Property__Group__1__Impl : ( ( rule__Property__Property_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:6348:1: rule__Property__Group__1__Impl : ( '{' ) ;
     public final void rule__Property__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6676:1: ( ( ( rule__Property__Property_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:6677:1: ( ( rule__Property__Property_nameAssignment_1 ) )
+            // InternalToscaDsl.g:6352:1: ( ( '{' ) )
+            // InternalToscaDsl.g:6353:1: ( '{' )
             {
-            // InternalToscaDsl.g:6677:1: ( ( rule__Property__Property_nameAssignment_1 ) )
-            // InternalToscaDsl.g:6678:2: ( rule__Property__Property_nameAssignment_1 )
+            // InternalToscaDsl.g:6353:1: ( '{' )
+            // InternalToscaDsl.g:6354:2: '{'
             {
-             before(grammarAccess.getPropertyAccess().getProperty_nameAssignment_1()); 
-            // InternalToscaDsl.g:6679:2: ( rule__Property__Property_nameAssignment_1 )
-            // InternalToscaDsl.g:6679:3: rule__Property__Property_nameAssignment_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Property__Property_nameAssignment_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPropertyAccess().getProperty_nameAssignment_1()); 
+             before(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_1()); 
+            match(input,11,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_1()); 
 
             }
 
@@ -20179,16 +19187,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__2"
-    // InternalToscaDsl.g:6687:1: rule__Property__Group__2 : rule__Property__Group__2__Impl rule__Property__Group__3 ;
+    // InternalToscaDsl.g:6363:1: rule__Property__Group__2 : rule__Property__Group__2__Impl rule__Property__Group__3 ;
     public final void rule__Property__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6691:1: ( rule__Property__Group__2__Impl rule__Property__Group__3 )
-            // InternalToscaDsl.g:6692:2: rule__Property__Group__2__Impl rule__Property__Group__3
+            // InternalToscaDsl.g:6367:1: ( rule__Property__Group__2__Impl rule__Property__Group__3 )
+            // InternalToscaDsl.g:6368:2: rule__Property__Group__2__Impl rule__Property__Group__3
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_11);
             rule__Property__Group__2__Impl();
 
             state._fsp--;
@@ -20217,21 +19225,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__2__Impl"
-    // InternalToscaDsl.g:6699:1: rule__Property__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:6375:1: rule__Property__Group__2__Impl : ( ( rule__Property__Property_nameAssignment_2 ) ) ;
     public final void rule__Property__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6703:1: ( ( ':' ) )
-            // InternalToscaDsl.g:6704:1: ( ':' )
+            // InternalToscaDsl.g:6379:1: ( ( ( rule__Property__Property_nameAssignment_2 ) ) )
+            // InternalToscaDsl.g:6380:1: ( ( rule__Property__Property_nameAssignment_2 ) )
             {
-            // InternalToscaDsl.g:6704:1: ( ':' )
-            // InternalToscaDsl.g:6705:2: ':'
+            // InternalToscaDsl.g:6380:1: ( ( rule__Property__Property_nameAssignment_2 ) )
+            // InternalToscaDsl.g:6381:2: ( rule__Property__Property_nameAssignment_2 )
             {
-             before(grammarAccess.getPropertyAccess().getColonKeyword_2()); 
-            match(input,25,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getColonKeyword_2()); 
+             before(grammarAccess.getPropertyAccess().getProperty_nameAssignment_2()); 
+            // InternalToscaDsl.g:6382:2: ( rule__Property__Property_nameAssignment_2 )
+            // InternalToscaDsl.g:6382:3: rule__Property__Property_nameAssignment_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Property__Property_nameAssignment_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPropertyAccess().getProperty_nameAssignment_2()); 
 
             }
 
@@ -20254,16 +19272,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__3"
-    // InternalToscaDsl.g:6714:1: rule__Property__Group__3 : rule__Property__Group__3__Impl rule__Property__Group__4 ;
+    // InternalToscaDsl.g:6390:1: rule__Property__Group__3 : rule__Property__Group__3__Impl rule__Property__Group__4 ;
     public final void rule__Property__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6718:1: ( rule__Property__Group__3__Impl rule__Property__Group__4 )
-            // InternalToscaDsl.g:6719:2: rule__Property__Group__3__Impl rule__Property__Group__4
+            // InternalToscaDsl.g:6394:1: ( rule__Property__Group__3__Impl rule__Property__Group__4 )
+            // InternalToscaDsl.g:6395:2: rule__Property__Group__3__Impl rule__Property__Group__4
             {
-            pushFollow(FOLLOW_18);
+            pushFollow(FOLLOW_4);
             rule__Property__Group__3__Impl();
 
             state._fsp--;
@@ -20292,21 +19310,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__3__Impl"
-    // InternalToscaDsl.g:6726:1: rule__Property__Group__3__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:6402:1: rule__Property__Group__3__Impl : ( ':' ) ;
     public final void rule__Property__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6730:1: ( ( '{' ) )
-            // InternalToscaDsl.g:6731:1: ( '{' )
+            // InternalToscaDsl.g:6406:1: ( ( ':' ) )
+            // InternalToscaDsl.g:6407:1: ( ':' )
             {
-            // InternalToscaDsl.g:6731:1: ( '{' )
-            // InternalToscaDsl.g:6732:2: '{'
+            // InternalToscaDsl.g:6407:1: ( ':' )
+            // InternalToscaDsl.g:6408:2: ':'
             {
-             before(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getLeftCurlyBracketKeyword_3()); 
+             before(grammarAccess.getPropertyAccess().getColonKeyword_3()); 
+            match(input,25,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getColonKeyword_3()); 
 
             }
 
@@ -20329,16 +19347,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__4"
-    // InternalToscaDsl.g:6741:1: rule__Property__Group__4 : rule__Property__Group__4__Impl rule__Property__Group__5 ;
+    // InternalToscaDsl.g:6417:1: rule__Property__Group__4 : rule__Property__Group__4__Impl rule__Property__Group__5 ;
     public final void rule__Property__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6745:1: ( rule__Property__Group__4__Impl rule__Property__Group__5 )
-            // InternalToscaDsl.g:6746:2: rule__Property__Group__4__Impl rule__Property__Group__5
+            // InternalToscaDsl.g:6421:1: ( rule__Property__Group__4__Impl rule__Property__Group__5 )
+            // InternalToscaDsl.g:6422:2: rule__Property__Group__4__Impl rule__Property__Group__5
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_18);
             rule__Property__Group__4__Impl();
 
             state._fsp--;
@@ -20367,21 +19385,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__4__Impl"
-    // InternalToscaDsl.g:6753:1: rule__Property__Group__4__Impl : ( '\"value\" :' ) ;
+    // InternalToscaDsl.g:6429:1: rule__Property__Group__4__Impl : ( ( rule__Property__ValueAssignment_4 ) ) ;
     public final void rule__Property__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6757:1: ( ( '\"value\" :' ) )
-            // InternalToscaDsl.g:6758:1: ( '\"value\" :' )
+            // InternalToscaDsl.g:6433:1: ( ( ( rule__Property__ValueAssignment_4 ) ) )
+            // InternalToscaDsl.g:6434:1: ( ( rule__Property__ValueAssignment_4 ) )
             {
-            // InternalToscaDsl.g:6758:1: ( '\"value\" :' )
-            // InternalToscaDsl.g:6759:2: '\"value\" :'
+            // InternalToscaDsl.g:6434:1: ( ( rule__Property__ValueAssignment_4 ) )
+            // InternalToscaDsl.g:6435:2: ( rule__Property__ValueAssignment_4 )
             {
-             before(grammarAccess.getPropertyAccess().getValueKeyword_4()); 
-            match(input,38,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getValueKeyword_4()); 
+             before(grammarAccess.getPropertyAccess().getValueAssignment_4()); 
+            // InternalToscaDsl.g:6436:2: ( rule__Property__ValueAssignment_4 )
+            // InternalToscaDsl.g:6436:3: rule__Property__ValueAssignment_4
+            {
+            pushFollow(FOLLOW_2);
+            rule__Property__ValueAssignment_4();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getPropertyAccess().getValueAssignment_4()); 
 
             }
 
@@ -20404,22 +19432,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__5"
-    // InternalToscaDsl.g:6768:1: rule__Property__Group__5 : rule__Property__Group__5__Impl rule__Property__Group__6 ;
+    // InternalToscaDsl.g:6444:1: rule__Property__Group__5 : rule__Property__Group__5__Impl ;
     public final void rule__Property__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6772:1: ( rule__Property__Group__5__Impl rule__Property__Group__6 )
-            // InternalToscaDsl.g:6773:2: rule__Property__Group__5__Impl rule__Property__Group__6
+            // InternalToscaDsl.g:6448:1: ( rule__Property__Group__5__Impl )
+            // InternalToscaDsl.g:6449:2: rule__Property__Group__5__Impl
             {
-            pushFollow(FOLLOW_19);
-            rule__Property__Group__5__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Property__Group__6();
+            rule__Property__Group__5__Impl();
 
             state._fsp--;
 
@@ -20442,31 +19465,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Property__Group__5__Impl"
-    // InternalToscaDsl.g:6780:1: rule__Property__Group__5__Impl : ( ( rule__Property__ValueAssignment_5 ) ) ;
+    // InternalToscaDsl.g:6455:1: rule__Property__Group__5__Impl : ( '}' ) ;
     public final void rule__Property__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6784:1: ( ( ( rule__Property__ValueAssignment_5 ) ) )
-            // InternalToscaDsl.g:6785:1: ( ( rule__Property__ValueAssignment_5 ) )
+            // InternalToscaDsl.g:6459:1: ( ( '}' ) )
+            // InternalToscaDsl.g:6460:1: ( '}' )
             {
-            // InternalToscaDsl.g:6785:1: ( ( rule__Property__ValueAssignment_5 ) )
-            // InternalToscaDsl.g:6786:2: ( rule__Property__ValueAssignment_5 )
+            // InternalToscaDsl.g:6460:1: ( '}' )
+            // InternalToscaDsl.g:6461:2: '}'
             {
-             before(grammarAccess.getPropertyAccess().getValueAssignment_5()); 
-            // InternalToscaDsl.g:6787:2: ( rule__Property__ValueAssignment_5 )
-            // InternalToscaDsl.g:6787:3: rule__Property__ValueAssignment_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__Property__ValueAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getPropertyAccess().getValueAssignment_5()); 
+             before(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_5()); 
+            match(input,13,FOLLOW_2); 
+             after(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_5()); 
 
             }
 
@@ -20488,85 +19501,15 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Property__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Property__Group__6"
-    // InternalToscaDsl.g:6795:1: rule__Property__Group__6 : rule__Property__Group__6__Impl ;
-    public final void rule__Property__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6799:1: ( rule__Property__Group__6__Impl )
-            // InternalToscaDsl.g:6800:2: rule__Property__Group__6__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Property__Group__6__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Property__Group__6"
-
-
-    // $ANTLR start "rule__Property__Group__6__Impl"
-    // InternalToscaDsl.g:6806:1: rule__Property__Group__6__Impl : ( '}' ) ;
-    public final void rule__Property__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:6810:1: ( ( '}' ) )
-            // InternalToscaDsl.g:6811:1: ( '}' )
-            {
-            // InternalToscaDsl.g:6811:1: ( '}' )
-            // InternalToscaDsl.g:6812:2: '}'
-            {
-             before(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_6()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getRightCurlyBracketKeyword_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Property__Group__6__Impl"
-
-
     // $ANTLR start "rule__Attribute__Group__0"
-    // InternalToscaDsl.g:6822:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
+    // InternalToscaDsl.g:6471:1: rule__Attribute__Group__0 : rule__Attribute__Group__0__Impl rule__Attribute__Group__1 ;
     public final void rule__Attribute__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6826:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
-            // InternalToscaDsl.g:6827:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
+            // InternalToscaDsl.g:6475:1: ( rule__Attribute__Group__0__Impl rule__Attribute__Group__1 )
+            // InternalToscaDsl.g:6476:2: rule__Attribute__Group__0__Impl rule__Attribute__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Attribute__Group__0__Impl();
@@ -20597,21 +19540,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__0__Impl"
-    // InternalToscaDsl.g:6834:1: rule__Attribute__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:6483:1: rule__Attribute__Group__0__Impl : ( () ) ;
     public final void rule__Attribute__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6838:1: ( ( () ) )
-            // InternalToscaDsl.g:6839:1: ( () )
+            // InternalToscaDsl.g:6487:1: ( ( () ) )
+            // InternalToscaDsl.g:6488:1: ( () )
             {
-            // InternalToscaDsl.g:6839:1: ( () )
-            // InternalToscaDsl.g:6840:2: ()
+            // InternalToscaDsl.g:6488:1: ( () )
+            // InternalToscaDsl.g:6489:2: ()
             {
              before(grammarAccess.getAttributeAccess().getAttributeAction_0()); 
-            // InternalToscaDsl.g:6841:2: ()
-            // InternalToscaDsl.g:6841:3: 
+            // InternalToscaDsl.g:6490:2: ()
+            // InternalToscaDsl.g:6490:3: 
             {
             }
 
@@ -20634,14 +19577,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__1"
-    // InternalToscaDsl.g:6849:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
+    // InternalToscaDsl.g:6498:1: rule__Attribute__Group__1 : rule__Attribute__Group__1__Impl rule__Attribute__Group__2 ;
     public final void rule__Attribute__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6853:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
-            // InternalToscaDsl.g:6854:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
+            // InternalToscaDsl.g:6502:1: ( rule__Attribute__Group__1__Impl rule__Attribute__Group__2 )
+            // InternalToscaDsl.g:6503:2: rule__Attribute__Group__1__Impl rule__Attribute__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Attribute__Group__1__Impl();
@@ -20672,21 +19615,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__1__Impl"
-    // InternalToscaDsl.g:6861:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__Attribute_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:6510:1: rule__Attribute__Group__1__Impl : ( ( rule__Attribute__Attribute_nameAssignment_1 ) ) ;
     public final void rule__Attribute__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6865:1: ( ( ( rule__Attribute__Attribute_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:6866:1: ( ( rule__Attribute__Attribute_nameAssignment_1 ) )
+            // InternalToscaDsl.g:6514:1: ( ( ( rule__Attribute__Attribute_nameAssignment_1 ) ) )
+            // InternalToscaDsl.g:6515:1: ( ( rule__Attribute__Attribute_nameAssignment_1 ) )
             {
-            // InternalToscaDsl.g:6866:1: ( ( rule__Attribute__Attribute_nameAssignment_1 ) )
-            // InternalToscaDsl.g:6867:2: ( rule__Attribute__Attribute_nameAssignment_1 )
+            // InternalToscaDsl.g:6515:1: ( ( rule__Attribute__Attribute_nameAssignment_1 ) )
+            // InternalToscaDsl.g:6516:2: ( rule__Attribute__Attribute_nameAssignment_1 )
             {
              before(grammarAccess.getAttributeAccess().getAttribute_nameAssignment_1()); 
-            // InternalToscaDsl.g:6868:2: ( rule__Attribute__Attribute_nameAssignment_1 )
-            // InternalToscaDsl.g:6868:3: rule__Attribute__Attribute_nameAssignment_1
+            // InternalToscaDsl.g:6517:2: ( rule__Attribute__Attribute_nameAssignment_1 )
+            // InternalToscaDsl.g:6517:3: rule__Attribute__Attribute_nameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__Attribute_nameAssignment_1();
@@ -20719,14 +19662,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__2"
-    // InternalToscaDsl.g:6876:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
+    // InternalToscaDsl.g:6525:1: rule__Attribute__Group__2 : rule__Attribute__Group__2__Impl ;
     public final void rule__Attribute__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6880:1: ( rule__Attribute__Group__2__Impl )
-            // InternalToscaDsl.g:6881:2: rule__Attribute__Group__2__Impl
+            // InternalToscaDsl.g:6529:1: ( rule__Attribute__Group__2__Impl )
+            // InternalToscaDsl.g:6530:2: rule__Attribute__Group__2__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Attribute__Group__2__Impl();
@@ -20752,17 +19695,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Attribute__Group__2__Impl"
-    // InternalToscaDsl.g:6887:1: rule__Attribute__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:6536:1: rule__Attribute__Group__2__Impl : ( ':' ) ;
     public final void rule__Attribute__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6891:1: ( ( ':' ) )
-            // InternalToscaDsl.g:6892:1: ( ':' )
+            // InternalToscaDsl.g:6540:1: ( ( ':' ) )
+            // InternalToscaDsl.g:6541:1: ( ':' )
             {
-            // InternalToscaDsl.g:6892:1: ( ':' )
-            // InternalToscaDsl.g:6893:2: ':'
+            // InternalToscaDsl.g:6541:1: ( ':' )
+            // InternalToscaDsl.g:6542:2: ':'
             {
              before(grammarAccess.getAttributeAccess().getColonKeyword_2()); 
             match(input,25,FOLLOW_2); 
@@ -20789,14 +19732,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__0"
-    // InternalToscaDsl.g:6903:1: rule__Requirement__Group__0 : rule__Requirement__Group__0__Impl rule__Requirement__Group__1 ;
+    // InternalToscaDsl.g:6552:1: rule__Requirement__Group__0 : rule__Requirement__Group__0__Impl rule__Requirement__Group__1 ;
     public final void rule__Requirement__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6907:1: ( rule__Requirement__Group__0__Impl rule__Requirement__Group__1 )
-            // InternalToscaDsl.g:6908:2: rule__Requirement__Group__0__Impl rule__Requirement__Group__1
+            // InternalToscaDsl.g:6556:1: ( rule__Requirement__Group__0__Impl rule__Requirement__Group__1 )
+            // InternalToscaDsl.g:6557:2: rule__Requirement__Group__0__Impl rule__Requirement__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Requirement__Group__0__Impl();
@@ -20827,21 +19770,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__0__Impl"
-    // InternalToscaDsl.g:6915:1: rule__Requirement__Group__0__Impl : ( ( rule__Requirement__Requirement_nameAssignment_0 ) ) ;
+    // InternalToscaDsl.g:6564:1: rule__Requirement__Group__0__Impl : ( ( rule__Requirement__Requirement_nameAssignment_0 ) ) ;
     public final void rule__Requirement__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6919:1: ( ( ( rule__Requirement__Requirement_nameAssignment_0 ) ) )
-            // InternalToscaDsl.g:6920:1: ( ( rule__Requirement__Requirement_nameAssignment_0 ) )
+            // InternalToscaDsl.g:6568:1: ( ( ( rule__Requirement__Requirement_nameAssignment_0 ) ) )
+            // InternalToscaDsl.g:6569:1: ( ( rule__Requirement__Requirement_nameAssignment_0 ) )
             {
-            // InternalToscaDsl.g:6920:1: ( ( rule__Requirement__Requirement_nameAssignment_0 ) )
-            // InternalToscaDsl.g:6921:2: ( rule__Requirement__Requirement_nameAssignment_0 )
+            // InternalToscaDsl.g:6569:1: ( ( rule__Requirement__Requirement_nameAssignment_0 ) )
+            // InternalToscaDsl.g:6570:2: ( rule__Requirement__Requirement_nameAssignment_0 )
             {
              before(grammarAccess.getRequirementAccess().getRequirement_nameAssignment_0()); 
-            // InternalToscaDsl.g:6922:2: ( rule__Requirement__Requirement_nameAssignment_0 )
-            // InternalToscaDsl.g:6922:3: rule__Requirement__Requirement_nameAssignment_0
+            // InternalToscaDsl.g:6571:2: ( rule__Requirement__Requirement_nameAssignment_0 )
+            // InternalToscaDsl.g:6571:3: rule__Requirement__Requirement_nameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Requirement__Requirement_nameAssignment_0();
@@ -20874,14 +19817,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__1"
-    // InternalToscaDsl.g:6930:1: rule__Requirement__Group__1 : rule__Requirement__Group__1__Impl rule__Requirement__Group__2 ;
+    // InternalToscaDsl.g:6579:1: rule__Requirement__Group__1 : rule__Requirement__Group__1__Impl rule__Requirement__Group__2 ;
     public final void rule__Requirement__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6934:1: ( rule__Requirement__Group__1__Impl rule__Requirement__Group__2 )
-            // InternalToscaDsl.g:6935:2: rule__Requirement__Group__1__Impl rule__Requirement__Group__2
+            // InternalToscaDsl.g:6583:1: ( rule__Requirement__Group__1__Impl rule__Requirement__Group__2 )
+            // InternalToscaDsl.g:6584:2: rule__Requirement__Group__1__Impl rule__Requirement__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__Requirement__Group__1__Impl();
@@ -20912,17 +19855,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__1__Impl"
-    // InternalToscaDsl.g:6942:1: rule__Requirement__Group__1__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:6591:1: rule__Requirement__Group__1__Impl : ( ':' ) ;
     public final void rule__Requirement__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6946:1: ( ( ':' ) )
-            // InternalToscaDsl.g:6947:1: ( ':' )
+            // InternalToscaDsl.g:6595:1: ( ( ':' ) )
+            // InternalToscaDsl.g:6596:1: ( ':' )
             {
-            // InternalToscaDsl.g:6947:1: ( ':' )
-            // InternalToscaDsl.g:6948:2: ':'
+            // InternalToscaDsl.g:6596:1: ( ':' )
+            // InternalToscaDsl.g:6597:2: ':'
             {
              before(grammarAccess.getRequirementAccess().getColonKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -20949,16 +19892,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__2"
-    // InternalToscaDsl.g:6957:1: rule__Requirement__Group__2 : rule__Requirement__Group__2__Impl rule__Requirement__Group__3 ;
+    // InternalToscaDsl.g:6606:1: rule__Requirement__Group__2 : rule__Requirement__Group__2__Impl rule__Requirement__Group__3 ;
     public final void rule__Requirement__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6961:1: ( rule__Requirement__Group__2__Impl rule__Requirement__Group__3 )
-            // InternalToscaDsl.g:6962:2: rule__Requirement__Group__2__Impl rule__Requirement__Group__3
+            // InternalToscaDsl.g:6610:1: ( rule__Requirement__Group__2__Impl rule__Requirement__Group__3 )
+            // InternalToscaDsl.g:6611:2: rule__Requirement__Group__2__Impl rule__Requirement__Group__3
             {
-            pushFollow(FOLLOW_20);
+            pushFollow(FOLLOW_19);
             rule__Requirement__Group__2__Impl();
 
             state._fsp--;
@@ -20987,17 +19930,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__2__Impl"
-    // InternalToscaDsl.g:6969:1: rule__Requirement__Group__2__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:6618:1: rule__Requirement__Group__2__Impl : ( '{' ) ;
     public final void rule__Requirement__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6973:1: ( ( '{' ) )
-            // InternalToscaDsl.g:6974:1: ( '{' )
+            // InternalToscaDsl.g:6622:1: ( ( '{' ) )
+            // InternalToscaDsl.g:6623:1: ( '{' )
             {
-            // InternalToscaDsl.g:6974:1: ( '{' )
-            // InternalToscaDsl.g:6975:2: '{'
+            // InternalToscaDsl.g:6623:1: ( '{' )
+            // InternalToscaDsl.g:6624:2: '{'
             {
              before(grammarAccess.getRequirementAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,11,FOLLOW_2); 
@@ -21024,14 +19967,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__3"
-    // InternalToscaDsl.g:6984:1: rule__Requirement__Group__3 : rule__Requirement__Group__3__Impl rule__Requirement__Group__4 ;
+    // InternalToscaDsl.g:6633:1: rule__Requirement__Group__3 : rule__Requirement__Group__3__Impl rule__Requirement__Group__4 ;
     public final void rule__Requirement__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:6988:1: ( rule__Requirement__Group__3__Impl rule__Requirement__Group__4 )
-            // InternalToscaDsl.g:6989:2: rule__Requirement__Group__3__Impl rule__Requirement__Group__4
+            // InternalToscaDsl.g:6637:1: ( rule__Requirement__Group__3__Impl rule__Requirement__Group__4 )
+            // InternalToscaDsl.g:6638:2: rule__Requirement__Group__3__Impl rule__Requirement__Group__4
             {
             pushFollow(FOLLOW_4);
             rule__Requirement__Group__3__Impl();
@@ -21062,20 +20005,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__3__Impl"
-    // InternalToscaDsl.g:6996:1: rule__Requirement__Group__3__Impl : ( '\"capabiity\" :' ) ;
+    // InternalToscaDsl.g:6645:1: rule__Requirement__Group__3__Impl : ( '\"capabiity\" :' ) ;
     public final void rule__Requirement__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7000:1: ( ( '\"capabiity\" :' ) )
-            // InternalToscaDsl.g:7001:1: ( '\"capabiity\" :' )
+            // InternalToscaDsl.g:6649:1: ( ( '\"capabiity\" :' ) )
+            // InternalToscaDsl.g:6650:1: ( '\"capabiity\" :' )
             {
-            // InternalToscaDsl.g:7001:1: ( '\"capabiity\" :' )
-            // InternalToscaDsl.g:7002:2: '\"capabiity\" :'
+            // InternalToscaDsl.g:6650:1: ( '\"capabiity\" :' )
+            // InternalToscaDsl.g:6651:2: '\"capabiity\" :'
             {
              before(grammarAccess.getRequirementAccess().getCapabiityKeyword_3()); 
-            match(input,39,FOLLOW_2); 
+            match(input,38,FOLLOW_2); 
              after(grammarAccess.getRequirementAccess().getCapabiityKeyword_3()); 
 
             }
@@ -21099,16 +20042,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__4"
-    // InternalToscaDsl.g:7011:1: rule__Requirement__Group__4 : rule__Requirement__Group__4__Impl rule__Requirement__Group__5 ;
+    // InternalToscaDsl.g:6660:1: rule__Requirement__Group__4 : rule__Requirement__Group__4__Impl rule__Requirement__Group__5 ;
     public final void rule__Requirement__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7015:1: ( rule__Requirement__Group__4__Impl rule__Requirement__Group__5 )
-            // InternalToscaDsl.g:7016:2: rule__Requirement__Group__4__Impl rule__Requirement__Group__5
+            // InternalToscaDsl.g:6664:1: ( rule__Requirement__Group__4__Impl rule__Requirement__Group__5 )
+            // InternalToscaDsl.g:6665:2: rule__Requirement__Group__4__Impl rule__Requirement__Group__5
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_20);
             rule__Requirement__Group__4__Impl();
 
             state._fsp--;
@@ -21137,21 +20080,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__4__Impl"
-    // InternalToscaDsl.g:7023:1: rule__Requirement__Group__4__Impl : ( ( rule__Requirement__CapabiityAssignment_4 ) ) ;
+    // InternalToscaDsl.g:6672:1: rule__Requirement__Group__4__Impl : ( ( rule__Requirement__CapabiityAssignment_4 ) ) ;
     public final void rule__Requirement__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7027:1: ( ( ( rule__Requirement__CapabiityAssignment_4 ) ) )
-            // InternalToscaDsl.g:7028:1: ( ( rule__Requirement__CapabiityAssignment_4 ) )
+            // InternalToscaDsl.g:6676:1: ( ( ( rule__Requirement__CapabiityAssignment_4 ) ) )
+            // InternalToscaDsl.g:6677:1: ( ( rule__Requirement__CapabiityAssignment_4 ) )
             {
-            // InternalToscaDsl.g:7028:1: ( ( rule__Requirement__CapabiityAssignment_4 ) )
-            // InternalToscaDsl.g:7029:2: ( rule__Requirement__CapabiityAssignment_4 )
+            // InternalToscaDsl.g:6677:1: ( ( rule__Requirement__CapabiityAssignment_4 ) )
+            // InternalToscaDsl.g:6678:2: ( rule__Requirement__CapabiityAssignment_4 )
             {
              before(grammarAccess.getRequirementAccess().getCapabiityAssignment_4()); 
-            // InternalToscaDsl.g:7030:2: ( rule__Requirement__CapabiityAssignment_4 )
-            // InternalToscaDsl.g:7030:3: rule__Requirement__CapabiityAssignment_4
+            // InternalToscaDsl.g:6679:2: ( rule__Requirement__CapabiityAssignment_4 )
+            // InternalToscaDsl.g:6679:3: rule__Requirement__CapabiityAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Requirement__CapabiityAssignment_4();
@@ -21184,16 +20127,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__5"
-    // InternalToscaDsl.g:7038:1: rule__Requirement__Group__5 : rule__Requirement__Group__5__Impl rule__Requirement__Group__6 ;
+    // InternalToscaDsl.g:6687:1: rule__Requirement__Group__5 : rule__Requirement__Group__5__Impl rule__Requirement__Group__6 ;
     public final void rule__Requirement__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7042:1: ( rule__Requirement__Group__5__Impl rule__Requirement__Group__6 )
-            // InternalToscaDsl.g:7043:2: rule__Requirement__Group__5__Impl rule__Requirement__Group__6
+            // InternalToscaDsl.g:6691:1: ( rule__Requirement__Group__5__Impl rule__Requirement__Group__6 )
+            // InternalToscaDsl.g:6692:2: rule__Requirement__Group__5__Impl rule__Requirement__Group__6
             {
-            pushFollow(FOLLOW_21);
+            pushFollow(FOLLOW_20);
             rule__Requirement__Group__5__Impl();
 
             state._fsp--;
@@ -21222,29 +20165,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__5__Impl"
-    // InternalToscaDsl.g:7050:1: rule__Requirement__Group__5__Impl : ( ( rule__Requirement__Group_5__0 )? ) ;
+    // InternalToscaDsl.g:6699:1: rule__Requirement__Group__5__Impl : ( ( rule__Requirement__Group_5__0 )? ) ;
     public final void rule__Requirement__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7054:1: ( ( ( rule__Requirement__Group_5__0 )? ) )
-            // InternalToscaDsl.g:7055:1: ( ( rule__Requirement__Group_5__0 )? )
+            // InternalToscaDsl.g:6703:1: ( ( ( rule__Requirement__Group_5__0 )? ) )
+            // InternalToscaDsl.g:6704:1: ( ( rule__Requirement__Group_5__0 )? )
             {
-            // InternalToscaDsl.g:7055:1: ( ( rule__Requirement__Group_5__0 )? )
-            // InternalToscaDsl.g:7056:2: ( rule__Requirement__Group_5__0 )?
+            // InternalToscaDsl.g:6704:1: ( ( rule__Requirement__Group_5__0 )? )
+            // InternalToscaDsl.g:6705:2: ( rule__Requirement__Group_5__0 )?
             {
              before(grammarAccess.getRequirementAccess().getGroup_5()); 
-            // InternalToscaDsl.g:7057:2: ( rule__Requirement__Group_5__0 )?
-            int alt52=2;
-            int LA52_0 = input.LA(1);
+            // InternalToscaDsl.g:6706:2: ( rule__Requirement__Group_5__0 )?
+            int alt50=2;
+            int LA50_0 = input.LA(1);
 
-            if ( (LA52_0==40) ) {
-                alt52=1;
+            if ( (LA50_0==39) ) {
+                alt50=1;
             }
-            switch (alt52) {
+            switch (alt50) {
                 case 1 :
-                    // InternalToscaDsl.g:7057:3: rule__Requirement__Group_5__0
+                    // InternalToscaDsl.g:6706:3: rule__Requirement__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Requirement__Group_5__0();
@@ -21280,14 +20223,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__6"
-    // InternalToscaDsl.g:7065:1: rule__Requirement__Group__6 : rule__Requirement__Group__6__Impl ;
+    // InternalToscaDsl.g:6714:1: rule__Requirement__Group__6 : rule__Requirement__Group__6__Impl ;
     public final void rule__Requirement__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7069:1: ( rule__Requirement__Group__6__Impl )
-            // InternalToscaDsl.g:7070:2: rule__Requirement__Group__6__Impl
+            // InternalToscaDsl.g:6718:1: ( rule__Requirement__Group__6__Impl )
+            // InternalToscaDsl.g:6719:2: rule__Requirement__Group__6__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Requirement__Group__6__Impl();
@@ -21313,17 +20256,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group__6__Impl"
-    // InternalToscaDsl.g:7076:1: rule__Requirement__Group__6__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:6725:1: rule__Requirement__Group__6__Impl : ( '}' ) ;
     public final void rule__Requirement__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7080:1: ( ( '}' ) )
-            // InternalToscaDsl.g:7081:1: ( '}' )
+            // InternalToscaDsl.g:6729:1: ( ( '}' ) )
+            // InternalToscaDsl.g:6730:1: ( '}' )
             {
-            // InternalToscaDsl.g:7081:1: ( '}' )
-            // InternalToscaDsl.g:7082:2: '}'
+            // InternalToscaDsl.g:6730:1: ( '}' )
+            // InternalToscaDsl.g:6731:2: '}'
             {
              before(grammarAccess.getRequirementAccess().getRightCurlyBracketKeyword_6()); 
             match(input,13,FOLLOW_2); 
@@ -21350,14 +20293,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group_5__0"
-    // InternalToscaDsl.g:7092:1: rule__Requirement__Group_5__0 : rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1 ;
+    // InternalToscaDsl.g:6741:1: rule__Requirement__Group_5__0 : rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1 ;
     public final void rule__Requirement__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7096:1: ( rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1 )
-            // InternalToscaDsl.g:7097:2: rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1
+            // InternalToscaDsl.g:6745:1: ( rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1 )
+            // InternalToscaDsl.g:6746:2: rule__Requirement__Group_5__0__Impl rule__Requirement__Group_5__1
             {
             pushFollow(FOLLOW_4);
             rule__Requirement__Group_5__0__Impl();
@@ -21388,20 +20331,20 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group_5__0__Impl"
-    // InternalToscaDsl.g:7104:1: rule__Requirement__Group_5__0__Impl : ( ',\\n\"node\" :' ) ;
+    // InternalToscaDsl.g:6753:1: rule__Requirement__Group_5__0__Impl : ( ',\\n\"node\" :' ) ;
     public final void rule__Requirement__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7108:1: ( ( ',\\n\"node\" :' ) )
-            // InternalToscaDsl.g:7109:1: ( ',\\n\"node\" :' )
+            // InternalToscaDsl.g:6757:1: ( ( ',\\n\"node\" :' ) )
+            // InternalToscaDsl.g:6758:1: ( ',\\n\"node\" :' )
             {
-            // InternalToscaDsl.g:7109:1: ( ',\\n\"node\" :' )
-            // InternalToscaDsl.g:7110:2: ',\\n\"node\" :'
+            // InternalToscaDsl.g:6758:1: ( ',\\n\"node\" :' )
+            // InternalToscaDsl.g:6759:2: ',\\n\"node\" :'
             {
              before(grammarAccess.getRequirementAccess().getNodeKeyword_5_0()); 
-            match(input,40,FOLLOW_2); 
+            match(input,39,FOLLOW_2); 
              after(grammarAccess.getRequirementAccess().getNodeKeyword_5_0()); 
 
             }
@@ -21425,14 +20368,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group_5__1"
-    // InternalToscaDsl.g:7119:1: rule__Requirement__Group_5__1 : rule__Requirement__Group_5__1__Impl ;
+    // InternalToscaDsl.g:6768:1: rule__Requirement__Group_5__1 : rule__Requirement__Group_5__1__Impl ;
     public final void rule__Requirement__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7123:1: ( rule__Requirement__Group_5__1__Impl )
-            // InternalToscaDsl.g:7124:2: rule__Requirement__Group_5__1__Impl
+            // InternalToscaDsl.g:6772:1: ( rule__Requirement__Group_5__1__Impl )
+            // InternalToscaDsl.g:6773:2: rule__Requirement__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Requirement__Group_5__1__Impl();
@@ -21458,21 +20401,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Group_5__1__Impl"
-    // InternalToscaDsl.g:7130:1: rule__Requirement__Group_5__1__Impl : ( ( rule__Requirement__NodeAssignment_5_1 ) ) ;
+    // InternalToscaDsl.g:6779:1: rule__Requirement__Group_5__1__Impl : ( ( rule__Requirement__NodeAssignment_5_1 ) ) ;
     public final void rule__Requirement__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7134:1: ( ( ( rule__Requirement__NodeAssignment_5_1 ) ) )
-            // InternalToscaDsl.g:7135:1: ( ( rule__Requirement__NodeAssignment_5_1 ) )
+            // InternalToscaDsl.g:6783:1: ( ( ( rule__Requirement__NodeAssignment_5_1 ) ) )
+            // InternalToscaDsl.g:6784:1: ( ( rule__Requirement__NodeAssignment_5_1 ) )
             {
-            // InternalToscaDsl.g:7135:1: ( ( rule__Requirement__NodeAssignment_5_1 ) )
-            // InternalToscaDsl.g:7136:2: ( rule__Requirement__NodeAssignment_5_1 )
+            // InternalToscaDsl.g:6784:1: ( ( rule__Requirement__NodeAssignment_5_1 ) )
+            // InternalToscaDsl.g:6785:2: ( rule__Requirement__NodeAssignment_5_1 )
             {
              before(grammarAccess.getRequirementAccess().getNodeAssignment_5_1()); 
-            // InternalToscaDsl.g:7137:2: ( rule__Requirement__NodeAssignment_5_1 )
-            // InternalToscaDsl.g:7137:3: rule__Requirement__NodeAssignment_5_1
+            // InternalToscaDsl.g:6786:2: ( rule__Requirement__NodeAssignment_5_1 )
+            // InternalToscaDsl.g:6786:3: rule__Requirement__NodeAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Requirement__NodeAssignment_5_1();
@@ -21505,14 +20448,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__0"
-    // InternalToscaDsl.g:7146:1: rule__Capability__Group__0 : rule__Capability__Group__0__Impl rule__Capability__Group__1 ;
+    // InternalToscaDsl.g:6795:1: rule__Capability__Group__0 : rule__Capability__Group__0__Impl rule__Capability__Group__1 ;
     public final void rule__Capability__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7150:1: ( rule__Capability__Group__0__Impl rule__Capability__Group__1 )
-            // InternalToscaDsl.g:7151:2: rule__Capability__Group__0__Impl rule__Capability__Group__1
+            // InternalToscaDsl.g:6799:1: ( rule__Capability__Group__0__Impl rule__Capability__Group__1 )
+            // InternalToscaDsl.g:6800:2: rule__Capability__Group__0__Impl rule__Capability__Group__1
             {
             pushFollow(FOLLOW_11);
             rule__Capability__Group__0__Impl();
@@ -21543,21 +20486,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__0__Impl"
-    // InternalToscaDsl.g:7158:1: rule__Capability__Group__0__Impl : ( ( rule__Capability__Capability_nameAssignment_0 ) ) ;
+    // InternalToscaDsl.g:6807:1: rule__Capability__Group__0__Impl : ( ( rule__Capability__Capability_nameAssignment_0 ) ) ;
     public final void rule__Capability__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7162:1: ( ( ( rule__Capability__Capability_nameAssignment_0 ) ) )
-            // InternalToscaDsl.g:7163:1: ( ( rule__Capability__Capability_nameAssignment_0 ) )
+            // InternalToscaDsl.g:6811:1: ( ( ( rule__Capability__Capability_nameAssignment_0 ) ) )
+            // InternalToscaDsl.g:6812:1: ( ( rule__Capability__Capability_nameAssignment_0 ) )
             {
-            // InternalToscaDsl.g:7163:1: ( ( rule__Capability__Capability_nameAssignment_0 ) )
-            // InternalToscaDsl.g:7164:2: ( rule__Capability__Capability_nameAssignment_0 )
+            // InternalToscaDsl.g:6812:1: ( ( rule__Capability__Capability_nameAssignment_0 ) )
+            // InternalToscaDsl.g:6813:2: ( rule__Capability__Capability_nameAssignment_0 )
             {
              before(grammarAccess.getCapabilityAccess().getCapability_nameAssignment_0()); 
-            // InternalToscaDsl.g:7165:2: ( rule__Capability__Capability_nameAssignment_0 )
-            // InternalToscaDsl.g:7165:3: rule__Capability__Capability_nameAssignment_0
+            // InternalToscaDsl.g:6814:2: ( rule__Capability__Capability_nameAssignment_0 )
+            // InternalToscaDsl.g:6814:3: rule__Capability__Capability_nameAssignment_0
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Capability_nameAssignment_0();
@@ -21590,14 +20533,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__1"
-    // InternalToscaDsl.g:7173:1: rule__Capability__Group__1 : rule__Capability__Group__1__Impl rule__Capability__Group__2 ;
+    // InternalToscaDsl.g:6822:1: rule__Capability__Group__1 : rule__Capability__Group__1__Impl rule__Capability__Group__2 ;
     public final void rule__Capability__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7177:1: ( rule__Capability__Group__1__Impl rule__Capability__Group__2 )
-            // InternalToscaDsl.g:7178:2: rule__Capability__Group__1__Impl rule__Capability__Group__2
+            // InternalToscaDsl.g:6826:1: ( rule__Capability__Group__1__Impl rule__Capability__Group__2 )
+            // InternalToscaDsl.g:6827:2: rule__Capability__Group__1__Impl rule__Capability__Group__2
             {
             pushFollow(FOLLOW_9);
             rule__Capability__Group__1__Impl();
@@ -21628,17 +20571,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__1__Impl"
-    // InternalToscaDsl.g:7185:1: rule__Capability__Group__1__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:6834:1: rule__Capability__Group__1__Impl : ( ':' ) ;
     public final void rule__Capability__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7189:1: ( ( ':' ) )
-            // InternalToscaDsl.g:7190:1: ( ':' )
+            // InternalToscaDsl.g:6838:1: ( ( ':' ) )
+            // InternalToscaDsl.g:6839:1: ( ':' )
             {
-            // InternalToscaDsl.g:7190:1: ( ':' )
-            // InternalToscaDsl.g:7191:2: ':'
+            // InternalToscaDsl.g:6839:1: ( ':' )
+            // InternalToscaDsl.g:6840:2: ':'
             {
              before(grammarAccess.getCapabilityAccess().getColonKeyword_1()); 
             match(input,25,FOLLOW_2); 
@@ -21665,14 +20608,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__2"
-    // InternalToscaDsl.g:7200:1: rule__Capability__Group__2 : rule__Capability__Group__2__Impl rule__Capability__Group__3 ;
+    // InternalToscaDsl.g:6849:1: rule__Capability__Group__2 : rule__Capability__Group__2__Impl rule__Capability__Group__3 ;
     public final void rule__Capability__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7204:1: ( rule__Capability__Group__2__Impl rule__Capability__Group__3 )
-            // InternalToscaDsl.g:7205:2: rule__Capability__Group__2__Impl rule__Capability__Group__3
+            // InternalToscaDsl.g:6853:1: ( rule__Capability__Group__2__Impl rule__Capability__Group__3 )
+            // InternalToscaDsl.g:6854:2: rule__Capability__Group__2__Impl rule__Capability__Group__3
             {
             pushFollow(FOLLOW_12);
             rule__Capability__Group__2__Impl();
@@ -21703,17 +20646,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__2__Impl"
-    // InternalToscaDsl.g:7212:1: rule__Capability__Group__2__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:6861:1: rule__Capability__Group__2__Impl : ( '{' ) ;
     public final void rule__Capability__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7216:1: ( ( '{' ) )
-            // InternalToscaDsl.g:7217:1: ( '{' )
+            // InternalToscaDsl.g:6865:1: ( ( '{' ) )
+            // InternalToscaDsl.g:6866:1: ( '{' )
             {
-            // InternalToscaDsl.g:7217:1: ( '{' )
-            // InternalToscaDsl.g:7218:2: '{'
+            // InternalToscaDsl.g:6866:1: ( '{' )
+            // InternalToscaDsl.g:6867:2: '{'
             {
              before(grammarAccess.getCapabilityAccess().getLeftCurlyBracketKeyword_2()); 
             match(input,11,FOLLOW_2); 
@@ -21740,14 +20683,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__3"
-    // InternalToscaDsl.g:7227:1: rule__Capability__Group__3 : rule__Capability__Group__3__Impl rule__Capability__Group__4 ;
+    // InternalToscaDsl.g:6876:1: rule__Capability__Group__3 : rule__Capability__Group__3__Impl rule__Capability__Group__4 ;
     public final void rule__Capability__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7231:1: ( rule__Capability__Group__3__Impl rule__Capability__Group__4 )
-            // InternalToscaDsl.g:7232:2: rule__Capability__Group__3__Impl rule__Capability__Group__4
+            // InternalToscaDsl.g:6880:1: ( rule__Capability__Group__3__Impl rule__Capability__Group__4 )
+            // InternalToscaDsl.g:6881:2: rule__Capability__Group__3__Impl rule__Capability__Group__4
             {
             pushFollow(FOLLOW_4);
             rule__Capability__Group__3__Impl();
@@ -21778,17 +20721,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__3__Impl"
-    // InternalToscaDsl.g:7239:1: rule__Capability__Group__3__Impl : ( '\"type\" :' ) ;
+    // InternalToscaDsl.g:6888:1: rule__Capability__Group__3__Impl : ( '\"type\" :' ) ;
     public final void rule__Capability__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7243:1: ( ( '\"type\" :' ) )
-            // InternalToscaDsl.g:7244:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:6892:1: ( ( '\"type\" :' ) )
+            // InternalToscaDsl.g:6893:1: ( '\"type\" :' )
             {
-            // InternalToscaDsl.g:7244:1: ( '\"type\" :' )
-            // InternalToscaDsl.g:7245:2: '\"type\" :'
+            // InternalToscaDsl.g:6893:1: ( '\"type\" :' )
+            // InternalToscaDsl.g:6894:2: '\"type\" :'
             {
              before(grammarAccess.getCapabilityAccess().getTypeKeyword_3()); 
             match(input,26,FOLLOW_2); 
@@ -21815,16 +20758,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__4"
-    // InternalToscaDsl.g:7254:1: rule__Capability__Group__4 : rule__Capability__Group__4__Impl rule__Capability__Group__5 ;
+    // InternalToscaDsl.g:6903:1: rule__Capability__Group__4 : rule__Capability__Group__4__Impl rule__Capability__Group__5 ;
     public final void rule__Capability__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7258:1: ( rule__Capability__Group__4__Impl rule__Capability__Group__5 )
-            // InternalToscaDsl.g:7259:2: rule__Capability__Group__4__Impl rule__Capability__Group__5
+            // InternalToscaDsl.g:6907:1: ( rule__Capability__Group__4__Impl rule__Capability__Group__5 )
+            // InternalToscaDsl.g:6908:2: rule__Capability__Group__4__Impl rule__Capability__Group__5
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_21);
             rule__Capability__Group__4__Impl();
 
             state._fsp--;
@@ -21853,21 +20796,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__4__Impl"
-    // InternalToscaDsl.g:7266:1: rule__Capability__Group__4__Impl : ( ( rule__Capability__TypeAssignment_4 ) ) ;
+    // InternalToscaDsl.g:6915:1: rule__Capability__Group__4__Impl : ( ( rule__Capability__TypeAssignment_4 ) ) ;
     public final void rule__Capability__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7270:1: ( ( ( rule__Capability__TypeAssignment_4 ) ) )
-            // InternalToscaDsl.g:7271:1: ( ( rule__Capability__TypeAssignment_4 ) )
+            // InternalToscaDsl.g:6919:1: ( ( ( rule__Capability__TypeAssignment_4 ) ) )
+            // InternalToscaDsl.g:6920:1: ( ( rule__Capability__TypeAssignment_4 ) )
             {
-            // InternalToscaDsl.g:7271:1: ( ( rule__Capability__TypeAssignment_4 ) )
-            // InternalToscaDsl.g:7272:2: ( rule__Capability__TypeAssignment_4 )
+            // InternalToscaDsl.g:6920:1: ( ( rule__Capability__TypeAssignment_4 ) )
+            // InternalToscaDsl.g:6921:2: ( rule__Capability__TypeAssignment_4 )
             {
              before(grammarAccess.getCapabilityAccess().getTypeAssignment_4()); 
-            // InternalToscaDsl.g:7273:2: ( rule__Capability__TypeAssignment_4 )
-            // InternalToscaDsl.g:7273:3: rule__Capability__TypeAssignment_4
+            // InternalToscaDsl.g:6922:2: ( rule__Capability__TypeAssignment_4 )
+            // InternalToscaDsl.g:6922:3: rule__Capability__TypeAssignment_4
             {
             pushFollow(FOLLOW_2);
             rule__Capability__TypeAssignment_4();
@@ -21900,16 +20843,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__5"
-    // InternalToscaDsl.g:7281:1: rule__Capability__Group__5 : rule__Capability__Group__5__Impl rule__Capability__Group__6 ;
+    // InternalToscaDsl.g:6930:1: rule__Capability__Group__5 : rule__Capability__Group__5__Impl rule__Capability__Group__6 ;
     public final void rule__Capability__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7285:1: ( rule__Capability__Group__5__Impl rule__Capability__Group__6 )
-            // InternalToscaDsl.g:7286:2: rule__Capability__Group__5__Impl rule__Capability__Group__6
+            // InternalToscaDsl.g:6934:1: ( rule__Capability__Group__5__Impl rule__Capability__Group__6 )
+            // InternalToscaDsl.g:6935:2: rule__Capability__Group__5__Impl rule__Capability__Group__6
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_21);
             rule__Capability__Group__5__Impl();
 
             state._fsp--;
@@ -21938,29 +20881,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__5__Impl"
-    // InternalToscaDsl.g:7293:1: rule__Capability__Group__5__Impl : ( ( rule__Capability__Group_5__0 )? ) ;
+    // InternalToscaDsl.g:6942:1: rule__Capability__Group__5__Impl : ( ( rule__Capability__Group_5__0 )? ) ;
     public final void rule__Capability__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7297:1: ( ( ( rule__Capability__Group_5__0 )? ) )
-            // InternalToscaDsl.g:7298:1: ( ( rule__Capability__Group_5__0 )? )
+            // InternalToscaDsl.g:6946:1: ( ( ( rule__Capability__Group_5__0 )? ) )
+            // InternalToscaDsl.g:6947:1: ( ( rule__Capability__Group_5__0 )? )
             {
-            // InternalToscaDsl.g:7298:1: ( ( rule__Capability__Group_5__0 )? )
-            // InternalToscaDsl.g:7299:2: ( rule__Capability__Group_5__0 )?
+            // InternalToscaDsl.g:6947:1: ( ( rule__Capability__Group_5__0 )? )
+            // InternalToscaDsl.g:6948:2: ( rule__Capability__Group_5__0 )?
             {
              before(grammarAccess.getCapabilityAccess().getGroup_5()); 
-            // InternalToscaDsl.g:7300:2: ( rule__Capability__Group_5__0 )?
-            int alt53=2;
-            int LA53_0 = input.LA(1);
+            // InternalToscaDsl.g:6949:2: ( rule__Capability__Group_5__0 )?
+            int alt51=2;
+            int LA51_0 = input.LA(1);
 
-            if ( (LA53_0==14) ) {
-                alt53=1;
+            if ( (LA51_0==14) ) {
+                alt51=1;
             }
-            switch (alt53) {
+            switch (alt51) {
                 case 1 :
-                    // InternalToscaDsl.g:7300:3: rule__Capability__Group_5__0
+                    // InternalToscaDsl.g:6949:3: rule__Capability__Group_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Capability__Group_5__0();
@@ -21996,16 +20939,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__6"
-    // InternalToscaDsl.g:7308:1: rule__Capability__Group__6 : rule__Capability__Group__6__Impl rule__Capability__Group__7 ;
+    // InternalToscaDsl.g:6957:1: rule__Capability__Group__6 : rule__Capability__Group__6__Impl rule__Capability__Group__7 ;
     public final void rule__Capability__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7312:1: ( rule__Capability__Group__6__Impl rule__Capability__Group__7 )
-            // InternalToscaDsl.g:7313:2: rule__Capability__Group__6__Impl rule__Capability__Group__7
+            // InternalToscaDsl.g:6961:1: ( rule__Capability__Group__6__Impl rule__Capability__Group__7 )
+            // InternalToscaDsl.g:6962:2: rule__Capability__Group__6__Impl rule__Capability__Group__7
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_21);
             rule__Capability__Group__6__Impl();
 
             state._fsp--;
@@ -22034,29 +20977,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__6__Impl"
-    // InternalToscaDsl.g:7320:1: rule__Capability__Group__6__Impl : ( ( rule__Capability__Group_6__0 )? ) ;
+    // InternalToscaDsl.g:6969:1: rule__Capability__Group__6__Impl : ( ( rule__Capability__Group_6__0 )? ) ;
     public final void rule__Capability__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7324:1: ( ( ( rule__Capability__Group_6__0 )? ) )
-            // InternalToscaDsl.g:7325:1: ( ( rule__Capability__Group_6__0 )? )
+            // InternalToscaDsl.g:6973:1: ( ( ( rule__Capability__Group_6__0 )? ) )
+            // InternalToscaDsl.g:6974:1: ( ( rule__Capability__Group_6__0 )? )
             {
-            // InternalToscaDsl.g:7325:1: ( ( rule__Capability__Group_6__0 )? )
-            // InternalToscaDsl.g:7326:2: ( rule__Capability__Group_6__0 )?
+            // InternalToscaDsl.g:6974:1: ( ( rule__Capability__Group_6__0 )? )
+            // InternalToscaDsl.g:6975:2: ( rule__Capability__Group_6__0 )?
             {
              before(grammarAccess.getCapabilityAccess().getGroup_6()); 
-            // InternalToscaDsl.g:7327:2: ( rule__Capability__Group_6__0 )?
-            int alt54=2;
-            int LA54_0 = input.LA(1);
+            // InternalToscaDsl.g:6976:2: ( rule__Capability__Group_6__0 )?
+            int alt52=2;
+            int LA52_0 = input.LA(1);
 
-            if ( (LA54_0==29) ) {
-                alt54=1;
+            if ( (LA52_0==29) ) {
+                alt52=1;
             }
-            switch (alt54) {
+            switch (alt52) {
                 case 1 :
-                    // InternalToscaDsl.g:7327:3: rule__Capability__Group_6__0
+                    // InternalToscaDsl.g:6976:3: rule__Capability__Group_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Capability__Group_6__0();
@@ -22092,16 +21035,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__7"
-    // InternalToscaDsl.g:7335:1: rule__Capability__Group__7 : rule__Capability__Group__7__Impl rule__Capability__Group__8 ;
+    // InternalToscaDsl.g:6984:1: rule__Capability__Group__7 : rule__Capability__Group__7__Impl rule__Capability__Group__8 ;
     public final void rule__Capability__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7339:1: ( rule__Capability__Group__7__Impl rule__Capability__Group__8 )
-            // InternalToscaDsl.g:7340:2: rule__Capability__Group__7__Impl rule__Capability__Group__8
+            // InternalToscaDsl.g:6988:1: ( rule__Capability__Group__7__Impl rule__Capability__Group__8 )
+            // InternalToscaDsl.g:6989:2: rule__Capability__Group__7__Impl rule__Capability__Group__8
             {
-            pushFollow(FOLLOW_22);
+            pushFollow(FOLLOW_21);
             rule__Capability__Group__7__Impl();
 
             state._fsp--;
@@ -22130,29 +21073,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__7__Impl"
-    // InternalToscaDsl.g:7347:1: rule__Capability__Group__7__Impl : ( ( rule__Capability__Group_7__0 )? ) ;
+    // InternalToscaDsl.g:6996:1: rule__Capability__Group__7__Impl : ( ( rule__Capability__Group_7__0 )? ) ;
     public final void rule__Capability__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7351:1: ( ( ( rule__Capability__Group_7__0 )? ) )
-            // InternalToscaDsl.g:7352:1: ( ( rule__Capability__Group_7__0 )? )
+            // InternalToscaDsl.g:7000:1: ( ( ( rule__Capability__Group_7__0 )? ) )
+            // InternalToscaDsl.g:7001:1: ( ( rule__Capability__Group_7__0 )? )
             {
-            // InternalToscaDsl.g:7352:1: ( ( rule__Capability__Group_7__0 )? )
-            // InternalToscaDsl.g:7353:2: ( rule__Capability__Group_7__0 )?
+            // InternalToscaDsl.g:7001:1: ( ( rule__Capability__Group_7__0 )? )
+            // InternalToscaDsl.g:7002:2: ( rule__Capability__Group_7__0 )?
             {
              before(grammarAccess.getCapabilityAccess().getGroup_7()); 
-            // InternalToscaDsl.g:7354:2: ( rule__Capability__Group_7__0 )?
-            int alt55=2;
-            int LA55_0 = input.LA(1);
+            // InternalToscaDsl.g:7003:2: ( rule__Capability__Group_7__0 )?
+            int alt53=2;
+            int LA53_0 = input.LA(1);
 
-            if ( (LA55_0==30) ) {
-                alt55=1;
+            if ( (LA53_0==30) ) {
+                alt53=1;
             }
-            switch (alt55) {
+            switch (alt53) {
                 case 1 :
-                    // InternalToscaDsl.g:7354:3: rule__Capability__Group_7__0
+                    // InternalToscaDsl.g:7003:3: rule__Capability__Group_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Capability__Group_7__0();
@@ -22188,14 +21131,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__8"
-    // InternalToscaDsl.g:7362:1: rule__Capability__Group__8 : rule__Capability__Group__8__Impl ;
+    // InternalToscaDsl.g:7011:1: rule__Capability__Group__8 : rule__Capability__Group__8__Impl ;
     public final void rule__Capability__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7366:1: ( rule__Capability__Group__8__Impl )
-            // InternalToscaDsl.g:7367:2: rule__Capability__Group__8__Impl
+            // InternalToscaDsl.g:7015:1: ( rule__Capability__Group__8__Impl )
+            // InternalToscaDsl.g:7016:2: rule__Capability__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group__8__Impl();
@@ -22221,17 +21164,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group__8__Impl"
-    // InternalToscaDsl.g:7373:1: rule__Capability__Group__8__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:7022:1: rule__Capability__Group__8__Impl : ( '}' ) ;
     public final void rule__Capability__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7377:1: ( ( '}' ) )
-            // InternalToscaDsl.g:7378:1: ( '}' )
+            // InternalToscaDsl.g:7026:1: ( ( '}' ) )
+            // InternalToscaDsl.g:7027:1: ( '}' )
             {
-            // InternalToscaDsl.g:7378:1: ( '}' )
-            // InternalToscaDsl.g:7379:2: '}'
+            // InternalToscaDsl.g:7027:1: ( '}' )
+            // InternalToscaDsl.g:7028:2: '}'
             {
              before(grammarAccess.getCapabilityAccess().getRightCurlyBracketKeyword_8()); 
             match(input,13,FOLLOW_2); 
@@ -22258,14 +21201,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_5__0"
-    // InternalToscaDsl.g:7389:1: rule__Capability__Group_5__0 : rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1 ;
+    // InternalToscaDsl.g:7038:1: rule__Capability__Group_5__0 : rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1 ;
     public final void rule__Capability__Group_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7393:1: ( rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1 )
-            // InternalToscaDsl.g:7394:2: rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1
+            // InternalToscaDsl.g:7042:1: ( rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1 )
+            // InternalToscaDsl.g:7043:2: rule__Capability__Group_5__0__Impl rule__Capability__Group_5__1
             {
             pushFollow(FOLLOW_4);
             rule__Capability__Group_5__0__Impl();
@@ -22296,17 +21239,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_5__0__Impl"
-    // InternalToscaDsl.g:7401:1: rule__Capability__Group_5__0__Impl : ( ',\\n\"description\" :' ) ;
+    // InternalToscaDsl.g:7050:1: rule__Capability__Group_5__0__Impl : ( ',\\n\"description\" :' ) ;
     public final void rule__Capability__Group_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7405:1: ( ( ',\\n\"description\" :' ) )
-            // InternalToscaDsl.g:7406:1: ( ',\\n\"description\" :' )
+            // InternalToscaDsl.g:7054:1: ( ( ',\\n\"description\" :' ) )
+            // InternalToscaDsl.g:7055:1: ( ',\\n\"description\" :' )
             {
-            // InternalToscaDsl.g:7406:1: ( ',\\n\"description\" :' )
-            // InternalToscaDsl.g:7407:2: ',\\n\"description\" :'
+            // InternalToscaDsl.g:7055:1: ( ',\\n\"description\" :' )
+            // InternalToscaDsl.g:7056:2: ',\\n\"description\" :'
             {
              before(grammarAccess.getCapabilityAccess().getDescriptionKeyword_5_0()); 
             match(input,14,FOLLOW_2); 
@@ -22333,14 +21276,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_5__1"
-    // InternalToscaDsl.g:7416:1: rule__Capability__Group_5__1 : rule__Capability__Group_5__1__Impl ;
+    // InternalToscaDsl.g:7065:1: rule__Capability__Group_5__1 : rule__Capability__Group_5__1__Impl ;
     public final void rule__Capability__Group_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7420:1: ( rule__Capability__Group_5__1__Impl )
-            // InternalToscaDsl.g:7421:2: rule__Capability__Group_5__1__Impl
+            // InternalToscaDsl.g:7069:1: ( rule__Capability__Group_5__1__Impl )
+            // InternalToscaDsl.g:7070:2: rule__Capability__Group_5__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group_5__1__Impl();
@@ -22366,21 +21309,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_5__1__Impl"
-    // InternalToscaDsl.g:7427:1: rule__Capability__Group_5__1__Impl : ( ( rule__Capability__DescriptionAssignment_5_1 ) ) ;
+    // InternalToscaDsl.g:7076:1: rule__Capability__Group_5__1__Impl : ( ( rule__Capability__DescriptionAssignment_5_1 ) ) ;
     public final void rule__Capability__Group_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7431:1: ( ( ( rule__Capability__DescriptionAssignment_5_1 ) ) )
-            // InternalToscaDsl.g:7432:1: ( ( rule__Capability__DescriptionAssignment_5_1 ) )
+            // InternalToscaDsl.g:7080:1: ( ( ( rule__Capability__DescriptionAssignment_5_1 ) ) )
+            // InternalToscaDsl.g:7081:1: ( ( rule__Capability__DescriptionAssignment_5_1 ) )
             {
-            // InternalToscaDsl.g:7432:1: ( ( rule__Capability__DescriptionAssignment_5_1 ) )
-            // InternalToscaDsl.g:7433:2: ( rule__Capability__DescriptionAssignment_5_1 )
+            // InternalToscaDsl.g:7081:1: ( ( rule__Capability__DescriptionAssignment_5_1 ) )
+            // InternalToscaDsl.g:7082:2: ( rule__Capability__DescriptionAssignment_5_1 )
             {
              before(grammarAccess.getCapabilityAccess().getDescriptionAssignment_5_1()); 
-            // InternalToscaDsl.g:7434:2: ( rule__Capability__DescriptionAssignment_5_1 )
-            // InternalToscaDsl.g:7434:3: rule__Capability__DescriptionAssignment_5_1
+            // InternalToscaDsl.g:7083:2: ( rule__Capability__DescriptionAssignment_5_1 )
+            // InternalToscaDsl.g:7083:3: rule__Capability__DescriptionAssignment_5_1
             {
             pushFollow(FOLLOW_2);
             rule__Capability__DescriptionAssignment_5_1();
@@ -22413,14 +21356,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__0"
-    // InternalToscaDsl.g:7443:1: rule__Capability__Group_6__0 : rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1 ;
+    // InternalToscaDsl.g:7092:1: rule__Capability__Group_6__0 : rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1 ;
     public final void rule__Capability__Group_6__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7447:1: ( rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1 )
-            // InternalToscaDsl.g:7448:2: rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1
+            // InternalToscaDsl.g:7096:1: ( rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1 )
+            // InternalToscaDsl.g:7097:2: rule__Capability__Group_6__0__Impl rule__Capability__Group_6__1
             {
             pushFollow(FOLLOW_9);
             rule__Capability__Group_6__0__Impl();
@@ -22451,17 +21394,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__0__Impl"
-    // InternalToscaDsl.g:7455:1: rule__Capability__Group_6__0__Impl : ( ',\\n\"properties\" :' ) ;
+    // InternalToscaDsl.g:7104:1: rule__Capability__Group_6__0__Impl : ( ',\\n\"properties\" :' ) ;
     public final void rule__Capability__Group_6__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7459:1: ( ( ',\\n\"properties\" :' ) )
-            // InternalToscaDsl.g:7460:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:7108:1: ( ( ',\\n\"properties\" :' ) )
+            // InternalToscaDsl.g:7109:1: ( ',\\n\"properties\" :' )
             {
-            // InternalToscaDsl.g:7460:1: ( ',\\n\"properties\" :' )
-            // InternalToscaDsl.g:7461:2: ',\\n\"properties\" :'
+            // InternalToscaDsl.g:7109:1: ( ',\\n\"properties\" :' )
+            // InternalToscaDsl.g:7110:2: ',\\n\"properties\" :'
             {
              before(grammarAccess.getCapabilityAccess().getPropertiesKeyword_6_0()); 
             match(input,29,FOLLOW_2); 
@@ -22488,16 +21431,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__1"
-    // InternalToscaDsl.g:7470:1: rule__Capability__Group_6__1 : rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2 ;
+    // InternalToscaDsl.g:7119:1: rule__Capability__Group_6__1 : rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2 ;
     public final void rule__Capability__Group_6__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7474:1: ( rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2 )
-            // InternalToscaDsl.g:7475:2: rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2
+            // InternalToscaDsl.g:7123:1: ( rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2 )
+            // InternalToscaDsl.g:7124:2: rule__Capability__Group_6__1__Impl rule__Capability__Group_6__2
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__Capability__Group_6__1__Impl();
 
             state._fsp--;
@@ -22526,17 +21469,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__1__Impl"
-    // InternalToscaDsl.g:7482:1: rule__Capability__Group_6__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:7131:1: rule__Capability__Group_6__1__Impl : ( '{' ) ;
     public final void rule__Capability__Group_6__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7486:1: ( ( '{' ) )
-            // InternalToscaDsl.g:7487:1: ( '{' )
+            // InternalToscaDsl.g:7135:1: ( ( '{' ) )
+            // InternalToscaDsl.g:7136:1: ( '{' )
             {
-            // InternalToscaDsl.g:7487:1: ( '{' )
-            // InternalToscaDsl.g:7488:2: '{'
+            // InternalToscaDsl.g:7136:1: ( '{' )
+            // InternalToscaDsl.g:7137:2: '{'
             {
              before(grammarAccess.getCapabilityAccess().getLeftCurlyBracketKeyword_6_1()); 
             match(input,11,FOLLOW_2); 
@@ -22563,14 +21506,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__2"
-    // InternalToscaDsl.g:7497:1: rule__Capability__Group_6__2 : rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3 ;
+    // InternalToscaDsl.g:7146:1: rule__Capability__Group_6__2 : rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3 ;
     public final void rule__Capability__Group_6__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7501:1: ( rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3 )
-            // InternalToscaDsl.g:7502:2: rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3
+            // InternalToscaDsl.g:7150:1: ( rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3 )
+            // InternalToscaDsl.g:7151:2: rule__Capability__Group_6__2__Impl rule__Capability__Group_6__3
             {
             pushFollow(FOLLOW_10);
             rule__Capability__Group_6__2__Impl();
@@ -22601,21 +21544,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__2__Impl"
-    // InternalToscaDsl.g:7509:1: rule__Capability__Group_6__2__Impl : ( ( rule__Capability__PropertiesAssignment_6_2 ) ) ;
+    // InternalToscaDsl.g:7158:1: rule__Capability__Group_6__2__Impl : ( ( rule__Capability__PropertiesAssignment_6_2 ) ) ;
     public final void rule__Capability__Group_6__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7513:1: ( ( ( rule__Capability__PropertiesAssignment_6_2 ) ) )
-            // InternalToscaDsl.g:7514:1: ( ( rule__Capability__PropertiesAssignment_6_2 ) )
+            // InternalToscaDsl.g:7162:1: ( ( ( rule__Capability__PropertiesAssignment_6_2 ) ) )
+            // InternalToscaDsl.g:7163:1: ( ( rule__Capability__PropertiesAssignment_6_2 ) )
             {
-            // InternalToscaDsl.g:7514:1: ( ( rule__Capability__PropertiesAssignment_6_2 ) )
-            // InternalToscaDsl.g:7515:2: ( rule__Capability__PropertiesAssignment_6_2 )
+            // InternalToscaDsl.g:7163:1: ( ( rule__Capability__PropertiesAssignment_6_2 ) )
+            // InternalToscaDsl.g:7164:2: ( rule__Capability__PropertiesAssignment_6_2 )
             {
              before(grammarAccess.getCapabilityAccess().getPropertiesAssignment_6_2()); 
-            // InternalToscaDsl.g:7516:2: ( rule__Capability__PropertiesAssignment_6_2 )
-            // InternalToscaDsl.g:7516:3: rule__Capability__PropertiesAssignment_6_2
+            // InternalToscaDsl.g:7165:2: ( rule__Capability__PropertiesAssignment_6_2 )
+            // InternalToscaDsl.g:7165:3: rule__Capability__PropertiesAssignment_6_2
             {
             pushFollow(FOLLOW_2);
             rule__Capability__PropertiesAssignment_6_2();
@@ -22648,14 +21591,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__3"
-    // InternalToscaDsl.g:7524:1: rule__Capability__Group_6__3 : rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4 ;
+    // InternalToscaDsl.g:7173:1: rule__Capability__Group_6__3 : rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4 ;
     public final void rule__Capability__Group_6__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7528:1: ( rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4 )
-            // InternalToscaDsl.g:7529:2: rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4
+            // InternalToscaDsl.g:7177:1: ( rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4 )
+            // InternalToscaDsl.g:7178:2: rule__Capability__Group_6__3__Impl rule__Capability__Group_6__4
             {
             pushFollow(FOLLOW_10);
             rule__Capability__Group_6__3__Impl();
@@ -22686,33 +21629,33 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__3__Impl"
-    // InternalToscaDsl.g:7536:1: rule__Capability__Group_6__3__Impl : ( ( rule__Capability__Group_6_3__0 )* ) ;
+    // InternalToscaDsl.g:7185:1: rule__Capability__Group_6__3__Impl : ( ( rule__Capability__Group_6_3__0 )* ) ;
     public final void rule__Capability__Group_6__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7540:1: ( ( ( rule__Capability__Group_6_3__0 )* ) )
-            // InternalToscaDsl.g:7541:1: ( ( rule__Capability__Group_6_3__0 )* )
+            // InternalToscaDsl.g:7189:1: ( ( ( rule__Capability__Group_6_3__0 )* ) )
+            // InternalToscaDsl.g:7190:1: ( ( rule__Capability__Group_6_3__0 )* )
             {
-            // InternalToscaDsl.g:7541:1: ( ( rule__Capability__Group_6_3__0 )* )
-            // InternalToscaDsl.g:7542:2: ( rule__Capability__Group_6_3__0 )*
+            // InternalToscaDsl.g:7190:1: ( ( rule__Capability__Group_6_3__0 )* )
+            // InternalToscaDsl.g:7191:2: ( rule__Capability__Group_6_3__0 )*
             {
              before(grammarAccess.getCapabilityAccess().getGroup_6_3()); 
-            // InternalToscaDsl.g:7543:2: ( rule__Capability__Group_6_3__0 )*
-            loop56:
+            // InternalToscaDsl.g:7192:2: ( rule__Capability__Group_6_3__0 )*
+            loop54:
             do {
-                int alt56=2;
-                int LA56_0 = input.LA(1);
+                int alt54=2;
+                int LA54_0 = input.LA(1);
 
-                if ( (LA56_0==18) ) {
-                    alt56=1;
+                if ( (LA54_0==18) ) {
+                    alt54=1;
                 }
 
 
-                switch (alt56) {
+                switch (alt54) {
             	case 1 :
-            	    // InternalToscaDsl.g:7543:3: rule__Capability__Group_6_3__0
+            	    // InternalToscaDsl.g:7192:3: rule__Capability__Group_6_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Capability__Group_6_3__0();
@@ -22724,7 +21667,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop56;
+            	    break loop54;
                 }
             } while (true);
 
@@ -22751,14 +21694,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__4"
-    // InternalToscaDsl.g:7551:1: rule__Capability__Group_6__4 : rule__Capability__Group_6__4__Impl ;
+    // InternalToscaDsl.g:7200:1: rule__Capability__Group_6__4 : rule__Capability__Group_6__4__Impl ;
     public final void rule__Capability__Group_6__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7555:1: ( rule__Capability__Group_6__4__Impl )
-            // InternalToscaDsl.g:7556:2: rule__Capability__Group_6__4__Impl
+            // InternalToscaDsl.g:7204:1: ( rule__Capability__Group_6__4__Impl )
+            // InternalToscaDsl.g:7205:2: rule__Capability__Group_6__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group_6__4__Impl();
@@ -22784,17 +21727,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6__4__Impl"
-    // InternalToscaDsl.g:7562:1: rule__Capability__Group_6__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:7211:1: rule__Capability__Group_6__4__Impl : ( '}' ) ;
     public final void rule__Capability__Group_6__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7566:1: ( ( '}' ) )
-            // InternalToscaDsl.g:7567:1: ( '}' )
+            // InternalToscaDsl.g:7215:1: ( ( '}' ) )
+            // InternalToscaDsl.g:7216:1: ( '}' )
             {
-            // InternalToscaDsl.g:7567:1: ( '}' )
-            // InternalToscaDsl.g:7568:2: '}'
+            // InternalToscaDsl.g:7216:1: ( '}' )
+            // InternalToscaDsl.g:7217:2: '}'
             {
              before(grammarAccess.getCapabilityAccess().getRightCurlyBracketKeyword_6_4()); 
             match(input,13,FOLLOW_2); 
@@ -22821,16 +21764,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6_3__0"
-    // InternalToscaDsl.g:7578:1: rule__Capability__Group_6_3__0 : rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1 ;
+    // InternalToscaDsl.g:7227:1: rule__Capability__Group_6_3__0 : rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1 ;
     public final void rule__Capability__Group_6_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7582:1: ( rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1 )
-            // InternalToscaDsl.g:7583:2: rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1
+            // InternalToscaDsl.g:7231:1: ( rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1 )
+            // InternalToscaDsl.g:7232:2: rule__Capability__Group_6_3__0__Impl rule__Capability__Group_6_3__1
             {
-            pushFollow(FOLLOW_4);
+            pushFollow(FOLLOW_9);
             rule__Capability__Group_6_3__0__Impl();
 
             state._fsp--;
@@ -22859,17 +21802,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6_3__0__Impl"
-    // InternalToscaDsl.g:7590:1: rule__Capability__Group_6_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:7239:1: rule__Capability__Group_6_3__0__Impl : ( ',' ) ;
     public final void rule__Capability__Group_6_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7594:1: ( ( ',' ) )
-            // InternalToscaDsl.g:7595:1: ( ',' )
+            // InternalToscaDsl.g:7243:1: ( ( ',' ) )
+            // InternalToscaDsl.g:7244:1: ( ',' )
             {
-            // InternalToscaDsl.g:7595:1: ( ',' )
-            // InternalToscaDsl.g:7596:2: ','
+            // InternalToscaDsl.g:7244:1: ( ',' )
+            // InternalToscaDsl.g:7245:2: ','
             {
              before(grammarAccess.getCapabilityAccess().getCommaKeyword_6_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -22896,14 +21839,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6_3__1"
-    // InternalToscaDsl.g:7605:1: rule__Capability__Group_6_3__1 : rule__Capability__Group_6_3__1__Impl ;
+    // InternalToscaDsl.g:7254:1: rule__Capability__Group_6_3__1 : rule__Capability__Group_6_3__1__Impl ;
     public final void rule__Capability__Group_6_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7609:1: ( rule__Capability__Group_6_3__1__Impl )
-            // InternalToscaDsl.g:7610:2: rule__Capability__Group_6_3__1__Impl
+            // InternalToscaDsl.g:7258:1: ( rule__Capability__Group_6_3__1__Impl )
+            // InternalToscaDsl.g:7259:2: rule__Capability__Group_6_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group_6_3__1__Impl();
@@ -22929,21 +21872,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_6_3__1__Impl"
-    // InternalToscaDsl.g:7616:1: rule__Capability__Group_6_3__1__Impl : ( ( rule__Capability__PropertiesAssignment_6_3_1 ) ) ;
+    // InternalToscaDsl.g:7265:1: rule__Capability__Group_6_3__1__Impl : ( ( rule__Capability__PropertiesAssignment_6_3_1 ) ) ;
     public final void rule__Capability__Group_6_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7620:1: ( ( ( rule__Capability__PropertiesAssignment_6_3_1 ) ) )
-            // InternalToscaDsl.g:7621:1: ( ( rule__Capability__PropertiesAssignment_6_3_1 ) )
+            // InternalToscaDsl.g:7269:1: ( ( ( rule__Capability__PropertiesAssignment_6_3_1 ) ) )
+            // InternalToscaDsl.g:7270:1: ( ( rule__Capability__PropertiesAssignment_6_3_1 ) )
             {
-            // InternalToscaDsl.g:7621:1: ( ( rule__Capability__PropertiesAssignment_6_3_1 ) )
-            // InternalToscaDsl.g:7622:2: ( rule__Capability__PropertiesAssignment_6_3_1 )
+            // InternalToscaDsl.g:7270:1: ( ( rule__Capability__PropertiesAssignment_6_3_1 ) )
+            // InternalToscaDsl.g:7271:2: ( rule__Capability__PropertiesAssignment_6_3_1 )
             {
              before(grammarAccess.getCapabilityAccess().getPropertiesAssignment_6_3_1()); 
-            // InternalToscaDsl.g:7623:2: ( rule__Capability__PropertiesAssignment_6_3_1 )
-            // InternalToscaDsl.g:7623:3: rule__Capability__PropertiesAssignment_6_3_1
+            // InternalToscaDsl.g:7272:2: ( rule__Capability__PropertiesAssignment_6_3_1 )
+            // InternalToscaDsl.g:7272:3: rule__Capability__PropertiesAssignment_6_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Capability__PropertiesAssignment_6_3_1();
@@ -22976,14 +21919,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__0"
-    // InternalToscaDsl.g:7632:1: rule__Capability__Group_7__0 : rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1 ;
+    // InternalToscaDsl.g:7281:1: rule__Capability__Group_7__0 : rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1 ;
     public final void rule__Capability__Group_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7636:1: ( rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1 )
-            // InternalToscaDsl.g:7637:2: rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1
+            // InternalToscaDsl.g:7285:1: ( rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1 )
+            // InternalToscaDsl.g:7286:2: rule__Capability__Group_7__0__Impl rule__Capability__Group_7__1
             {
             pushFollow(FOLLOW_9);
             rule__Capability__Group_7__0__Impl();
@@ -23014,17 +21957,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__0__Impl"
-    // InternalToscaDsl.g:7644:1: rule__Capability__Group_7__0__Impl : ( ',\\n\"attributes\" :' ) ;
+    // InternalToscaDsl.g:7293:1: rule__Capability__Group_7__0__Impl : ( ',\\n\"attributes\" :' ) ;
     public final void rule__Capability__Group_7__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7648:1: ( ( ',\\n\"attributes\" :' ) )
-            // InternalToscaDsl.g:7649:1: ( ',\\n\"attributes\" :' )
+            // InternalToscaDsl.g:7297:1: ( ( ',\\n\"attributes\" :' ) )
+            // InternalToscaDsl.g:7298:1: ( ',\\n\"attributes\" :' )
             {
-            // InternalToscaDsl.g:7649:1: ( ',\\n\"attributes\" :' )
-            // InternalToscaDsl.g:7650:2: ',\\n\"attributes\" :'
+            // InternalToscaDsl.g:7298:1: ( ',\\n\"attributes\" :' )
+            // InternalToscaDsl.g:7299:2: ',\\n\"attributes\" :'
             {
              before(grammarAccess.getCapabilityAccess().getAttributesKeyword_7_0()); 
             match(input,30,FOLLOW_2); 
@@ -23051,14 +21994,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__1"
-    // InternalToscaDsl.g:7659:1: rule__Capability__Group_7__1 : rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2 ;
+    // InternalToscaDsl.g:7308:1: rule__Capability__Group_7__1 : rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2 ;
     public final void rule__Capability__Group_7__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7663:1: ( rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2 )
-            // InternalToscaDsl.g:7664:2: rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2
+            // InternalToscaDsl.g:7312:1: ( rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2 )
+            // InternalToscaDsl.g:7313:2: rule__Capability__Group_7__1__Impl rule__Capability__Group_7__2
             {
             pushFollow(FOLLOW_4);
             rule__Capability__Group_7__1__Impl();
@@ -23089,17 +22032,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__1__Impl"
-    // InternalToscaDsl.g:7671:1: rule__Capability__Group_7__1__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:7320:1: rule__Capability__Group_7__1__Impl : ( '{' ) ;
     public final void rule__Capability__Group_7__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7675:1: ( ( '{' ) )
-            // InternalToscaDsl.g:7676:1: ( '{' )
+            // InternalToscaDsl.g:7324:1: ( ( '{' ) )
+            // InternalToscaDsl.g:7325:1: ( '{' )
             {
-            // InternalToscaDsl.g:7676:1: ( '{' )
-            // InternalToscaDsl.g:7677:2: '{'
+            // InternalToscaDsl.g:7325:1: ( '{' )
+            // InternalToscaDsl.g:7326:2: '{'
             {
              before(grammarAccess.getCapabilityAccess().getLeftCurlyBracketKeyword_7_1()); 
             match(input,11,FOLLOW_2); 
@@ -23126,14 +22069,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__2"
-    // InternalToscaDsl.g:7686:1: rule__Capability__Group_7__2 : rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3 ;
+    // InternalToscaDsl.g:7335:1: rule__Capability__Group_7__2 : rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3 ;
     public final void rule__Capability__Group_7__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7690:1: ( rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3 )
-            // InternalToscaDsl.g:7691:2: rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3
+            // InternalToscaDsl.g:7339:1: ( rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3 )
+            // InternalToscaDsl.g:7340:2: rule__Capability__Group_7__2__Impl rule__Capability__Group_7__3
             {
             pushFollow(FOLLOW_10);
             rule__Capability__Group_7__2__Impl();
@@ -23164,21 +22107,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__2__Impl"
-    // InternalToscaDsl.g:7698:1: rule__Capability__Group_7__2__Impl : ( ( rule__Capability__AttributesAssignment_7_2 ) ) ;
+    // InternalToscaDsl.g:7347:1: rule__Capability__Group_7__2__Impl : ( ( rule__Capability__AttributesAssignment_7_2 ) ) ;
     public final void rule__Capability__Group_7__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7702:1: ( ( ( rule__Capability__AttributesAssignment_7_2 ) ) )
-            // InternalToscaDsl.g:7703:1: ( ( rule__Capability__AttributesAssignment_7_2 ) )
+            // InternalToscaDsl.g:7351:1: ( ( ( rule__Capability__AttributesAssignment_7_2 ) ) )
+            // InternalToscaDsl.g:7352:1: ( ( rule__Capability__AttributesAssignment_7_2 ) )
             {
-            // InternalToscaDsl.g:7703:1: ( ( rule__Capability__AttributesAssignment_7_2 ) )
-            // InternalToscaDsl.g:7704:2: ( rule__Capability__AttributesAssignment_7_2 )
+            // InternalToscaDsl.g:7352:1: ( ( rule__Capability__AttributesAssignment_7_2 ) )
+            // InternalToscaDsl.g:7353:2: ( rule__Capability__AttributesAssignment_7_2 )
             {
              before(grammarAccess.getCapabilityAccess().getAttributesAssignment_7_2()); 
-            // InternalToscaDsl.g:7705:2: ( rule__Capability__AttributesAssignment_7_2 )
-            // InternalToscaDsl.g:7705:3: rule__Capability__AttributesAssignment_7_2
+            // InternalToscaDsl.g:7354:2: ( rule__Capability__AttributesAssignment_7_2 )
+            // InternalToscaDsl.g:7354:3: rule__Capability__AttributesAssignment_7_2
             {
             pushFollow(FOLLOW_2);
             rule__Capability__AttributesAssignment_7_2();
@@ -23211,14 +22154,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__3"
-    // InternalToscaDsl.g:7713:1: rule__Capability__Group_7__3 : rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4 ;
+    // InternalToscaDsl.g:7362:1: rule__Capability__Group_7__3 : rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4 ;
     public final void rule__Capability__Group_7__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7717:1: ( rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4 )
-            // InternalToscaDsl.g:7718:2: rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4
+            // InternalToscaDsl.g:7366:1: ( rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4 )
+            // InternalToscaDsl.g:7367:2: rule__Capability__Group_7__3__Impl rule__Capability__Group_7__4
             {
             pushFollow(FOLLOW_10);
             rule__Capability__Group_7__3__Impl();
@@ -23249,33 +22192,33 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__3__Impl"
-    // InternalToscaDsl.g:7725:1: rule__Capability__Group_7__3__Impl : ( ( rule__Capability__Group_7_3__0 )* ) ;
+    // InternalToscaDsl.g:7374:1: rule__Capability__Group_7__3__Impl : ( ( rule__Capability__Group_7_3__0 )* ) ;
     public final void rule__Capability__Group_7__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7729:1: ( ( ( rule__Capability__Group_7_3__0 )* ) )
-            // InternalToscaDsl.g:7730:1: ( ( rule__Capability__Group_7_3__0 )* )
+            // InternalToscaDsl.g:7378:1: ( ( ( rule__Capability__Group_7_3__0 )* ) )
+            // InternalToscaDsl.g:7379:1: ( ( rule__Capability__Group_7_3__0 )* )
             {
-            // InternalToscaDsl.g:7730:1: ( ( rule__Capability__Group_7_3__0 )* )
-            // InternalToscaDsl.g:7731:2: ( rule__Capability__Group_7_3__0 )*
+            // InternalToscaDsl.g:7379:1: ( ( rule__Capability__Group_7_3__0 )* )
+            // InternalToscaDsl.g:7380:2: ( rule__Capability__Group_7_3__0 )*
             {
              before(grammarAccess.getCapabilityAccess().getGroup_7_3()); 
-            // InternalToscaDsl.g:7732:2: ( rule__Capability__Group_7_3__0 )*
-            loop57:
+            // InternalToscaDsl.g:7381:2: ( rule__Capability__Group_7_3__0 )*
+            loop55:
             do {
-                int alt57=2;
-                int LA57_0 = input.LA(1);
+                int alt55=2;
+                int LA55_0 = input.LA(1);
 
-                if ( (LA57_0==18) ) {
-                    alt57=1;
+                if ( (LA55_0==18) ) {
+                    alt55=1;
                 }
 
 
-                switch (alt57) {
+                switch (alt55) {
             	case 1 :
-            	    // InternalToscaDsl.g:7732:3: rule__Capability__Group_7_3__0
+            	    // InternalToscaDsl.g:7381:3: rule__Capability__Group_7_3__0
             	    {
             	    pushFollow(FOLLOW_8);
             	    rule__Capability__Group_7_3__0();
@@ -23287,7 +22230,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
             	    break;
 
             	default :
-            	    break loop57;
+            	    break loop55;
                 }
             } while (true);
 
@@ -23314,14 +22257,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__4"
-    // InternalToscaDsl.g:7740:1: rule__Capability__Group_7__4 : rule__Capability__Group_7__4__Impl ;
+    // InternalToscaDsl.g:7389:1: rule__Capability__Group_7__4 : rule__Capability__Group_7__4__Impl ;
     public final void rule__Capability__Group_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7744:1: ( rule__Capability__Group_7__4__Impl )
-            // InternalToscaDsl.g:7745:2: rule__Capability__Group_7__4__Impl
+            // InternalToscaDsl.g:7393:1: ( rule__Capability__Group_7__4__Impl )
+            // InternalToscaDsl.g:7394:2: rule__Capability__Group_7__4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group_7__4__Impl();
@@ -23347,17 +22290,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7__4__Impl"
-    // InternalToscaDsl.g:7751:1: rule__Capability__Group_7__4__Impl : ( '}' ) ;
+    // InternalToscaDsl.g:7400:1: rule__Capability__Group_7__4__Impl : ( '}' ) ;
     public final void rule__Capability__Group_7__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7755:1: ( ( '}' ) )
-            // InternalToscaDsl.g:7756:1: ( '}' )
+            // InternalToscaDsl.g:7404:1: ( ( '}' ) )
+            // InternalToscaDsl.g:7405:1: ( '}' )
             {
-            // InternalToscaDsl.g:7756:1: ( '}' )
-            // InternalToscaDsl.g:7757:2: '}'
+            // InternalToscaDsl.g:7405:1: ( '}' )
+            // InternalToscaDsl.g:7406:2: '}'
             {
              before(grammarAccess.getCapabilityAccess().getRightCurlyBracketKeyword_7_4()); 
             match(input,13,FOLLOW_2); 
@@ -23384,14 +22327,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7_3__0"
-    // InternalToscaDsl.g:7767:1: rule__Capability__Group_7_3__0 : rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1 ;
+    // InternalToscaDsl.g:7416:1: rule__Capability__Group_7_3__0 : rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1 ;
     public final void rule__Capability__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7771:1: ( rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1 )
-            // InternalToscaDsl.g:7772:2: rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1
+            // InternalToscaDsl.g:7420:1: ( rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1 )
+            // InternalToscaDsl.g:7421:2: rule__Capability__Group_7_3__0__Impl rule__Capability__Group_7_3__1
             {
             pushFollow(FOLLOW_4);
             rule__Capability__Group_7_3__0__Impl();
@@ -23422,17 +22365,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7_3__0__Impl"
-    // InternalToscaDsl.g:7779:1: rule__Capability__Group_7_3__0__Impl : ( ',' ) ;
+    // InternalToscaDsl.g:7428:1: rule__Capability__Group_7_3__0__Impl : ( ',' ) ;
     public final void rule__Capability__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7783:1: ( ( ',' ) )
-            // InternalToscaDsl.g:7784:1: ( ',' )
+            // InternalToscaDsl.g:7432:1: ( ( ',' ) )
+            // InternalToscaDsl.g:7433:1: ( ',' )
             {
-            // InternalToscaDsl.g:7784:1: ( ',' )
-            // InternalToscaDsl.g:7785:2: ','
+            // InternalToscaDsl.g:7433:1: ( ',' )
+            // InternalToscaDsl.g:7434:2: ','
             {
              before(grammarAccess.getCapabilityAccess().getCommaKeyword_7_3_0()); 
             match(input,18,FOLLOW_2); 
@@ -23459,14 +22402,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7_3__1"
-    // InternalToscaDsl.g:7794:1: rule__Capability__Group_7_3__1 : rule__Capability__Group_7_3__1__Impl ;
+    // InternalToscaDsl.g:7443:1: rule__Capability__Group_7_3__1 : rule__Capability__Group_7_3__1__Impl ;
     public final void rule__Capability__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7798:1: ( rule__Capability__Group_7_3__1__Impl )
-            // InternalToscaDsl.g:7799:2: rule__Capability__Group_7_3__1__Impl
+            // InternalToscaDsl.g:7447:1: ( rule__Capability__Group_7_3__1__Impl )
+            // InternalToscaDsl.g:7448:2: rule__Capability__Group_7_3__1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Capability__Group_7_3__1__Impl();
@@ -23492,21 +22435,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Group_7_3__1__Impl"
-    // InternalToscaDsl.g:7805:1: rule__Capability__Group_7_3__1__Impl : ( ( rule__Capability__AttributesAssignment_7_3_1 ) ) ;
+    // InternalToscaDsl.g:7454:1: rule__Capability__Group_7_3__1__Impl : ( ( rule__Capability__AttributesAssignment_7_3_1 ) ) ;
     public final void rule__Capability__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7809:1: ( ( ( rule__Capability__AttributesAssignment_7_3_1 ) ) )
-            // InternalToscaDsl.g:7810:1: ( ( rule__Capability__AttributesAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:7458:1: ( ( ( rule__Capability__AttributesAssignment_7_3_1 ) ) )
+            // InternalToscaDsl.g:7459:1: ( ( rule__Capability__AttributesAssignment_7_3_1 ) )
             {
-            // InternalToscaDsl.g:7810:1: ( ( rule__Capability__AttributesAssignment_7_3_1 ) )
-            // InternalToscaDsl.g:7811:2: ( rule__Capability__AttributesAssignment_7_3_1 )
+            // InternalToscaDsl.g:7459:1: ( ( rule__Capability__AttributesAssignment_7_3_1 ) )
+            // InternalToscaDsl.g:7460:2: ( rule__Capability__AttributesAssignment_7_3_1 )
             {
              before(grammarAccess.getCapabilityAccess().getAttributesAssignment_7_3_1()); 
-            // InternalToscaDsl.g:7812:2: ( rule__Capability__AttributesAssignment_7_3_1 )
-            // InternalToscaDsl.g:7812:3: rule__Capability__AttributesAssignment_7_3_1
+            // InternalToscaDsl.g:7461:2: ( rule__Capability__AttributesAssignment_7_3_1 )
+            // InternalToscaDsl.g:7461:3: rule__Capability__AttributesAssignment_7_3_1
             {
             pushFollow(FOLLOW_2);
             rule__Capability__AttributesAssignment_7_3_1();
@@ -23539,14 +22482,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__0"
-    // InternalToscaDsl.g:7821:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
+    // InternalToscaDsl.g:7470:1: rule__Operation__Group__0 : rule__Operation__Group__0__Impl rule__Operation__Group__1 ;
     public final void rule__Operation__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7825:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
-            // InternalToscaDsl.g:7826:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
+            // InternalToscaDsl.g:7474:1: ( rule__Operation__Group__0__Impl rule__Operation__Group__1 )
+            // InternalToscaDsl.g:7475:2: rule__Operation__Group__0__Impl rule__Operation__Group__1
             {
             pushFollow(FOLLOW_4);
             rule__Operation__Group__0__Impl();
@@ -23577,21 +22520,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__0__Impl"
-    // InternalToscaDsl.g:7833:1: rule__Operation__Group__0__Impl : ( () ) ;
+    // InternalToscaDsl.g:7482:1: rule__Operation__Group__0__Impl : ( () ) ;
     public final void rule__Operation__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7837:1: ( ( () ) )
-            // InternalToscaDsl.g:7838:1: ( () )
+            // InternalToscaDsl.g:7486:1: ( ( () ) )
+            // InternalToscaDsl.g:7487:1: ( () )
             {
-            // InternalToscaDsl.g:7838:1: ( () )
-            // InternalToscaDsl.g:7839:2: ()
+            // InternalToscaDsl.g:7487:1: ( () )
+            // InternalToscaDsl.g:7488:2: ()
             {
              before(grammarAccess.getOperationAccess().getOperationAction_0()); 
-            // InternalToscaDsl.g:7840:2: ()
-            // InternalToscaDsl.g:7840:3: 
+            // InternalToscaDsl.g:7489:2: ()
+            // InternalToscaDsl.g:7489:3: 
             {
             }
 
@@ -23614,14 +22557,14 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__1"
-    // InternalToscaDsl.g:7848:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
+    // InternalToscaDsl.g:7497:1: rule__Operation__Group__1 : rule__Operation__Group__1__Impl rule__Operation__Group__2 ;
     public final void rule__Operation__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7852:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
-            // InternalToscaDsl.g:7853:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
+            // InternalToscaDsl.g:7501:1: ( rule__Operation__Group__1__Impl rule__Operation__Group__2 )
+            // InternalToscaDsl.g:7502:2: rule__Operation__Group__1__Impl rule__Operation__Group__2
             {
             pushFollow(FOLLOW_11);
             rule__Operation__Group__1__Impl();
@@ -23652,21 +22595,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__1__Impl"
-    // InternalToscaDsl.g:7860:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__Operation_nameAssignment_1 ) ) ;
+    // InternalToscaDsl.g:7509:1: rule__Operation__Group__1__Impl : ( ( rule__Operation__Operation_nameAssignment_1 ) ) ;
     public final void rule__Operation__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7864:1: ( ( ( rule__Operation__Operation_nameAssignment_1 ) ) )
-            // InternalToscaDsl.g:7865:1: ( ( rule__Operation__Operation_nameAssignment_1 ) )
+            // InternalToscaDsl.g:7513:1: ( ( ( rule__Operation__Operation_nameAssignment_1 ) ) )
+            // InternalToscaDsl.g:7514:1: ( ( rule__Operation__Operation_nameAssignment_1 ) )
             {
-            // InternalToscaDsl.g:7865:1: ( ( rule__Operation__Operation_nameAssignment_1 ) )
-            // InternalToscaDsl.g:7866:2: ( rule__Operation__Operation_nameAssignment_1 )
+            // InternalToscaDsl.g:7514:1: ( ( rule__Operation__Operation_nameAssignment_1 ) )
+            // InternalToscaDsl.g:7515:2: ( rule__Operation__Operation_nameAssignment_1 )
             {
              before(grammarAccess.getOperationAccess().getOperation_nameAssignment_1()); 
-            // InternalToscaDsl.g:7867:2: ( rule__Operation__Operation_nameAssignment_1 )
-            // InternalToscaDsl.g:7867:3: rule__Operation__Operation_nameAssignment_1
+            // InternalToscaDsl.g:7516:2: ( rule__Operation__Operation_nameAssignment_1 )
+            // InternalToscaDsl.g:7516:3: rule__Operation__Operation_nameAssignment_1
             {
             pushFollow(FOLLOW_2);
             rule__Operation__Operation_nameAssignment_1();
@@ -23699,16 +22642,16 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__2"
-    // InternalToscaDsl.g:7875:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
+    // InternalToscaDsl.g:7524:1: rule__Operation__Group__2 : rule__Operation__Group__2__Impl rule__Operation__Group__3 ;
     public final void rule__Operation__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7879:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
-            // InternalToscaDsl.g:7880:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
+            // InternalToscaDsl.g:7528:1: ( rule__Operation__Group__2__Impl rule__Operation__Group__3 )
+            // InternalToscaDsl.g:7529:2: rule__Operation__Group__2__Impl rule__Operation__Group__3
             {
-            pushFollow(FOLLOW_9);
+            pushFollow(FOLLOW_4);
             rule__Operation__Group__2__Impl();
 
             state._fsp--;
@@ -23737,17 +22680,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__2__Impl"
-    // InternalToscaDsl.g:7887:1: rule__Operation__Group__2__Impl : ( ':' ) ;
+    // InternalToscaDsl.g:7536:1: rule__Operation__Group__2__Impl : ( ':' ) ;
     public final void rule__Operation__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7891:1: ( ( ':' ) )
-            // InternalToscaDsl.g:7892:1: ( ':' )
+            // InternalToscaDsl.g:7540:1: ( ( ':' ) )
+            // InternalToscaDsl.g:7541:1: ( ':' )
             {
-            // InternalToscaDsl.g:7892:1: ( ':' )
-            // InternalToscaDsl.g:7893:2: ':'
+            // InternalToscaDsl.g:7541:1: ( ':' )
+            // InternalToscaDsl.g:7542:2: ':'
             {
              before(grammarAccess.getOperationAccess().getColonKeyword_2()); 
             match(input,25,FOLLOW_2); 
@@ -23774,22 +22717,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__3"
-    // InternalToscaDsl.g:7902:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl rule__Operation__Group__4 ;
+    // InternalToscaDsl.g:7551:1: rule__Operation__Group__3 : rule__Operation__Group__3__Impl ;
     public final void rule__Operation__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7906:1: ( rule__Operation__Group__3__Impl rule__Operation__Group__4 )
-            // InternalToscaDsl.g:7907:2: rule__Operation__Group__3__Impl rule__Operation__Group__4
+            // InternalToscaDsl.g:7555:1: ( rule__Operation__Group__3__Impl )
+            // InternalToscaDsl.g:7556:2: rule__Operation__Group__3__Impl
             {
-            pushFollow(FOLLOW_23);
-            rule__Operation__Group__3__Impl();
-
-            state._fsp--;
-
             pushFollow(FOLLOW_2);
-            rule__Operation__Group__4();
+            rule__Operation__Group__3__Impl();
 
             state._fsp--;
 
@@ -23812,21 +22750,31 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Group__3__Impl"
-    // InternalToscaDsl.g:7914:1: rule__Operation__Group__3__Impl : ( '{' ) ;
+    // InternalToscaDsl.g:7562:1: rule__Operation__Group__3__Impl : ( ( rule__Operation__PrimaryAssignment_3 ) ) ;
     public final void rule__Operation__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:7918:1: ( ( '{' ) )
-            // InternalToscaDsl.g:7919:1: ( '{' )
+            // InternalToscaDsl.g:7566:1: ( ( ( rule__Operation__PrimaryAssignment_3 ) ) )
+            // InternalToscaDsl.g:7567:1: ( ( rule__Operation__PrimaryAssignment_3 ) )
             {
-            // InternalToscaDsl.g:7919:1: ( '{' )
-            // InternalToscaDsl.g:7920:2: '{'
+            // InternalToscaDsl.g:7567:1: ( ( rule__Operation__PrimaryAssignment_3 ) )
+            // InternalToscaDsl.g:7568:2: ( rule__Operation__PrimaryAssignment_3 )
             {
-             before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_3()); 
+             before(grammarAccess.getOperationAccess().getPrimaryAssignment_3()); 
+            // InternalToscaDsl.g:7569:2: ( rule__Operation__PrimaryAssignment_3 )
+            // InternalToscaDsl.g:7569:3: rule__Operation__PrimaryAssignment_3
+            {
+            pushFollow(FOLLOW_2);
+            rule__Operation__PrimaryAssignment_3();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getOperationAccess().getPrimaryAssignment_3()); 
 
             }
 
@@ -23848,1817 +22796,18 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Operation__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Operation__Group__4"
-    // InternalToscaDsl.g:7929:1: rule__Operation__Group__4 : rule__Operation__Group__4__Impl rule__Operation__Group__5 ;
-    public final void rule__Operation__Group__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7933:1: ( rule__Operation__Group__4__Impl rule__Operation__Group__5 )
-            // InternalToscaDsl.g:7934:2: rule__Operation__Group__4__Impl rule__Operation__Group__5
-            {
-            pushFollow(FOLLOW_4);
-            rule__Operation__Group__4__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__5();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__4"
-
-
-    // $ANTLR start "rule__Operation__Group__4__Impl"
-    // InternalToscaDsl.g:7941:1: rule__Operation__Group__4__Impl : ( '\"primary\" :' ) ;
-    public final void rule__Operation__Group__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7945:1: ( ( '\"primary\" :' ) )
-            // InternalToscaDsl.g:7946:1: ( '\"primary\" :' )
-            {
-            // InternalToscaDsl.g:7946:1: ( '\"primary\" :' )
-            // InternalToscaDsl.g:7947:2: '\"primary\" :'
-            {
-             before(grammarAccess.getOperationAccess().getPrimaryKeyword_4()); 
-            match(input,41,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getPrimaryKeyword_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__4__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group__5"
-    // InternalToscaDsl.g:7956:1: rule__Operation__Group__5 : rule__Operation__Group__5__Impl rule__Operation__Group__6 ;
-    public final void rule__Operation__Group__5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7960:1: ( rule__Operation__Group__5__Impl rule__Operation__Group__6 )
-            // InternalToscaDsl.g:7961:2: rule__Operation__Group__5__Impl rule__Operation__Group__6
-            {
-            pushFollow(FOLLOW_24);
-            rule__Operation__Group__5__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__6();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__5"
-
-
-    // $ANTLR start "rule__Operation__Group__5__Impl"
-    // InternalToscaDsl.g:7968:1: rule__Operation__Group__5__Impl : ( ( rule__Operation__PrimaryAssignment_5 ) ) ;
-    public final void rule__Operation__Group__5__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7972:1: ( ( ( rule__Operation__PrimaryAssignment_5 ) ) )
-            // InternalToscaDsl.g:7973:1: ( ( rule__Operation__PrimaryAssignment_5 ) )
-            {
-            // InternalToscaDsl.g:7973:1: ( ( rule__Operation__PrimaryAssignment_5 ) )
-            // InternalToscaDsl.g:7974:2: ( rule__Operation__PrimaryAssignment_5 )
-            {
-             before(grammarAccess.getOperationAccess().getPrimaryAssignment_5()); 
-            // InternalToscaDsl.g:7975:2: ( rule__Operation__PrimaryAssignment_5 )
-            // InternalToscaDsl.g:7975:3: rule__Operation__PrimaryAssignment_5
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__PrimaryAssignment_5();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getPrimaryAssignment_5()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__5__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group__6"
-    // InternalToscaDsl.g:7983:1: rule__Operation__Group__6 : rule__Operation__Group__6__Impl rule__Operation__Group__7 ;
-    public final void rule__Operation__Group__6() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7987:1: ( rule__Operation__Group__6__Impl rule__Operation__Group__7 )
-            // InternalToscaDsl.g:7988:2: rule__Operation__Group__6__Impl rule__Operation__Group__7
-            {
-            pushFollow(FOLLOW_24);
-            rule__Operation__Group__6__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__7();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__6"
-
-
-    // $ANTLR start "rule__Operation__Group__6__Impl"
-    // InternalToscaDsl.g:7995:1: rule__Operation__Group__6__Impl : ( ( rule__Operation__Group_6__0 )? ) ;
-    public final void rule__Operation__Group__6__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:7999:1: ( ( ( rule__Operation__Group_6__0 )? ) )
-            // InternalToscaDsl.g:8000:1: ( ( rule__Operation__Group_6__0 )? )
-            {
-            // InternalToscaDsl.g:8000:1: ( ( rule__Operation__Group_6__0 )? )
-            // InternalToscaDsl.g:8001:2: ( rule__Operation__Group_6__0 )?
-            {
-             before(grammarAccess.getOperationAccess().getGroup_6()); 
-            // InternalToscaDsl.g:8002:2: ( rule__Operation__Group_6__0 )?
-            int alt58=2;
-            int LA58_0 = input.LA(1);
-
-            if ( (LA58_0==14) ) {
-                alt58=1;
-            }
-            switch (alt58) {
-                case 1 :
-                    // InternalToscaDsl.g:8002:3: rule__Operation__Group_6__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Operation__Group_6__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getOperationAccess().getGroup_6()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__6__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group__7"
-    // InternalToscaDsl.g:8010:1: rule__Operation__Group__7 : rule__Operation__Group__7__Impl rule__Operation__Group__8 ;
-    public final void rule__Operation__Group__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8014:1: ( rule__Operation__Group__7__Impl rule__Operation__Group__8 )
-            // InternalToscaDsl.g:8015:2: rule__Operation__Group__7__Impl rule__Operation__Group__8
-            {
-            pushFollow(FOLLOW_24);
-            rule__Operation__Group__7__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__8();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__7"
-
-
-    // $ANTLR start "rule__Operation__Group__7__Impl"
-    // InternalToscaDsl.g:8022:1: rule__Operation__Group__7__Impl : ( ( rule__Operation__Group_7__0 )? ) ;
-    public final void rule__Operation__Group__7__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8026:1: ( ( ( rule__Operation__Group_7__0 )? ) )
-            // InternalToscaDsl.g:8027:1: ( ( rule__Operation__Group_7__0 )? )
-            {
-            // InternalToscaDsl.g:8027:1: ( ( rule__Operation__Group_7__0 )? )
-            // InternalToscaDsl.g:8028:2: ( rule__Operation__Group_7__0 )?
-            {
-             before(grammarAccess.getOperationAccess().getGroup_7()); 
-            // InternalToscaDsl.g:8029:2: ( rule__Operation__Group_7__0 )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
-
-            if ( (LA59_0==42) ) {
-                alt59=1;
-            }
-            switch (alt59) {
-                case 1 :
-                    // InternalToscaDsl.g:8029:3: rule__Operation__Group_7__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Operation__Group_7__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getOperationAccess().getGroup_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__7__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group__8"
-    // InternalToscaDsl.g:8037:1: rule__Operation__Group__8 : rule__Operation__Group__8__Impl rule__Operation__Group__9 ;
-    public final void rule__Operation__Group__8() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8041:1: ( rule__Operation__Group__8__Impl rule__Operation__Group__9 )
-            // InternalToscaDsl.g:8042:2: rule__Operation__Group__8__Impl rule__Operation__Group__9
-            {
-            pushFollow(FOLLOW_24);
-            rule__Operation__Group__8__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__9();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__8"
-
-
-    // $ANTLR start "rule__Operation__Group__8__Impl"
-    // InternalToscaDsl.g:8049:1: rule__Operation__Group__8__Impl : ( ( rule__Operation__Group_8__0 )? ) ;
-    public final void rule__Operation__Group__8__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8053:1: ( ( ( rule__Operation__Group_8__0 )? ) )
-            // InternalToscaDsl.g:8054:1: ( ( rule__Operation__Group_8__0 )? )
-            {
-            // InternalToscaDsl.g:8054:1: ( ( rule__Operation__Group_8__0 )? )
-            // InternalToscaDsl.g:8055:2: ( rule__Operation__Group_8__0 )?
-            {
-             before(grammarAccess.getOperationAccess().getGroup_8()); 
-            // InternalToscaDsl.g:8056:2: ( rule__Operation__Group_8__0 )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
-
-            if ( (LA60_0==20) ) {
-                alt60=1;
-            }
-            switch (alt60) {
-                case 1 :
-                    // InternalToscaDsl.g:8056:3: rule__Operation__Group_8__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Operation__Group_8__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-             after(grammarAccess.getOperationAccess().getGroup_8()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__8__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group__9"
-    // InternalToscaDsl.g:8064:1: rule__Operation__Group__9 : rule__Operation__Group__9__Impl ;
-    public final void rule__Operation__Group__9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8068:1: ( rule__Operation__Group__9__Impl )
-            // InternalToscaDsl.g:8069:2: rule__Operation__Group__9__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group__9__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__9"
-
-
-    // $ANTLR start "rule__Operation__Group__9__Impl"
-    // InternalToscaDsl.g:8075:1: rule__Operation__Group__9__Impl : ( '}' ) ;
-    public final void rule__Operation__Group__9__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8079:1: ( ( '}' ) )
-            // InternalToscaDsl.g:8080:1: ( '}' )
-            {
-            // InternalToscaDsl.g:8080:1: ( '}' )
-            // InternalToscaDsl.g:8081:2: '}'
-            {
-             before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_9()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_9()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group__9__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_6__0"
-    // InternalToscaDsl.g:8091:1: rule__Operation__Group_6__0 : rule__Operation__Group_6__0__Impl rule__Operation__Group_6__1 ;
-    public final void rule__Operation__Group_6__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8095:1: ( rule__Operation__Group_6__0__Impl rule__Operation__Group_6__1 )
-            // InternalToscaDsl.g:8096:2: rule__Operation__Group_6__0__Impl rule__Operation__Group_6__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Operation__Group_6__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_6__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_6__0"
-
-
-    // $ANTLR start "rule__Operation__Group_6__0__Impl"
-    // InternalToscaDsl.g:8103:1: rule__Operation__Group_6__0__Impl : ( ',\\n\"description\" :' ) ;
-    public final void rule__Operation__Group_6__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8107:1: ( ( ',\\n\"description\" :' ) )
-            // InternalToscaDsl.g:8108:1: ( ',\\n\"description\" :' )
-            {
-            // InternalToscaDsl.g:8108:1: ( ',\\n\"description\" :' )
-            // InternalToscaDsl.g:8109:2: ',\\n\"description\" :'
-            {
-             before(grammarAccess.getOperationAccess().getDescriptionKeyword_6_0()); 
-            match(input,14,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getDescriptionKeyword_6_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_6__0__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_6__1"
-    // InternalToscaDsl.g:8118:1: rule__Operation__Group_6__1 : rule__Operation__Group_6__1__Impl ;
-    public final void rule__Operation__Group_6__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8122:1: ( rule__Operation__Group_6__1__Impl )
-            // InternalToscaDsl.g:8123:2: rule__Operation__Group_6__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_6__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_6__1"
-
-
-    // $ANTLR start "rule__Operation__Group_6__1__Impl"
-    // InternalToscaDsl.g:8129:1: rule__Operation__Group_6__1__Impl : ( ( rule__Operation__DescriptionAssignment_6_1 ) ) ;
-    public final void rule__Operation__Group_6__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8133:1: ( ( ( rule__Operation__DescriptionAssignment_6_1 ) ) )
-            // InternalToscaDsl.g:8134:1: ( ( rule__Operation__DescriptionAssignment_6_1 ) )
-            {
-            // InternalToscaDsl.g:8134:1: ( ( rule__Operation__DescriptionAssignment_6_1 ) )
-            // InternalToscaDsl.g:8135:2: ( rule__Operation__DescriptionAssignment_6_1 )
-            {
-             before(grammarAccess.getOperationAccess().getDescriptionAssignment_6_1()); 
-            // InternalToscaDsl.g:8136:2: ( rule__Operation__DescriptionAssignment_6_1 )
-            // InternalToscaDsl.g:8136:3: rule__Operation__DescriptionAssignment_6_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__DescriptionAssignment_6_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getDescriptionAssignment_6_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_6__1__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7__0"
-    // InternalToscaDsl.g:8145:1: rule__Operation__Group_7__0 : rule__Operation__Group_7__0__Impl rule__Operation__Group_7__1 ;
-    public final void rule__Operation__Group_7__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8149:1: ( rule__Operation__Group_7__0__Impl rule__Operation__Group_7__1 )
-            // InternalToscaDsl.g:8150:2: rule__Operation__Group_7__0__Impl rule__Operation__Group_7__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Operation__Group_7__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__0"
-
-
-    // $ANTLR start "rule__Operation__Group_7__0__Impl"
-    // InternalToscaDsl.g:8157:1: rule__Operation__Group_7__0__Impl : ( ',\\n\"dependentArtifacts\" :' ) ;
-    public final void rule__Operation__Group_7__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8161:1: ( ( ',\\n\"dependentArtifacts\" :' ) )
-            // InternalToscaDsl.g:8162:1: ( ',\\n\"dependentArtifacts\" :' )
-            {
-            // InternalToscaDsl.g:8162:1: ( ',\\n\"dependentArtifacts\" :' )
-            // InternalToscaDsl.g:8163:2: ',\\n\"dependentArtifacts\" :'
-            {
-             before(grammarAccess.getOperationAccess().getDependentArtifactsKeyword_7_0()); 
-            match(input,42,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getDependentArtifactsKeyword_7_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__0__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7__1"
-    // InternalToscaDsl.g:8172:1: rule__Operation__Group_7__1 : rule__Operation__Group_7__1__Impl rule__Operation__Group_7__2 ;
-    public final void rule__Operation__Group_7__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8176:1: ( rule__Operation__Group_7__1__Impl rule__Operation__Group_7__2 )
-            // InternalToscaDsl.g:8177:2: rule__Operation__Group_7__1__Impl rule__Operation__Group_7__2
-            {
-            pushFollow(FOLLOW_16);
-            rule__Operation__Group_7__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__1"
-
-
-    // $ANTLR start "rule__Operation__Group_7__1__Impl"
-    // InternalToscaDsl.g:8184:1: rule__Operation__Group_7__1__Impl : ( '{' ) ;
-    public final void rule__Operation__Group_7__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8188:1: ( ( '{' ) )
-            // InternalToscaDsl.g:8189:1: ( '{' )
-            {
-            // InternalToscaDsl.g:8189:1: ( '{' )
-            // InternalToscaDsl.g:8190:2: '{'
-            {
-             before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_7_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_7_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__1__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7__2"
-    // InternalToscaDsl.g:8199:1: rule__Operation__Group_7__2 : rule__Operation__Group_7__2__Impl rule__Operation__Group_7__3 ;
-    public final void rule__Operation__Group_7__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8203:1: ( rule__Operation__Group_7__2__Impl rule__Operation__Group_7__3 )
-            // InternalToscaDsl.g:8204:2: rule__Operation__Group_7__2__Impl rule__Operation__Group_7__3
-            {
-            pushFollow(FOLLOW_10);
-            rule__Operation__Group_7__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__2"
-
-
-    // $ANTLR start "rule__Operation__Group_7__2__Impl"
-    // InternalToscaDsl.g:8211:1: rule__Operation__Group_7__2__Impl : ( ( rule__Operation__DependentArtifactsAssignment_7_2 ) ) ;
-    public final void rule__Operation__Group_7__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8215:1: ( ( ( rule__Operation__DependentArtifactsAssignment_7_2 ) ) )
-            // InternalToscaDsl.g:8216:1: ( ( rule__Operation__DependentArtifactsAssignment_7_2 ) )
-            {
-            // InternalToscaDsl.g:8216:1: ( ( rule__Operation__DependentArtifactsAssignment_7_2 ) )
-            // InternalToscaDsl.g:8217:2: ( rule__Operation__DependentArtifactsAssignment_7_2 )
-            {
-             before(grammarAccess.getOperationAccess().getDependentArtifactsAssignment_7_2()); 
-            // InternalToscaDsl.g:8218:2: ( rule__Operation__DependentArtifactsAssignment_7_2 )
-            // InternalToscaDsl.g:8218:3: rule__Operation__DependentArtifactsAssignment_7_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__DependentArtifactsAssignment_7_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getDependentArtifactsAssignment_7_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__2__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7__3"
-    // InternalToscaDsl.g:8226:1: rule__Operation__Group_7__3 : rule__Operation__Group_7__3__Impl rule__Operation__Group_7__4 ;
-    public final void rule__Operation__Group_7__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8230:1: ( rule__Operation__Group_7__3__Impl rule__Operation__Group_7__4 )
-            // InternalToscaDsl.g:8231:2: rule__Operation__Group_7__3__Impl rule__Operation__Group_7__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Operation__Group_7__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__3"
-
-
-    // $ANTLR start "rule__Operation__Group_7__3__Impl"
-    // InternalToscaDsl.g:8238:1: rule__Operation__Group_7__3__Impl : ( ( rule__Operation__Group_7_3__0 )* ) ;
-    public final void rule__Operation__Group_7__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8242:1: ( ( ( rule__Operation__Group_7_3__0 )* ) )
-            // InternalToscaDsl.g:8243:1: ( ( rule__Operation__Group_7_3__0 )* )
-            {
-            // InternalToscaDsl.g:8243:1: ( ( rule__Operation__Group_7_3__0 )* )
-            // InternalToscaDsl.g:8244:2: ( rule__Operation__Group_7_3__0 )*
-            {
-             before(grammarAccess.getOperationAccess().getGroup_7_3()); 
-            // InternalToscaDsl.g:8245:2: ( rule__Operation__Group_7_3__0 )*
-            loop61:
-            do {
-                int alt61=2;
-                int LA61_0 = input.LA(1);
-
-                if ( (LA61_0==18) ) {
-                    alt61=1;
-                }
-
-
-                switch (alt61) {
-            	case 1 :
-            	    // InternalToscaDsl.g:8245:3: rule__Operation__Group_7_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Operation__Group_7_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop61;
-                }
-            } while (true);
-
-             after(grammarAccess.getOperationAccess().getGroup_7_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__3__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7__4"
-    // InternalToscaDsl.g:8253:1: rule__Operation__Group_7__4 : rule__Operation__Group_7__4__Impl ;
-    public final void rule__Operation__Group_7__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8257:1: ( rule__Operation__Group_7__4__Impl )
-            // InternalToscaDsl.g:8258:2: rule__Operation__Group_7__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__4"
-
-
-    // $ANTLR start "rule__Operation__Group_7__4__Impl"
-    // InternalToscaDsl.g:8264:1: rule__Operation__Group_7__4__Impl : ( '}' ) ;
-    public final void rule__Operation__Group_7__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8268:1: ( ( '}' ) )
-            // InternalToscaDsl.g:8269:1: ( '}' )
-            {
-            // InternalToscaDsl.g:8269:1: ( '}' )
-            // InternalToscaDsl.g:8270:2: '}'
-            {
-             before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_7_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_7_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7__4__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7_3__0"
-    // InternalToscaDsl.g:8280:1: rule__Operation__Group_7_3__0 : rule__Operation__Group_7_3__0__Impl rule__Operation__Group_7_3__1 ;
-    public final void rule__Operation__Group_7_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8284:1: ( rule__Operation__Group_7_3__0__Impl rule__Operation__Group_7_3__1 )
-            // InternalToscaDsl.g:8285:2: rule__Operation__Group_7_3__0__Impl rule__Operation__Group_7_3__1
-            {
-            pushFollow(FOLLOW_16);
-            rule__Operation__Group_7_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7_3__0"
-
-
-    // $ANTLR start "rule__Operation__Group_7_3__0__Impl"
-    // InternalToscaDsl.g:8292:1: rule__Operation__Group_7_3__0__Impl : ( ',' ) ;
-    public final void rule__Operation__Group_7_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8296:1: ( ( ',' ) )
-            // InternalToscaDsl.g:8297:1: ( ',' )
-            {
-            // InternalToscaDsl.g:8297:1: ( ',' )
-            // InternalToscaDsl.g:8298:2: ','
-            {
-             before(grammarAccess.getOperationAccess().getCommaKeyword_7_3_0()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getCommaKeyword_7_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7_3__0__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_7_3__1"
-    // InternalToscaDsl.g:8307:1: rule__Operation__Group_7_3__1 : rule__Operation__Group_7_3__1__Impl ;
-    public final void rule__Operation__Group_7_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8311:1: ( rule__Operation__Group_7_3__1__Impl )
-            // InternalToscaDsl.g:8312:2: rule__Operation__Group_7_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_7_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7_3__1"
-
-
-    // $ANTLR start "rule__Operation__Group_7_3__1__Impl"
-    // InternalToscaDsl.g:8318:1: rule__Operation__Group_7_3__1__Impl : ( ( rule__Operation__DependentArtifactsAssignment_7_3_1 ) ) ;
-    public final void rule__Operation__Group_7_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8322:1: ( ( ( rule__Operation__DependentArtifactsAssignment_7_3_1 ) ) )
-            // InternalToscaDsl.g:8323:1: ( ( rule__Operation__DependentArtifactsAssignment_7_3_1 ) )
-            {
-            // InternalToscaDsl.g:8323:1: ( ( rule__Operation__DependentArtifactsAssignment_7_3_1 ) )
-            // InternalToscaDsl.g:8324:2: ( rule__Operation__DependentArtifactsAssignment_7_3_1 )
-            {
-             before(grammarAccess.getOperationAccess().getDependentArtifactsAssignment_7_3_1()); 
-            // InternalToscaDsl.g:8325:2: ( rule__Operation__DependentArtifactsAssignment_7_3_1 )
-            // InternalToscaDsl.g:8325:3: rule__Operation__DependentArtifactsAssignment_7_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__DependentArtifactsAssignment_7_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getDependentArtifactsAssignment_7_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_7_3__1__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8__0"
-    // InternalToscaDsl.g:8334:1: rule__Operation__Group_8__0 : rule__Operation__Group_8__0__Impl rule__Operation__Group_8__1 ;
-    public final void rule__Operation__Group_8__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8338:1: ( rule__Operation__Group_8__0__Impl rule__Operation__Group_8__1 )
-            // InternalToscaDsl.g:8339:2: rule__Operation__Group_8__0__Impl rule__Operation__Group_8__1
-            {
-            pushFollow(FOLLOW_9);
-            rule__Operation__Group_8__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__0"
-
-
-    // $ANTLR start "rule__Operation__Group_8__0__Impl"
-    // InternalToscaDsl.g:8346:1: rule__Operation__Group_8__0__Impl : ( ',\\n\"inputs\" :' ) ;
-    public final void rule__Operation__Group_8__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8350:1: ( ( ',\\n\"inputs\" :' ) )
-            // InternalToscaDsl.g:8351:1: ( ',\\n\"inputs\" :' )
-            {
-            // InternalToscaDsl.g:8351:1: ( ',\\n\"inputs\" :' )
-            // InternalToscaDsl.g:8352:2: ',\\n\"inputs\" :'
-            {
-             before(grammarAccess.getOperationAccess().getInputsKeyword_8_0()); 
-            match(input,20,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getInputsKeyword_8_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__0__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8__1"
-    // InternalToscaDsl.g:8361:1: rule__Operation__Group_8__1 : rule__Operation__Group_8__1__Impl rule__Operation__Group_8__2 ;
-    public final void rule__Operation__Group_8__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8365:1: ( rule__Operation__Group_8__1__Impl rule__Operation__Group_8__2 )
-            // InternalToscaDsl.g:8366:2: rule__Operation__Group_8__1__Impl rule__Operation__Group_8__2
-            {
-            pushFollow(FOLLOW_4);
-            rule__Operation__Group_8__1__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8__2();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__1"
-
-
-    // $ANTLR start "rule__Operation__Group_8__1__Impl"
-    // InternalToscaDsl.g:8373:1: rule__Operation__Group_8__1__Impl : ( '{' ) ;
-    public final void rule__Operation__Group_8__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8377:1: ( ( '{' ) )
-            // InternalToscaDsl.g:8378:1: ( '{' )
-            {
-            // InternalToscaDsl.g:8378:1: ( '{' )
-            // InternalToscaDsl.g:8379:2: '{'
-            {
-             before(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_8_1()); 
-            match(input,11,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getLeftCurlyBracketKeyword_8_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__1__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8__2"
-    // InternalToscaDsl.g:8388:1: rule__Operation__Group_8__2 : rule__Operation__Group_8__2__Impl rule__Operation__Group_8__3 ;
-    public final void rule__Operation__Group_8__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8392:1: ( rule__Operation__Group_8__2__Impl rule__Operation__Group_8__3 )
-            // InternalToscaDsl.g:8393:2: rule__Operation__Group_8__2__Impl rule__Operation__Group_8__3
-            {
-            pushFollow(FOLLOW_10);
-            rule__Operation__Group_8__2__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8__3();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__2"
-
-
-    // $ANTLR start "rule__Operation__Group_8__2__Impl"
-    // InternalToscaDsl.g:8400:1: rule__Operation__Group_8__2__Impl : ( ( rule__Operation__InputsAssignment_8_2 ) ) ;
-    public final void rule__Operation__Group_8__2__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8404:1: ( ( ( rule__Operation__InputsAssignment_8_2 ) ) )
-            // InternalToscaDsl.g:8405:1: ( ( rule__Operation__InputsAssignment_8_2 ) )
-            {
-            // InternalToscaDsl.g:8405:1: ( ( rule__Operation__InputsAssignment_8_2 ) )
-            // InternalToscaDsl.g:8406:2: ( rule__Operation__InputsAssignment_8_2 )
-            {
-             before(grammarAccess.getOperationAccess().getInputsAssignment_8_2()); 
-            // InternalToscaDsl.g:8407:2: ( rule__Operation__InputsAssignment_8_2 )
-            // InternalToscaDsl.g:8407:3: rule__Operation__InputsAssignment_8_2
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__InputsAssignment_8_2();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getInputsAssignment_8_2()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__2__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8__3"
-    // InternalToscaDsl.g:8415:1: rule__Operation__Group_8__3 : rule__Operation__Group_8__3__Impl rule__Operation__Group_8__4 ;
-    public final void rule__Operation__Group_8__3() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8419:1: ( rule__Operation__Group_8__3__Impl rule__Operation__Group_8__4 )
-            // InternalToscaDsl.g:8420:2: rule__Operation__Group_8__3__Impl rule__Operation__Group_8__4
-            {
-            pushFollow(FOLLOW_10);
-            rule__Operation__Group_8__3__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8__4();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__3"
-
-
-    // $ANTLR start "rule__Operation__Group_8__3__Impl"
-    // InternalToscaDsl.g:8427:1: rule__Operation__Group_8__3__Impl : ( ( rule__Operation__Group_8_3__0 )* ) ;
-    public final void rule__Operation__Group_8__3__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8431:1: ( ( ( rule__Operation__Group_8_3__0 )* ) )
-            // InternalToscaDsl.g:8432:1: ( ( rule__Operation__Group_8_3__0 )* )
-            {
-            // InternalToscaDsl.g:8432:1: ( ( rule__Operation__Group_8_3__0 )* )
-            // InternalToscaDsl.g:8433:2: ( rule__Operation__Group_8_3__0 )*
-            {
-             before(grammarAccess.getOperationAccess().getGroup_8_3()); 
-            // InternalToscaDsl.g:8434:2: ( rule__Operation__Group_8_3__0 )*
-            loop62:
-            do {
-                int alt62=2;
-                int LA62_0 = input.LA(1);
-
-                if ( (LA62_0==18) ) {
-                    alt62=1;
-                }
-
-
-                switch (alt62) {
-            	case 1 :
-            	    // InternalToscaDsl.g:8434:3: rule__Operation__Group_8_3__0
-            	    {
-            	    pushFollow(FOLLOW_8);
-            	    rule__Operation__Group_8_3__0();
-
-            	    state._fsp--;
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop62;
-                }
-            } while (true);
-
-             after(grammarAccess.getOperationAccess().getGroup_8_3()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__3__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8__4"
-    // InternalToscaDsl.g:8442:1: rule__Operation__Group_8__4 : rule__Operation__Group_8__4__Impl ;
-    public final void rule__Operation__Group_8__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8446:1: ( rule__Operation__Group_8__4__Impl )
-            // InternalToscaDsl.g:8447:2: rule__Operation__Group_8__4__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8__4__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__4"
-
-
-    // $ANTLR start "rule__Operation__Group_8__4__Impl"
-    // InternalToscaDsl.g:8453:1: rule__Operation__Group_8__4__Impl : ( '}' ) ;
-    public final void rule__Operation__Group_8__4__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8457:1: ( ( '}' ) )
-            // InternalToscaDsl.g:8458:1: ( '}' )
-            {
-            // InternalToscaDsl.g:8458:1: ( '}' )
-            // InternalToscaDsl.g:8459:2: '}'
-            {
-             before(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_8_4()); 
-            match(input,13,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getRightCurlyBracketKeyword_8_4()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8__4__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8_3__0"
-    // InternalToscaDsl.g:8469:1: rule__Operation__Group_8_3__0 : rule__Operation__Group_8_3__0__Impl rule__Operation__Group_8_3__1 ;
-    public final void rule__Operation__Group_8_3__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8473:1: ( rule__Operation__Group_8_3__0__Impl rule__Operation__Group_8_3__1 )
-            // InternalToscaDsl.g:8474:2: rule__Operation__Group_8_3__0__Impl rule__Operation__Group_8_3__1
-            {
-            pushFollow(FOLLOW_4);
-            rule__Operation__Group_8_3__0__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8_3__1();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8_3__0"
-
-
-    // $ANTLR start "rule__Operation__Group_8_3__0__Impl"
-    // InternalToscaDsl.g:8481:1: rule__Operation__Group_8_3__0__Impl : ( ',' ) ;
-    public final void rule__Operation__Group_8_3__0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8485:1: ( ( ',' ) )
-            // InternalToscaDsl.g:8486:1: ( ',' )
-            {
-            // InternalToscaDsl.g:8486:1: ( ',' )
-            // InternalToscaDsl.g:8487:2: ','
-            {
-             before(grammarAccess.getOperationAccess().getCommaKeyword_8_3_0()); 
-            match(input,18,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getCommaKeyword_8_3_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8_3__0__Impl"
-
-
-    // $ANTLR start "rule__Operation__Group_8_3__1"
-    // InternalToscaDsl.g:8496:1: rule__Operation__Group_8_3__1 : rule__Operation__Group_8_3__1__Impl ;
-    public final void rule__Operation__Group_8_3__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8500:1: ( rule__Operation__Group_8_3__1__Impl )
-            // InternalToscaDsl.g:8501:2: rule__Operation__Group_8_3__1__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__Group_8_3__1__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8_3__1"
-
-
-    // $ANTLR start "rule__Operation__Group_8_3__1__Impl"
-    // InternalToscaDsl.g:8507:1: rule__Operation__Group_8_3__1__Impl : ( ( rule__Operation__InputsAssignment_8_3_1 ) ) ;
-    public final void rule__Operation__Group_8_3__1__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:8511:1: ( ( ( rule__Operation__InputsAssignment_8_3_1 ) ) )
-            // InternalToscaDsl.g:8512:1: ( ( rule__Operation__InputsAssignment_8_3_1 ) )
-            {
-            // InternalToscaDsl.g:8512:1: ( ( rule__Operation__InputsAssignment_8_3_1 ) )
-            // InternalToscaDsl.g:8513:2: ( rule__Operation__InputsAssignment_8_3_1 )
-            {
-             before(grammarAccess.getOperationAccess().getInputsAssignment_8_3_1()); 
-            // InternalToscaDsl.g:8514:2: ( rule__Operation__InputsAssignment_8_3_1 )
-            // InternalToscaDsl.g:8514:3: rule__Operation__InputsAssignment_8_3_1
-            {
-            pushFollow(FOLLOW_2);
-            rule__Operation__InputsAssignment_8_3_1();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getOperationAccess().getInputsAssignment_8_3_1()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__Group_8_3__1__Impl"
-
-
     // $ANTLR start "rule__TopologyTemplate__Tosca_definitions_versionAssignment_2"
-    // InternalToscaDsl.g:8523:1: rule__TopologyTemplate__Tosca_definitions_versionAssignment_2 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7578:1: rule__TopologyTemplate__Tosca_definitions_versionAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TopologyTemplate__Tosca_definitions_versionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8527:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8528:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7582:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7583:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8528:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8529:3: RULE_STRING
+            // InternalToscaDsl.g:7583:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7584:3: RULE_STRING
             {
              before(grammarAccess.getTopologyTemplateAccess().getTosca_definitions_versionSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -25685,17 +22834,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__DescriptionAssignment_3_1"
-    // InternalToscaDsl.g:8538:1: rule__TopologyTemplate__DescriptionAssignment_3_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7593:1: rule__TopologyTemplate__DescriptionAssignment_3_1 : ( RULE_STRING ) ;
     public final void rule__TopologyTemplate__DescriptionAssignment_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8542:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8543:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7597:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7598:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8543:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8544:3: RULE_STRING
+            // InternalToscaDsl.g:7598:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7599:3: RULE_STRING
             {
              before(grammarAccess.getTopologyTemplateAccess().getDescriptionSTRINGTerminalRuleCall_3_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -25722,17 +22871,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__ImportsAssignment_4_2"
-    // InternalToscaDsl.g:8553:1: rule__TopologyTemplate__ImportsAssignment_4_2 : ( ruleImport ) ;
+    // InternalToscaDsl.g:7608:1: rule__TopologyTemplate__ImportsAssignment_4_2 : ( ruleImport ) ;
     public final void rule__TopologyTemplate__ImportsAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8557:1: ( ( ruleImport ) )
-            // InternalToscaDsl.g:8558:2: ( ruleImport )
+            // InternalToscaDsl.g:7612:1: ( ( ruleImport ) )
+            // InternalToscaDsl.g:7613:2: ( ruleImport )
             {
-            // InternalToscaDsl.g:8558:2: ( ruleImport )
-            // InternalToscaDsl.g:8559:3: ruleImport
+            // InternalToscaDsl.g:7613:2: ( ruleImport )
+            // InternalToscaDsl.g:7614:3: ruleImport
             {
              before(grammarAccess.getTopologyTemplateAccess().getImportsImportParserRuleCall_4_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25763,17 +22912,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__ImportsAssignment_4_3_1"
-    // InternalToscaDsl.g:8568:1: rule__TopologyTemplate__ImportsAssignment_4_3_1 : ( ruleImport ) ;
+    // InternalToscaDsl.g:7623:1: rule__TopologyTemplate__ImportsAssignment_4_3_1 : ( ruleImport ) ;
     public final void rule__TopologyTemplate__ImportsAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8572:1: ( ( ruleImport ) )
-            // InternalToscaDsl.g:8573:2: ( ruleImport )
+            // InternalToscaDsl.g:7627:1: ( ( ruleImport ) )
+            // InternalToscaDsl.g:7628:2: ( ruleImport )
             {
-            // InternalToscaDsl.g:8573:2: ( ruleImport )
-            // InternalToscaDsl.g:8574:3: ruleImport
+            // InternalToscaDsl.g:7628:2: ( ruleImport )
+            // InternalToscaDsl.g:7629:3: ruleImport
             {
              before(grammarAccess.getTopologyTemplateAccess().getImportsImportParserRuleCall_4_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25804,17 +22953,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__OutputsAssignment_5_2"
-    // InternalToscaDsl.g:8583:1: rule__TopologyTemplate__OutputsAssignment_5_2 : ( ruleParameter ) ;
+    // InternalToscaDsl.g:7638:1: rule__TopologyTemplate__OutputsAssignment_5_2 : ( ruleParameter ) ;
     public final void rule__TopologyTemplate__OutputsAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8587:1: ( ( ruleParameter ) )
-            // InternalToscaDsl.g:8588:2: ( ruleParameter )
+            // InternalToscaDsl.g:7642:1: ( ( ruleParameter ) )
+            // InternalToscaDsl.g:7643:2: ( ruleParameter )
             {
-            // InternalToscaDsl.g:8588:2: ( ruleParameter )
-            // InternalToscaDsl.g:8589:3: ruleParameter
+            // InternalToscaDsl.g:7643:2: ( ruleParameter )
+            // InternalToscaDsl.g:7644:3: ruleParameter
             {
              before(grammarAccess.getTopologyTemplateAccess().getOutputsParameterParserRuleCall_5_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25845,17 +22994,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__OutputsAssignment_5_3_1"
-    // InternalToscaDsl.g:8598:1: rule__TopologyTemplate__OutputsAssignment_5_3_1 : ( ruleParameter ) ;
+    // InternalToscaDsl.g:7653:1: rule__TopologyTemplate__OutputsAssignment_5_3_1 : ( ruleParameter ) ;
     public final void rule__TopologyTemplate__OutputsAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8602:1: ( ( ruleParameter ) )
-            // InternalToscaDsl.g:8603:2: ( ruleParameter )
+            // InternalToscaDsl.g:7657:1: ( ( ruleParameter ) )
+            // InternalToscaDsl.g:7658:2: ( ruleParameter )
             {
-            // InternalToscaDsl.g:8603:2: ( ruleParameter )
-            // InternalToscaDsl.g:8604:3: ruleParameter
+            // InternalToscaDsl.g:7658:2: ( ruleParameter )
+            // InternalToscaDsl.g:7659:3: ruleParameter
             {
              before(grammarAccess.getTopologyTemplateAccess().getOutputsParameterParserRuleCall_5_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25886,17 +23035,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__InputsAssignment_6_2"
-    // InternalToscaDsl.g:8613:1: rule__TopologyTemplate__InputsAssignment_6_2 : ( ruleParameter ) ;
+    // InternalToscaDsl.g:7668:1: rule__TopologyTemplate__InputsAssignment_6_2 : ( ruleParameter ) ;
     public final void rule__TopologyTemplate__InputsAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8617:1: ( ( ruleParameter ) )
-            // InternalToscaDsl.g:8618:2: ( ruleParameter )
+            // InternalToscaDsl.g:7672:1: ( ( ruleParameter ) )
+            // InternalToscaDsl.g:7673:2: ( ruleParameter )
             {
-            // InternalToscaDsl.g:8618:2: ( ruleParameter )
-            // InternalToscaDsl.g:8619:3: ruleParameter
+            // InternalToscaDsl.g:7673:2: ( ruleParameter )
+            // InternalToscaDsl.g:7674:3: ruleParameter
             {
              before(grammarAccess.getTopologyTemplateAccess().getInputsParameterParserRuleCall_6_2_0()); 
             pushFollow(FOLLOW_2);
@@ -25927,17 +23076,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__InputsAssignment_6_3_1"
-    // InternalToscaDsl.g:8628:1: rule__TopologyTemplate__InputsAssignment_6_3_1 : ( ruleParameter ) ;
+    // InternalToscaDsl.g:7683:1: rule__TopologyTemplate__InputsAssignment_6_3_1 : ( ruleParameter ) ;
     public final void rule__TopologyTemplate__InputsAssignment_6_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8632:1: ( ( ruleParameter ) )
-            // InternalToscaDsl.g:8633:2: ( ruleParameter )
+            // InternalToscaDsl.g:7687:1: ( ( ruleParameter ) )
+            // InternalToscaDsl.g:7688:2: ( ruleParameter )
             {
-            // InternalToscaDsl.g:8633:2: ( ruleParameter )
-            // InternalToscaDsl.g:8634:3: ruleParameter
+            // InternalToscaDsl.g:7688:2: ( ruleParameter )
+            // InternalToscaDsl.g:7689:3: ruleParameter
             {
              before(grammarAccess.getTopologyTemplateAccess().getInputsParameterParserRuleCall_6_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -25968,17 +23117,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__NodeTemplatesAssignment_7_2"
-    // InternalToscaDsl.g:8643:1: rule__TopologyTemplate__NodeTemplatesAssignment_7_2 : ( ruleNodeTemplate ) ;
+    // InternalToscaDsl.g:7698:1: rule__TopologyTemplate__NodeTemplatesAssignment_7_2 : ( ruleNodeTemplate ) ;
     public final void rule__TopologyTemplate__NodeTemplatesAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8647:1: ( ( ruleNodeTemplate ) )
-            // InternalToscaDsl.g:8648:2: ( ruleNodeTemplate )
+            // InternalToscaDsl.g:7702:1: ( ( ruleNodeTemplate ) )
+            // InternalToscaDsl.g:7703:2: ( ruleNodeTemplate )
             {
-            // InternalToscaDsl.g:8648:2: ( ruleNodeTemplate )
-            // InternalToscaDsl.g:8649:3: ruleNodeTemplate
+            // InternalToscaDsl.g:7703:2: ( ruleNodeTemplate )
+            // InternalToscaDsl.g:7704:3: ruleNodeTemplate
             {
              before(grammarAccess.getTopologyTemplateAccess().getNodeTemplatesNodeTemplateParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26009,17 +23158,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__NodeTemplatesAssignment_7_3_1"
-    // InternalToscaDsl.g:8658:1: rule__TopologyTemplate__NodeTemplatesAssignment_7_3_1 : ( ruleNodeTemplate ) ;
+    // InternalToscaDsl.g:7713:1: rule__TopologyTemplate__NodeTemplatesAssignment_7_3_1 : ( ruleNodeTemplate ) ;
     public final void rule__TopologyTemplate__NodeTemplatesAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8662:1: ( ( ruleNodeTemplate ) )
-            // InternalToscaDsl.g:8663:2: ( ruleNodeTemplate )
+            // InternalToscaDsl.g:7717:1: ( ( ruleNodeTemplate ) )
+            // InternalToscaDsl.g:7718:2: ( ruleNodeTemplate )
             {
-            // InternalToscaDsl.g:8663:2: ( ruleNodeTemplate )
-            // InternalToscaDsl.g:8664:3: ruleNodeTemplate
+            // InternalToscaDsl.g:7718:2: ( ruleNodeTemplate )
+            // InternalToscaDsl.g:7719:3: ruleNodeTemplate
             {
              before(grammarAccess.getTopologyTemplateAccess().getNodeTemplatesNodeTemplateParserRuleCall_7_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26050,17 +23199,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__RealtionshipsAssignment_8_2"
-    // InternalToscaDsl.g:8673:1: rule__TopologyTemplate__RealtionshipsAssignment_8_2 : ( ruleRelationship ) ;
+    // InternalToscaDsl.g:7728:1: rule__TopologyTemplate__RealtionshipsAssignment_8_2 : ( ruleRelationship ) ;
     public final void rule__TopologyTemplate__RealtionshipsAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8677:1: ( ( ruleRelationship ) )
-            // InternalToscaDsl.g:8678:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7732:1: ( ( ruleRelationship ) )
+            // InternalToscaDsl.g:7733:2: ( ruleRelationship )
             {
-            // InternalToscaDsl.g:8678:2: ( ruleRelationship )
-            // InternalToscaDsl.g:8679:3: ruleRelationship
+            // InternalToscaDsl.g:7733:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7734:3: ruleRelationship
             {
              before(grammarAccess.getTopologyTemplateAccess().getRealtionshipsRelationshipParserRuleCall_8_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26091,17 +23240,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__RealtionshipsAssignment_8_3_1"
-    // InternalToscaDsl.g:8688:1: rule__TopologyTemplate__RealtionshipsAssignment_8_3_1 : ( ruleRelationship ) ;
+    // InternalToscaDsl.g:7743:1: rule__TopologyTemplate__RealtionshipsAssignment_8_3_1 : ( ruleRelationship ) ;
     public final void rule__TopologyTemplate__RealtionshipsAssignment_8_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8692:1: ( ( ruleRelationship ) )
-            // InternalToscaDsl.g:8693:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7747:1: ( ( ruleRelationship ) )
+            // InternalToscaDsl.g:7748:2: ( ruleRelationship )
             {
-            // InternalToscaDsl.g:8693:2: ( ruleRelationship )
-            // InternalToscaDsl.g:8694:3: ruleRelationship
+            // InternalToscaDsl.g:7748:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7749:3: ruleRelationship
             {
              before(grammarAccess.getTopologyTemplateAccess().getRealtionshipsRelationshipParserRuleCall_8_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26132,17 +23281,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__GroupsAssignment_9_2"
-    // InternalToscaDsl.g:8703:1: rule__TopologyTemplate__GroupsAssignment_9_2 : ( ruleGroup ) ;
+    // InternalToscaDsl.g:7758:1: rule__TopologyTemplate__GroupsAssignment_9_2 : ( ruleGroup ) ;
     public final void rule__TopologyTemplate__GroupsAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8707:1: ( ( ruleGroup ) )
-            // InternalToscaDsl.g:8708:2: ( ruleGroup )
+            // InternalToscaDsl.g:7762:1: ( ( ruleGroup ) )
+            // InternalToscaDsl.g:7763:2: ( ruleGroup )
             {
-            // InternalToscaDsl.g:8708:2: ( ruleGroup )
-            // InternalToscaDsl.g:8709:3: ruleGroup
+            // InternalToscaDsl.g:7763:2: ( ruleGroup )
+            // InternalToscaDsl.g:7764:3: ruleGroup
             {
              before(grammarAccess.getTopologyTemplateAccess().getGroupsGroupParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26173,17 +23322,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__GroupsAssignment_9_3_1"
-    // InternalToscaDsl.g:8718:1: rule__TopologyTemplate__GroupsAssignment_9_3_1 : ( ruleGroup ) ;
+    // InternalToscaDsl.g:7773:1: rule__TopologyTemplate__GroupsAssignment_9_3_1 : ( ruleGroup ) ;
     public final void rule__TopologyTemplate__GroupsAssignment_9_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8722:1: ( ( ruleGroup ) )
-            // InternalToscaDsl.g:8723:2: ( ruleGroup )
+            // InternalToscaDsl.g:7777:1: ( ( ruleGroup ) )
+            // InternalToscaDsl.g:7778:2: ( ruleGroup )
             {
-            // InternalToscaDsl.g:8723:2: ( ruleGroup )
-            // InternalToscaDsl.g:8724:3: ruleGroup
+            // InternalToscaDsl.g:7778:2: ( ruleGroup )
+            // InternalToscaDsl.g:7779:3: ruleGroup
             {
              before(grammarAccess.getTopologyTemplateAccess().getGroupsGroupParserRuleCall_9_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26214,17 +23363,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__PoliciesAssignment_10_2"
-    // InternalToscaDsl.g:8733:1: rule__TopologyTemplate__PoliciesAssignment_10_2 : ( rulePolicy ) ;
+    // InternalToscaDsl.g:7788:1: rule__TopologyTemplate__PoliciesAssignment_10_2 : ( rulePolicy ) ;
     public final void rule__TopologyTemplate__PoliciesAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8737:1: ( ( rulePolicy ) )
-            // InternalToscaDsl.g:8738:2: ( rulePolicy )
+            // InternalToscaDsl.g:7792:1: ( ( rulePolicy ) )
+            // InternalToscaDsl.g:7793:2: ( rulePolicy )
             {
-            // InternalToscaDsl.g:8738:2: ( rulePolicy )
-            // InternalToscaDsl.g:8739:3: rulePolicy
+            // InternalToscaDsl.g:7793:2: ( rulePolicy )
+            // InternalToscaDsl.g:7794:3: rulePolicy
             {
              before(grammarAccess.getTopologyTemplateAccess().getPoliciesPolicyParserRuleCall_10_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26255,17 +23404,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__TopologyTemplate__PoliciesAssignment_10_3_1"
-    // InternalToscaDsl.g:8748:1: rule__TopologyTemplate__PoliciesAssignment_10_3_1 : ( rulePolicy ) ;
+    // InternalToscaDsl.g:7803:1: rule__TopologyTemplate__PoliciesAssignment_10_3_1 : ( rulePolicy ) ;
     public final void rule__TopologyTemplate__PoliciesAssignment_10_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8752:1: ( ( rulePolicy ) )
-            // InternalToscaDsl.g:8753:2: ( rulePolicy )
+            // InternalToscaDsl.g:7807:1: ( ( rulePolicy ) )
+            // InternalToscaDsl.g:7808:2: ( rulePolicy )
             {
-            // InternalToscaDsl.g:8753:2: ( rulePolicy )
-            // InternalToscaDsl.g:8754:3: rulePolicy
+            // InternalToscaDsl.g:7808:2: ( rulePolicy )
+            // InternalToscaDsl.g:7809:3: rulePolicy
             {
              before(grammarAccess.getTopologyTemplateAccess().getPoliciesPolicyParserRuleCall_10_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26296,17 +23445,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Import__FileAssignment_1"
-    // InternalToscaDsl.g:8763:1: rule__Import__FileAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7818:1: rule__Import__FileAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Import__FileAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8767:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8768:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7822:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7823:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8768:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8769:3: RULE_STRING
+            // InternalToscaDsl.g:7823:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7824:3: RULE_STRING
             {
              before(grammarAccess.getImportAccess().getFileSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -26333,17 +23482,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Parameter__Parameter_nameAssignment_1"
-    // InternalToscaDsl.g:8778:1: rule__Parameter__Parameter_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7833:1: rule__Parameter__Parameter_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Parameter__Parameter_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8782:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8783:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7837:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7838:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8783:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8784:3: RULE_STRING
+            // InternalToscaDsl.g:7838:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7839:3: RULE_STRING
             {
              before(grammarAccess.getParameterAccess().getParameter_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -26370,17 +23519,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__Node_template_nameAssignment_1"
-    // InternalToscaDsl.g:8793:1: rule__NodeTemplate__Node_template_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7848:1: rule__NodeTemplate__Node_template_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__NodeTemplate__Node_template_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8797:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8798:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7852:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7853:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8798:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8799:3: RULE_STRING
+            // InternalToscaDsl.g:7853:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7854:3: RULE_STRING
             {
              before(grammarAccess.getNodeTemplateAccess().getNode_template_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -26407,17 +23556,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__TypeAssignment_5"
-    // InternalToscaDsl.g:8808:1: rule__NodeTemplate__TypeAssignment_5 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7863:1: rule__NodeTemplate__TypeAssignment_5 : ( RULE_STRING ) ;
     public final void rule__NodeTemplate__TypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8812:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8813:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7867:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7868:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8813:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8814:3: RULE_STRING
+            // InternalToscaDsl.g:7868:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7869:3: RULE_STRING
             {
              before(grammarAccess.getNodeTemplateAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -26444,17 +23593,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__DescriptionAssignment_6_1"
-    // InternalToscaDsl.g:8823:1: rule__NodeTemplate__DescriptionAssignment_6_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:7878:1: rule__NodeTemplate__DescriptionAssignment_6_1 : ( RULE_STRING ) ;
     public final void rule__NodeTemplate__DescriptionAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8827:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:8828:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7882:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:7883:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:8828:2: ( RULE_STRING )
-            // InternalToscaDsl.g:8829:3: RULE_STRING
+            // InternalToscaDsl.g:7883:2: ( RULE_STRING )
+            // InternalToscaDsl.g:7884:3: RULE_STRING
             {
              before(grammarAccess.getNodeTemplateAccess().getDescriptionSTRINGTerminalRuleCall_6_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -26481,17 +23630,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__RelationshipsAssignment_7_2"
-    // InternalToscaDsl.g:8838:1: rule__NodeTemplate__RelationshipsAssignment_7_2 : ( ruleRelationship ) ;
+    // InternalToscaDsl.g:7893:1: rule__NodeTemplate__RelationshipsAssignment_7_2 : ( ruleRelationship ) ;
     public final void rule__NodeTemplate__RelationshipsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8842:1: ( ( ruleRelationship ) )
-            // InternalToscaDsl.g:8843:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7897:1: ( ( ruleRelationship ) )
+            // InternalToscaDsl.g:7898:2: ( ruleRelationship )
             {
-            // InternalToscaDsl.g:8843:2: ( ruleRelationship )
-            // InternalToscaDsl.g:8844:3: ruleRelationship
+            // InternalToscaDsl.g:7898:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7899:3: ruleRelationship
             {
              before(grammarAccess.getNodeTemplateAccess().getRelationshipsRelationshipParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26522,17 +23671,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__RelationshipsAssignment_7_3_1"
-    // InternalToscaDsl.g:8853:1: rule__NodeTemplate__RelationshipsAssignment_7_3_1 : ( ruleRelationship ) ;
+    // InternalToscaDsl.g:7908:1: rule__NodeTemplate__RelationshipsAssignment_7_3_1 : ( ruleRelationship ) ;
     public final void rule__NodeTemplate__RelationshipsAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8857:1: ( ( ruleRelationship ) )
-            // InternalToscaDsl.g:8858:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7912:1: ( ( ruleRelationship ) )
+            // InternalToscaDsl.g:7913:2: ( ruleRelationship )
             {
-            // InternalToscaDsl.g:8858:2: ( ruleRelationship )
-            // InternalToscaDsl.g:8859:3: ruleRelationship
+            // InternalToscaDsl.g:7913:2: ( ruleRelationship )
+            // InternalToscaDsl.g:7914:3: ruleRelationship
             {
              before(grammarAccess.getNodeTemplateAccess().getRelationshipsRelationshipParserRuleCall_7_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26563,17 +23712,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__InterfacesAssignment_8_2"
-    // InternalToscaDsl.g:8868:1: rule__NodeTemplate__InterfacesAssignment_8_2 : ( ruleInterface ) ;
+    // InternalToscaDsl.g:7923:1: rule__NodeTemplate__InterfacesAssignment_8_2 : ( ruleInterface ) ;
     public final void rule__NodeTemplate__InterfacesAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8872:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:8873:2: ( ruleInterface )
+            // InternalToscaDsl.g:7927:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:7928:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:8873:2: ( ruleInterface )
-            // InternalToscaDsl.g:8874:3: ruleInterface
+            // InternalToscaDsl.g:7928:2: ( ruleInterface )
+            // InternalToscaDsl.g:7929:3: ruleInterface
             {
              before(grammarAccess.getNodeTemplateAccess().getInterfacesInterfaceParserRuleCall_8_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26604,17 +23753,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__InterfacesAssignment_8_3_1"
-    // InternalToscaDsl.g:8883:1: rule__NodeTemplate__InterfacesAssignment_8_3_1 : ( ruleInterface ) ;
+    // InternalToscaDsl.g:7938:1: rule__NodeTemplate__InterfacesAssignment_8_3_1 : ( ruleInterface ) ;
     public final void rule__NodeTemplate__InterfacesAssignment_8_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8887:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:8888:2: ( ruleInterface )
+            // InternalToscaDsl.g:7942:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:7943:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:8888:2: ( ruleInterface )
-            // InternalToscaDsl.g:8889:3: ruleInterface
+            // InternalToscaDsl.g:7943:2: ( ruleInterface )
+            // InternalToscaDsl.g:7944:3: ruleInterface
             {
              before(grammarAccess.getNodeTemplateAccess().getInterfacesInterfaceParserRuleCall_8_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26645,17 +23794,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__PropertiesAssignment_9_2"
-    // InternalToscaDsl.g:8898:1: rule__NodeTemplate__PropertiesAssignment_9_2 : ( ruleProperty ) ;
+    // InternalToscaDsl.g:7953:1: rule__NodeTemplate__PropertiesAssignment_9_2 : ( ruleProperty ) ;
     public final void rule__NodeTemplate__PropertiesAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8902:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:8903:2: ( ruleProperty )
+            // InternalToscaDsl.g:7957:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:7958:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:8903:2: ( ruleProperty )
-            // InternalToscaDsl.g:8904:3: ruleProperty
+            // InternalToscaDsl.g:7958:2: ( ruleProperty )
+            // InternalToscaDsl.g:7959:3: ruleProperty
             {
              before(grammarAccess.getNodeTemplateAccess().getPropertiesPropertyParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26686,17 +23835,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__PropertiesAssignment_9_3_1"
-    // InternalToscaDsl.g:8913:1: rule__NodeTemplate__PropertiesAssignment_9_3_1 : ( ruleProperty ) ;
+    // InternalToscaDsl.g:7968:1: rule__NodeTemplate__PropertiesAssignment_9_3_1 : ( ruleProperty ) ;
     public final void rule__NodeTemplate__PropertiesAssignment_9_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8917:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:8918:2: ( ruleProperty )
+            // InternalToscaDsl.g:7972:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:7973:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:8918:2: ( ruleProperty )
-            // InternalToscaDsl.g:8919:3: ruleProperty
+            // InternalToscaDsl.g:7973:2: ( ruleProperty )
+            // InternalToscaDsl.g:7974:3: ruleProperty
             {
              before(grammarAccess.getNodeTemplateAccess().getPropertiesPropertyParserRuleCall_9_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26727,17 +23876,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__AttributesAssignment_10_2"
-    // InternalToscaDsl.g:8928:1: rule__NodeTemplate__AttributesAssignment_10_2 : ( ruleAttribute ) ;
+    // InternalToscaDsl.g:7983:1: rule__NodeTemplate__AttributesAssignment_10_2 : ( ruleAttribute ) ;
     public final void rule__NodeTemplate__AttributesAssignment_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8932:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:8933:2: ( ruleAttribute )
+            // InternalToscaDsl.g:7987:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:7988:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:8933:2: ( ruleAttribute )
-            // InternalToscaDsl.g:8934:3: ruleAttribute
+            // InternalToscaDsl.g:7988:2: ( ruleAttribute )
+            // InternalToscaDsl.g:7989:3: ruleAttribute
             {
              before(grammarAccess.getNodeTemplateAccess().getAttributesAttributeParserRuleCall_10_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26768,17 +23917,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__AttributesAssignment_10_3_1"
-    // InternalToscaDsl.g:8943:1: rule__NodeTemplate__AttributesAssignment_10_3_1 : ( ruleAttribute ) ;
+    // InternalToscaDsl.g:7998:1: rule__NodeTemplate__AttributesAssignment_10_3_1 : ( ruleAttribute ) ;
     public final void rule__NodeTemplate__AttributesAssignment_10_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8947:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:8948:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8002:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:8003:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:8948:2: ( ruleAttribute )
-            // InternalToscaDsl.g:8949:3: ruleAttribute
+            // InternalToscaDsl.g:8003:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8004:3: ruleAttribute
             {
              before(grammarAccess.getNodeTemplateAccess().getAttributesAttributeParserRuleCall_10_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26809,17 +23958,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__RequirementsAssignment_11_2"
-    // InternalToscaDsl.g:8958:1: rule__NodeTemplate__RequirementsAssignment_11_2 : ( ruleRequirement ) ;
+    // InternalToscaDsl.g:8013:1: rule__NodeTemplate__RequirementsAssignment_11_2 : ( ruleRequirement ) ;
     public final void rule__NodeTemplate__RequirementsAssignment_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8962:1: ( ( ruleRequirement ) )
-            // InternalToscaDsl.g:8963:2: ( ruleRequirement )
+            // InternalToscaDsl.g:8017:1: ( ( ruleRequirement ) )
+            // InternalToscaDsl.g:8018:2: ( ruleRequirement )
             {
-            // InternalToscaDsl.g:8963:2: ( ruleRequirement )
-            // InternalToscaDsl.g:8964:3: ruleRequirement
+            // InternalToscaDsl.g:8018:2: ( ruleRequirement )
+            // InternalToscaDsl.g:8019:3: ruleRequirement
             {
              before(grammarAccess.getNodeTemplateAccess().getRequirementsRequirementParserRuleCall_11_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26850,17 +23999,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__RequirementsAssignment_11_3_1"
-    // InternalToscaDsl.g:8973:1: rule__NodeTemplate__RequirementsAssignment_11_3_1 : ( ruleRequirement ) ;
+    // InternalToscaDsl.g:8028:1: rule__NodeTemplate__RequirementsAssignment_11_3_1 : ( ruleRequirement ) ;
     public final void rule__NodeTemplate__RequirementsAssignment_11_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8977:1: ( ( ruleRequirement ) )
-            // InternalToscaDsl.g:8978:2: ( ruleRequirement )
+            // InternalToscaDsl.g:8032:1: ( ( ruleRequirement ) )
+            // InternalToscaDsl.g:8033:2: ( ruleRequirement )
             {
-            // InternalToscaDsl.g:8978:2: ( ruleRequirement )
-            // InternalToscaDsl.g:8979:3: ruleRequirement
+            // InternalToscaDsl.g:8033:2: ( ruleRequirement )
+            // InternalToscaDsl.g:8034:3: ruleRequirement
             {
              before(grammarAccess.getNodeTemplateAccess().getRequirementsRequirementParserRuleCall_11_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26891,17 +24040,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__CapabilitiesAssignment_12_2"
-    // InternalToscaDsl.g:8988:1: rule__NodeTemplate__CapabilitiesAssignment_12_2 : ( ruleCapability ) ;
+    // InternalToscaDsl.g:8043:1: rule__NodeTemplate__CapabilitiesAssignment_12_2 : ( ruleCapability ) ;
     public final void rule__NodeTemplate__CapabilitiesAssignment_12_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:8992:1: ( ( ruleCapability ) )
-            // InternalToscaDsl.g:8993:2: ( ruleCapability )
+            // InternalToscaDsl.g:8047:1: ( ( ruleCapability ) )
+            // InternalToscaDsl.g:8048:2: ( ruleCapability )
             {
-            // InternalToscaDsl.g:8993:2: ( ruleCapability )
-            // InternalToscaDsl.g:8994:3: ruleCapability
+            // InternalToscaDsl.g:8048:2: ( ruleCapability )
+            // InternalToscaDsl.g:8049:3: ruleCapability
             {
              before(grammarAccess.getNodeTemplateAccess().getCapabilitiesCapabilityParserRuleCall_12_2_0()); 
             pushFollow(FOLLOW_2);
@@ -26932,17 +24081,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__NodeTemplate__CapabilitiesAssignment_12_3_1"
-    // InternalToscaDsl.g:9003:1: rule__NodeTemplate__CapabilitiesAssignment_12_3_1 : ( ruleCapability ) ;
+    // InternalToscaDsl.g:8058:1: rule__NodeTemplate__CapabilitiesAssignment_12_3_1 : ( ruleCapability ) ;
     public final void rule__NodeTemplate__CapabilitiesAssignment_12_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9007:1: ( ( ruleCapability ) )
-            // InternalToscaDsl.g:9008:2: ( ruleCapability )
+            // InternalToscaDsl.g:8062:1: ( ( ruleCapability ) )
+            // InternalToscaDsl.g:8063:2: ( ruleCapability )
             {
-            // InternalToscaDsl.g:9008:2: ( ruleCapability )
-            // InternalToscaDsl.g:9009:3: ruleCapability
+            // InternalToscaDsl.g:8063:2: ( ruleCapability )
+            // InternalToscaDsl.g:8064:3: ruleCapability
             {
              before(grammarAccess.getNodeTemplateAccess().getCapabilitiesCapabilityParserRuleCall_12_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -26972,22 +24121,22 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__NodeTemplate__CapabilitiesAssignment_12_3_1"
 
 
-    // $ANTLR start "rule__Relationship__Relationship_nameAssignment_1"
-    // InternalToscaDsl.g:9018:1: rule__Relationship__Relationship_nameAssignment_1 : ( RULE_STRING ) ;
-    public final void rule__Relationship__Relationship_nameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__TypeAssignment_3"
+    // InternalToscaDsl.g:8073:1: rule__Relationship__TypeAssignment_3 : ( RULE_STRING ) ;
+    public final void rule__Relationship__TypeAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9022:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9023:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8077:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8078:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9023:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9024:3: RULE_STRING
+            // InternalToscaDsl.g:8078:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8079:3: RULE_STRING
             {
-             before(grammarAccess.getRelationshipAccess().getRelationship_nameSTRINGTerminalRuleCall_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getTypeSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getRelationship_nameSTRINGTerminalRuleCall_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getTypeSTRINGTerminalRuleCall_3_0()); 
 
             }
 
@@ -27006,25 +24155,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__Relationship_nameAssignment_1"
+    // $ANTLR end "rule__Relationship__TypeAssignment_3"
 
 
-    // $ANTLR start "rule__Relationship__TypeAssignment_5"
-    // InternalToscaDsl.g:9033:1: rule__Relationship__TypeAssignment_5 : ( RULE_STRING ) ;
-    public final void rule__Relationship__TypeAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__TargetAssignment_4_1"
+    // InternalToscaDsl.g:8088:1: rule__Relationship__TargetAssignment_4_1 : ( RULE_STRING ) ;
+    public final void rule__Relationship__TargetAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9037:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9038:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8092:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8093:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9038:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9039:3: RULE_STRING
+            // InternalToscaDsl.g:8093:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8094:3: RULE_STRING
             {
-             before(grammarAccess.getRelationshipAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
+             before(grammarAccess.getRelationshipAccess().getTargetSTRINGTerminalRuleCall_4_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
+             after(grammarAccess.getRelationshipAccess().getTargetSTRINGTerminalRuleCall_4_1_0()); 
 
             }
 
@@ -27043,66 +24192,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__TypeAssignment_5"
+    // $ANTLR end "rule__Relationship__TargetAssignment_4_1"
 
 
-    // $ANTLR start "rule__Relationship__TargetAssignment_6_1"
-    // InternalToscaDsl.g:9048:1: rule__Relationship__TargetAssignment_6_1 : ( RULE_STRING ) ;
-    public final void rule__Relationship__TargetAssignment_6_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9052:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9053:2: ( RULE_STRING )
-            {
-            // InternalToscaDsl.g:9053:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9054:3: RULE_STRING
-            {
-             before(grammarAccess.getRelationshipAccess().getTargetSTRINGTerminalRuleCall_6_1_0()); 
-            match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getRelationshipAccess().getTargetSTRINGTerminalRuleCall_6_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Relationship__TargetAssignment_6_1"
-
-
-    // $ANTLR start "rule__Relationship__InterfacesAssignment_7_2"
-    // InternalToscaDsl.g:9063:1: rule__Relationship__InterfacesAssignment_7_2 : ( ruleInterface ) ;
-    public final void rule__Relationship__InterfacesAssignment_7_2() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__InterfacesAssignment_5_2"
+    // InternalToscaDsl.g:8103:1: rule__Relationship__InterfacesAssignment_5_2 : ( ruleInterface ) ;
+    public final void rule__Relationship__InterfacesAssignment_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9067:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9068:2: ( ruleInterface )
+            // InternalToscaDsl.g:8107:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8108:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9068:2: ( ruleInterface )
-            // InternalToscaDsl.g:9069:3: ruleInterface
+            // InternalToscaDsl.g:8108:2: ( ruleInterface )
+            // InternalToscaDsl.g:8109:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_7_2_0()); 
+             before(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_5_2_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_7_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_5_2_0()); 
 
             }
 
@@ -27121,29 +24233,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__InterfacesAssignment_7_2"
+    // $ANTLR end "rule__Relationship__InterfacesAssignment_5_2"
 
 
-    // $ANTLR start "rule__Relationship__InterfacesAssignment_7_3_1"
-    // InternalToscaDsl.g:9078:1: rule__Relationship__InterfacesAssignment_7_3_1 : ( ruleInterface ) ;
-    public final void rule__Relationship__InterfacesAssignment_7_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__InterfacesAssignment_5_3_1"
+    // InternalToscaDsl.g:8118:1: rule__Relationship__InterfacesAssignment_5_3_1 : ( ruleInterface ) ;
+    public final void rule__Relationship__InterfacesAssignment_5_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9082:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9083:2: ( ruleInterface )
+            // InternalToscaDsl.g:8122:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8123:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9083:2: ( ruleInterface )
-            // InternalToscaDsl.g:9084:3: ruleInterface
+            // InternalToscaDsl.g:8123:2: ( ruleInterface )
+            // InternalToscaDsl.g:8124:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_7_3_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_5_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_7_3_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getInterfacesInterfaceParserRuleCall_5_3_1_0()); 
 
             }
 
@@ -27162,29 +24274,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__InterfacesAssignment_7_3_1"
+    // $ANTLR end "rule__Relationship__InterfacesAssignment_5_3_1"
 
 
-    // $ANTLR start "rule__Relationship__PropertiesAssignment_8_2"
-    // InternalToscaDsl.g:9093:1: rule__Relationship__PropertiesAssignment_8_2 : ( ruleProperty ) ;
-    public final void rule__Relationship__PropertiesAssignment_8_2() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__PropertiesAssignment_6_2"
+    // InternalToscaDsl.g:8133:1: rule__Relationship__PropertiesAssignment_6_2 : ( ruleProperty ) ;
+    public final void rule__Relationship__PropertiesAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9097:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9098:2: ( ruleProperty )
+            // InternalToscaDsl.g:8137:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:8138:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:9098:2: ( ruleProperty )
-            // InternalToscaDsl.g:9099:3: ruleProperty
+            // InternalToscaDsl.g:8138:2: ( ruleProperty )
+            // InternalToscaDsl.g:8139:3: ruleProperty
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_8_2_0()); 
+             before(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_6_2_0()); 
             pushFollow(FOLLOW_2);
             ruleProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_8_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_6_2_0()); 
 
             }
 
@@ -27203,29 +24315,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__PropertiesAssignment_8_2"
+    // $ANTLR end "rule__Relationship__PropertiesAssignment_6_2"
 
 
-    // $ANTLR start "rule__Relationship__PropertiesAssignment_8_3_1"
-    // InternalToscaDsl.g:9108:1: rule__Relationship__PropertiesAssignment_8_3_1 : ( ruleProperty ) ;
-    public final void rule__Relationship__PropertiesAssignment_8_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__PropertiesAssignment_6_3_1"
+    // InternalToscaDsl.g:8148:1: rule__Relationship__PropertiesAssignment_6_3_1 : ( ruleProperty ) ;
+    public final void rule__Relationship__PropertiesAssignment_6_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9112:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9113:2: ( ruleProperty )
+            // InternalToscaDsl.g:8152:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:8153:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:9113:2: ( ruleProperty )
-            // InternalToscaDsl.g:9114:3: ruleProperty
+            // InternalToscaDsl.g:8153:2: ( ruleProperty )
+            // InternalToscaDsl.g:8154:3: ruleProperty
             {
-             before(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_8_3_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_6_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleProperty();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_8_3_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getPropertiesPropertyParserRuleCall_6_3_1_0()); 
 
             }
 
@@ -27244,29 +24356,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__PropertiesAssignment_8_3_1"
+    // $ANTLR end "rule__Relationship__PropertiesAssignment_6_3_1"
 
 
-    // $ANTLR start "rule__Relationship__AttributesAssignment_9_2"
-    // InternalToscaDsl.g:9123:1: rule__Relationship__AttributesAssignment_9_2 : ( ruleAttribute ) ;
-    public final void rule__Relationship__AttributesAssignment_9_2() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__AttributesAssignment_7_2"
+    // InternalToscaDsl.g:8163:1: rule__Relationship__AttributesAssignment_7_2 : ( ruleAttribute ) ;
+    public final void rule__Relationship__AttributesAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9127:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:9128:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8167:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:8168:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:9128:2: ( ruleAttribute )
-            // InternalToscaDsl.g:9129:3: ruleAttribute
+            // InternalToscaDsl.g:8168:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8169:3: ruleAttribute
             {
-             before(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_9_2_0()); 
+             before(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
             ruleAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_9_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_7_2_0()); 
 
             }
 
@@ -27285,29 +24397,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__AttributesAssignment_9_2"
+    // $ANTLR end "rule__Relationship__AttributesAssignment_7_2"
 
 
-    // $ANTLR start "rule__Relationship__AttributesAssignment_9_3_1"
-    // InternalToscaDsl.g:9138:1: rule__Relationship__AttributesAssignment_9_3_1 : ( ruleAttribute ) ;
-    public final void rule__Relationship__AttributesAssignment_9_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__AttributesAssignment_7_3_1"
+    // InternalToscaDsl.g:8178:1: rule__Relationship__AttributesAssignment_7_3_1 : ( ruleAttribute ) ;
+    public final void rule__Relationship__AttributesAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9142:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:9143:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8182:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:8183:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:9143:2: ( ruleAttribute )
-            // InternalToscaDsl.g:9144:3: ruleAttribute
+            // InternalToscaDsl.g:8183:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8184:3: ruleAttribute
             {
-             before(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_9_3_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_7_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleAttribute();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_9_3_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getAttributesAttributeParserRuleCall_7_3_1_0()); 
 
             }
 
@@ -27326,29 +24438,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__AttributesAssignment_9_3_1"
+    // $ANTLR end "rule__Relationship__AttributesAssignment_7_3_1"
 
 
-    // $ANTLR start "rule__Relationship__SourceInterfacesAssignment_10_2"
-    // InternalToscaDsl.g:9153:1: rule__Relationship__SourceInterfacesAssignment_10_2 : ( ruleInterface ) ;
-    public final void rule__Relationship__SourceInterfacesAssignment_10_2() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Source_interfacesAssignment_8_2"
+    // InternalToscaDsl.g:8193:1: rule__Relationship__Source_interfacesAssignment_8_2 : ( ruleInterface ) ;
+    public final void rule__Relationship__Source_interfacesAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9157:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9158:2: ( ruleInterface )
+            // InternalToscaDsl.g:8197:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8198:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9158:2: ( ruleInterface )
-            // InternalToscaDsl.g:9159:3: ruleInterface
+            // InternalToscaDsl.g:8198:2: ( ruleInterface )
+            // InternalToscaDsl.g:8199:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getSourceInterfacesInterfaceParserRuleCall_10_2_0()); 
+             before(grammarAccess.getRelationshipAccess().getSource_interfacesInterfaceParserRuleCall_8_2_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getSourceInterfacesInterfaceParserRuleCall_10_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getSource_interfacesInterfaceParserRuleCall_8_2_0()); 
 
             }
 
@@ -27367,29 +24479,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__SourceInterfacesAssignment_10_2"
+    // $ANTLR end "rule__Relationship__Source_interfacesAssignment_8_2"
 
 
-    // $ANTLR start "rule__Relationship__SourceInterfacesAssignment_10_3_1"
-    // InternalToscaDsl.g:9168:1: rule__Relationship__SourceInterfacesAssignment_10_3_1 : ( ruleInterface ) ;
-    public final void rule__Relationship__SourceInterfacesAssignment_10_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Source_interfacesAssignment_8_3_1"
+    // InternalToscaDsl.g:8208:1: rule__Relationship__Source_interfacesAssignment_8_3_1 : ( ruleInterface ) ;
+    public final void rule__Relationship__Source_interfacesAssignment_8_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9172:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9173:2: ( ruleInterface )
+            // InternalToscaDsl.g:8212:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8213:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9173:2: ( ruleInterface )
-            // InternalToscaDsl.g:9174:3: ruleInterface
+            // InternalToscaDsl.g:8213:2: ( ruleInterface )
+            // InternalToscaDsl.g:8214:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getSourceInterfacesInterfaceParserRuleCall_10_3_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getSource_interfacesInterfaceParserRuleCall_8_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getSourceInterfacesInterfaceParserRuleCall_10_3_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getSource_interfacesInterfaceParserRuleCall_8_3_1_0()); 
 
             }
 
@@ -27408,29 +24520,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__SourceInterfacesAssignment_10_3_1"
+    // $ANTLR end "rule__Relationship__Source_interfacesAssignment_8_3_1"
 
 
-    // $ANTLR start "rule__Relationship__TargetInterfacesAssignment_11_2"
-    // InternalToscaDsl.g:9183:1: rule__Relationship__TargetInterfacesAssignment_11_2 : ( ruleInterface ) ;
-    public final void rule__Relationship__TargetInterfacesAssignment_11_2() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Target_interfacesAssignment_9_2"
+    // InternalToscaDsl.g:8223:1: rule__Relationship__Target_interfacesAssignment_9_2 : ( ruleInterface ) ;
+    public final void rule__Relationship__Target_interfacesAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9187:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9188:2: ( ruleInterface )
+            // InternalToscaDsl.g:8227:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8228:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9188:2: ( ruleInterface )
-            // InternalToscaDsl.g:9189:3: ruleInterface
+            // InternalToscaDsl.g:8228:2: ( ruleInterface )
+            // InternalToscaDsl.g:8229:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getTargetInterfacesInterfaceParserRuleCall_11_2_0()); 
+             before(grammarAccess.getRelationshipAccess().getTarget_interfacesInterfaceParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getTargetInterfacesInterfaceParserRuleCall_11_2_0()); 
+             after(grammarAccess.getRelationshipAccess().getTarget_interfacesInterfaceParserRuleCall_9_2_0()); 
 
             }
 
@@ -27449,29 +24561,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__TargetInterfacesAssignment_11_2"
+    // $ANTLR end "rule__Relationship__Target_interfacesAssignment_9_2"
 
 
-    // $ANTLR start "rule__Relationship__TargetInterfacesAssignment_11_3_1"
-    // InternalToscaDsl.g:9198:1: rule__Relationship__TargetInterfacesAssignment_11_3_1 : ( ruleInterface ) ;
-    public final void rule__Relationship__TargetInterfacesAssignment_11_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Relationship__Target_interfacesAssignment_9_3_1"
+    // InternalToscaDsl.g:8238:1: rule__Relationship__Target_interfacesAssignment_9_3_1 : ( ruleInterface ) ;
+    public final void rule__Relationship__Target_interfacesAssignment_9_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9202:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9203:2: ( ruleInterface )
+            // InternalToscaDsl.g:8242:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8243:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9203:2: ( ruleInterface )
-            // InternalToscaDsl.g:9204:3: ruleInterface
+            // InternalToscaDsl.g:8243:2: ( ruleInterface )
+            // InternalToscaDsl.g:8244:3: ruleInterface
             {
-             before(grammarAccess.getRelationshipAccess().getTargetInterfacesInterfaceParserRuleCall_11_3_1_0()); 
+             before(grammarAccess.getRelationshipAccess().getTarget_interfacesInterfaceParserRuleCall_9_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleInterface();
 
             state._fsp--;
 
-             after(grammarAccess.getRelationshipAccess().getTargetInterfacesInterfaceParserRuleCall_11_3_1_0()); 
+             after(grammarAccess.getRelationshipAccess().getTarget_interfacesInterfaceParserRuleCall_9_3_1_0()); 
 
             }
 
@@ -27490,21 +24602,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Relationship__TargetInterfacesAssignment_11_3_1"
+    // $ANTLR end "rule__Relationship__Target_interfacesAssignment_9_3_1"
 
 
     // $ANTLR start "rule__Group__Group_nameAssignment_1"
-    // InternalToscaDsl.g:9213:1: rule__Group__Group_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8253:1: rule__Group__Group_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Group__Group_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9217:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9218:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8257:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8258:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9218:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9219:3: RULE_STRING
+            // InternalToscaDsl.g:8258:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8259:3: RULE_STRING
             {
              before(grammarAccess.getGroupAccess().getGroup_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -27531,17 +24643,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__TypeAssignment_5"
-    // InternalToscaDsl.g:9228:1: rule__Group__TypeAssignment_5 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8268:1: rule__Group__TypeAssignment_5 : ( RULE_STRING ) ;
     public final void rule__Group__TypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9232:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9233:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8272:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8273:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9233:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9234:3: RULE_STRING
+            // InternalToscaDsl.g:8273:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8274:3: RULE_STRING
             {
              before(grammarAccess.getGroupAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -27568,17 +24680,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__DescriptionAssignment_6_1"
-    // InternalToscaDsl.g:9243:1: rule__Group__DescriptionAssignment_6_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8283:1: rule__Group__DescriptionAssignment_6_1 : ( RULE_STRING ) ;
     public final void rule__Group__DescriptionAssignment_6_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9247:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9248:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8287:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8288:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9248:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9249:3: RULE_STRING
+            // InternalToscaDsl.g:8288:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8289:3: RULE_STRING
             {
              before(grammarAccess.getGroupAccess().getDescriptionSTRINGTerminalRuleCall_6_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -27605,17 +24717,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__TargetsAssignment_7_2"
-    // InternalToscaDsl.g:9258:1: rule__Group__TargetsAssignment_7_2 : ( ruleEString ) ;
+    // InternalToscaDsl.g:8298:1: rule__Group__TargetsAssignment_7_2 : ( ruleEString ) ;
     public final void rule__Group__TargetsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9262:1: ( ( ruleEString ) )
-            // InternalToscaDsl.g:9263:2: ( ruleEString )
+            // InternalToscaDsl.g:8302:1: ( ( ruleEString ) )
+            // InternalToscaDsl.g:8303:2: ( ruleEString )
             {
-            // InternalToscaDsl.g:9263:2: ( ruleEString )
-            // InternalToscaDsl.g:9264:3: ruleEString
+            // InternalToscaDsl.g:8303:2: ( ruleEString )
+            // InternalToscaDsl.g:8304:3: ruleEString
             {
              before(grammarAccess.getGroupAccess().getTargetsEStringParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
@@ -27646,17 +24758,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__TargetsAssignment_7_3_1"
-    // InternalToscaDsl.g:9273:1: rule__Group__TargetsAssignment_7_3_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8313:1: rule__Group__TargetsAssignment_7_3_1 : ( RULE_STRING ) ;
     public final void rule__Group__TargetsAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9277:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9278:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8317:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8318:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9278:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9279:3: RULE_STRING
+            // InternalToscaDsl.g:8318:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8319:3: RULE_STRING
             {
              before(grammarAccess.getGroupAccess().getTargetsSTRINGTerminalRuleCall_7_3_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -27683,17 +24795,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__PropertiesAssignment_8_1"
-    // InternalToscaDsl.g:9288:1: rule__Group__PropertiesAssignment_8_1 : ( ruleProperty ) ;
+    // InternalToscaDsl.g:8328:1: rule__Group__PropertiesAssignment_8_1 : ( ruleProperty ) ;
     public final void rule__Group__PropertiesAssignment_8_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9292:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9293:2: ( ruleProperty )
+            // InternalToscaDsl.g:8332:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:8333:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:9293:2: ( ruleProperty )
-            // InternalToscaDsl.g:9294:3: ruleProperty
+            // InternalToscaDsl.g:8333:2: ( ruleProperty )
+            // InternalToscaDsl.g:8334:3: ruleProperty
             {
              before(grammarAccess.getGroupAccess().getPropertiesPropertyParserRuleCall_8_1_0()); 
             pushFollow(FOLLOW_2);
@@ -27724,17 +24836,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__InterfacesAssignment_9_2"
-    // InternalToscaDsl.g:9303:1: rule__Group__InterfacesAssignment_9_2 : ( ruleInterface ) ;
+    // InternalToscaDsl.g:8343:1: rule__Group__InterfacesAssignment_9_2 : ( ruleInterface ) ;
     public final void rule__Group__InterfacesAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9307:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9308:2: ( ruleInterface )
+            // InternalToscaDsl.g:8347:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8348:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9308:2: ( ruleInterface )
-            // InternalToscaDsl.g:9309:3: ruleInterface
+            // InternalToscaDsl.g:8348:2: ( ruleInterface )
+            // InternalToscaDsl.g:8349:3: ruleInterface
             {
              before(grammarAccess.getGroupAccess().getInterfacesInterfaceParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
@@ -27765,17 +24877,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Group__InterfacesAssignment_9_3_1"
-    // InternalToscaDsl.g:9318:1: rule__Group__InterfacesAssignment_9_3_1 : ( ruleInterface ) ;
+    // InternalToscaDsl.g:8358:1: rule__Group__InterfacesAssignment_9_3_1 : ( ruleInterface ) ;
     public final void rule__Group__InterfacesAssignment_9_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9322:1: ( ( ruleInterface ) )
-            // InternalToscaDsl.g:9323:2: ( ruleInterface )
+            // InternalToscaDsl.g:8362:1: ( ( ruleInterface ) )
+            // InternalToscaDsl.g:8363:2: ( ruleInterface )
             {
-            // InternalToscaDsl.g:9323:2: ( ruleInterface )
-            // InternalToscaDsl.g:9324:3: ruleInterface
+            // InternalToscaDsl.g:8363:2: ( ruleInterface )
+            // InternalToscaDsl.g:8364:3: ruleInterface
             {
              before(grammarAccess.getGroupAccess().getInterfacesInterfaceParserRuleCall_9_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -27806,17 +24918,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Policy__Policy_nameAssignment_1"
-    // InternalToscaDsl.g:9333:1: rule__Policy__Policy_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8373:1: rule__Policy__Policy_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Policy__Policy_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9337:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9338:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8377:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8378:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9338:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9339:3: RULE_STRING
+            // InternalToscaDsl.g:8378:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8379:3: RULE_STRING
             {
              before(grammarAccess.getPolicyAccess().getPolicy_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -27842,22 +24954,22 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Policy__Policy_nameAssignment_1"
 
 
-    // $ANTLR start "rule__Interface__Interface_nameAssignment_1"
-    // InternalToscaDsl.g:9348:1: rule__Interface__Interface_nameAssignment_1 : ( RULE_STRING ) ;
-    public final void rule__Interface__Interface_nameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Interface__TypeAssignment_1"
+    // InternalToscaDsl.g:8388:1: rule__Interface__TypeAssignment_1 : ( RULE_STRING ) ;
+    public final void rule__Interface__TypeAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9352:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9353:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8392:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8393:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9353:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9354:3: RULE_STRING
+            // InternalToscaDsl.g:8393:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8394:3: RULE_STRING
             {
-             before(grammarAccess.getInterfaceAccess().getInterface_nameSTRINGTerminalRuleCall_1_0()); 
+             before(grammarAccess.getInterfaceAccess().getTypeSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getInterface_nameSTRINGTerminalRuleCall_1_0()); 
+             after(grammarAccess.getInterfaceAccess().getTypeSTRINGTerminalRuleCall_1_0()); 
 
             }
 
@@ -27876,66 +24988,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__Interface_nameAssignment_1"
+    // $ANTLR end "rule__Interface__TypeAssignment_1"
 
 
-    // $ANTLR start "rule__Interface__TypeAssignment_5"
-    // InternalToscaDsl.g:9363:1: rule__Interface__TypeAssignment_5 : ( RULE_STRING ) ;
-    public final void rule__Interface__TypeAssignment_5() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9367:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9368:2: ( RULE_STRING )
-            {
-            // InternalToscaDsl.g:9368:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9369:3: RULE_STRING
-            {
-             before(grammarAccess.getInterfaceAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
-            match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getInterfaceAccess().getTypeSTRINGTerminalRuleCall_5_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__TypeAssignment_5"
-
-
-    // $ANTLR start "rule__Interface__OperationsAssignment_6_2"
-    // InternalToscaDsl.g:9378:1: rule__Interface__OperationsAssignment_6_2 : ( ruleOperation ) ;
-    public final void rule__Interface__OperationsAssignment_6_2() throws RecognitionException {
+    // $ANTLR start "rule__Interface__OperationsAssignment_4_2"
+    // InternalToscaDsl.g:8403:1: rule__Interface__OperationsAssignment_4_2 : ( ruleOperation ) ;
+    public final void rule__Interface__OperationsAssignment_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9382:1: ( ( ruleOperation ) )
-            // InternalToscaDsl.g:9383:2: ( ruleOperation )
+            // InternalToscaDsl.g:8407:1: ( ( ruleOperation ) )
+            // InternalToscaDsl.g:8408:2: ( ruleOperation )
             {
-            // InternalToscaDsl.g:9383:2: ( ruleOperation )
-            // InternalToscaDsl.g:9384:3: ruleOperation
+            // InternalToscaDsl.g:8408:2: ( ruleOperation )
+            // InternalToscaDsl.g:8409:3: ruleOperation
             {
-             before(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_6_2_0()); 
+             before(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_4_2_0()); 
             pushFollow(FOLLOW_2);
             ruleOperation();
 
             state._fsp--;
 
-             after(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_6_2_0()); 
+             after(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_4_2_0()); 
 
             }
 
@@ -27954,29 +25029,29 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__OperationsAssignment_6_2"
+    // $ANTLR end "rule__Interface__OperationsAssignment_4_2"
 
 
-    // $ANTLR start "rule__Interface__OperationsAssignment_6_3_1"
-    // InternalToscaDsl.g:9393:1: rule__Interface__OperationsAssignment_6_3_1 : ( ruleOperation ) ;
-    public final void rule__Interface__OperationsAssignment_6_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Interface__OperationsAssignment_4_3_1"
+    // InternalToscaDsl.g:8418:1: rule__Interface__OperationsAssignment_4_3_1 : ( ruleOperation ) ;
+    public final void rule__Interface__OperationsAssignment_4_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9397:1: ( ( ruleOperation ) )
-            // InternalToscaDsl.g:9398:2: ( ruleOperation )
+            // InternalToscaDsl.g:8422:1: ( ( ruleOperation ) )
+            // InternalToscaDsl.g:8423:2: ( ruleOperation )
             {
-            // InternalToscaDsl.g:9398:2: ( ruleOperation )
-            // InternalToscaDsl.g:9399:3: ruleOperation
+            // InternalToscaDsl.g:8423:2: ( ruleOperation )
+            // InternalToscaDsl.g:8424:3: ruleOperation
             {
-             before(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_6_3_1_0()); 
+             before(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_4_3_1_0()); 
             pushFollow(FOLLOW_2);
             ruleOperation();
 
             state._fsp--;
 
-             after(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_6_3_1_0()); 
+             after(grammarAccess.getInterfaceAccess().getOperationsOperationParserRuleCall_4_3_1_0()); 
 
             }
 
@@ -27995,107 +25070,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Interface__OperationsAssignment_6_3_1"
+    // $ANTLR end "rule__Interface__OperationsAssignment_4_3_1"
 
 
-    // $ANTLR start "rule__Interface__InputsAssignment_7_2"
-    // InternalToscaDsl.g:9408:1: rule__Interface__InputsAssignment_7_2 : ( ruleProperty ) ;
-    public final void rule__Interface__InputsAssignment_7_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9412:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9413:2: ( ruleProperty )
-            {
-            // InternalToscaDsl.g:9413:2: ( ruleProperty )
-            // InternalToscaDsl.g:9414:3: ruleProperty
-            {
-             before(grammarAccess.getInterfaceAccess().getInputsPropertyParserRuleCall_7_2_0()); 
-            pushFollow(FOLLOW_2);
-            ruleProperty();
-
-            state._fsp--;
-
-             after(grammarAccess.getInterfaceAccess().getInputsPropertyParserRuleCall_7_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__InputsAssignment_7_2"
-
-
-    // $ANTLR start "rule__Interface__InputsAssignment_7_3_1"
-    // InternalToscaDsl.g:9423:1: rule__Interface__InputsAssignment_7_3_1 : ( ruleProperty ) ;
-    public final void rule__Interface__InputsAssignment_7_3_1() throws RecognitionException {
+    // $ANTLR start "rule__Property__Property_nameAssignment_2"
+    // InternalToscaDsl.g:8433:1: rule__Property__Property_nameAssignment_2 : ( RULE_STRING ) ;
+    public final void rule__Property__Property_nameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9427:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9428:2: ( ruleProperty )
+            // InternalToscaDsl.g:8437:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8438:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9428:2: ( ruleProperty )
-            // InternalToscaDsl.g:9429:3: ruleProperty
+            // InternalToscaDsl.g:8438:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8439:3: RULE_STRING
             {
-             before(grammarAccess.getInterfaceAccess().getInputsPropertyParserRuleCall_7_3_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleProperty();
-
-            state._fsp--;
-
-             after(grammarAccess.getInterfaceAccess().getInputsPropertyParserRuleCall_7_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Interface__InputsAssignment_7_3_1"
-
-
-    // $ANTLR start "rule__Property__Property_nameAssignment_1"
-    // InternalToscaDsl.g:9438:1: rule__Property__Property_nameAssignment_1 : ( RULE_STRING ) ;
-    public final void rule__Property__Property_nameAssignment_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9442:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9443:2: ( RULE_STRING )
-            {
-            // InternalToscaDsl.g:9443:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9444:3: RULE_STRING
-            {
-             before(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_1_0()); 
+             before(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_1_0()); 
+             after(grammarAccess.getPropertyAccess().getProperty_nameSTRINGTerminalRuleCall_2_0()); 
 
             }
 
@@ -28114,25 +25107,25 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Property__Property_nameAssignment_1"
+    // $ANTLR end "rule__Property__Property_nameAssignment_2"
 
 
-    // $ANTLR start "rule__Property__ValueAssignment_5"
-    // InternalToscaDsl.g:9453:1: rule__Property__ValueAssignment_5 : ( RULE_STRING ) ;
-    public final void rule__Property__ValueAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Property__ValueAssignment_4"
+    // InternalToscaDsl.g:8448:1: rule__Property__ValueAssignment_4 : ( RULE_STRING ) ;
+    public final void rule__Property__ValueAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9457:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9458:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8452:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8453:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9458:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9459:3: RULE_STRING
+            // InternalToscaDsl.g:8453:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8454:3: RULE_STRING
             {
-             before(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_5_0()); 
+             before(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_5_0()); 
+             after(grammarAccess.getPropertyAccess().getValueSTRINGTerminalRuleCall_4_0()); 
 
             }
 
@@ -28151,21 +25144,21 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Property__ValueAssignment_5"
+    // $ANTLR end "rule__Property__ValueAssignment_4"
 
 
     // $ANTLR start "rule__Attribute__Attribute_nameAssignment_1"
-    // InternalToscaDsl.g:9468:1: rule__Attribute__Attribute_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8463:1: rule__Attribute__Attribute_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Attribute__Attribute_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9472:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9473:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8467:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8468:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9473:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9474:3: RULE_STRING
+            // InternalToscaDsl.g:8468:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8469:3: RULE_STRING
             {
              before(grammarAccess.getAttributeAccess().getAttribute_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28192,17 +25185,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__Requirement_nameAssignment_0"
-    // InternalToscaDsl.g:9483:1: rule__Requirement__Requirement_nameAssignment_0 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8478:1: rule__Requirement__Requirement_nameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Requirement__Requirement_nameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9487:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9488:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8482:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8483:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9488:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9489:3: RULE_STRING
+            // InternalToscaDsl.g:8483:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8484:3: RULE_STRING
             {
              before(grammarAccess.getRequirementAccess().getRequirement_nameSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28229,17 +25222,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__CapabiityAssignment_4"
-    // InternalToscaDsl.g:9498:1: rule__Requirement__CapabiityAssignment_4 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8493:1: rule__Requirement__CapabiityAssignment_4 : ( RULE_STRING ) ;
     public final void rule__Requirement__CapabiityAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9502:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9503:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8497:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8498:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9503:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9504:3: RULE_STRING
+            // InternalToscaDsl.g:8498:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8499:3: RULE_STRING
             {
              before(grammarAccess.getRequirementAccess().getCapabiitySTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28266,17 +25259,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Requirement__NodeAssignment_5_1"
-    // InternalToscaDsl.g:9513:1: rule__Requirement__NodeAssignment_5_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8508:1: rule__Requirement__NodeAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__Requirement__NodeAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9517:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9518:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8512:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8513:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9518:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9519:3: RULE_STRING
+            // InternalToscaDsl.g:8513:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8514:3: RULE_STRING
             {
              before(grammarAccess.getRequirementAccess().getNodeSTRINGTerminalRuleCall_5_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28303,17 +25296,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__Capability_nameAssignment_0"
-    // InternalToscaDsl.g:9528:1: rule__Capability__Capability_nameAssignment_0 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8523:1: rule__Capability__Capability_nameAssignment_0 : ( RULE_STRING ) ;
     public final void rule__Capability__Capability_nameAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9532:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9533:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8527:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8528:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9533:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9534:3: RULE_STRING
+            // InternalToscaDsl.g:8528:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8529:3: RULE_STRING
             {
              before(grammarAccess.getCapabilityAccess().getCapability_nameSTRINGTerminalRuleCall_0_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28340,17 +25333,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__TypeAssignment_4"
-    // InternalToscaDsl.g:9543:1: rule__Capability__TypeAssignment_4 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8538:1: rule__Capability__TypeAssignment_4 : ( RULE_STRING ) ;
     public final void rule__Capability__TypeAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9547:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9548:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8542:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8543:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9548:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9549:3: RULE_STRING
+            // InternalToscaDsl.g:8543:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8544:3: RULE_STRING
             {
              before(grammarAccess.getCapabilityAccess().getTypeSTRINGTerminalRuleCall_4_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28377,17 +25370,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__DescriptionAssignment_5_1"
-    // InternalToscaDsl.g:9558:1: rule__Capability__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8553:1: rule__Capability__DescriptionAssignment_5_1 : ( RULE_STRING ) ;
     public final void rule__Capability__DescriptionAssignment_5_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9562:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9563:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8557:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8558:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9563:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9564:3: RULE_STRING
+            // InternalToscaDsl.g:8558:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8559:3: RULE_STRING
             {
              before(grammarAccess.getCapabilityAccess().getDescriptionSTRINGTerminalRuleCall_5_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28414,17 +25407,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__PropertiesAssignment_6_2"
-    // InternalToscaDsl.g:9573:1: rule__Capability__PropertiesAssignment_6_2 : ( ruleProperty ) ;
+    // InternalToscaDsl.g:8568:1: rule__Capability__PropertiesAssignment_6_2 : ( ruleProperty ) ;
     public final void rule__Capability__PropertiesAssignment_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9577:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9578:2: ( ruleProperty )
+            // InternalToscaDsl.g:8572:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:8573:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:9578:2: ( ruleProperty )
-            // InternalToscaDsl.g:9579:3: ruleProperty
+            // InternalToscaDsl.g:8573:2: ( ruleProperty )
+            // InternalToscaDsl.g:8574:3: ruleProperty
             {
              before(grammarAccess.getCapabilityAccess().getPropertiesPropertyParserRuleCall_6_2_0()); 
             pushFollow(FOLLOW_2);
@@ -28455,17 +25448,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__PropertiesAssignment_6_3_1"
-    // InternalToscaDsl.g:9588:1: rule__Capability__PropertiesAssignment_6_3_1 : ( ruleProperty ) ;
+    // InternalToscaDsl.g:8583:1: rule__Capability__PropertiesAssignment_6_3_1 : ( ruleProperty ) ;
     public final void rule__Capability__PropertiesAssignment_6_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9592:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9593:2: ( ruleProperty )
+            // InternalToscaDsl.g:8587:1: ( ( ruleProperty ) )
+            // InternalToscaDsl.g:8588:2: ( ruleProperty )
             {
-            // InternalToscaDsl.g:9593:2: ( ruleProperty )
-            // InternalToscaDsl.g:9594:3: ruleProperty
+            // InternalToscaDsl.g:8588:2: ( ruleProperty )
+            // InternalToscaDsl.g:8589:3: ruleProperty
             {
              before(grammarAccess.getCapabilityAccess().getPropertiesPropertyParserRuleCall_6_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -28496,17 +25489,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__AttributesAssignment_7_2"
-    // InternalToscaDsl.g:9603:1: rule__Capability__AttributesAssignment_7_2 : ( ruleAttribute ) ;
+    // InternalToscaDsl.g:8598:1: rule__Capability__AttributesAssignment_7_2 : ( ruleAttribute ) ;
     public final void rule__Capability__AttributesAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9607:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:9608:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8602:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:8603:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:9608:2: ( ruleAttribute )
-            // InternalToscaDsl.g:9609:3: ruleAttribute
+            // InternalToscaDsl.g:8603:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8604:3: ruleAttribute
             {
              before(grammarAccess.getCapabilityAccess().getAttributesAttributeParserRuleCall_7_2_0()); 
             pushFollow(FOLLOW_2);
@@ -28537,17 +25530,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Capability__AttributesAssignment_7_3_1"
-    // InternalToscaDsl.g:9618:1: rule__Capability__AttributesAssignment_7_3_1 : ( ruleAttribute ) ;
+    // InternalToscaDsl.g:8613:1: rule__Capability__AttributesAssignment_7_3_1 : ( ruleAttribute ) ;
     public final void rule__Capability__AttributesAssignment_7_3_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9622:1: ( ( ruleAttribute ) )
-            // InternalToscaDsl.g:9623:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8617:1: ( ( ruleAttribute ) )
+            // InternalToscaDsl.g:8618:2: ( ruleAttribute )
             {
-            // InternalToscaDsl.g:9623:2: ( ruleAttribute )
-            // InternalToscaDsl.g:9624:3: ruleAttribute
+            // InternalToscaDsl.g:8618:2: ( ruleAttribute )
+            // InternalToscaDsl.g:8619:3: ruleAttribute
             {
              before(grammarAccess.getCapabilityAccess().getAttributesAttributeParserRuleCall_7_3_1_0()); 
             pushFollow(FOLLOW_2);
@@ -28578,17 +25571,17 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
 
 
     // $ANTLR start "rule__Operation__Operation_nameAssignment_1"
-    // InternalToscaDsl.g:9633:1: rule__Operation__Operation_nameAssignment_1 : ( RULE_STRING ) ;
+    // InternalToscaDsl.g:8628:1: rule__Operation__Operation_nameAssignment_1 : ( RULE_STRING ) ;
     public final void rule__Operation__Operation_nameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9637:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9638:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8632:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8633:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9638:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9639:3: RULE_STRING
+            // InternalToscaDsl.g:8633:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8634:3: RULE_STRING
             {
              before(grammarAccess.getOperationAccess().getOperation_nameSTRINGTerminalRuleCall_1_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -28614,22 +25607,22 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     // $ANTLR end "rule__Operation__Operation_nameAssignment_1"
 
 
-    // $ANTLR start "rule__Operation__PrimaryAssignment_5"
-    // InternalToscaDsl.g:9648:1: rule__Operation__PrimaryAssignment_5 : ( RULE_STRING ) ;
-    public final void rule__Operation__PrimaryAssignment_5() throws RecognitionException {
+    // $ANTLR start "rule__Operation__PrimaryAssignment_3"
+    // InternalToscaDsl.g:8643:1: rule__Operation__PrimaryAssignment_3 : ( RULE_STRING ) ;
+    public final void rule__Operation__PrimaryAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalToscaDsl.g:9652:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9653:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8647:1: ( ( RULE_STRING ) )
+            // InternalToscaDsl.g:8648:2: ( RULE_STRING )
             {
-            // InternalToscaDsl.g:9653:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9654:3: RULE_STRING
+            // InternalToscaDsl.g:8648:2: ( RULE_STRING )
+            // InternalToscaDsl.g:8649:3: RULE_STRING
             {
-             before(grammarAccess.getOperationAccess().getPrimarySTRINGTerminalRuleCall_5_0()); 
+             before(grammarAccess.getOperationAccess().getPrimarySTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getPrimarySTRINGTerminalRuleCall_5_0()); 
+             after(grammarAccess.getOperationAccess().getPrimarySTRINGTerminalRuleCall_3_0()); 
 
             }
 
@@ -28648,208 +25641,7 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
         }
         return ;
     }
-    // $ANTLR end "rule__Operation__PrimaryAssignment_5"
-
-
-    // $ANTLR start "rule__Operation__DescriptionAssignment_6_1"
-    // InternalToscaDsl.g:9663:1: rule__Operation__DescriptionAssignment_6_1 : ( RULE_STRING ) ;
-    public final void rule__Operation__DescriptionAssignment_6_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9667:1: ( ( RULE_STRING ) )
-            // InternalToscaDsl.g:9668:2: ( RULE_STRING )
-            {
-            // InternalToscaDsl.g:9668:2: ( RULE_STRING )
-            // InternalToscaDsl.g:9669:3: RULE_STRING
-            {
-             before(grammarAccess.getOperationAccess().getDescriptionSTRINGTerminalRuleCall_6_1_0()); 
-            match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getOperationAccess().getDescriptionSTRINGTerminalRuleCall_6_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__DescriptionAssignment_6_1"
-
-
-    // $ANTLR start "rule__Operation__DependentArtifactsAssignment_7_2"
-    // InternalToscaDsl.g:9678:1: rule__Operation__DependentArtifactsAssignment_7_2 : ( ruleEString ) ;
-    public final void rule__Operation__DependentArtifactsAssignment_7_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9682:1: ( ( ruleEString ) )
-            // InternalToscaDsl.g:9683:2: ( ruleEString )
-            {
-            // InternalToscaDsl.g:9683:2: ( ruleEString )
-            // InternalToscaDsl.g:9684:3: ruleEString
-            {
-             before(grammarAccess.getOperationAccess().getDependentArtifactsEStringParserRuleCall_7_2_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getOperationAccess().getDependentArtifactsEStringParserRuleCall_7_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__DependentArtifactsAssignment_7_2"
-
-
-    // $ANTLR start "rule__Operation__DependentArtifactsAssignment_7_3_1"
-    // InternalToscaDsl.g:9693:1: rule__Operation__DependentArtifactsAssignment_7_3_1 : ( ruleEString ) ;
-    public final void rule__Operation__DependentArtifactsAssignment_7_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9697:1: ( ( ruleEString ) )
-            // InternalToscaDsl.g:9698:2: ( ruleEString )
-            {
-            // InternalToscaDsl.g:9698:2: ( ruleEString )
-            // InternalToscaDsl.g:9699:3: ruleEString
-            {
-             before(grammarAccess.getOperationAccess().getDependentArtifactsEStringParserRuleCall_7_3_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleEString();
-
-            state._fsp--;
-
-             after(grammarAccess.getOperationAccess().getDependentArtifactsEStringParserRuleCall_7_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__DependentArtifactsAssignment_7_3_1"
-
-
-    // $ANTLR start "rule__Operation__InputsAssignment_8_2"
-    // InternalToscaDsl.g:9708:1: rule__Operation__InputsAssignment_8_2 : ( ruleProperty ) ;
-    public final void rule__Operation__InputsAssignment_8_2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9712:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9713:2: ( ruleProperty )
-            {
-            // InternalToscaDsl.g:9713:2: ( ruleProperty )
-            // InternalToscaDsl.g:9714:3: ruleProperty
-            {
-             before(grammarAccess.getOperationAccess().getInputsPropertyParserRuleCall_8_2_0()); 
-            pushFollow(FOLLOW_2);
-            ruleProperty();
-
-            state._fsp--;
-
-             after(grammarAccess.getOperationAccess().getInputsPropertyParserRuleCall_8_2_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__InputsAssignment_8_2"
-
-
-    // $ANTLR start "rule__Operation__InputsAssignment_8_3_1"
-    // InternalToscaDsl.g:9723:1: rule__Operation__InputsAssignment_8_3_1 : ( ruleProperty ) ;
-    public final void rule__Operation__InputsAssignment_8_3_1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalToscaDsl.g:9727:1: ( ( ruleProperty ) )
-            // InternalToscaDsl.g:9728:2: ( ruleProperty )
-            {
-            // InternalToscaDsl.g:9728:2: ( ruleProperty )
-            // InternalToscaDsl.g:9729:3: ruleProperty
-            {
-             before(grammarAccess.getOperationAccess().getInputsPropertyParserRuleCall_8_3_1_0()); 
-            pushFollow(FOLLOW_2);
-            ruleProperty();
-
-            state._fsp--;
-
-             after(grammarAccess.getOperationAccess().getInputsPropertyParserRuleCall_8_3_1_0()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Operation__InputsAssignment_8_3_1"
+    // $ANTLR end "rule__Operation__PrimaryAssignment_3"
 
     // Delegated rules
 
@@ -28872,13 +25664,10 @@ public class InternalToscaDslParser extends AbstractInternalContentAssistParser 
     public static final BitSet FOLLOW_14 = new BitSet(new long[]{0x0000000E70002000L});
     public static final BitSet FOLLOW_15 = new BitSet(new long[]{0x0000001030006000L});
     public static final BitSet FOLLOW_16 = new BitSet(new long[]{0x0000000000000030L});
-    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000002000102000L});
-    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000004000000000L});
-    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000008000000000L});
-    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000010000002000L});
-    public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000060006000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000020000000000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000040000106000L});
+    public static final BitSet FOLLOW_17 = new BitSet(new long[]{0x0000002000002000L});
+    public static final BitSet FOLLOW_18 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_19 = new BitSet(new long[]{0x0000004000000000L});
+    public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000008000002000L});
+    public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000060006000L});
 
 }

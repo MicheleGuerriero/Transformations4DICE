@@ -6,7 +6,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/com.fasterxml.jackson.core.jar"/>
-	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/com.fasterxml.jackson.databind.jar"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/org.eclipse.emf.common_2.10.0.v20140514-1158.jar"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/org.eclipse.emf.ecore_2.10.0.v20140514-1158.jar"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/org.eclipse.emf.ecore.xmi_2.10.0.v20140514-1158.jar"/>
@@ -16,5 +15,6 @@
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/org.objectweb.asm_3.3.1.v201105211655.jar"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/snakeyaml-1.9.jar"/>
 	<classpathentry kind="lib" path="/Users/michele/workspace/Transformtion4DICE/rollout/org.xtext.example.toscadsl.parent/org.xtext.example.toscadsl/lib/jackson-annotations-2.1.2-2.jar"/>
+	<classpathentry kind="lib" path="lib/com.fasterxml.jackson.databind.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
